@@ -20,15 +20,14 @@ stages/
 # ============================================================================
 # EXÉCUTABLES ET BIBLIOTHÈQUES
 # ============================================================================
-*.exe
-*.dll
+# Note: On inclut les DLL nécessaires au fonctionnement du jeu
+# pour que le pack soit plug-and-play
 *.so
 *.dylib
 *.pyd
 
-# Dossiers de bibliothèques
+# Dossiers de bibliothèques non essentiels
 Elecbyte.MUGEN.libs/
-Microsoft.VC90.CRT/
 Ikemen-GO*/
 
 # ============================================================================

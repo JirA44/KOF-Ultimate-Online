@@ -1,0 +1,407 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+KOF ULTIMATE - Testeur Avancé de Menus
+Parcourt tous les menus automatiquement et capture des screenshots
+"""
+
+import subprocess
+import time
+import os
+from pathlib import Path
+from datetime import datetime
+import sys
+
+# Vérifier et installer pyautogui si nécessaire
+try:
+    import pyautogui
+    import win32gui
+    import win32con
+    from PIL import Image
+except ImportError:
+    print("Installation des dépendances...")
+    os.system(f"{sys.executable} -m pip install pyautogui pywin32 Pillow --quiet")
+    import pyautogui
+    import win32gui
+    import win32con
+    from PIL import Image
+
+class Colors:
+    GREEN = '\033[92m'
+    RED = '\033[91m'
+    YELLOW = '\033[93m'
+    CYAN = '\033[96m'
+    MAGENTA = '\033[95m'
+    BOLD = '\033[1m'
+    RESET = '\033[0m'
+
+class AdvancedMenuTester:
+    """Testeur avancé qui parcourt les menus"""
+
+    def __init__(self, game_dir):
+        self.game_dir = Path(game_dir)
+        self.exe_path = self.game_dir / "KOF BLACK R.exe"
+        self.process = None
+        self.window_handle = None
+        self.screenshots_dir = self.game_dir / "test_screenshots" / datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.screenshots_dir.mkdir(parents=True, exist_ok=True)
+        self.menu_items_found = []
+
+    def find_game_window(self):
+        """Trouve la fenêtre du jeu"""
+        def callback(hwnd, windows):
+            if win32gui.IsWindowVisible(hwnd):
+                title = win32gui.GetWindowText(hwnd)
+                if "mugen" in title.lower() or "kof" in title.lower():
+                    windows.append(hwnd)
+            return True
+
+        windows = []
+        win32gui.EnumWindows(callback, windows)
+
+        if windows:
+            self.window_handle = windows[0]
+            return True
+        return False
+
+    def launch_game(self):
+        """Lance le jeu"""
+        print(f"\n{Colors.CYAN}🎮 Lancement du jeu...{Colors.RESET}")
+
+        # Nettoyer ancien log
+        log_file = self.game_dir / "mugen.log"
+        if log_file.exists():
+            log_file.unlink()
+
+        # Lancer
+        self.process = subprocess.Popen(
+            [str(self.exe_path)],
+            cwd=str(self.game_dir)
+        )
+
+        print(f"{Colors.GREEN}✓ Jeu lancé (PID: {self.process.pid}){Colors.RESET}")
+
+        # Attendre fenêtre
+        print(f"{Colors.CYAN}Attente de la fenêtre...{Colors.RESET}")
+        for i in range(30):
+            time.sleep(0.5)
+            if self.find_game_window():
+                print(f"{Colors.GREEN}✓ Fenêtre trouvée!{Colors.RESET}")
+
+                # Mettre au premier plan
+                try:
+                    win32gui.ShowWindow(self.window_handle, win32con.SW_RESTORE)
+                    win32gui.SetForegroundWindow(self.window_handle)
+                    time.sleep(1)
+                except:
+                    pass
+
+                return True
+
+        print(f"{Colors.RED}✗ Fenêtre non trouvée{Colors.RESET}")
+        return False
+
+    def capture_screenshot(self, name):
+        """Capture l'écran"""
+        timestamp = datetime.now().strftime("%H%M%S")
+        filename = f"{timestamp}_{name}.png"
+        filepath = self.screenshots_dir / filename
+
+        try:
+            if self.window_handle:
+                # Capturer la fenêtre du jeu
+                rect = win32gui.GetWindowRect(self.window_handle)
+                x, y, x2, y2 = rect
+                width = x2 - x
+                height = y2 - y
+
+                screenshot = pyautogui.screenshot(region=(x, y, width, height))
+                screenshot.save(str(filepath))
+                print(f"{Colors.GREEN}  📸 {filename}{Colors.RESET}")
+                return filepath
+        except Exception as e:
+            print(f"{Colors.RED}  ✗ Erreur capture: {e}{Colors.RESET}")
+
+        return None
+
+    def wait_for_loading(self):
+        """Attend le chargement"""
+        print(f"\n{Colors.CYAN}⏳ Attente du chargement (15s)...{Colors.RESET}")
+        for i in range(15, 0, -1):
+            print(f"\r  {i:2d}s restantes... ", end='', flush=True)
+            time.sleep(1)
+        print(f"\r{Colors.GREEN}  ✓ Chargement OK          {Colors.RESET}")
+
+    def navigate_menu(self):
+        """Parcourt le menu principal"""
+        print(f"\n{Colors.CYAN}{Colors.BOLD}🎯 PARCOURS DU MENU PRINCIPAL{Colors.RESET}")
+        print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
+
+        # Capture initiale
+        print(f"{Colors.CYAN}1. Menu initial{Colors.RESET}")
+        self.capture_screenshot("01_menu_initial")
+        time.sleep(2)
+
+        # Liste des options à tester
+        menu_options = [
+            "ARCADE",
+            "VS MODE",
+            "TEAM ARCADE",
+            "TEAM VS",
+            "SURVIVAL",
+            "TRAINING",
+            "MULTIJOUEUR EN LIGNE",
+            "OPTIONS",
+            "EXIT"
+        ]
+
+        print(f"\n{Colors.CYAN}Navigation dans les options:{Colors.RESET}\n")
+
+        for i in range(len(menu_options)):
+            # Appuyer sur flèche bas
+            pyautogui.press('down')
+            time.sleep(0.5)
+
+            # Capturer
+            screenshot = self.capture_screenshot(f"02_option_{i+1}")
+            print(f"{Colors.CYAN}  → Option {i+1}{Colors.RESET}")
+
+        print(f"\n{Colors.GREEN}✓ Navigation menu complète!{Colors.RESET}")
+
+    def test_vs_mode_entry(self):
+        """Teste l'entrée dans VS MODE"""
+        print(f"\n{Colors.CYAN}{Colors.BOLD}🎮 TEST VS MODE{Colors.RESET}")
+        print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
+
+        # Retourner au début du menu
+        print(f"{Colors.CYAN}Retour au début du menu...{Colors.RESET}")
+        for _ in range(10):
+            pyautogui.press('up')
+            time.sleep(0.2)
+
+        time.sleep(1)
+
+        # Descendre à VS MODE (2ème option normalement)
+        print(f"{Colors.CYAN}Sélection VS MODE...{Colors.RESET}")
+        pyautogui.press('down')
+        time.sleep(0.5)
+        self.capture_screenshot("03_vs_mode_selected")
+
+        # Valider (Entrée)
+        print(f"{Colors.CYAN}Validation...{Colors.RESET}")
+        pyautogui.press('enter')
+        time.sleep(3)
+
+        # Capturer écran de sélection
+        self.capture_screenshot("04_character_select")
+        print(f"{Colors.GREEN}  ✓ Écran de sélection atteint{Colors.RESET}")
+
+        time.sleep(2)
+
+        # Retour au menu (ESC)
+        print(f"{Colors.CYAN}Retour au menu...{Colors.RESET}")
+        pyautogui.press('esc')
+        time.sleep(2)
+
+        print(f"\n{Colors.GREEN}✓ Test VS MODE terminé{Colors.RESET}")
+
+    def test_options_menu(self):
+        """Teste le menu OPTIONS"""
+        print(f"\n{Colors.CYAN}{Colors.BOLD}⚙️ TEST MENU OPTIONS{Colors.RESET}")
+        print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
+
+        # Naviguer vers OPTIONS (avant-dernière option)
+        print(f"{Colors.CYAN}Navigation vers OPTIONS...{Colors.RESET}")
+        for _ in range(7):
+            pyautogui.press('down')
+            time.sleep(0.3)
+
+        time.sleep(1)
+        self.capture_screenshot("05_options_selected")
+
+        # Valider
+        print(f"{Colors.CYAN}Ouverture OPTIONS...{Colors.RESET}")
+        pyautogui.press('enter')
+        time.sleep(3)
+
+        self.capture_screenshot("06_options_menu")
+        print(f"{Colors.GREEN}  ✓ Menu OPTIONS ouvert{Colors.RESET}")
+
+        time.sleep(2)
+
+        # Retour
+        print(f"{Colors.CYAN}Retour au menu...{Colors.RESET}")
+        pyautogui.press('esc')
+        time.sleep(2)
+
+        print(f"\n{Colors.GREEN}✓ Test OPTIONS terminé{Colors.RESET}")
+
+    def analyze_screenshots(self):
+        """Analyse les screenshots capturés"""
+        print(f"\n{Colors.CYAN}{Colors.BOLD}📊 ANALYSE DES CAPTURES{Colors.RESET}")
+        print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
+
+        screenshots = list(self.screenshots_dir.glob("*.png"))
+        print(f"  Nombre de captures: {len(screenshots)}")
+
+        issues = []
+
+        for screenshot in sorted(screenshots):
+            try:
+                img = Image.open(screenshot)
+                width, height = img.size
+
+                # Vérifier si image trop sombre (fond noir sans contenu)
+                pixels = img.load()
+                total_brightness = 0
+                sample_size = 1000
+
+                for _ in range(sample_size):
+                    x = width // 4 + (_ * (width // 2)) // sample_size
+                    y = height // 4 + (_ * (height // 2)) // sample_size
+                    pixel = pixels[x, y]
+                    if isinstance(pixel, tuple):
+                        total_brightness += sum(pixel[:3])
+
+                avg_brightness = total_brightness / (sample_size * 3)
+
+                status = "📸"
+                if avg_brightness < 10:
+                    status = "❌"
+                    issues.append(f"{screenshot.name}: Écran presque noir")
+                elif avg_brightness < 30:
+                    status = "⚠️"
+
+                print(f"{status} {screenshot.name}: Luminosité {avg_brightness:.1f}/255")
+
+            except Exception as e:
+                print(f"{Colors.RED}  ✗ Erreur analyse {screenshot.name}: {e}{Colors.RESET}")
+
+        if issues:
+            print(f"\n{Colors.YELLOW}Issues détectées:{Colors.RESET}")
+            for issue in issues:
+                print(f"  - {issue}")
+        else:
+            print(f"\n{Colors.GREEN}✓ Toutes les captures sont OK{Colors.RESET}")
+
+    def check_log_for_menu_items(self):
+        """Vérifie le log pour voir si l'option multijoueur est chargée"""
+        print(f"\n{Colors.CYAN}{Colors.BOLD}📋 ANALYSE DU LOG{Colors.RESET}")
+        print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
+
+        log_file = self.game_dir / "mugen.log"
+
+        if not log_file.exists():
+            print(f"{Colors.RED}✗ Log introuvable{Colors.RESET}")
+            return False
+
+        with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
+            content = f.read()
+
+        # Vérifier chargement
+        checks = {
+            "Title Info": "Load [Title Info]...OK" in content,
+            "TitleBG": "TitleBG...OK" in content or "TitleBG...VersusBG" in content,
+            "Select Screen": "Initializing select screen" in content,
+            "Mode Select": "Entering mode select" in content
+        }
+
+        for check_name, result in checks.items():
+            if result:
+                print(f"{Colors.GREEN}  ✓ {check_name}{Colors.RESET}")
+            else:
+                print(f"{Colors.RED}  ✗ {check_name}{Colors.RESET}")
+
+        # Compter erreurs
+        errors = [line for line in content.split('\n') if 'error' in line.lower() or 'failed' in line.lower()]
+        critical_errors = [e for e in errors if 'chars/x/x.def' not in e and 'pads' not in e.lower()]
+
+        print(f"\n  Total erreurs: {len(errors)}")
+        print(f"  Erreurs critiques: {len(critical_errors)}")
+
+        if critical_errors:
+            print(f"\n{Colors.RED}Erreurs critiques:{Colors.RESET}")
+            for error in critical_errors[:5]:
+                print(f"  - {error.strip()}")
+
+        return len(critical_errors) == 0
+
+    def stop_game(self):
+        """Arrête le jeu"""
+        print(f"\n{Colors.YELLOW}⏹ Fermeture du jeu...{Colors.RESET}")
+
+        if self.process:
+            try:
+                import psutil
+                process = psutil.Process(self.process.pid)
+                process.terminate()
+                process.wait(timeout=5)
+                print(f"{Colors.GREEN}✓ Jeu fermé{Colors.RESET}")
+            except:
+                try:
+                    process.kill()
+                except:
+                    pass
+
+    def run_complete_test(self):
+        """Lance le test complet"""
+        print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'🎮 TEST COMPLET DES MENUS 🎮':^80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+        try:
+            # 1. Lancer le jeu
+            if not self.launch_game():
+                print(f"\n{Colors.RED}✗ Échec du lancement{Colors.RESET}")
+                return False
+
+            # 2. Attendre le chargement
+            self.wait_for_loading()
+
+            # 3. Parcourir le menu
+            self.navigate_menu()
+
+            # 4. Tester VS MODE
+            self.test_vs_mode_entry()
+
+            # 5. Tester OPTIONS
+            self.test_options_menu()
+
+            # 6. Attendre un peu
+            time.sleep(3)
+
+            # 7. Arrêter
+            self.stop_game()
+
+            # 8. Analyser
+            time.sleep(2)
+            self.analyze_screenshots()
+            self.check_log_for_menu_items()
+
+            print(f"\n{Colors.GREEN}{Colors.BOLD}✓ TEST COMPLET TERMINÉ{Colors.RESET}")
+            print(f"\n{Colors.CYAN}📁 Screenshots: {self.screenshots_dir}{Colors.RESET}\n")
+
+            return True
+
+        except Exception as e:
+            print(f"\n{Colors.RED}✗ Erreur: {e}{Colors.RESET}")
+            import traceback
+            traceback.print_exc()
+            self.stop_game()
+            return False
+
+def main():
+    game_dir = r"D:\KOF Ultimate"
+
+    tester = AdvancedMenuTester(game_dir)
+    tester.run_complete_test()
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(f"\n\n{Colors.YELLOW}Interruption par l'utilisateur{Colors.RESET}")
+    except Exception as e:
+        print(f"\n{Colors.RED}Erreur: {e}{Colors.RESET}")
+        import traceback
+        traceback.print_exc()
