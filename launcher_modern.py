@@ -22,7 +22,7 @@ VERSION = "2.0.0"
 class ModernLauncher:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("KOF ULTIMATE")
+        self.root.title("KOF ULTIMATE ONLINE - Launcher")
         self.root.geometry("900x650")
         self.root.resizable(False, False)
         self.root.configure(bg='#000000')
@@ -137,8 +137,8 @@ class ModernLauncher:
         for i, color in enumerate(colors):
             title_canvas.create_text(
                 400 - i*2, 75 - i*2,
-                text="⚡ KOF ULTIMATE ⚡",
-                font=('Impact', 56, 'bold'),
+                text="⚡ KOF ULTIMATE ONLINE ⚡",
+                font=('Impact', 48, 'bold'),
                 fill=color,
                 anchor='center'
             )
@@ -146,8 +146,8 @@ class ModernLauncher:
         # Texte principal (devant)
         title_canvas.create_text(
             400, 75,
-            text="⚡ KOF ULTIMATE ⚡",
-            font=('Impact', 56, 'bold'),
+            text="⚡ KOF ULTIMATE ONLINE ⚡",
+            font=('Impact', 48, 'bold'),
             fill='#ffffff',
             anchor='center'
         )
@@ -390,7 +390,7 @@ class ModernLauncher:
             self.set_fullscreen_mode()
 
         # Lancer le jeu
-        exe_path = GAME_PATH / "KOF BLACK R.exe"
+        exe_path = GAME_PATH / "KOF_Ultimate_Online.exe"
 
         if not exe_path.exists():
             messagebox.showerror(

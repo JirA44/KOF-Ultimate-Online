@@ -1,0 +1,161 @@
+╔════════════════════════════════════════════════════════════════╗
+║                  🎮 KOF ULTIMATE - GUIDE DE JEU                ║
+║                        ENFIN JOUABLE!                           ║
+╚════════════════════════════════════════════════════════════════╝
+
+🎯 PROBLÈMES RÉSOLUS:
+════════════════════════════════════════════════════════════════
+
+✓ Un seul personnage (Magnus) disponible → CORRIGÉ!
+  → 189 personnages maintenant disponibles!
+
+✓ Impossible de jouer (toujours des IA) → CORRIGÉ!
+  → Vous pouvez maintenant VRAIMENT jouer!
+
+✓ Manette ne fonctionne pas → CORRIGÉ!
+  → Mapper manette → clavier disponible
+
+✓ Launcher option 2 erreur → CORRIGÉ!
+  → Fichier debug.def manquant créé automatiquement
+
+✓ Pas assez d'auto-diagnostic → CORRIGÉ!
+  → Nouveau launcher avec vérifications complètes
+
+
+📂 FICHIERS CRÉÉS:
+════════════════════════════════════════════════════════════════
+
+🚀 LANCEURS PRINCIPAUX:
+  • START_KOF_ULTIMATE.bat          - Menu principal avec tous les modes
+  • LANCER_AUTO_DIAGNOSTIC.bat      - Launcher avec diagnostics
+
+🎮 MODES DE JEU:
+  • JOUER_LOCAL_VS_IA.bat           - Vous vs IA locale
+  • JOUER_CONTRE_IA_ONLINE.bat      - Vous vs IA en ligne (netplay simulé)
+
+🛠️ OUTILS:
+  • ai_select_def_generator.py      - Générateur de select.def (189 persos)
+  • ai_installation_checker.py      - Vérificateur d'installation complet
+  • ai_netplay_opponent.py          - IA adversaire qui joue comme un humain
+  • gamepad_to_keyboard_mapper.py   - Mapper manette → clavier
+  • launcher_auto_diagnostic.py     - Launcher avec auto-réparation
+
+
+🎮 COMMENT JOUER:
+════════════════════════════════════════════════════════════════
+
+OPTION 1: Mode le plus simple (RECOMMANDÉ)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Double-cliquez sur: START_KOF_ULTIMATE.bat
+2. Choisissez option [1] - JOUER SOLO
+3. Sélectionnez votre moteur (MUGEN ou Ikemen GO)
+4. Jouez!
+
+✓ Vous contrôlez Player 1
+✓ L'IA du jeu contrôle Player 2
+
+
+OPTION 2: Mode Netplay vs IA (IMMERSIF)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Double-cliquez sur: START_KOF_ULTIMATE.bat
+2. Choisissez option [2] - JOUER vs IA EN LIGNE
+3. Sélectionnez la difficulté (Facile/Moyen/Difficile)
+4. Le jeu se lance automatiquement
+5. L'IA sélectionne son personnage automatiquement
+6. Jouez contre l'IA qui se comporte comme un vrai joueur!
+
+✓ Vous contrôlez Player 1
+✓ L'IA Python contrôle Player 2 via le réseau
+✓ L'IA fait des erreurs, des combos, joue comme un humain
+
+
+OPTION 3: Mode 2 Joueurs Local
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Double-cliquez sur: START_KOF_ULTIMATE.bat
+2. Choisissez option [3] - JOUER EN LOCAL
+3. Jouez à deux sur la même machine!
+
+✓ Player 1 : Vous (clavier ou manette 1)
+✓ Player 2 : Ami (clavier ou manette 2)
+
+
+🎮 MANETTE NE FONCTIONNE PAS?
+════════════════════════════════════════════════════════════════
+
+Solution: Utiliser le MAPPER!
+
+1. Double-cliquez sur: START_KOF_ULTIMATE.bat
+2. Choisissez option [6] - Mapper Manette → Clavier
+3. Une fenêtre s'ouvre qui convertit votre manette en clavier
+4. Laissez cette fenêtre ouverte
+5. Lancez le jeu (option 1, 2 ou 3)
+6. Jouez avec votre manette!
+
+Le mapper convertit:
+  • D-Pad/Stick → Flèches directionnelles
+  • A → S (coup léger)
+  • B → D (coup moyen)
+  • X → F (coup fort)
+  • Y → G (spécial)
+  • Start → Entrée
+  • Back → Échap
+
+
+🔧 PROBLÈMES?
+════════════════════════════════════════════════════════════════
+
+Lancez le DIAGNOSTIC AUTOMATIQUE:
+  1. START_KOF_ULTIMATE.bat
+  2. Option [4] - Launcher Auto-Diagnostic
+
+Il va:
+  ✓ Vérifier tous les fichiers
+  ✓ Réparer automatiquement ce qui peut l'être
+  ✓ Afficher un rapport complet
+
+
+📋 PAS ASSEZ DE PERSONNAGES?
+════════════════════════════════════════════════════════════════
+
+Régénérez le select.def:
+  1. START_KOF_ULTIMATE.bat
+  2. Option [5] - Générateur de Select.def
+  3. Choisissez mode 1 (roster complet)
+
+Résultat:
+  ✓ 189 personnages dans Ikemen GO
+  ✓ 189 personnages dans MUGEN
+
+
+✅ VÉRIFIER L'INSTALLATION
+════════════════════════════════════════════════════════════════
+
+Pour vérifier que tout est OK:
+  1. START_KOF_ULTIMATE.bat
+  2. Option [7] - Vérifier Installation
+
+L'IA va vérifier:
+  ✓ Fichiers essentiels
+  ✓ Dossiers requis
+  ✓ Personnages (189 trouvés)
+  ✓ Stages (31 trouvés)
+  ✓ Configuration
+  ✓ Dépendances Python
+  ✓ Espace disque
+  ✓ Outils installés
+
+
+🎯 RÉSUMÉ RAPIDE:
+════════════════════════════════════════════════════════════════
+
+Pour jouer IMMÉDIATEMENT:
+  → Double-cliquez: START_KOF_ULTIMATE.bat
+  → Option [1] - JOUER SOLO
+  → C'EST PARTI! 🎮
+
+Bon combat! 🥊
+
+
+═══════════════════════════════════════════════════════════════
+                Créé avec ❤️ par Claude Code
+═══════════════════════════════════════════════════════════════

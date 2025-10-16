@@ -79,7 +79,7 @@ class GameMonitor:
         self.log("Vérification des fichiers...", color=Colors.BLUE)
 
         required_files = [
-            "KOF BLACK R.exe",
+            "KOF_Ultimate_Online.exe",
             "data/system.def",
             "data/select.def",
             "data/mugen.cfg"
@@ -134,7 +134,7 @@ class GameMonitor:
         """Lance le jeu"""
         self.log_event("Lancement du jeu...")
 
-        exe_path = self.base_dir / "KOF BLACK R.exe"
+        exe_path = self.base_dir / "KOF_Ultimate_Online.exe"
 
         if not exe_path.exists():
             self.log_error("Exécutable du jeu non trouvé!")

@@ -1,0 +1,16 @@
+{
+  "system_test": {
+    "status": "FAILED",
+    "output": ""
+  },
+  "game_monitor": null,
+  "error_analysis": {
+    "status": "COMPLETED",
+    "output": "\n\u001b[95m\u001b[1m================================================================================\u001b[0m\n\u001b[95m\u001b[1m                           🔍 ANALYSE DU LOG EXISTANT                            \u001b[0m\n\u001b[95m\u001b[1m================================================================================\u001b[0m\n\n\u001b[91m✗ Aucun log trouvé\u001b[0m\n"
+  },
+  "file_integrity": {
+    "status": "COMPLETED",
+    "issues_found": 0,
+    "issues": []
+  }
+}

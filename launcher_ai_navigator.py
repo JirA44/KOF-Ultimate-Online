@@ -15,9 +15,14 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk
 import pyautogui
-import anthropic
+try:
+    import anthropic
+    ANTHROPIC_AVAILABLE = True
+except:
+    ANTHROPIC_AVAILABLE = False
 from PIL import Image, ImageDraw, ImageFont
 import threading
+import numpy as np
 
 # Configuration
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
@@ -26,17 +31,17 @@ if not ANTHROPIC_API_KEY:
     print("Please set it with: set ANTHROPIC_API_KEY=your_key_here")
     print("Continuing with limited functionality (basic checks only)...")
 
-GAME_PATH = Path("D:/KOF Ultimate")
+GAME_PATH = Path("D:/KOF Ultimate Online")
 LOG_FILE = GAME_PATH / "launcher_ai_log.json"
 
 class LauncherAINavigator:
     """Agent IA qui navigue sur le launcher et détecte les problèmes"""
 
     def __init__(self):
-        self.client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY) if ANTHROPIC_API_KEY else None
+        self.client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY) if (ANTHROPIC_API_KEY and ANTHROPIC_AVAILABLE) else None
         self.problems_detected = []
         self.navigation_log = []
-        self.running = True
+        self.running = False
 
         # Interface de monitoring
         self.root = tk.Tk()
@@ -45,6 +50,9 @@ class LauncherAINavigator:
         self.root.configure(bg='#1a1f3a')
 
         self.setup_ui()
+
+        # Démarrer automatiquement le monitoring après 1 seconde
+        self.root.after(1000, self.start_monitoring)
 
     def setup_ui(self):
         """Configure l'interface de l'agent"""
@@ -262,11 +270,12 @@ class LauncherAINavigator:
 
     def update_stats(self):
         """Met à jour les statistiques"""
+        ai_status = "✓ Claude AI" if self.client else "✓ Basic Mode (no API)"
         stats = f"""
 Actions effectuées:  {len(self.navigation_log)}
 Problèmes détectés:  {len(self.problems_detected)}
 Temps d'exécution:   {self.get_runtime()}
-Statut IA:          {'✓ Connected' if self.client else '✗ Not connected'}
+Statut IA:          {ai_status}
         """
 
         self.stats_text.config(state=tk.NORMAL)
@@ -352,9 +361,21 @@ Réponds en français de manière concise."""
     def check_launcher_window(self):
         """Vérifie si la fenêtre du launcher est ouverte"""
         try:
-            windows = pyautogui.getWindowsWithTitle("KOF Ultimate Launcher")
-            return len(windows) > 0
-        except:
+            # Rechercher plusieurs titres possibles
+            possible_titles = [
+                "KOF Ultimate Launcher",
+                "KOF Ultimate",
+                "launcher.py",
+                "Python"
+            ]
+            for title in possible_titles:
+                windows = pyautogui.getWindowsWithTitle(title)
+                if len(windows) > 0:
+                    self.log_message(f"Found window: {title}", "SUCCESS")
+                    return True
+            return False
+        except Exception as e:
+            self.log_message(f"Error checking window: {e}", "ERROR")
             return False
 
     def start_monitoring(self):
@@ -427,7 +448,7 @@ Réponds en français de manière concise."""
         """Effectue des vérifications basiques sans IA"""
         # Vérifier les fichiers essentiels
         essential_files = [
-            GAME_PATH / "KOF BLACK R.exe",
+            GAME_PATH / "KOF_Ultimate_Online.exe",
             GAME_PATH / "data" / "mugen.cfg",
             GAME_PATH / "launcher.py"
         ]
@@ -436,6 +457,59 @@ Réponds en français de manière concise."""
             if not file_path.exists():
                 self.add_problem(f"Missing essential file: {file_path.name}", "HIGH")
                 self.log_message(f"Missing file: {file_path}", "ERROR")
+            else:
+                self.log_message(f"✓ File found: {file_path.name}", "SUCCESS")
+
+        # Navigation automatique dans l'interface
+        self.navigate_interface()
+
+    def navigate_interface(self):
+        """Navigue automatiquement dans l'interface du launcher"""
+        try:
+            self.log_message("🚀 Starting interface navigation...", "INFO")
+
+            # Capturer l'écran pour analyser
+            screenshot = self.capture_screen()
+            if not screenshot:
+                return
+
+            # Convertir en numpy pour analyse d'image
+            import numpy as np
+            screen = np.array(screenshot)
+
+            # Détecter les couleurs de boutons (vert, bleu, rouge, etc.)
+            # Vert pour les boutons actifs
+            green_mask = (screen[:,:,1] > 150) & (screen[:,:,0] < 100) & (screen[:,:,2] < 100)
+
+            if np.any(green_mask):
+                self.log_message("✓ Detected green buttons (active elements)", "SUCCESS")
+                # Trouver le centre du bouton vert
+                y_coords, x_coords = np.where(green_mask)
+                if len(x_coords) > 0:
+                    center_x = int(np.mean(x_coords))
+                    center_y = int(np.mean(y_coords))
+                    self.log_message(f"  → Button position: ({center_x}, {center_y})", "INFO")
+
+            # Détecter si des fenêtres d'erreur sont présentes (rouge)
+            red_mask = (screen[:,:,0] > 180) & (screen[:,:,1] < 100) & (screen[:,:,2] < 100)
+            if np.any(red_mask):
+                self.add_problem("Detected red elements - possible error dialog", "MEDIUM")
+                self.log_message("⚠️  Red elements detected (possible error)", "WARNING")
+
+            # Détecter les zones de texte blanc/gris (labels)
+            text_mask = (screen[:,:,0] > 200) & (screen[:,:,1] > 200) & (screen[:,:,2] > 200)
+            text_pixels = np.sum(text_mask)
+            self.log_message(f"  → Text pixels detected: {text_pixels}", "INFO")
+
+            if text_pixels < 1000:
+                self.add_problem("Very little text detected - interface may not be loaded", "LOW")
+
+            self.log_message("✓ Interface navigation completed", "SUCCESS")
+
+        except Exception as e:
+            self.log_message(f"Navigation error: {e}", "ERROR")
+            # Continuer même en cas d'erreur
+            pass
 
     def save_log(self):
         """Sauvegarde le log complet"""

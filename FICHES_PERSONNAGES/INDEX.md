@@ -1,0 +1,177 @@
+# 📚 INDEX DES FICHES PERSONNAGES - KOF ULTIMATE ONLINE
+
+Cette documentation contient les fiches complètes de tous les personnages avec leurs coups spéciaux et combos.
+
+## Liste des Personnages
+
+- [03-A-Kyo LV2](03-A-Kyo LV2.md) - 61 techniques
+- [A-Angel](A-Angel.md) - 61 techniques
+- [ALBA MEIRA KOF XI -MI2](ALBA MEIRA KOF XI -MI2.md) - 40 techniques
+- [Aika](Aika.md) - 19 techniques
+- [Aika_MK](Aika_MK.md) - 57 techniques
+- [Aileen](Aileen.md) - 77 techniques
+- [Akari](Akari.md) - 41 techniques
+- [Akiha Orochi](Akiha Orochi.md) - 67 techniques
+- [Akiha Yagami](Akiha Yagami.md) - 55 techniques
+- [Akiha Yagami DK](Akiha Yagami DK.md) - 72 techniques
+- [Akiha Yagami1](Akiha Yagami1.md) - 53 techniques
+- [Alfred_WLS](Alfred_WLS.md) - 87 techniques
+- [Alou_AKOF](Alou_AKOF.md) - 81 techniques
+- [Alter Kyo](Alter Kyo.md) - 100 techniques
+- [Amoumi-KOFM](Amoumi-KOFM.md) - 98 techniques
+- [Andy-ROTD](Andy-ROTD.md) - 20 techniques
+- [Aner Rolange KOFM](Aner Rolange KOFM.md) - 105 techniques
+- [Anette-KOFM](Anette-KOFM.md) - 94 techniques
+- [AngusPurple-KOFM](AngusPurple-KOFM.md) - 12 techniques
+- [Another Scarlet](Another Scarlet.md) - 72 techniques
+- [Ash](Ash.md) - 26 techniques
+- [Athena](Athena.md) - 64 techniques
+- [Athena Asamiya MI KOFM](Athena Asamiya MI KOFM.md) - 19 techniques
+- [Athena-Heidern](Athena-Heidern.md) - 6 techniques
+- [Athena_XI](Athena_XI.md) - 34 techniques
+- [BW-Meiling](BW-Meiling.md) - 71 techniques
+- [Balto-KOFM](Balto-KOFM.md) - 97 techniques
+- [Benimaru-Nikaido-STAR](Benimaru-Nikaido-STAR.md) - 95 techniques
+- [BlackPrincess_Tohka](BlackPrincess_Tohka.md) - 64 techniques
+- [Boss Gustab M](Boss Gustab M.md) - 89 techniques
+- [Business_Vanessa-KOFM](Business_Vanessa-KOFM.md) - 81 techniques
+- [C.Kyo.Blood-KOFM](C.Kyo.Blood-KOFM.md) - 14 techniques
+- [Carlin.Blood-CKOFM](Carlin.Blood-CKOFM.md) - 3 techniques
+- [Chalice](Chalice.md) - 16 techniques
+- [Chaos-CKOFM](Chaos-CKOFM.md) - 48 techniques
+- [Chobi-Hige](Chobi-Hige.md) - 79 techniques
+- [Choi_XI](Choi_XI.md) - 114 techniques
+- [Clone Blood Rugal](Clone Blood Rugal.md) - 66 techniques
+- [Clone Zero](Clone Zero.md) - 27 techniques
+- [Cronus](Cronus.md) - 43 techniques
+- [Cruelty Sula UM](Cruelty Sula UM.md) - 78 techniques
+- [D.Yashiro.Rhythm(Dusk)1.x](D.Yashiro.Rhythm(Dusk)1.x.md) - 66 techniques
+- [D=Rockula](D=Rockula.md) - 25 techniques
+- [DF-Sula](DF-Sula.md) - 140 techniques
+- [DG.Rugal-KOFM](DG.Rugal-KOFM.md) - 92 techniques
+- [D_DisciplineGirl](D_DisciplineGirl.md) - 18 techniques
+- [Daiki_Final(Prototype)](Daiki_Final(Prototype).md) - 52 techniques
+- [Daisu](Daisu.md) - 57 techniques
+- [Delirus](Delirus.md) - 65 techniques
+- [Dragondomainlords](Dragondomainlords.md) - 20 techniques
+- [Drakyola](Drakyola.md) - 78 techniques
+- [Dual-flame_Magaki](Dual-flame_Magaki.md) - 86 techniques
+- [Duester](Duester.md) - 63 techniques
+- [Element Ash](Element Ash.md) - 35 techniques
+- [Element Scarlet](Element Scarlet.md) - 46 techniques
+- [Element-Adel](Element-Adel.md) - 35 techniques
+- [Eputh Blood-KOFM](Eputh Blood-KOFM.md) - 29 techniques
+- [Error Zero](Error Zero.md) - 37 techniques
+- [Essence of Darkness](Essence of Darkness.md) - 29 techniques
+- [Eve](Eve.md) - 64 techniques
+- [Fang](Fang.md) - 34 techniques
+- [Felix_THird](Felix_THird.md) - 92 techniques
+- [Final Adel](Final Adel.md) - 54 techniques
+- [Final Goeniko](Final Goeniko.md) - 47 techniques
+- [Final Sachiel WF](Final Sachiel WF.md) - 41 techniques
+- [Final Zeroko B](Final Zeroko B.md) - 84 techniques
+- [Final-IGNIZ](Final-IGNIZ.md) - 66 techniques
+- [Final-OriginalZero](Final-OriginalZero.md) - 26 techniques
+- [Flamme(S)](Flamme(S).md) - 67 techniques
+- [GARS](GARS.md) - 29 techniques
+- [GOD_ADEL(2012-01-28 Trial)](GOD_ADEL(2012-01-28 Trial).md) - 37 techniques
+- [Garnet 1.1](Garnet 1.1.md) - 86 techniques
+- [Geese-KOFM](Geese-KOFM.md) - 30 techniques
+- [God_Wind](God_Wind.md) - 102 techniques
+- [Goktore-CKOFM](Goktore-CKOFM.md) - 52 techniques
+- [Graves](Graves.md) - 89 techniques
+- [HIEL-KOFM](HIEL-KOFM.md) - 38 techniques
+- [Hiel_SP](Hiel_SP.md) - 64 techniques
+- [Hunter_U6746](Hunter_U6746.md) - 69 techniques
+- [Infernal_Wind](Infernal_Wind.md) - 51 techniques
+- [K9999_KOF](K9999_KOF.md) - 55 techniques
+- [Kaneda-KOFM](Kaneda-KOFM.md) - 33 techniques
+- [Kaori Yumiko](Kaori Yumiko.md) - 64 techniques
+- [Kartis](Kartis.md) - 23 techniques
+- [Kasumi-KOFM](Kasumi-KOFM.md) - 59 techniques
+- [Kei](Kei.md) - 29 techniques
+- [Kevenoce](Kevenoce.md) - 31 techniques
+- [Keyser-Aunthmer](Keyser-Aunthmer.md) - 75 techniques
+- [Kyaga-KOFM](Kyaga-KOFM.md) - 3 techniques
+- [Kychiel](Kychiel.md) - 91 techniques
+- [Littledevil-Phoenix](Littledevil-Phoenix.md) - 11 techniques
+- [Lord-Goenitz](Lord-Goenitz.md) - 114 techniques
+- [Magnus](Magnus.md) - 36 techniques
+- [Mai Phoenix XI](Mai Phoenix XI.md) - 43 techniques
+- [Maltet](Maltet.md) - 43 techniques
+- [Maryl](Maryl.md) - 24 techniques
+- [Matam](Matam.md) - 83 techniques
+- [Meld_Boss](Meld_Boss.md) - 59 techniques
+- [N-Zeroko](N-Zeroko.md) - 65 techniques
+- [Nao-MX 1.0](Nao-MX 1.0.md) - 20 techniques
+- [NeoDio KOFM](NeoDio KOFM.md) - 80 techniques
+- [NeoGeegus KOFM](NeoGeegus KOFM.md) - 115 techniques
+- [Nero](Nero.md) - 91 techniques
+- [New_Kyouki](New_Kyouki.md) - 15 techniques
+- [Noa_MK](Noa_MK.md) - 42 techniques
+- [Nox Bernstein](Nox Bernstein.md) - 99 techniques
+- [Olivia](Olivia.md) - 13 techniques
+- [Original Psyqhical](Original Psyqhical.md) - 30 techniques
+- [Orochi Kyo WF](Orochi Kyo WF.md) - 93 techniques
+- [Orochi Leona-KOFM](Orochi Leona-KOFM.md) - 93 techniques
+- [Orochi-EV1.55](Orochi-EV1.55.md) - 77 techniques
+- [Orochi.Yamazaki-CKOFM](Orochi.Yamazaki-CKOFM.md) - 9 techniques
+- [P-LEONA_ELEMENT](P-LEONA_ELEMENT.md) - 37 techniques
+- [Psyche_42-1.1](Psyche_42-1.1.md) - 95 techniques
+- [Psyche_57-1.1](Psyche_57-1.1.md) - 74 techniques
+- [R.S.P](R.S.P.md) - 55 techniques
+- [Raisen.blood-KOFM](Raisen.blood-KOFM.md) - 38 techniques
+- [Rayno](Rayno.md) - 71 techniques
+- [Reas-KOFM](Reas-KOFM.md) - 34 techniques
+- [Rocken](Rocken.md) - 63 techniques
+- [Rose](Rose.md) - 22 techniques
+- [Rozwel S.K (LEGIT)](Rozwel S.K (LEGIT).md) - 74 techniques
+- [Rugal7th](Rugal7th.md) - 85 techniques
+- [Ryuji](Ryuji.md) - 81 techniques
+- [S_Infezione](S_Infezione.md) - 19 techniques
+- [Samael](Samael.md) - 12 techniques
+- [Sasin](Sasin.md) - 40 techniques
+- [Shadow-Dancer](Shadow-Dancer.md) - 44 techniques
+- [Spiritland Lords](Spiritland Lords.md) - 14 techniques
+- [Tenrou_Kunagi](Tenrou_Kunagi.md) - 109 techniques
+- [Titan_KOF](Titan_KOF.md) - 31 techniques
+- [True Iori X_KOF](True Iori X_KOF.md) - 41 techniques
+- [Unfailed Gustab](Unfailed Gustab.md) - 75 techniques
+- [Unleashesd God Kula](Unleashesd God Kula.md) - 57 techniques
+- [Viper](Viper.md) - 44 techniques
+- [WatchTV](WatchTV.md) - 16 techniques
+- [WhirlWind-Goenitz](WhirlWind-Goenitz.md) - 109 techniques
+- [White DeathRaGeroous Version](White DeathRaGeroous Version.md) - 77 techniques
+- [Wild.O.Yashiro](Wild.O.Yashiro.md) - 99 techniques
+- [Wind_MMXIX](Wind_MMXIX.md) - 62 techniques
+- [Xion-V](Xion-V.md) - 52 techniques
+- [Yamazaki.Blood](Yamazaki.Blood.md) - 14 techniques
+- [Yukida](Yukida.md) - 61 techniques
+- [Yuri_SV](Yuri_SV.md) - 22 techniques
+- [Zerozuchi_Boss](Zerozuchi_Boss.md) - 81 techniques
+- [_ArchiMurderer](_ArchiMurderer.md) - 81 techniques
+- [ai](ai.md) - 26 techniques
+- [akuma](akuma.md) - 72 techniques
+- [asura-kofa](asura-kofa.md) - 47 techniques
+- [baiyi](baiyi.md) - 12 techniques
+- [billy](billy.md) - 39 techniques
+- [bob](bob.md) - 68 techniques
+- [ccihinako](ccihinako.md) - 30 techniques
+- [ccijhun](ccijhun.md) - 23 techniques
+- [cciking](cciking.md) - 34 techniques
+- [ccishermie](ccishermie.md) - 30 techniques
+- [dr-yang-kofa](dr-yang-kofa.md) - 20 techniques
+- [final-goenitz](final-goenitz.md) - 27 techniques
+- [god_orochi](god_orochi.md) - 46 techniques
+- [heraclius](heraclius.md) - 35 techniques
+- [kfm](kfm.md) - 18 techniques
+- [meteoricmarisa](meteoricmarisa.md) - 35 techniques
+- [mizore-kofmLV2](mizore-kofmLV2.md) - 59 techniques
+- [orochi-iori](orochi-iori.md) - 20 techniques
+- [orochi-kyoko](orochi-kyoko.md) - 39 techniques
+- [robo-kyo-kofa](robo-kyo-kofa.md) - 21 techniques
+- [vandals](vandals.md) - 13 techniques
+
+---
+
+**Total**: 167 personnages documentés

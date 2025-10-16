@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOF Ultimate Online - Guide des Personnages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e94560 0%, #c72c41 100%);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        .search-bar {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-bar input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .container {
+            display: flex;
+            min-height: calc(100vh - 200px);
+        }
+
+        .character-list {
+            width: 300px;
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 2px solid rgba(233, 69, 96, 0.5);
+        }
+
+        .character-item {
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .character-item:hover {
+            background: rgba(233, 69, 96, 0.3);
+            border-left-color: #e94560;
+            transform: translateX(5px);
+        }
+
+        .character-item.active {
+            background: rgba(233, 69, 96, 0.5);
+            border-left-color: #e94560;
+        }
+
+        .character-name {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .technique-count {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.7);
+            margin-top: 5px;
+        }
+
+        .character-details {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .detail-header {
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.3) 0%, rgba(199, 44, 65, 0.3) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(233, 69, 96, 0.5);
+        }
+
+        .detail-header h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e94560;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #e94560;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .move {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .move:hover {
+            background: rgba(233, 69, 96, 0.2);
+            transform: scale(1.02);
+        }
+
+        .move-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .move-command {
+            font-size: 1.2em;
+            font-family: 'Courier New', monospace;
+            background: rgba(0,0,0,0.5);
+            padding: 12px;
+            border-radius: 6px;
+            display: inline-block;
+            color: #4ecca3;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 5px 12px;
+            margin: 2px;
+            background: #e94560;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .direction {
+            display: inline-block;
+            padding: 5px 12px;
+            margin: 2px;
+            background: #4ecca3;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #000;
+            font-size: 1.1em;
+        }
+
+        .legend {
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 50px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .combo-box {
+            background: linear-gradient(135deg, rgba(78, 204, 163, 0.1) 0%, rgba(78, 204, 163, 0.05) 100%);
+            border: 2px solid #4ecca3;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .combo-title {
+            color: #4ecca3;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e94560;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .character-list {
+                width: 100%;
+                max-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🥋 KOF ULTIMATE ONLINE</h1>
+        <p>Guide Interactif des Personnages</p>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="🔍 Rechercher un personnage...">
+    </div>
+
+    <div class="container">
+        <div class="character-list" id="characterList">
+            <!-- Liste générée dynamiquement -->
+        </div>
+
+        <div class="character-details" id="characterDetails">
+            <div class="empty-state">
+                <h2>👈 Sélectionnez un personnage</h2>
+                <p>Choisissez un personnage dans la liste pour voir ses coups et combos</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Charge les données depuis les fichiers Markdown
+        const characters = [];
+
+        async function loadCharacterData() {
+            try {
+                // Charge l'index
+                const indexResponse = await fetch('FICHES_PERSONNAGES/INDEX.md');
+                const indexText = await indexResponse.text();
+
+                // Parse l'index pour obtenir la liste des personnages
+                const lines = indexText.split('\n');
+                for (const line of lines) {
+                    const match = line.match(/- \[(.*?)\]\((.*?\.md)\) - (\d+) techniques/);
+                    if (match) {
+                        characters.push({
+                            name: match[1],
+                            file: match[2],
+                            techniqueCount: parseInt(match[3])
+                        });
+                    }
+                }
+
+                renderCharacterList();
+            } catch (error) {
+                console.error('Erreur chargement index:', error);
+            }
+        }
+
+        function renderCharacterList() {
+            const listContainer = document.getElementById('characterList');
+            listContainer.innerHTML = '';
+
+            characters.forEach((char, index) => {
+                const div = document.createElement('div');
+                div.className = 'character-item';
+                div.innerHTML = `
+                    <div class="character-name">${char.name}</div>
+                    <div class="technique-count">⚡ ${char.techniqueCount} techniques</div>
+                `;
+                div.onclick = () => loadCharacter(char, div);
+                listContainer.appendChild(div);
+            });
+        }
+
+        async function loadCharacter(char, element) {
+            // Marque comme actif
+            document.querySelectorAll('.character-item').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+
+            try {
+                const response = await fetch(`FICHES_PERSONNAGES/${char.file}`);
+                const markdown = await response.text();
+
+                displayCharacterDetails(char, markdown);
+            } catch (error) {
+                console.error('Erreur chargement personnage:', error);
+            }
+        }
+
+        function displayCharacterDetails(char, markdown) {
+            const detailsContainer = document.getElementById('characterDetails');
+
+            // Parse le markdown
+            const sections = parseMarkdown(markdown);
+
+            let html = `
+                <div class="detail-header">
+                    <h2>${char.name}</h2>
+                    <p>⚡ ${char.techniqueCount} techniques disponibles</p>
+                </div>
+
+                <div class="legend">
+                    <h3>🎮 Légende des Commandes</h3>
+                    <div class="legend-grid">
+                        <div class="legend-item">
+                            <span class="direction">→</span> Avant (F)
+                        </div>
+                        <div class="legend-item">
+                            <span class="direction">←</span> Arrière (B)
+                        </div>
+                        <div class="legend-item">
+                            <span class="direction">↓</span> Bas (D)
+                        </div>
+                        <div class="legend-item">
+                            <span class="direction">↑</span> Haut (U)
+                        </div>
+                        <div class="legend-item">
+                            <span class="button">A</span> Light Punch
+                        </div>
+                        <div class="legend-item">
+                            <span class="button">B</span> Medium Punch
+                        </div>
+                        <div class="legend-item">
+                            <span class="button">C</span> Heavy Punch
+                        </div>
+                        <div class="legend-item">
+                            <span class="button">X</span> Light Kick
+                        </div>
+                        <div class="legend-item">
+                            <span class="button">Y</span> Medium Kick
+                        </div>
+                        <div class="legend-item">
+                            <span class="button">Z</span> Heavy Kick
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Supers
+            if (sections.supers && sections.supers.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">🔥 SUPER MOVES / DESPERATION MOVES</div>
+                        ${sections.supers.map(move => `
+                            <div class="move">
+                                <div class="move-name">${move.name}</div>
+                                <div class="move-command">${formatCommand(move.command)}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            // Specials
+            if (sections.specials && sections.specials.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">⚡ COUPS SPÉCIAUX</div>
+                        ${sections.specials.map(move => `
+                            <div class="move">
+                                <div class="move-name">${move.name}</div>
+                                <div class="move-command">${formatCommand(move.command)}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            // Throws
+            if (sections.throws && sections.throws.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">🤜 PROJECTIONS</div>
+                        ${sections.throws.map(move => `
+                            <div class="move">
+                                <div class="move-name">${move.name}</div>
+                                <div class="move-command">${formatCommand(move.command)}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            // Combos
+            html += `
+                <div class="section">
+                    <div class="section-title">💥 COMBOS SUGGÉRÉS</div>
+                    <div class="combo-box">
+                        <div class="combo-title">Combo 1 - Basic</div>
+                        <div class="move-command">LP → MP → HP → Special Move</div>
+                    </div>
+                    <div class="combo-box">
+                        <div class="combo-title">Combo 2 - Jumping</div>
+                        <div class="move-command">Jump HK → LP → MP → Special Move</div>
+                    </div>
+                    <div class="combo-box">
+                        <div class="combo-title">Combo 3 - Super Finish</div>
+                        <div class="move-command">LP → MP → HP → Super Move</div>
+                    </div>
+                </div>
+            `;
+
+            detailsContainer.innerHTML = html;
+            detailsContainer.scrollTop = 0;
+        }
+
+        function parseMarkdown(markdown) {
+            const sections = {
+                supers: [],
+                specials: [],
+                throws: [],
+                other: []
+            };
+
+            let currentSection = null;
+            let currentMove = null;
+
+            const lines = markdown.split('\n');
+
+            for (const line of lines) {
+                // Détecte les sections
+                if (line.includes('## 🔥 SUPER MOVES')) {
+                    currentSection = 'supers';
+                } else if (line.includes('## ⚡ COUPS SPÉCIAUX')) {
+                    currentSection = 'specials';
+                } else if (line.includes('## 🤜 PROJECTIONS')) {
+                    currentSection = 'throws';
+                } else if (line.includes('## 🎯 AUTRES')) {
+                    currentSection = 'other';
+                }
+
+                // Détecte les noms de mouvements
+                if (line.startsWith('### ')) {
+                    if (currentMove && currentSection) {
+                        sections[currentSection].push(currentMove);
+                    }
+                    currentMove = {
+                        name: line.replace('### ', '').trim(),
+                        command: ''
+                    };
+                }
+
+                // Détecte les commandes
+                if (line.startsWith('**Commande**: ') && currentMove) {
+                    currentMove.command = line.replace('**Commande**: ', '').replace(/`/g, '').trim();
+                }
+            }
+
+            // Ajoute le dernier move
+            if (currentMove && currentSection) {
+                sections[currentSection].push(currentMove);
+            }
+
+            return sections;
+        }
+
+        function formatCommand(command) {
+            // Remplace les symboles par des spans stylisés
+            let formatted = command;
+
+            // Directions
+            formatted = formatted.replace(/→/g, '<span class="direction">→</span>');
+            formatted = formatted.replace(/←/g, '<span class="direction">←</span>');
+            formatted = formatted.replace(/↓/g, '<span class="direction">↓</span>');
+            formatted = formatted.replace(/↑/g, '<span class="direction">↑</span>');
+            formatted = formatted.replace(/↘/g, '<span class="direction">↘</span>');
+            formatted = formatted.replace(/↙/g, '<span class="direction">↙</span>');
+            formatted = formatted.replace(/↗/g, '<span class="direction">↗</span>');
+            formatted = formatted.replace(/↖/g, '<span class="direction">↖</span>');
+
+            // Boutons
+            formatted = formatted.replace(/\bA\b/g, '<span class="button">A</span>');
+            formatted = formatted.replace(/\bB\b/g, '<span class="button">B</span>');
+            formatted = formatted.replace(/\bC\b/g, '<span class="button">C</span>');
+            formatted = formatted.replace(/\bX\b/g, '<span class="button">X</span>');
+            formatted = formatted.replace(/\bY\b/g, '<span class="button">Y</span>');
+            formatted = formatted.replace(/\bZ\b/g, '<span class="button">Z</span>');
+            formatted = formatted.replace(/\bLP\b/g, '<span class="button">LP</span>');
+            formatted = formatted.replace(/\bMP\b/g, '<span class="button">MP</span>');
+            formatted = formatted.replace(/\bHP\b/g, '<span class="button">HP</span>');
+            formatted = formatted.replace(/\bLK\b/g, '<span class="button">LK</span>');
+            formatted = formatted.replace(/\bMK\b/g, '<span class="button">MK</span>');
+            formatted = formatted.replace(/\bHK\b/g, '<span class="button">HK</span>');
+
+            return formatted;
+        }
+
+        // Recherche
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.character-item');
+
+            items.forEach(item => {
+                const name = item.querySelector('.character-name').textContent.toLowerCase();
+                if (name.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Charge les données au démarrage
+        loadCharacterData();
+    </script>
+</body>
+</html>

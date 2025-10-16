@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-10-17T00:23:02.520601",
+  "total_bugs": 1,
+  "severity_breakdown": {
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "bugs": [
+    {
+      "timestamp": "2025-10-17T00:23:01.192852",
+      "category": "VISUALISEUR",
+      "severity": "HIGH",
+      "description": "Utilise fetch() qui ne fonctionne pas avec file:// (CORS)"
+    }
+  ],
+  "fixes_applied": []
+}

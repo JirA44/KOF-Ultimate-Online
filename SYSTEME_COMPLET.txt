@@ -1,0 +1,211 @@
+╔══════════════════════════════════════════════════════════════════╗
+║       KOF ULTIMATE ONLINE - SYSTÈME COMPLET CRÉÉ               ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✅ SYSTÈME DE PROFILS (Style Warcraft 3)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 player_profile_system.py
+   • Gestion complète des profils joueurs
+   • Authentification sécurisée (Password + PIN)
+   • Système de statistiques ELO-like
+   • Historique des 50 derniers matchs
+   • Stats par personnage
+   • Système de niveaux et XP
+   • Classement/Leaderboard
+
+📁 launcher_with_profiles.py
+   • Interface graphique Tkinter moderne
+   • Sélection de profils (liste gauche)
+   • Affichage des stats (panneau droit)
+   • Boutons: JOUER, MULTIJOUEUR, Classement
+   • Création/suppression de profils
+   • Double authentification pour jouer
+
+✅ SERVEUR DE MATCHMAKING MMR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 matchmaking_server.py
+   • Serveur TCP multi-threading
+   • Port: 9999
+   • Système MMR adaptatif
+   • Files d'attente par mode (Ranked/Quick/Custom)
+   • Matchmaking automatique
+   • Notifications temps réel
+   • Stats du serveur en direct
+
+Fonctionnalités:
+   ✓ Connexion multi-joueurs
+   ✓ File d'attente ranked (MMR strict)
+   ✓ File d'attente rapide (MMR flexible)
+   ✓ Matchmaking basé sur:
+     - Différence MMR (50 + 5 par seconde d'attente)
+     - Temps d'attente
+   ✓ Création et notification de matchs
+   ✓ Gestion des déconnexions
+
+✅ CLIENT DE MATCHMAKING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 matchmaking_client.py
+   • Client de connexion au serveur
+   • Communication socket TCP
+   • Système de callbacks
+   • Gestion asynchrone des messages
+   • Thread de réception
+
+Méthodes:
+   ✓ connect()       - Connexion au serveur
+   ✓ search_match()  - Recherche de partie
+   ✓ cancel_search() - Annulation
+   ✓ disconnect()    - Déconnexion
+
+Callbacks:
+   ✓ on_match_found    - Match trouvé
+   ✓ on_connected      - Connexion établie
+   ✓ on_disconnected   - Déconnexion
+   ✓ on_error          - Erreur
+
+✅ MENU MULTIJOUEUR EN LIGNE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 online_multiplayer_menu.py
+   • Interface Tkinter du menu online
+   • Connexion automatique au serveur
+   • 3 modes de jeu:
+     - Ranked (Classé)
+     - Quick Match (Rapide)
+     - Custom Lobby (Personnalisé)
+   • Affichage des stats joueur
+   • Barre de progression pendant recherche
+   • Dialog de confirmation de match
+   • Compteur de joueurs en ligne
+
+Fonctionnalités:
+   ✓ Profil joueur affiché
+   ✓ Statut de connexion serveur
+   ✓ Recherche de partie
+   ✓ Annulation de recherche
+   ✓ Acceptation/Refus de match
+   ✓ Timer de 10s pour accepter
+
+✅ TEST AUTOMATIQUE - 2 IA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 auto_matchmaking_test.py
+   • Script de test automatisé
+   • 2 sessions IA simultanées
+   • Tests de bout en bout
+
+Processus de test:
+   1. Création/connexion aux profils
+   2. Connexion au serveur de matchmaking
+   3. Lancement recherche simultanée
+   4. Vérification du match
+   5. Affichage du résultat
+
+Session IA teste:
+   ✓ Création de profil
+   ✓ Authentification
+   ✓ Connexion serveur
+   ✓ Recherche de match
+   ✓ Match trouvé
+   ✓ Infos adversaire
+   ✓ Déconnexion
+
+✅ SCRIPTS DE LANCEMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 START_MATCHMAKING_SYSTEM.bat
+   • Lancement automatique du système complet
+   • Démarre le serveur en arrière-plan
+   • Lance le launcher
+
+✅ DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 README_MATCHMAKING.md
+   • Guide complet du système
+   • Architecture détaillée
+   • Instructions d'utilisation
+   • Configuration
+   • Troubleshooting
+
+📁 GUIDE_ANIMATIONS_MENUS.md
+   • Guide pour créer des animations
+   • Configuration system.def/select.def
+   • Exemples pratiques
+
+╔══════════════════════════════════════════════════════════════════╗
+║                    COMMENT UTILISER                             ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🚀 DÉMARRAGE RAPIDE:
+   1. Double-cliquez: START_MATCHMAKING_SYSTEM.bat
+   2. Créez un profil dans le launcher
+   3. Cliquez sur MULTIJOUEUR
+   4. Choisissez un mode et RECHERCHER UNE PARTIE
+
+🧪 TEST DU SYSTÈME:
+   Terminal 1: python matchmaking_server.py
+   Terminal 2: python auto_matchmaking_test.py
+
+📊 STATISTIQUES:
+   • Profils stockés dans: profiles/profiles_database.json
+   • Système MMR: 1000 points de départ
+   • +20 pts par victoire, -10 pts par défaite
+   • Niveau basé sur XP (1000 XP par niveau)
+
+╔══════════════════════════════════════════════════════════════════╗
+║                      ARCHITECTURE                               ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Launcher (GUI)
+    ↓
+Profile System (JSON DB)
+    ↓
+Online Multiplayer Menu
+    ↓
+Matchmaking Client (Socket TCP)
+    ↓
+Matchmaking Server (Port 9999)
+    ↓
+MMR Algorithm + Queue Management
+    ↓
+Match Creation + Notifications
+
+╔══════════════════════════════════════════════════════════════════╗
+║                    FONCTIONNALITÉS                              ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✅ Système de profils avec stats persistantes
+✅ Authentification double (Password + PIN)
+✅ Launcher graphique style Warcraft 3
+✅ Serveur de matchmaking MMR
+✅ Matchmaking ranked basé sur le MMR
+✅ Mode quick match sans restriction
+✅ Menu multijoueur avec recherche de partie
+✅ Notifications temps réel
+✅ Système de classement/leaderboard
+✅ Test automatique avec 2 IA
+✅ Documentation complète
+✅ Scripts de lancement automatiques
+
+╔══════════════════════════════════════════════════════════════════╗
+║                    PROCHAINES ÉTAPES                            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📋 EN ATTENTE:
+   • Système de fonds d'écrans animés
+   • Intégration animations dans menus MUGEN
+   • Chat in-game
+   • Replay system
+   • Tournois automatiques
+
+🎮 TESTEZ LE SYSTÈME:
+   1. Lancez START_MATCHMAKING_SYSTEM.bat
+   2. Créez 2 profils
+   3. Ouvrez 2 instances du launcher (pour tester le matchmaking)
+   4. Les deux joueurs cherchent une partie
+   5. Ils devraient se trouver mutuellement!
+
+📖 DOCUMENTATION:
+   • Lisez README_MATCHMAKING.md pour les détails
+   • Consultez GUIDE_ANIMATIONS_MENUS.md pour les animations
+
+═══════════════════════════════════════════════════════════════════
+                        SYSTÈME COMPLET ✓
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,286 @@
+{
+  "timestamp": "2025-10-16T16:43:21.273567",
+  "gamepad": "Xbox 360 Controller",
+  "actions": [
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "🤖 IA NAVIGATEUR MANETTE - KOF ULTIMATE"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "🎮 Recherche de la manette..."
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "SUCCESS",
+      "message": "✓ Manette détectée: Xbox 360 Controller"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "  - 6 axes"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "  - 11 boutons"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "  - 1 D-Pads"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "🎮 Vérification du jeu..."
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "🚀 DÉMARRAGE DU TEST DE NAVIGATION"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "16:43:05",
+      "level": "INFO",
+      "message": "⏳ Attente du chargement du jeu..."
+    },
+    {
+      "timestamp": "16:43:08",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:08",
+      "level": "INFO",
+      "message": "📍 Test 1: D-Pad"
+    },
+    {
+      "timestamp": "16:43:10",
+      "level": "WARNING",
+      "message": "⚠️  D-Pad non détecté - tentative avec clavier"
+    },
+    {
+      "timestamp": "16:43:10",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:10",
+      "level": "INFO",
+      "message": "📍 Test 2: Navigation dans le menu"
+    },
+    {
+      "timestamp": "16:43:10",
+      "level": "INFO",
+      "message": "  → Navigation BAS"
+    },
+    {
+      "timestamp": "16:43:10",
+      "level": "INFO",
+      "message": "🎯 Simulant DOWN..."
+    },
+    {
+      "timestamp": "16:43:11",
+      "level": "INFO",
+      "message": "  → Navigation HAUT"
+    },
+    {
+      "timestamp": "16:43:11",
+      "level": "INFO",
+      "message": "🎯 Simulant UP..."
+    },
+    {
+      "timestamp": "16:43:11",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:11",
+      "level": "INFO",
+      "message": "📍 Test 3: Bouton A (Entrée)"
+    },
+    {
+      "timestamp": "16:43:12",
+      "level": "WARNING",
+      "message": "⚠️  Bouton A non détecté - utilisation clavier"
+    },
+    {
+      "timestamp": "16:43:12",
+      "level": "INFO",
+      "message": "🎯 Simulant A..."
+    },
+    {
+      "timestamp": "16:43:13",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:13",
+      "level": "INFO",
+      "message": "📍 Test 4: Bouton B (Retour)"
+    },
+    {
+      "timestamp": "16:43:14",
+      "level": "WARNING",
+      "message": "⚠️  Bouton B non détecté - utilisation clavier"
+    },
+    {
+      "timestamp": "16:43:14",
+      "level": "INFO",
+      "message": "🎯 Simulant B..."
+    },
+    {
+      "timestamp": "16:43:15",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:15",
+      "level": "INFO",
+      "message": "📍 Test 5: Séquence de navigation complète"
+    },
+    {
+      "timestamp": "16:43:15",
+      "level": "INFO",
+      "message": "  → Descendre dans le menu"
+    },
+    {
+      "timestamp": "16:43:15",
+      "level": "INFO",
+      "message": "🎯 Simulant DOWN..."
+    },
+    {
+      "timestamp": "16:43:16",
+      "level": "INFO",
+      "message": "  → Descendre encore"
+    },
+    {
+      "timestamp": "16:43:16",
+      "level": "INFO",
+      "message": "🎯 Simulant DOWN..."
+    },
+    {
+      "timestamp": "16:43:17",
+      "level": "INFO",
+      "message": "  → Remonter"
+    },
+    {
+      "timestamp": "16:43:17",
+      "level": "INFO",
+      "message": "🎯 Simulant UP..."
+    },
+    {
+      "timestamp": "16:43:18",
+      "level": "INFO",
+      "message": "  → Sélectionner"
+    },
+    {
+      "timestamp": "16:43:18",
+      "level": "INFO",
+      "message": "🎯 Simulant A..."
+    },
+    {
+      "timestamp": "16:43:20",
+      "level": "INFO",
+      "message": "  → Retour"
+    },
+    {
+      "timestamp": "16:43:20",
+      "level": "INFO",
+      "message": "🎯 Simulant B..."
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "INFO",
+      "message": "📊 RAPPORT DE NAVIGATION"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "INFO",
+      "message": "Actions effectuées: 48"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "INFO",
+      "message": "Problèmes détectés: 3"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "INFO",
+      "message": ""
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "WARNING",
+      "message": "⚠️  PROBLÈMES DÉTECTÉS:"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "ERROR",
+      "message": "  1. D-Pad not responding - using keyboard fallback"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "ERROR",
+      "message": "  2. Button A not responding"
+    },
+    {
+      "timestamp": "16:43:21",
+      "level": "ERROR",
+      "message": "  3. Button B not responding"
+    }
+  ],
+  "problems": [
+    "D-Pad not responding - using keyboard fallback",
+    "Button A not responding",
+    "Button B not responding"
+  ]
+}

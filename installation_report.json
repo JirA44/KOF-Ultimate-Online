@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-10-16T16:47:54.300865",
+  "checks_passed": [
+    "KOF BLACK R.exe",
+    "data/mugen.cfg",
+    "data/system.def",
+    "data/system.sff",
+    "data/system.snd",
+    "data/select.def",
+    "data/fight.def",
+    "chars",
+    "stages",
+    "data",
+    "font",
+    "sound"
+  ],
+  "warnings": [],
+  "problems": [],
+  "status": "OK"
+}

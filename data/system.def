@@ -78,19 +78,22 @@ cancel.snd =100,2
 ;----------------------------
 ;Title background definition
 [TitleBGdef]
-bgclearcolor = 0,0,0
-
-[TitleBG 0]
-type = anim
-actionno = 4
-layerno = 0
-mask = 1
+bgclearcolor = 20,10,50
 
 [TitleBG 1]
 type = anim
-actionno = 5
+actionno = 4
 layerno = 1
 mask = 1
+trans = add
+
+[TitleBG 2]
+type = anim
+actionno = 5
+layerno = 2
+mask = 1
+trans = addalpha
+alpha = 128,256
 
 ;-------------------------------------------------------------------
 ;Character select definition
@@ -131,14 +134,14 @@ stage.done.snd = 100,1
 cancel.snd = 100,2
 
 portrait.spr = 9000,2
-portrait.offset = 1,0
+portrait.offset = 15,15
 portrait.scale = 0.5,0.5
 
-p1.face.offset = 25,-294
+p1.face.offset = 25,20
 p1.face.scale = 0.5,0.5
 p1.face.facing = 1
 
-p2.face.offset = 614,-294
+p2.face.offset = 550,20
 p2.face.scale = 0.5,0.5
 p2.face.facing = -1
 
@@ -183,20 +186,14 @@ p2.teammenu.value.snd = 100,0
 p2.teammenu.done.snd = 100,1
 ;-----------------------
 [SelectBGdef]
- 
-[SelectBG]
-type = normal
-spriteno = 150,4
-tile = 1,1
-velocity = 0,1
-mask = 1
+bgclearcolor = 15,10,40
 
-[SelectBG 0] 
+[SelectBG 0]
 type = anim
 actionno = 7
 mask = 1
 
-[SelectBG 0] 
+[SelectBG 0]
 type = anim
 actionno = 8
 layerno = 1
@@ -227,12 +224,12 @@ match.offset = 23,230
 match.font = 2
 
 p1.spr = 9000,1
-p1.offset = 19,-583
+p1.offset = 19,100
 p1.facing = 1
 p1.scale = 1,1 
 
 p2.spr = 9000,1
-p2.offset = 620,-583
+p2.offset = 520,100
 p2.facing = -1
 p2.scale = 1,1
 
@@ -368,7 +365,7 @@ time = 770              ;Time to show screen
 fadein.time = 8
 fadeout.time = 15
 ;Winner's portrait and name
-p1.offset = 564,-544
+p1.offset = 450,100
 p1.spr = 9000,1
 p1.facing = -1
 p1.scale = 1,1

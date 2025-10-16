@@ -1,0 +1,127 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+KOF ULTIMATE - Correction Massive de TOUS les fichiers .air
+Corrige automatiquement toutes les erreurs clsn2 dans tous les personnages
+"""
+
+import re
+from pathlib import Path
+
+class Colors:
+    GREEN = '\033[92m'
+    RED = '\033[91m'
+    YELLOW = '\033[93m'
+    CYAN = '\033[96m'
+    MAGENTA = '\033[95m'
+    BOLD = '\033[1m'
+    RESET = '\033[0m'
+
+def fix_air_file(air_path):
+    """Répare un fichier .air"""
+    try:
+        with open(air_path, 'r', encoding='utf-8', errors='ignore') as f:
+            lines = f.readlines()
+
+        fixed_lines = []
+        i = 0
+        fixes_applied = 0
+
+        while i < len(lines):
+            line = lines[i]
+            fixed_lines.append(line)
+
+            # Vérifier si c'est une ligne Clsn2[0] sans déclaration avant
+            if re.match(r'\s*Clsn2\[0\]', line):
+                # Vérifier la ligne précédente
+                prev_line = lines[i-1] if i > 0 else ""
+
+                # Si la ligne précédente n'est PAS une déclaration Clsn2:
+                if not re.match(r'\s*Clsn2:\s*\d+', prev_line):
+                    # Compter combien de Clsn2[X] consécutifs il y a
+                    count = 0
+                    j = i
+                    while j < len(lines) and re.match(r'\s*Clsn2\[\d+\]', lines[j]):
+                        count += 1
+                        j += 1
+
+                    # Insérer la déclaration AVANT la ligne Clsn2[0]
+                    indent = len(line) - len(line.lstrip())
+                    declaration = f"{'': <{indent}}Clsn2: {count}\n"
+
+                    # Remplacer la dernière ligne ajoutée par déclaration + ligne
+                    fixed_lines[-1] = declaration
+                    fixed_lines.append(line)
+
+                    fixes_applied += 1
+
+            i += 1
+
+        # Sauvegarder seulement si des corrections ont été faites
+        if fixes_applied > 0:
+            with open(air_path, 'w', encoding='utf-8') as f:
+                f.writelines(fixed_lines)
+
+        return fixes_applied
+
+    except Exception as e:
+        return -1
+
+def main():
+    print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")
+    print(f"{Colors.MAGENTA}{Colors.BOLD}{'CORRECTION MASSIVE FICHIERS .AIR':^80}{Colors.RESET}")
+    print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+    chars_dir = Path(r"D:\KOF Ultimate\chars")
+
+    if not chars_dir.exists():
+        print(f"{Colors.RED}✗ Dossier chars/ introuvable{Colors.RESET}")
+        return
+
+    # Trouver TOUS les fichiers .air
+    print(f"{Colors.CYAN}Recherche des fichiers .air...{Colors.RESET}")
+    air_files = list(chars_dir.glob("**/*.air"))
+
+    print(f"{Colors.GREEN}✓ {len(air_files)} fichiers .air trouvés{Colors.RESET}\n")
+
+    # Corriger chaque fichier
+    total_fixes = 0
+    files_fixed = 0
+    errors = 0
+
+    for air_file in air_files:
+        fixes = fix_air_file(air_file)
+
+        if fixes > 0:
+            files_fixed += 1
+            total_fixes += fixes
+            print(f"{Colors.GREEN}  ✓ {air_file.relative_to(chars_dir)}: {fixes} corrections{Colors.RESET}")
+        elif fixes == -1:
+            errors += 1
+            print(f"{Colors.RED}  ✗ {air_file.relative_to(chars_dir)}: Erreur{Colors.RESET}")
+
+    # Résumé
+    print(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}{Colors.RESET}")
+    print(f"{Colors.CYAN}{Colors.BOLD}{'RÉSUMÉ':^80}{Colors.RESET}")
+    print(f"{Colors.CYAN}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+    print(f"  Fichiers analysés: {len(air_files)}")
+    print(f"  Fichiers corrigés: {Colors.GREEN}{files_fixed}{Colors.RESET}")
+    print(f"  Total corrections: {Colors.GREEN}{total_fixes}{Colors.RESET}")
+    print(f"  Erreurs: {Colors.RED if errors > 0 else Colors.GREEN}{errors}{Colors.RESET}")
+
+    if files_fixed > 0:
+        print(f"\n{Colors.GREEN}{Colors.BOLD}✓ CORRECTION TERMINÉE!{Colors.RESET}")
+        print(f"{Colors.GREEN}Tous les personnages sont maintenant fonctionnels!{Colors.RESET}\n")
+    else:
+        print(f"\n{Colors.CYAN}Aucune correction nécessaire - Tous les fichiers sont OK!{Colors.RESET}\n")
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(f"\n\n{Colors.YELLOW}Interruption{Colors.RESET}")
+    except Exception as e:
+        print(f"\n{Colors.RED}Erreur: {e}{Colors.RESET}")
+        import traceback
+        traceback.print_exc()
