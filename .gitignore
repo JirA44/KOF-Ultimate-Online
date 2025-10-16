@@ -1,0 +1,118 @@
+# ============================================================================
+# KOF ULTIMATE ONLINE - .gitignore
+# ============================================================================
+
+# FICHIERS VOLUMINEUX (à distribuer séparément)
+# ============================================================================
+# Personnages (9.7 GB total - trop volumineux pour Git)
+chars/
+
+# Sprites et sons volumineux
+*.sff
+*.snd
+*.mp3
+*.ogg
+*.wav
+
+# Stages avec assets volumineux
+stages/
+
+# ============================================================================
+# EXÉCUTABLES ET BIBLIOTHÈQUES
+# ============================================================================
+*.exe
+*.dll
+*.so
+*.dylib
+*.pyd
+
+# Dossiers de bibliothèques
+Elecbyte.MUGEN.libs/
+Microsoft.VC90.CRT/
+Ikemen-GO*/
+
+# ============================================================================
+# FICHIERS GÉNÉRÉS ET BUILD
+# ============================================================================
+build/
+dist/
+*.spec
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+
+# ============================================================================
+# LOGS ET FICHIERS TEMPORAIRES
+# ============================================================================
+*.log
+mugen*.png
+*.tmp
+*.temp
+nul
+stdout.txt
+stderr.txt
+ai_player.log
+
+# Fichiers de cache
+*.cache
+.DS_Store
+Thumbs.db
+
+# ============================================================================
+# ENVIRONNEMENTS VIRTUELS PYTHON
+# ============================================================================
+venv/
+env/
+ENV/
+.venv/
+
+# ============================================================================
+# IDE ET ÉDITEURS
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================================================
+# FICHIERS DE CONFIGURATION LOCAUX
+# ============================================================================
+# Sauvegardes
+*.bak
+*.backup
+*_backup/
+OLD_BACKUP*/
+
+# Profils utilisateurs (configs personnelles)
+profiles/
+
+# ============================================================================
+# DOSSIERS DE DÉVELOPPEMENT
+# ============================================================================
+old_tools/
+ai_enhanced_demos/
+
+# ============================================================================
+# FICHIERS À VERSIONNER (explicitement autorisés)
+# ============================================================================
+# Les scripts Python sont inclus
+!*.py
+
+# La documentation est incluse
+!*.md
+!*.txt
+!*.rst
+
+# Les configs importantes sont incluses
+!data/*.def
+!data/*.cfg
+!*.json
+
+# Les scripts batch sont inclus
+!*.bat
+
+# Note: Les personnages (chars/) devront être téléchargés séparément
+# depuis Google Drive ou un service similaire

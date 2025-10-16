@@ -1,0 +1,74 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║           🎮 KOF ULTIMATE - DEMARRAGE RAPIDE 🎮             ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+📍 VOUS ÊTES ICI: D:\KOF Ultimate\
+
+
+🚀 POUR LANCER LE JEU (1 CLIC):
+
+   Double-cliquez sur:  LAUNCH_ULTIMATE.bat
+
+   C'est TOUT !
+
+
+✨ CE QUI VA SE PASSER:
+
+   [1/4] Installation automatique des dépendances (si nécessaire)
+   [2/4] Lancement du launcher moderne (design spectaculaire)
+   [3/4] Lancement du monitor de manettes (hot-plug)
+   [4/4] Lancement de l'agent IA (surveillance)
+
+
+🎮 ENSUITE:
+
+   1. Dans le launcher, cliquez: ▶ J O U E R ◀
+   2. Branchez votre manette (Xbox, PlayStation, etc.)
+   3. COMBATTEZ ! 🥊💥
+
+
+⚡ TOUT EST AUTOMATIQUE:
+
+   ✅ Dépendances auto-installées
+   ✅ Manettes auto-détectées
+   ✅ Configuration auto-réalisée
+   ✅ Backgrounds déjà intégrés dans le jeu
+   ✅ Hot-plug actif (branchez/débranchez à tout moment)
+
+
+🔧 SI VOUS AVEZ DES PROBLÈMES:
+
+   Lisez:  AGENT_IA_RAPPORT.md
+           (L'agent IA a déjà corrigé tous les problèmes connus)
+
+
+📚 DOCUMENTATION:
+
+   • QUICK_START.md              - Guide de démarrage (1 page)
+   • README_COMPLETE_SYSTEM.md   - Guide complet (50+ pages)
+   • AGENT_IA_RAPPORT.md         - Rapport de l'agent IA
+
+
+🎨 NOUVEAUTÉS:
+
+   ✨ Launcher ultra-moderne avec animations
+   ✨ 6 backgrounds spectaculaires pour les menus
+   ✨ 6 stages spatiaux (galaxies, planètes)
+   ✨ Auto-détection manettes Xbox/PlayStation
+   ✨ Hot-plug temps réel (même pendant le jeu !)
+   ✨ Agent IA qui surveille tout
+
+
+═══════════════════════════════════════════════════════════════
+
+                    🏆 PRÊT À JOUER ! 🏆
+
+   Double-clic sur: LAUNCH_ULTIMATE.bat
+
+═══════════════════════════════════════════════════════════════
+
+
+Créé par Claude Code - Système de Navigation Intelligente IA

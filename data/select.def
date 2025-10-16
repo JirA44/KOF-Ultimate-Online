@@ -1,0 +1,293 @@
+;---------------------caven 170 chars -------------------------
+[Characters]
+x
+x
+x
+x
+x
+Athena Asamiya MI KOFM
+Anette-KOFM
+AngusPurple-KOFM
+x
+x
+x
+x
+Aner Rolange KOFM
+Aika
+A-Angel
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+Benimaru-Nikaido-STAR
+Beast Yeorin QS
+Carlin.Blood-CKOFM
+x
+x
+x
+x
+_ArchiMurderer
+GARS
+Fang
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+C.Kyo.Blood-KOFM
+D.Yashiro.Rhythm(Dusk)1.x
+Caser.Yashiro
+x
+x
+x
+x
+Daisu
+Final Sachiel WF
+Cruelty Sula UM
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+clone benimaru
+Chaos-CKOFM
+Element-Adel
+x
+x
+x
+x
+Element Ash
+Dual-flame_Magaki
+D_DisciplineGirl
+x
+x
+x
+x
+x
+Error Zero
+Chobi-Hige
+BLAKE V3-1.1
+Akiha Yagami DK
+Akiha Orochi
+Psyche_57-1.1
+God_Wind
+GOD_ADEL(2012-01-28 Trial)
+x
+x
+x
+x
+Flamme(S)
+Final Zeroko B
+Kaori Yumiko
+Rose
+Nox Bernstein
+Magnus
+Felix_THird
+WatchTV
+vandals
+ThunderMiss.Shermie
+orochi-iori
+Raika
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+Drakyola
+ABYSS'Mega's
+N-Zeroko
+Littledevil-Phoenix
+Nao-MX 1.0
+Yuno-KOFM
+Valmar Rugal
+Reas-KOFM
+Rocken
+Psyche_42-1.1
+Unleashesd God Kula
+Unfailed Gustab
+True Iori X_KOF
+Titan_KOF
+Shadow-Dancer
+Ryuji
+Olivia
+robo-kyo-kofa
+Raisen.blood-KOFM
+Orochi.Yamazaki-CKOFM
+R.S.P
+NeoGeegus KOFM
+NeoDio KOFM
+meteoricmarisa
+Lord-Goenitz
+Kychiel
+Hunter_U6746
+Goktore-CKOFM
+Garnet 1.1
+Eve
+baiyi
+P-LEONA_ELEMENT
+Orochi Kyo WF
+S_Infezione
+Matam
+Final Goeniko
+Orochi Leona-KOFM
+Zerozuchi_Boss
+Xion-V
+White DeathRaGeroous Version
+New_Kyouki
+WhirlWind-Goenitz
+Element Scarlet
+Voltage Zeroko-Pre
+Nero
+VladRose
+Viper
+Rozwel S.K (LEGIT)
+Rinne-RH
+Rayno
+Original Psyqhical
+O.Zero-Prominence
+Noa_MK
+LUMIEL
+Geese-KOFM
+Yukida
+Final Adel
+Essence of Darkness
+DF-Sula
+BW-Meiling
+Arctic Emperor
+mizore-kofmLV2
+Akiha Yagami1
+Aileen
+Tenrou_Kunagi
+Sasin
+Maryl
+Meld_Boss
+Yuri_SV
+Kartis
+Eputh Blood-KOFM
+Kaneda-KOFM
+; Infernal_Wind
+HIEL-KOFM
+Hiel_SP
+Kotone
+Kei
+Kasumi-KOFM
+Kasim_LV2-CKOFM[v0.40]
+Graves
+dr-yang-kofa
+Duester
+Rugal7th
+Business_Vanessa-KOFM
+Wind_MMXIX
+Balto-KOFM
+D=Rockula
+Mai Phoenix XI
+Athena
+Another Scarlet
+Amoumi-KOFM
+asura-kofa
+Akira_Kazakami
+Athena-Heidern
+Akiha Yagami
+Aika_MK
+Delirus
+Cronus
+Clone Blood Rugal
+BlackPrincess_Tohka
+Alter Kyo
+K9999_KOF
+Choi_XI
+Wild.O.Yashiro
+Chalice
+ccishermie
+cciking
+ccijhun
+ccihinako
+Kyaga-KOFM
+boss-orochi
+Boss Gustab M
+Hiyoi
+billy
+Maltet
+orochi-kyoko
+heraclius
+Athena_XI
+Ash
+bob
+Yamazaki.Blood
+Andy-ROTD
+Alou_AKOF
+Alfred_WLS
+ALBA MEIRA KOF XI -MI2
+akuma
+Akari
+ai
+Final-OriginalZero
+Final-IGNIZ
+final-goenitz
+DG.Rugal-KOFM
+Clone Zero
+god_orochi
+03-A-Kyo LV2
+Spiritland Lords
+Dragondomainlords
+Keyser-Aunthmer
+Orochi-EV1.55
+Sonic Vanesa
+Samael
+Kevenoce
+Daiki_Final(Prototype)
+Reyna
+;=======================≠============================
+[ExtraStages]
+stages/Wall of paintings.def
+stages/TIME INGCODNITA.def
+stages/The Will Of Hades S .def
+stages/O.DB DRORANGE BLACK.def
+stages/light kyouki.def
+stages/Anime Blu.def
+stages/Galaxy BG.def
+stages/DROBLOOD R 2.0.def
+stages/DARK SAID RUGAL S .def
+stages/BLACK SON DROTIME.def
+stages/Red_Cliff.def
+stages/RED.def
+stages/Darkness.def
+stages/Abyss-Rugal-Palace.def
+stages/Anubis.def
+stages/xX-Hell-Dark-Xx.def
+stages/Basque Palace.def
+stages/clones lab destroyed.def
+stages/Moon recidence.def
+stages/Moon of dark wall.def
+stages/Black wall.def
+stages/Palece Mistery R.def
+stages/forest infernal fire.def
+stages/Exagon Force.def
+;---------------------------------------------------------------------
+[Options]
+arcade.maxmatches = 6,1,1,0,0,0,0,0,0,0
+
+team.maxmatches = 6,1,1,1,0,0,0,0,0,0

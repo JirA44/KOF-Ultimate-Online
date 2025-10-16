@@ -1,0 +1,18 @@
+# Requirements for AI Player System
+
+# Core AI
+anthropic>=0.40.0
+
+# Screen capture and automation
+pyautogui>=0.9.54
+pillow>=10.0.0
+keyboard>=0.13.5
+mouse>=0.7.1
+
+# Image processing
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0

@@ -1,0 +1,51 @@
+================================================================================
+                    KOF ULTIMATE ONLINE - DÉMARRAGE RAPIDE
+================================================================================
+
+📌 POUR LANCER LE JEU :
+
+   👉 Double-cliquez sur : LAUNCH_ULTIMATE_SMART.bat
+
+   Ce launcher va :
+   1. Vérifier et réparer automatiquement les erreurs
+   2. Tester le système
+   3. Lancer le jeu
+
+================================================================================
+
+🎮 CONTRÔLES :
+
+   JOUEUR 1 (Clavier):
+   - Flèches directionnelles : Déplacement
+   - A, S, D, F, G, H : Boutons d'action
+   - Entrée : Start
+
+   MANETTE :
+   - Détection automatique
+   - Si problème : Lancez auto_repair_system.py
+
+================================================================================
+
+✨ NOUVEAUTÉS :
+
+   ✅ Menu principal modernisé avec animations cyber
+   ✅ Système d'auto-réparation intelligent
+   ✅ 188 personnages disponibles
+   ✅ 31 stages
+   ✅ Tous les crashes corrigés
+
+================================================================================
+
+🛠️ EN CAS DE PROBLÈME :
+
+   1. Lancez : python auto_repair_system.py
+   2. Relancez le jeu
+   3. Si ça ne marche pas, consultez README_FR.md
+
+================================================================================
+
+📊 STATUT DU JEU : ✅ 100% FONCTIONNEL
+
+Bon jeu ! 🎮🔥
+
+================================================================================

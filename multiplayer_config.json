@@ -1,0 +1,9 @@
+{
+  "last_player_name": "Player1",
+  "last_ip": "localhost",
+  "last_port": 7500,
+  "auto_save": true,
+  "enable_chat": true,
+  "favorite_characters": [],
+  "network_quality": "high"
+}

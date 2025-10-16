@@ -1,0 +1,43 @@
+================================================================================
+  KOF ULTIMATE - RAPPORT DE TEST MULTIJOUEUR
+================================================================================
+
+Date: 2025-10-16 09:50:31
+Nombre de tests: 3
+
+--------------------------------------------------------------------------------
+RÉSULTATS DÉTAILLÉS
+--------------------------------------------------------------------------------
+
+Test #Démarrage rapide (5s):
+  Durée: 5.10s
+  Erreurs: 1
+  Détails:
+    - Initializing pads...failed
+
+Test #Session courte (10s):
+  Durée: 10.18s
+  Erreurs: 73
+  Détails:
+    - Initializing pads...failed
+    - Error reading character file: chars/x/x.def
+    - Error reading character file: chars/x/x.def
+
+Test #Session normale (20s):
+  Durée: 20.18s
+  Erreurs: 73
+  Détails:
+    - Initializing pads...failed
+    - Error reading character file: chars/x/x.def
+    - Error reading character file: chars/x/x.def
+
+--------------------------------------------------------------------------------
+RÉSUMÉ
+--------------------------------------------------------------------------------
+
+Total erreurs: 147
+Tests réussis: 0/3
+
+✗ Erreurs significatives détectées - révision recommandée
+
+================================================================================
