@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # KOF ULTIMATE ONLINE 🎮
 
 <div align="center">
