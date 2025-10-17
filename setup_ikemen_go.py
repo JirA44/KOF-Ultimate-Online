@@ -59,7 +59,7 @@ def setup_ikemen_go():
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'INSTALLATION IKEMEN GO':^80}{Colors.RESET}")
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
 
-    base_dir = Path(r"D:\KOF Ultimate Online Online Online")
+    base_dir = Path(r"D:\KOF Ultimate Online")
     ikemen_dir = base_dir / "Ikemen_GO"
 
     # URLs pour télécharger Ikemen GO

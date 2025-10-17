@@ -125,16 +125,16 @@ alpha = 150,256
 [Select Info]
 fadeout.time = 15
 
-rows = 13
+rows = 10
 columns = 20
 wrapping = 1
-pos = 15,75
+pos = 10,60
 showemptyboxes = 1
 moveoveremptyboxes = 1
 
-cell.size = 29,29
-cell.spacing = 2
-; cell.bg.spr =
+cell.size = 30,30
+cell.spacing = 1
+cell.bg.spr =
 cell.random.anim = 173
 cell.random.switchtime = 5
 
