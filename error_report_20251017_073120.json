@@ -1,0 +1,158 @@
+{
+  "timestamp": "2025-10-17T07:31:20.023625",
+  "total_tested": 30,
+  "ok_count": 30,
+  "error_count": 0,
+  "results": [
+    {
+      "char": "03-A-Kyo LV2",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "A-Angel",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "ABYSS'Mega's",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "ALBA MEIRA KOF XI -MI2",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Aika",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Aika_MK",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Aileen",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Akari",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Akiha Orochi",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Akiha Yagami",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Akiha Yagami DK",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Akiha Yagami1",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Akira_Kazakami",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Alfred_WLS",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Alou_AKOF",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Alter Kyo",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Amoumi-KOFM",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Andy-ROTD",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Aner Rolange KOFM",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Anette-KOFM",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "AngusPurple-KOFM",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Another Scarlet",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Arctic Emperor",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Ash",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Athena",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Athena Asamiya MI KOFM",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Athena-Heidern",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "Athena_XI",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "BLAKE V3-1.1",
+      "status": "OK",
+      "errors": []
+    },
+    {
+      "char": "BW-Meiling",
+      "status": "OK",
+      "errors": []
+    }
+  ]
+}
