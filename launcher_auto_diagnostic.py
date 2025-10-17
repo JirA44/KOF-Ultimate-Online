@@ -216,6 +216,135 @@ File = f-4x6.sff
             self.log(f"  ❌ Impossible de créer debug.def: {e}", "ERROR")
             return False
 
+    def check_and_fix_air_files(self):
+        """Vérifie et corrige automatiquement les erreurs CLSN dans les fichiers AIR"""
+        self.log("\n🔍 Vérification des fichiers AIR...", "INFO")
+
+        fix_script = self.base_path / "FIX_ALL_CLSN_COMPLETE.py"
+
+        if not fix_script.exists():
+            self.log("  ⚠️  Script de correction AIR non trouvé", "WARNING")
+            return False
+
+        try:
+            # Exécuter le script de correction
+            result = subprocess.run(
+                [sys.executable, str(fix_script)],
+                capture_output=True,
+                text=True,
+                timeout=60,
+                cwd=str(self.base_path)
+            )
+
+            # Analyser le résultat
+            if "0 fichiers corrigés" in result.stdout:
+                self.log("  ✓ Aucune erreur AIR détectée", "SUCCESS")
+                return True
+            elif "fichiers corrigés" in result.stdout:
+                # Extraire le nombre de fichiers corrigés
+                import re
+                match = re.search(r'(\d+) fichiers corrigés', result.stdout)
+                if match:
+                    num_fixed = match.group(1)
+                    self.log(f"  🔧 {num_fixed} fichiers AIR corrigés automatiquement", "FIX")
+                    self.fixes.append(f"Fixed {num_fixed} AIR files with CLSN errors")
+                return True
+            else:
+                self.log("  ✓ Vérification AIR terminée", "SUCCESS")
+                return True
+
+        except subprocess.TimeoutExpired:
+            self.log("  ⚠️  Timeout de la vérification AIR", "WARNING")
+            return False
+        except Exception as e:
+            self.log(f"  ❌ Erreur lors de la vérification AIR: {e}", "ERROR")
+            return False
+
+    def check_char_select_config(self):
+        """Vérifie la configuration de l'écran de sélection des personnages"""
+        self.log("\n🎮 Vérification Character Select...", "INFO")
+
+        system_def = self.base_path / "data/system.def"
+        select_def = self.base_path / "data/select.def"
+
+        if not system_def.exists():
+            self.log("  ❌ system.def non trouvé", "ERROR")
+            return False
+
+        if not select_def.exists():
+            self.log("  ❌ select.def non trouvé", "ERROR")
+            return False
+
+        try:
+            # Compter les personnages dans select.def
+            with open(select_def, 'r', encoding='utf-8', errors='ignore') as f:
+                lines = f.readlines()
+
+            in_characters = False
+            char_count = 0
+            for line in lines:
+                stripped = line.strip()
+                if stripped == "[Characters]":
+                    in_characters = True
+                    continue
+                if in_characters:
+                    if stripped.startswith('['):
+                        break
+                    if stripped and not stripped.startswith(';'):
+                        char_count += 1
+
+            # Lire la configuration de la grille
+            with open(system_def, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            rows = 10
+            columns = 20
+            cell_size = "30,30"
+
+            for line in content.split('\n'):
+                if line.strip().startswith('rows ='):
+                    rows = int(line.split('=')[1].strip())
+                elif line.strip().startswith('columns ='):
+                    columns = int(line.split('=')[1].strip())
+                elif line.strip().startswith('cell.size ='):
+                    cell_size = line.split('=')[1].strip()
+
+            total_slots = rows * columns
+
+            self.log(f"  Personnages: {char_count}", "INFO")
+            self.log(f"  Grille: {rows}×{columns} = {total_slots} slots", "INFO")
+            self.log(f"  Taille cellule: {cell_size}", "INFO")
+
+            # Vérifier si la configuration est optimale
+            cell_w, cell_h = map(int, cell_size.split(','))
+
+            if char_count > total_slots:
+                self.log(f"  ⚠️  PROBLÈME: {char_count} personnages > {total_slots} slots!", "WARNING")
+                self.warnings.append("Not enough slots for all characters")
+            elif total_slots - char_count > 50:
+                self.log(f"  ⚠️  Trop de slots vides ({total_slots - char_count})", "WARNING")
+                self.warnings.append("Too many empty slots in grid")
+
+            if cell_w < 32 or cell_h < 32:
+                self.log(f"  ⚠️  Cellules trop petites ({cell_size})", "WARNING")
+                self.warnings.append("Character cells too small")
+
+            # Vérifier largeur écran
+            spacing = 2
+            total_width = columns * cell_w + (columns - 1) * spacing
+            if total_width > 630:
+                self.log(f"  ⚠️  Grille trop large ({total_width}px > 630px)", "WARNING")
+                self.warnings.append("Grid too wide for screen")
+
+            if not self.warnings or all("character" not in w.lower() and "grid" not in w.lower() and "slot" not in w.lower() for w in self.warnings):
+                self.log("  ✓ Configuration optimale", "SUCCESS")
+
+            return True
+
+        except Exception as e:
+            self.log(f"  ❌ Erreur: {e}", "ERROR")
+            return False
+
     def launch_mugen(self):
         """Lance M.U.G.E.N"""
         self.log("\n🚀 Lancement M.U.G.E.N...", "INFO")
@@ -286,6 +415,10 @@ File = f-4x6.sff
         # Vérifications automatiques
         mugen_ok = self.check_mugen_engine()
         ikemen_ok = self.check_ikemen_engine()
+
+        # Vérifications supplémentaires
+        self.check_and_fix_air_files()
+        self.check_char_select_config()
 
         # Résumé
         print()

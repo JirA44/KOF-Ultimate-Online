@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Portraits - KOF Ultimate</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+        .section {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+        }
+        .grid-visual {
+            display: grid;
+            grid-template-columns: repeat(15, 34px);
+            grid-gap: 2px;
+            margin: 20px auto;
+            width: fit-content;
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+        }
+        .cell {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 1px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .portrait-mock {
+            width: calc(100px * 0.34);
+            height: calc(100px * 0.34);
+            background: radial-gradient(circle, #ff6b6b 0%, #c92a2a 100%);
+            border-radius: 50%;
+            opacity: 0.7;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+        }
+        .stat-label {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .issue {
+            background: rgba(255,100,100,0.2);
+            border-left: 4px solid #ff6b6b;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .fix {
+            background: rgba(100,255,100,0.2);
+            border-left: 4px solid #51cf66;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .recommendation {
+            background: rgba(100,150,255,0.2);
+            border-left: 4px solid #4a90e2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Diagnostic Portraits</h1>
+        <div class="subtitle">KOF Ultimate Online - 2025-10-17 19:55:04</div>
+
+        <div class="section">
+            <h2>📊 Configuration Actuelle</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-label">Grille</div>
+                    <div class="stat-value">14×15</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Taille Cellules</div>
+                    <div class="stat-value">34×34 px</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Espacement</div>
+                    <div class="stat-value">2 px</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Échelle Portraits</div>
+                    <div class="stat-value">0.34×0.34</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🖼️ Aperçu Visuel (Première Ligne)</h2>
+            <p style="margin-bottom: 10px; color: #aaa;">Les cercles rouges représentent les portraits à l'échelle actuelle</p>
+            <div class="grid-visual">
+                <div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div><div class="cell"><div class="portrait-mock"></div></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚠️ Problèmes Détectés</h2>
+            <div class="issue">❌ Portraits trop larges: échelle 1.0 > idéal 0.34</div><div class="issue">❌ Portraits trop hauts: échelle 1.0 > idéal 0.34</div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Corrections Appliquées</h2>
+            <div class="fix">✓ Modified portrait.scale = 0.34,0.34</div><div class="fix">✓ Modified portrait.offset = 0,0</div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Recommandations</h2>
+            <div class="recommendation">
+                <strong>Échelle Portraits Optimale:</strong><br>
+                Pour des cellules de 34×34 px
+                et des portraits de ~100×100 px (taille standard M.U.G.E.N),<br>
+                l'échelle optimale est: <strong>0.34×0.34</strong>
+            </div>
+            <div class="recommendation">
+                <strong>Taille Cellules Recommandée:</strong><br>
+                Minimum: 30×30 px<br>
+                Optimal: 34×34 px (configuration actuelle ✓)<br>
+                Maximum: 40×40 px
+            </div>
+            <div class="recommendation">
+                <strong>Espacement Recommandé:</strong><br>
+                2-3 px pour éviter que les cellules se touchent (actuel: 2 px ✓)
+            </div>
+        </div>
+    </div>
+</body>
+</html>

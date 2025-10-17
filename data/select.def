@@ -195,6 +195,17 @@ robo-kyo-kofa
 vandals
 
 [ExtraStages]
+stages/Abyss-Rugal-Palace.def
+stages/Anime Blu.def
+stages/Anubis.def
+stages/Basque Palace.def
+stages/BLACK SON DROTIME.def
+stages/Black wall.def
+stages/clones lab destroyed.def
+stages/DARK SAID RUGAL S .def
+stages/Darkness.def
+stages/DROBLOOD R 2.0.def
+stages/space_void.def
 
 [Options]
 arcade.maxmatches = 6,1,1,0,0,0,0,0,0,0

@@ -45,7 +45,7 @@ echo ⏳ Étape 1/3: Lancement du jeu (VOUS)...
 echo.
 
 REM Lancer Ikemen GO pour le joueur
-cd /d "D:\KOF Ultimate\Ikemen_GO"
+cd /d "D:\KOF Ultimate Online\Ikemen_GO"
 start "KOF - Vous" "Ikemen_GO.exe"
 
 echo ✓ Jeu lancé!
@@ -62,7 +62,7 @@ echo.
 timeout /t 3 /nobreak > nul
 
 REM Lancer l'IA adversaire
-cd /d "D:\KOF Ultimate"
+cd /d "D:\KOF Ultimate Online"
 start "IA Adversaire" python ai_netplay_opponent.py --skill %skill% --wait 5
 
 echo.
