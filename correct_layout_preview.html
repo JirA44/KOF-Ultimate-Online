@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KOF Select Screen - CORRECT Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #000;
+            font-family: Arial, sans-serif;
+        }
+        .screen {
+            width: 640px;
+            height: 480px;
+            background: linear-gradient(135deg, #1a0033 0%, #000033 100%);
+            position: relative;
+            border: 3px solid #666;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Zone portraits en HAUT */
+        .portrait-zone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 140px;
+            background: rgba(0,0,0,0.3);
+            border-bottom: 2px solid #444;
+        }
+
+        .portrait {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #333 0%, #222 100%);
+            border: 2px solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 11px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .p1-portrait {
+            left: 40px;
+            top: 20px;
+            border-color: #ff3333;
+            box-shadow: 0 0 15px rgba(255,0,0,0.5);
+        }
+
+        .p2-portrait {
+            right: 40px;
+            top: 20px;
+            border-color: #3333ff;
+            box-shadow: 0 0 15px rgba(0,0,255,0.5);
+        }
+
+        .portrait-name {
+            position: absolute;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .p1-name {
+            left: 40px;
+            top: 125px;
+        }
+
+        .p2-name {
+            right: 40px;
+            top: 125px;
+        }
+
+        /* Zone grille EN BAS */
+        .grid-zone {
+            position: absolute;
+            top: 150px;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(21, 27px);
+            grid-template-rows: repeat(9, 27px);
+            gap: 2px;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        .cell {
+            width: 27px;
+            height: 27px;
+            background: linear-gradient(135deg, #555 0%, #333 100%);
+            border: 1px solid #777;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cell:hover {
+            transform: scale(1.1);
+            border-color: #fff;
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        .cell.filled::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: radial-gradient(circle, #666 0%, #444 100%);
+        }
+
+        .info {
+            color: #fff;
+            margin-top: 20px;
+            text-align: center;
+            background: #111;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .good {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .spec-item {
+            background: #222;
+            padding: 8px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <!-- Zone portraits -->
+        <div class="portrait-zone">
+            <div class="portrait p1-portrait">
+                <div style="font-size: 10px; color: #aaa;">PLAYER 1</div>
+                <div style="font-size: 16px; margin-top: 10px;">👤</div>
+                <div style="font-size: 9px; margin-top: 10px;">Portrait<br>100×100</div>
+            </div>
+            <div class="portrait-name p1-name">KYO KUSANAGI</div>
+
+            <div class="portrait p2-portrait">
+                <div style="font-size: 10px; color: #aaa;">PLAYER 2</div>
+                <div style="font-size: 16px; margin-top: 10px;">👤</div>
+                <div style="font-size: 9px; margin-top: 10px;">Portrait<br>100×100</div>
+            </div>
+            <div class="portrait-name p2-name">IORI YAGAMI</div>
+        </div>
+
+        <!-- Zone grille -->
+        <div class="grid-zone">
+            <div class="grid">
+                <script>
+                    // 9 rows × 21 columns = 189 cells
+                    for (let i = 0; i < 189; i++) {
+                        document.write('<div class="cell filled"></div>');
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="good">✓ LAYOUT CORRECT - Style KOF Classique</div>
+
+        <div class="specs">
+            <div class="spec-item">
+                <strong>Résolution:</strong> 640×480px
+            </div>
+            <div class="spec-item">
+                <strong>Personnages:</strong> 189
+            </div>
+            <div class="spec-item">
+                <strong>Portraits:</strong><br>
+                • P1: (40, 20) 100×100px<br>
+                • P2: (540, 20) 100×100px<br>
+                • Noms en dessous
+            </div>
+            <div class="spec-item">
+                <strong>Grille:</strong><br>
+                • 9 lignes × 21 colonnes = 189 cases<br>
+                • Cellules: 27×27px, gap: 2px<br>
+                • Position: centrée, Y=150-160
+            </div>
+            <div class="spec-item">
+                <strong>Espacement:</strong><br>
+                • Zone portraits: 0-140px<br>
+                • Zone grille: 150-470px<br>
+                • Séparation claire: 10px
+            </div>
+            <div class="spec-item">
+                <strong>Avantages:</strong><br>
+                • Portraits bien visibles en haut<br>
+                • Grille ne touche PAS les portraits<br>
+                • Toutes les 189 cases visibles<br>
+                • Layout équilibré
+            </div>
+        </div>
+    </div>
+</body>
+</html>

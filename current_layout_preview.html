@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KOF Select Screen - Current Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #000;
+            font-family: Arial, sans-serif;
+        }
+        .screen {
+            width: 640px;
+            height: 480px;
+            background: linear-gradient(135deg, #1a0033 0%, #000033 100%);
+            position: relative;
+            border: 2px solid #333;
+            margin: 0 auto;
+        }
+        .portrait {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #fff;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+        .p1-portrait {
+            left: 18px;
+            top: 13px;
+            border-color: #ff0000;
+        }
+        .p2-portrait {
+            left: 500px;
+            top: 13px;
+            border-color: #0000ff;
+        }
+        .grid {
+            position: absolute;
+            left: 70px;
+            top: 130px;
+            display: grid;
+            grid-template-columns: repeat(15, 27px);
+            grid-template-rows: repeat(13, 27px);
+            gap: 2px;
+        }
+        .cell {
+            width: 27px;
+            height: 27px;
+            background: #444;
+            border: 1px solid #666;
+        }
+        .info {
+            color: #fff;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .legend {
+            color: #aaa;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .warning {
+            color: #ff6600;
+            font-weight: bold;
+            margin: 10px;
+            padding: 10px;
+            background: #220000;
+            border: 1px solid #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        ⚠️ PROBLÈME: La grille (13×15) commence à Y=130px, trop haute pour laisser de la place aux portraits!
+    </div>
+
+    <div class="screen">
+        <!-- Portraits joueurs -->
+        <div class="portrait p1-portrait">
+            P1 PORTRAIT<br>
+            (18, 13)<br>
+            120×120px
+        </div>
+        <div class="portrait p2-portrait">
+            P2 PORTRAIT<br>
+            (500, 13)<br>
+            120×120px
+        </div>
+
+        <!-- Grille de sélection -->
+        <div class="grid">
+            <!-- 13 rows × 15 columns = 195 cells -->
+            <script>
+                for (let i = 0; i < 195; i++) {
+                    document.write('<div class="cell"></div>');
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="info">
+        <strong>Configuration actuelle (system.def)</strong><br>
+        Résolution: 640×480px<br>
+        Grille: 13 lignes × 15 colonnes = 195 cases<br>
+        Position grille: (70, 130)<br>
+        Taille cellule: 27×27px, espacement: 2px<br>
+        Hauteur totale grille: 13×27 + 12×2 = 375px<br>
+        La grille se termine à: 130 + 375 = 505px <span style="color: red;">(DÉPASSE 480px!)</span>
+    </div>
+
+    <div class="legend">
+        <div class="warning">
+            <strong>DIAGNOSTIC:</strong><br>
+            1. Les portraits (18,13 et 500,13) sont en HAUT<br>
+            2. La grille commence à Y=130, ce qui CHEVAUCHE les portraits (hauteur 120px + 13px = 133px)<br>
+            3. La grille est TROP HAUTE: 375px de haut, ce qui dépasse l'écran (130+375=505 > 480)<br>
+            <br>
+            <strong>SOLUTION:</strong> Réduire les lignes (rows) ou descendre/rétrécir les portraits
+        </div>
+    </div>
+</body>
+</html>
