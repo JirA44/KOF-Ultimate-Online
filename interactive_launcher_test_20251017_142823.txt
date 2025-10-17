@@ -1,0 +1,12 @@
+======================================================================
+RAPPORT TESTS INTERACTIFS LAUNCHERS
+======================================================================
+
+Total: 4
+Succès: 4
+Erreurs: 0
+
+OK: launcher.py
+OK: launcher_modern.py
+OK: LAUNCHER_ULTIMATE.py
+OK: LAUNCHER_ULTIMATE_V2.py

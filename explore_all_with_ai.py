@@ -12,7 +12,7 @@ import json
 
 class AIExplorationSystem:
     def __init__(self):
-        self.base_dir = Path(r'D:\KOF Ultimate Online')
+        self.base_dir = Path(r'D:\KOF Ultimate Online Online Online')
         self.results = {
             'system_test': None,
             'game_monitor': None,

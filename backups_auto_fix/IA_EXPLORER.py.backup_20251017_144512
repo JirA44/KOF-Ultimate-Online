@@ -1,0 +1,320 @@
+# -*- coding: utf-8 -*-
+"""
+Agent IA Explorer - Fait parcourir tous les menus et teste le jeu
+"""
+
+import os
+import sys
+import time
+import subprocess
+from pathlib import Path
+import pyautogui
+import json
+from datetime import datetime
+
+class IAExplorer:
+    def __init__(self):
+        self.base_dir = Path(r'D:\KOF Ultimate Online')
+        self.rapport = {
+            'timestamp': datetime.now().isoformat(),
+            'tests_effectues': [],
+            'bugs_trouves': [],
+            'screenshots': []
+        }
+
+    def print_header(self, text):
+        print(f"\n{'='*80}")
+        print(f"  {text}")
+        print(f"{'='*80}\n")
+
+    def attendre(self, secondes, message=""):
+        """Attend avec message"""
+        if message:
+            print(f"⏳ {message} ({secondes}s)")
+        time.sleep(secondes)
+
+    def verifier_jeu_lance(self):
+        """Vérifie si le jeu est lancé"""
+        try:
+            result = subprocess.run(
+                ['powershell', '-Command',
+                 'Get-Process -Name "KOF_Ultimate_Online" -ErrorAction SilentlyContinue | Select-Object Name'],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            return 'KOF_Ultimate_Online' in result.stdout
+        except:
+            return False
+
+    def lancer_jeu(self):
+        """Lance le jeu"""
+        self.print_header("🎮 LANCEMENT DU JEU")
+
+        exe_path = self.base_dir / "KOF_Ultimate_Online.exe"
+
+        if not exe_path.exists():
+            print("❌ Exécutable introuvable!")
+            return False
+
+        try:
+            print("🚀 Lancement du jeu...")
+            subprocess.Popen([str(exe_path)], cwd=str(self.base_dir))
+
+            # Attendre que le jeu démarre
+            for i in range(20):
+                if self.verifier_jeu_lance():
+                    print("✅ Jeu lancé avec succès!")
+                    self.attendre(5, "Chargement du menu principal")
+                    return True
+                time.sleep(1)
+
+            print("⚠️ Le jeu tarde à démarrer...")
+            return True  # On continue quand même
+
+        except Exception as e:
+            print(f"❌ Erreur: {e}")
+            return False
+
+    def prendre_screenshot(self, nom):
+        """Prend un screenshot"""
+        try:
+            screenshot = pyautogui.screenshot()
+            screenshot_path = self.base_dir / f"screenshots_ia/{nom}.png"
+            screenshot_path.parent.mkdir(exist_ok=True)
+            screenshot.save(screenshot_path)
+            self.rapport['screenshots'].append(str(screenshot_path))
+            print(f"📸 Screenshot sauvegardé: {nom}.png")
+            return True
+        except Exception as e:
+            print(f"⚠️ Screenshot échoué: {e}")
+            return False
+
+    def naviguer_menus(self):
+        """Navigue dans les menus du jeu"""
+        self.print_header("🧭 NAVIGATION DANS LES MENUS")
+
+        actions = [
+            ("Menu Principal", "screenshot_menu_principal", 3),
+            ("Descendre vers VS MODE", "bas bas", 1),
+            ("Screenshot VS MODE", "screenshot_vs_mode", 2),
+            ("Entrer dans VS MODE", "a", 2),
+            ("Selection personnages", "screenshot_selection_chars", 3),
+            ("Navigation personnages", "droite droite droite", 1),
+            ("Screenshot grille", "screenshot_grille_chars", 2),
+            ("Choisir personnage 1", "a", 2),
+            ("Screenshot P1 choisi", "screenshot_p1_choisi", 2),
+            ("Navigation P2", "droite droite droite", 1),
+            ("Choisir personnage 2", "a", 2),
+            ("Screenshot P2 choisi", "screenshot_p2_choisi", 2),
+            ("Attente chargement combat", "wait", 5),
+            ("Screenshot VS Screen", "screenshot_vs_screen", 3),
+            ("Attente début combat", "wait", 3),
+            ("Screenshot combat", "screenshot_combat", 2),
+        ]
+
+        for action_nom, action, delai in actions:
+            print(f"📍 {action_nom}...")
+
+            if action.startswith("screenshot_"):
+                self.prendre_screenshot(action)
+            elif action == "wait":
+                self.attendre(delai)
+            else:
+                # Simuler les touches
+                touches = action.split()
+                for touche in touches:
+                    if touche == "bas":
+                        pyautogui.press('down')
+                    elif touche == "haut":
+                        pyautogui.press('up')
+                    elif touche == "gauche":
+                        pyautogui.press('left')
+                    elif touche == "droite":
+                        pyautogui.press('right')
+                    elif touche == "a":
+                        pyautogui.press('a')
+                    elif touche == "enter":
+                        pyautogui.press('enter')
+                    time.sleep(0.5)
+
+            self.attendre(delai)
+
+            self.rapport['tests_effectues'].append({
+                'action': action_nom,
+                'timestamp': datetime.now().isoformat(),
+                'statut': 'OK'
+            })
+
+    def tester_combat(self):
+        """Teste un combat rapide"""
+        self.print_header("⚔️ TEST DE COMBAT")
+
+        print("🥊 Simulation de coups...")
+
+        # Simuler quelques coups
+        coups = ['a', 's', 'd', 'f', 'g', 'h']
+
+        for i in range(15):
+            coup = coups[i % len(coups)]
+            pyautogui.press(coup)
+            time.sleep(0.3)
+
+            if i % 5 == 0:
+                self.prendre_screenshot(f"combat_action_{i}")
+
+        print("✅ Test de combat terminé")
+
+    def retour_menu(self):
+        """Retourne au menu"""
+        self.print_header("🔙 RETOUR AU MENU")
+
+        print("⏎ Appui sur Échap...")
+        pyautogui.press('esc')
+        self.attendre(2)
+
+        pyautogui.press('esc')
+        self.attendre(2)
+
+    def tester_modes(self):
+        """Teste différents modes de jeu"""
+        self.print_header("🎯 TEST DES DIFFÉRENTS MODES")
+
+        modes = [
+            ("ARCADE", "a", 2),
+            ("VS MODE", "bas", 1),
+            ("TRAINING", "bas bas bas bas bas bas", 1),
+            ("OPTIONS", "bas", 1),
+        ]
+
+        print("📋 Navigation dans les modes...")
+
+        for mode_nom, navigation, _ in modes:
+            print(f"  → Test {mode_nom}")
+
+            # Retour au menu principal
+            pyautogui.press('esc')
+            self.attendre(1)
+
+            # Navigation
+            touches = navigation.split()
+            for touche in touches:
+                if touche == "bas":
+                    pyautogui.press('down')
+                elif touche == "haut":
+                    pyautogui.press('up')
+                time.sleep(0.3)
+
+            self.prendre_screenshot(f"menu_{mode_nom.lower().replace(' ', '_')}")
+            self.attendre(1)
+
+    def analyser_logs(self):
+        """Analyse les logs du jeu"""
+        self.print_header("📊 ANALYSE DES LOGS")
+
+        log_file = self.base_dir / "mugen.log"
+
+        if not log_file.exists():
+            print("ℹ️ Aucun log trouvé (jeu pas encore lancé ou pas d'erreurs)")
+            return
+
+        with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
+            log_content = f.read()
+
+        # Chercher les erreurs
+        erreurs = []
+        for line in log_content.split('\n'):
+            if 'error' in line.lower() or 'fatal' in line.lower():
+                erreurs.append(line.strip())
+
+        if erreurs:
+            print(f"⚠️ {len(erreurs)} erreurs trouvées dans le log:")
+            for err in erreurs[:10]:  # Afficher les 10 premières
+                print(f"  - {err}")
+                self.rapport['bugs_trouves'].append(err)
+        else:
+            print("✅ Aucune erreur dans le log du jeu!")
+
+    def generer_rapport(self):
+        """Génère le rapport final"""
+        self.print_header("📄 GÉNÉRATION DU RAPPORT")
+
+        rapport_path = self.base_dir / "ia_exploration_complete.json"
+
+        self.rapport['resume'] = {
+            'total_tests': len(self.rapport['tests_effectues']),
+            'bugs_trouves': len(self.rapport['bugs_trouves']),
+            'screenshots': len(self.rapport['screenshots']),
+            'duree': 'Complete'
+        }
+
+        with open(rapport_path, 'w', encoding='utf-8') as f:
+            json.dump(self.rapport, f, indent=2, ensure_ascii=False)
+
+        print(f"✅ Rapport sauvegardé: {rapport_path}")
+        print()
+        print("📊 RÉSUMÉ:")
+        print(f"  Tests effectués: {self.rapport['resume']['total_tests']}")
+        print(f"  Screenshots: {self.rapport['resume']['screenshots']}")
+        print(f"  Bugs trouvés: {self.rapport['resume']['bugs_trouves']}")
+
+    def explorer_complet(self):
+        """Exploration complète du système"""
+        print("\n" + "="*80)
+        print("  🤖 AGENT IA EXPLORER - EXPLORATION COMPLÈTE")
+        print("="*80)
+
+        # Étape 1: Lancer le jeu
+        if not self.lancer_jeu():
+            print("❌ Impossible de lancer le jeu")
+            return
+
+        # Étape 2: Naviguer dans les menus
+        self.attendre(3, "Attente stabilisation du jeu")
+        self.naviguer_menus()
+
+        # Étape 3: Tester le combat
+        self.attendre(2)
+        self.tester_combat()
+
+        # Étape 4: Retour et test des autres modes
+        self.attendre(2)
+        self.retour_menu()
+        self.attendre(2)
+        self.tester_modes()
+
+        # Étape 5: Analyser les logs
+        self.analyser_logs()
+
+        # Étape 6: Rapport final
+        self.generer_rapport()
+
+        print("\n✅ EXPLORATION COMPLÈTE TERMINÉE!")
+        print("   Consultez ia_exploration_complete.json pour le rapport détaillé")
+
+def main():
+    try:
+        import pyautogui
+    except ImportError:
+        print("Installation de pyautogui...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "pyautogui"])
+        print("Veuillez relancer le script")
+        input("Appuyez sur Entrée...")
+        return
+
+    print("\n⚠️  IMPORTANT:")
+    print("  - Ne touchez pas à la souris/clavier pendant l'exploration")
+    print("  - L'IA va contrôler le jeu automatiquement")
+    print("  - Durée estimée: 3-5 minutes")
+    print()
+
+    reponse = input("Lancer l'exploration automatique? (oui/non): ").strip().lower()
+
+    if reponse in ['oui', 'o', 'y', 'yes']:
+        explorer = IAExplorer()
+        explorer.explorer_complet()
+    else:
+        print("Exploration annulée")
+
+if __name__ == '__main__':
+    main()

@@ -219,7 +219,7 @@ def analyze_existing_log():
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'🔍 ANALYSE DU LOG EXISTANT':^80}{Colors.RESET}")
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
 
-    game_dir = Path(r"D:\KOF Ultimate Online")
+    game_dir = Path(r"D:\KOF Ultimate Online Online Online")
     log_file = game_dir / "mugen.log"
 
     if not log_file.exists():
@@ -252,7 +252,7 @@ def main():
     if len(sys.argv) > 1 and sys.argv[1] == '--analyze':
         analyze_existing_log()
     else:
-        game_dir = Path(r"D:\KOF Ultimate Online")
+        game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         monitor = RealtimeErrorMonitor(game_dir)
 
         print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")

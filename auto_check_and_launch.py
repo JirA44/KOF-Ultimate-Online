@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 class KOFAutoChecker:
-    def __init__(self, base_dir=r"D:\KOF Ultimate Online"):
+    def __init__(self, base_dir=r"D:\KOF Ultimate Online Online Online"):
         self.base_dir = Path(base_dir)
         self.errors = []
         self.warnings = []

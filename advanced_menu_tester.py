@@ -391,7 +391,7 @@ class AdvancedMenuTester:
             return False
 
 def main():
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
 
     tester = AdvancedMenuTester(game_dir)
     tester.run_complete_test()

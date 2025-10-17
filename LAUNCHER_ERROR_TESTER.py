@@ -13,7 +13,7 @@ from datetime import datetime
 import threading
 import queue
 
-game_dir = Path(r"D:\KOF Ultimate Online")
+game_dir = Path(r"D:\KOF Ultimate Online Online Online")
 
 class LauncherErrorTester:
     """Testeur d'erreurs de launcher"""

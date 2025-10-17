@@ -13,7 +13,7 @@ import re
 from pathlib import Path
 from datetime import datetime
 
-game_dir = Path(r"D:\KOF Ultimate Online")
+game_dir = Path(r"D:\KOF Ultimate Online Online Online")
 chars_dir = game_dir / "chars"
 
 class AdvancedAIRFixer:

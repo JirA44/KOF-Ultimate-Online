@@ -23,7 +23,7 @@ class Colors:
     RESET = '\033[0m'
 
 class GraphicsLauncher:
-    def __init__(self, game_dir=r"D:\KOF Ultimate Online"):
+    def __init__(self, game_dir=r"D:\KOF Ultimate Online Online Online"):
         self.game_dir = Path(game_dir)
         self.mugen_cfg = self.game_dir / "data" / "mugen.cfg"
         self.presets_file = self.game_dir / "graphics_presets.json"

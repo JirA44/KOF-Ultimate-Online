@@ -14,7 +14,7 @@ class CharacterBalancer:
     """Analyseur et équilibreur de personnages MUGEN"""
 
     def __init__(self):
-        self.game_path = Path(r"D:\KOF Ultimate Online")
+        self.game_path = Path(r"D:\KOF Ultimate Online Online Online")
         self.chars_path = self.game_path / "chars"
         self.characters = []
         self.stats = {}

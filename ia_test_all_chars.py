@@ -19,7 +19,7 @@ class CharacterTester:
         self.window_handle = None
         self.chars_tested = 0
         self.errors_found = []
-        self.log_file = Path(r"D:\KOF Ultimate Online\char_test_log.txt")
+        self.log_file = Path(r"D:\KOF Ultimate Online Online Online\char_test_log.txt")
 
     def log(self, message):
         """Log dans fichier et console"""

@@ -15,7 +15,7 @@ class DeepErrorDetector:
     """Détecteur d'erreurs profond pour tous les fichiers du jeu"""
 
     def __init__(self):
-        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         self.chars_dir = self.game_dir / "chars"
         self.stages_dir = self.game_dir / "stages"
         self.data_dir = self.game_dir / "data"

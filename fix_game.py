@@ -5,7 +5,7 @@ from pathlib import Path
 print("=== RÉPARATION DU JEU ===\n")
 
 # Chemin vers le dossier data
-data_dir = Path(r"D:\KOF Ultimate Online\data")
+data_dir = Path(r"D:\KOF Ultimate Online Online Online\data")
 system_def = data_dir / "system.def"
 
 # 1. Restaurer system.def depuis backup

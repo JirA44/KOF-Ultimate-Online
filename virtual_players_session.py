@@ -428,7 +428,7 @@ class MultiplayerSession:
 
 def main():
     """Point d'entrée principal"""
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
 
     print(f"{Colors.CYAN}Options:{Colors.RESET}")
     print(f"  1. Session 2 joueurs (rapide - 30s)")

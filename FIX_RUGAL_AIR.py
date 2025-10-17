@@ -12,7 +12,7 @@ from datetime import datetime
 
 def fix_rugal_air():
     """Corrige Rugal-KOFM.air"""
-    air_file = Path(r"D:\KOF Ultimate Online\chars\Rugal7th\Rugal-KOFM.air")
+    air_file = Path(r"D:\KOF Ultimate Online Online Online\chars\Rugal7th\Rugal-KOFM.air")
 
     if not air_file.exists():
         print(f"❌ Fichier introuvable: {air_file}")

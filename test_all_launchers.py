@@ -16,7 +16,7 @@ class LauncherTester:
     """Teste tous les launchers automatiquement"""
 
     def __init__(self):
-        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         self.launchers = []
         self.results = {}
         self.log_file = self.game_dir / "launcher_test_results.txt"

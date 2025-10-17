@@ -14,7 +14,7 @@ class LauncherFixer:
     """Correcteur automatique de launchers"""
 
     def __init__(self):
-        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         self.backup_dir = self.game_dir / "backups_launchers"
         self.backup_dir.mkdir(exist_ok=True)
 

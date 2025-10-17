@@ -21,7 +21,7 @@ class SimpleNavigator:
         self.window_handle = None
         self.actions_performed = 0
         self.errors_detected = []
-        self.screenshots_dir = Path(r"D:\KOF Ultimate Online\ia_screenshots")
+        self.screenshots_dir = Path(r"D:\KOF Ultimate Online Online Online\ia_screenshots")
         self.screenshots_dir.mkdir(exist_ok=True)
 
     def log(self, message):

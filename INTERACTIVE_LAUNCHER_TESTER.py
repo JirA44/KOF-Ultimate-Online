@@ -1,0 +1,296 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+KOF ULTIMATE - TESTEUR INTERACTIF DES LAUNCHERS
+Lance chaque launcher et clique sur tous les boutons pour tester
+"""
+
+import subprocess
+import time
+import pyautogui
+import win32gui
+import win32con
+from pathlib import Path
+from datetime import datetime
+import sys
+
+class InteractiveLauncherTester:
+    """Testeur qui clique vraiment sur les boutons des launchers"""
+
+    def __init__(self):
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
+        self.test_results = []
+        self.errors = []
+
+    def log(self, message, level='INFO'):
+        """Log message"""
+        symbols = {
+            'INFO': 'ℹ️',
+            'SUCCESS': '✅',
+            'WARNING': '⚠️',
+            'ERROR': '❌',
+            'TEST': '🧪',
+            'CLICK': '🖱️'
+        }
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        print(f"[{timestamp}] {symbols.get(level, '•')} {message}")
+
+    def find_window(self, title_keywords):
+        """Trouve une fenêtre par mots-clés dans le titre"""
+        def callback(hwnd, windows):
+            if win32gui.IsWindowVisible(hwnd):
+                title = win32gui.GetWindowText(hwnd).lower()
+                if any(keyword.lower() in title for keyword in title_keywords):
+                    windows.append(hwnd)
+            return True
+
+        windows = []
+        win32gui.EnumWindows(callback, windows)
+        return windows[0] if windows else None
+
+    def activate_window(self, hwnd):
+        """Active une fenêtre"""
+        try:
+            win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+            win32gui.SetForegroundWindow(hwnd)
+            time.sleep(0.5)
+            return True
+        except:
+            return False
+
+    def click_at(self, x, y):
+        """Clique à une position"""
+        pyautogui.click(x, y)
+        time.sleep(0.3)
+
+    def test_launcher_buttons(self, launcher_name):
+        """Teste un launcher en cliquant sur ses boutons"""
+        self.log(f"TEST DU LAUNCHER: {launcher_name}", 'TEST')
+        print("=" * 70)
+        print()
+
+        launcher_path = self.game_dir / launcher_name
+
+        if not launcher_path.exists():
+            self.log(f"Launcher introuvable: {launcher_name}", 'ERROR')
+            return
+
+        try:
+            # Lancer le launcher
+            self.log(f"Lancement de {launcher_name}...")
+
+            proc = subprocess.Popen(
+                [sys.executable, str(launcher_path)],
+                cwd=str(self.game_dir),
+                creationflags=subprocess.CREATE_NEW_CONSOLE
+            )
+
+            # Attendre que la fenêtre apparaisse
+            time.sleep(3)
+
+            # Chercher la fenêtre
+            window_titles = ['launcher', 'kof', 'ultimate', 'python']
+            hwnd = self.find_window(window_titles)
+
+            if not hwnd:
+                self.log("Fenêtre non trouvée", 'WARNING')
+                proc.terminate()
+                return
+
+            self.log(f"Fenêtre trouvée: {win32gui.GetWindowText(hwnd)}", 'SUCCESS')
+
+            # Activer la fenêtre
+            if not self.activate_window(hwnd):
+                self.log("Impossible d'activer la fenêtre", 'ERROR')
+                proc.terminate()
+                return
+
+            # Obtenir les dimensions de la fenêtre
+            rect = win32gui.GetWindowRect(hwnd)
+            win_x, win_y, win_width, win_height = rect
+            center_x = win_x + (win_width - win_x) // 2
+            center_y = win_y + (win_height - win_y) // 2
+
+            self.log(f"Position fenêtre: {win_x},{win_y} - {win_width},{win_height}")
+
+            # Tester différentes actions avec la souris et le clavier
+            test_actions = [
+                ('1', "Taper '1' - Option JOUER"),
+                ('enter', "Appuyer ENTER"),
+                ('escape', "Appuyer ESCAPE - Retour"),
+                ('2', "Taper '2' - Vérifier MAJ"),
+                ('enter', "Appuyer ENTER"),
+                ('escape', "Appuyer ESCAPE - Retour"),
+                ('3', "Taper '3' - Auto-réparation"),
+                ('enter', "Appuyer ENTER"),
+                ('escape', "Appuyer ESCAPE - Retour"),
+                ('4', "Taper '4' - Diagnostic"),
+                ('enter', "Appuyer ENTER"),
+                ('escape', "Appuyer ESCAPE - Retour"),
+                ('0', "Taper '0' - Quitter"),
+            ]
+
+            for key, description in test_actions:
+                self.log(f"Action: {description}", 'CLICK')
+
+                # S'assurer que la fenêtre est active
+                self.activate_window(hwnd)
+
+                # Appuyer sur la touche
+                pyautogui.press(key)
+                time.sleep(1.5)
+
+                # Vérifier si la fenêtre existe toujours
+                if not win32gui.IsWindow(hwnd):
+                    self.log("Fenêtre fermée", 'INFO')
+                    break
+
+            # Attendre un peu
+            time.sleep(2)
+
+            # Terminer proprement
+            try:
+                proc.terminate()
+                proc.wait(timeout=3)
+            except:
+                try:
+                    proc.kill()
+                except:
+                    pass
+
+            self.log(f"Test de {launcher_name} terminé", 'SUCCESS')
+            self.test_results.append({
+                'launcher': launcher_name,
+                'status': 'OK',
+                'error': None
+            })
+
+        except Exception as e:
+            self.log(f"Erreur lors du test: {e}", 'ERROR')
+            self.errors.append(f"{launcher_name}: {e}")
+            self.test_results.append({
+                'launcher': launcher_name,
+                'status': 'ERROR',
+                'error': str(e)
+            })
+
+        print()
+        print("=" * 70)
+        print()
+
+    def test_all_launchers(self):
+        """Teste tous les launchers"""
+        print()
+        print("=" * 70)
+        print("  🧪 TEST INTERACTIF DE TOUS LES LAUNCHERS")
+        print("=" * 70)
+        print()
+
+        launchers = [
+            'launcher.py',
+            'launcher_modern.py',
+            'LAUNCHER_ULTIMATE.py',
+            'LAUNCHER_ULTIMATE_V2.py'
+        ]
+
+        for i, launcher in enumerate(launchers, 1):
+            self.log(f"Launcher {i}/{len(launchers)}", 'TEST')
+            self.test_launcher_buttons(launcher)
+
+            # Pause entre les tests
+            if i < len(launchers):
+                self.log("Pause 3s avant le prochain launcher...", 'INFO')
+                time.sleep(3)
+
+        self.generate_report()
+
+    def generate_report(self):
+        """Génère un rapport final"""
+        print()
+        print("=" * 70)
+        print("📊 RAPPORT FINAL DES TESTS INTERACTIFS")
+        print("=" * 70)
+        print()
+
+        total = len(self.test_results)
+        ok_count = len([r for r in self.test_results if r['status'] == 'OK'])
+        error_count = len([r for r in self.test_results if r['status'] == 'ERROR'])
+
+        print(f"Launchers testés:  {total}")
+        print(f"✅ Succès:         {ok_count}")
+        print(f"❌ Erreurs:        {error_count}")
+        print()
+
+        if self.test_results:
+            print("DÉTAILS PAR LAUNCHER:")
+            print()
+            for result in self.test_results:
+                status_icon = '✅' if result['status'] == 'OK' else '❌'
+                print(f"  {status_icon} {result['launcher']}")
+                if result['error']:
+                    print(f"     Erreur: {result['error']}")
+            print()
+
+        if self.errors:
+            print("🔍 ERREURS DÉTECTÉES:")
+            print()
+            for error in self.errors:
+                print(f"  ❌ {error}")
+            print()
+
+        # Sauvegarder dans un fichier
+        report_file = self.game_dir / f"interactive_launcher_test_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write("=" * 70 + "\n")
+            f.write("RAPPORT TESTS INTERACTIFS LAUNCHERS\n")
+            f.write("=" * 70 + "\n\n")
+
+            f.write(f"Total: {total}\n")
+            f.write(f"Succès: {ok_count}\n")
+            f.write(f"Erreurs: {error_count}\n\n")
+
+            for result in self.test_results:
+                f.write(f"{result['status']}: {result['launcher']}\n")
+                if result['error']:
+                    f.write(f"  Erreur: {result['error']}\n")
+
+        self.log(f"Rapport sauvegardé: {report_file.name}", 'SUCCESS')
+        print("=" * 70)
+        print()
+
+def main():
+    """Main function"""
+    print()
+    print("=" * 70)
+    print("  🖱️ KOF ULTIMATE - TESTEUR INTERACTIF LAUNCHERS")
+    print("=" * 70)
+    print()
+    print("Ce testeur va lancer chaque launcher et cliquer sur les boutons")
+    print("pour vérifier qu'ils fonctionnent correctement.")
+    print()
+    print("⚠️  NE TOUCHEZ PAS la souris/clavier pendant les tests!")
+    print()
+
+    try:
+        input("Appuyez sur ENTRÉE pour commencer les tests...")
+    except EOFError:
+        pass
+
+    tester = InteractiveLauncherTester()
+    tester.test_all_launchers()
+
+    print()
+    try:
+        input("Tests terminés. Appuyez sur ENTRÉE pour fermer...")
+    except EOFError:
+        pass
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\n\n⏹️ Tests interrompus par l'utilisateur")
+    except Exception as e:
+        print(f"\n❌ Erreur critique: {e}")
+        import traceback
+        traceback.print_exc()

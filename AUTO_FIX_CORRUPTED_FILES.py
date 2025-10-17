@@ -14,7 +14,7 @@ class CorruptedFileFixer:
     """Correcteur automatique de fichiers corrompus"""
 
     def __init__(self):
-        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         self.chars_dir = self.game_dir / "chars"
         self.stages_dir = self.game_dir / "stages"
         self.data_dir = self.game_dir / "data"

@@ -410,7 +410,7 @@ class AIMatch:
 
 def main():
     """Point d'entrée"""
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
 
     print(f"\n{Colors.CYAN}Durée du match:{Colors.RESET}")
     print(f"  1. Court (30s)")

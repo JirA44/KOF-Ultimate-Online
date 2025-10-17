@@ -14,7 +14,7 @@ class RemainingErrorsFixer:
     """Correcteur d'erreurs spécifiques restantes"""
 
     def __init__(self):
-        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         self.chars_dir = self.game_dir / "chars"
         self.backup_dir = self.game_dir / "backups_remaining_fixes"
         self.backup_dir.mkdir(exist_ok=True)

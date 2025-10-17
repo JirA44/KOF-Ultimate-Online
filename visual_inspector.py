@@ -27,7 +27,7 @@ class VisualInspector:
         self.root.geometry("1200x800")
         self.root.configure(bg='#0a0e27')
 
-        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         self.exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         self.process = None
         self.window_handle = None

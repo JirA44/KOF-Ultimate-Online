@@ -254,7 +254,7 @@ class OnlineBotMatchSystem:
         print(f"{Colors.GREEN}{Colors.BOLD}✓ Saison terminée!{Colors.RESET}\n")
 
 def main():
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
 
     system = OnlineBotMatchSystem(game_dir)
 

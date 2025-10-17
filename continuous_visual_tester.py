@@ -340,7 +340,7 @@ class VisualTester:
             return False
 
 def main():
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
 
     print(f"\n{Colors.WHITE}Installation des dépendances si nécessaire...{Colors.RESET}")
 

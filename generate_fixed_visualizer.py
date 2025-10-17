@@ -9,7 +9,7 @@ from pathlib import Path
 
 def load_all_characters():
     """Charge tous les personnages depuis INDEX.md"""
-    base_dir = Path(r'D:\KOF Ultimate Online')
+    base_dir = Path(r'D:\KOF Ultimate Online Online Online')
     index_file = base_dir / 'FICHES_PERSONNAGES' / 'INDEX.md'
 
     characters = []
@@ -597,7 +597,7 @@ def main():
     print("\n🔨 Génération du HTML...")
     html = generate_html(characters)
 
-    output_file = Path(r'D:\KOF Ultimate Online\VISUALISEUR_PERSONNAGES_FIXED.html')
+    output_file = Path(r'D:\KOF Ultimate Online Online Online\VISUALISEUR_PERSONNAGES_FIXED.html')
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html)
 

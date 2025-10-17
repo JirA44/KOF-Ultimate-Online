@@ -1,0 +1,59 @@
+"""
+Script pour générer un select.def complet avec tous les personnages disponibles
+"""
+import os
+
+# Chemin vers le dossier des personnages
+chars_dir = r"D:\KOF Ultimate Online\chars"
+output_file = r"D:\KOF Ultimate Online\data\select.def"
+
+# Récupérer tous les dossiers de personnages
+char_folders = []
+for item in os.listdir(chars_dir):
+    item_path = os.path.join(chars_dir, item)
+    if os.path.isdir(item_path):
+        # Vérifier qu'il y a au moins un fichier .def dans le dossier
+        has_def = any(f.endswith('.def') for f in os.listdir(item_path))
+        if has_def:
+            char_folders.append(item)
+
+# Trier par ordre alphabétique
+char_folders.sort(key=str.lower)
+
+print(f"Trouvé {len(char_folders)} personnages valides")
+
+# Créer le contenu du select.def
+content = [
+    ";KOF Ultimate Online - Liste complète des personnages",
+    f";Généré automatiquement - {len(char_folders)} personnages",
+    "[Characters]"
+]
+
+# Ajouter tous les personnages
+for char in char_folders:
+    content.append(char)
+
+# Ajouter les sections supplémentaires
+content.extend([
+    "",
+    "[ExtraStages]",
+    "",
+    "[Options]",
+    "arcade.maxmatches = 6,1,1,0,0,0,0,0,0,0",
+    "team.maxmatches = 6,1,1,1,0,0,0,0,0,0",
+    ""
+])
+
+# Écrire le fichier
+with open(output_file, 'w', encoding='utf-8') as f:
+    f.write('\n'.join(content))
+
+print(f"✓ Fichier select.def généré avec succès!")
+print(f"  Emplacement: {output_file}")
+print(f"  Nombre de personnages: {len(char_folders)}")
+
+# Afficher les 10 premiers personnages
+print("\nPremiers personnages:")
+for char in char_folders[:10]:
+    print(f"  - {char}")
+print("  ...")

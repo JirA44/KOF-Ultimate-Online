@@ -11,7 +11,7 @@ from datetime import datetime
 
 class AIBugDiagnostic:
     def __init__(self):
-        self.base_dir = Path(r'D:\KOF Ultimate Online')
+        self.base_dir = Path(r'D:\KOF Ultimate Online Online Online Online')
         self.bugs_found = []
         self.fixes_applied = []
 

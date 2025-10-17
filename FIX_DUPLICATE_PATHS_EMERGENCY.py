@@ -15,7 +15,7 @@ class EmergencyPathFixer:
 
     def __init__(self):
         self.game_dir = Path(__file__).parent
-        self.correct_path = r"D:\KOF Ultimate Online"
+        self.correct_path = r"D:\KOF Ultimate Online Online Online Online"
         self.backup_dir = self.game_dir / "backups_emergency"
         self.backup_dir.mkdir(exist_ok=True)
         self.files_fixed = 0
@@ -46,12 +46,12 @@ class EmergencyPathFixer:
             original_content = content
 
             # Pattern pour détecter les chemins dupliqués
-            # Match: D:\KOF Ultimate Online...
+            # Match: D:\KOF Ultimate Online Online Online Online...
             pattern = r'D:\\KOF Ultimate(?:( Online)+)'
 
             def replace_func(match):
                 # Remplacer par le chemin correct une seule fois
-                return r'D:\KOF Ultimate Online'
+                return r'D:\KOF Ultimate Online Online Online Online'
 
             # Remplacer tous les chemins dupliqués
             content = re.sub(pattern, replace_func, content)

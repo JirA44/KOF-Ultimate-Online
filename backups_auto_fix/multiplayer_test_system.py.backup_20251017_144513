@@ -1,0 +1,411 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+KOF ULTIMATE - Système de Test Multijoueur
+Simule 3 joueurs pour tester et détecter les bugs
+"""
+
+import subprocess
+import time
+import os
+from pathlib import Path
+from datetime import datetime
+import threading
+import psutil
+
+class Colors:
+    GREEN = '\033[92m'
+    RED = '\033[91m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    CYAN = '\033[96m'
+    MAGENTA = '\033[95m'
+    WHITE = '\033[97m'
+    BOLD = '\033[1m'
+    RESET = '\033[0m'
+
+class GameInstance:
+    """Représente une instance du jeu"""
+
+    def __init__(self, instance_id, game_dir):
+        self.id = instance_id
+        self.game_dir = Path(game_dir)
+        self.exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
+        self.log_path = self.game_dir / f"mugen_player{instance_id}.log"
+        self.process = None
+        self.errors = []
+        self.start_time = None
+        self.end_time = None
+
+    def start(self):
+        """Lance le jeu"""
+        print(f"{Colors.CYAN}[Joueur {self.id}] Lancement du jeu...{Colors.RESET}")
+
+        try:
+            # Supprimer l'ancien log
+            if os.path.exists("D:\\KOF Ultimate\\mugen.log"):
+                try:
+                    os.remove("D:\\KOF Ultimate\\mugen.log")
+                except:
+                    pass
+
+            # Lancer le jeu
+            self.process = subprocess.Popen(
+                [str(self.exe_path)],
+                cwd=str(self.game_dir),
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE
+            )
+
+            self.start_time = datetime.now()
+            print(f"{Colors.GREEN}[Joueur {self.id}] Jeu lancé (PID: {self.process.pid}){Colors.RESET}")
+
+            return True
+
+        except Exception as e:
+            print(f"{Colors.RED}[Joueur {self.id}] Erreur: {e}{Colors.RESET}")
+            return False
+
+    def stop(self):
+        """Arrête le jeu"""
+        if self.process:
+            print(f"{Colors.YELLOW}[Joueur {self.id}] Arrêt du jeu...{Colors.RESET}")
+
+            try:
+                self.process.terminate()
+                self.process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                self.process.kill()
+                self.process.wait()
+
+            self.end_time = datetime.now()
+            print(f"{Colors.GREEN}[Joueur {self.id}] Jeu arrêté{Colors.RESET}")
+
+    def get_duration(self):
+        """Retourne la durée d'exécution"""
+        if self.start_time and self.end_time:
+            return (self.end_time - self.start_time).total_seconds()
+        return 0
+
+    def analyze_log(self):
+        """Analyse le log pour détecter les erreurs"""
+        log_file = Path("D:\\KOF Ultimate\\mugen.log")
+
+        if not log_file.exists():
+            print(f"{Colors.YELLOW}[Joueur {self.id}] Pas de log trouvé{Colors.RESET}")
+            return
+
+        print(f"{Colors.CYAN}[Joueur {self.id}] Analyse du log...{Colors.RESET}")
+
+        with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
+            lines = f.readlines()
+
+        # Chercher les erreurs
+        error_keywords = ['Error', 'Failed', 'failed', 'ERROR', 'crash', 'Crash']
+
+        for line in lines:
+            for keyword in error_keywords:
+                if keyword in line:
+                    self.errors.append(line.strip())
+
+        if self.errors:
+            print(f"{Colors.RED}[Joueur {self.id}] {len(self.errors)} erreurs détectées{Colors.RESET}")
+        else:
+            print(f"{Colors.GREEN}[Joueur {self.id}] Aucune erreur détectée{Colors.RESET}")
+
+class MultiplayerTestSystem:
+    """Système de test multijoueur"""
+
+    def __init__(self, game_dir, num_players=3):
+        self.game_dir = Path(game_dir)
+        self.num_players = num_players
+        self.instances = []
+        self.results = {}
+
+    def run_sequential_test(self, test_duration=20):
+        """Lance les jeux séquentiellement (un après l'autre)"""
+        print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'TEST SÉQUENTIEL - 3 JOUEURS':^80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+        print(f"{Colors.WHITE}Mode: Lancement séquentiel (un joueur après l'autre){Colors.RESET}")
+        print(f"{Colors.WHITE}Durée par joueur: {test_duration} secondes{Colors.RESET}")
+        print(f"{Colors.WHITE}Nombre de joueurs: {self.num_players}{Colors.RESET}\n")
+
+        for i in range(1, self.num_players + 1):
+            print(f"\n{Colors.BLUE}{'─'*80}{Colors.RESET}")
+            print(f"{Colors.BOLD}TEST DU JOUEUR {i}{Colors.RESET}")
+            print(f"{Colors.BLUE}{'─'*80}{Colors.RESET}\n")
+
+            instance = GameInstance(i, self.game_dir)
+
+            if instance.start():
+                self.instances.append(instance)
+
+                # Attendre
+                print(f"{Colors.CYAN}[Joueur {i}] Jeu en cours...{Colors.RESET}")
+                for remaining in range(test_duration, 0, -1):
+                    print(f"\r  Temps restant: {remaining}s ", end='', flush=True)
+                    time.sleep(1)
+                print()
+
+                # Arrêter
+                instance.stop()
+
+                # Attendre un peu avant l'analyse
+                time.sleep(2)
+
+                # Analyser
+                instance.analyze_log()
+
+                # Stocker les résultats
+                self.results[i] = {
+                    'duration': instance.get_duration(),
+                    'errors': len(instance.errors),
+                    'error_details': instance.errors[:5]  # Garder les 5 premières
+                }
+
+                # Attendre avant le prochain test
+                print(f"\n{Colors.CYAN}Pause de 3 secondes...{Colors.RESET}\n")
+                time.sleep(3)
+
+        self.generate_report()
+
+    def run_stress_test(self, num_iterations=3, test_duration=15):
+        """Lance le jeu plusieurs fois d'affilée pour tester la stabilité"""
+        print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'TEST DE STRESS - LANCEMENT RÉPÉTÉ':^80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+        print(f"{Colors.WHITE}Mode: Lancements répétés pour tester la stabilité{Colors.RESET}")
+        print(f"{Colors.WHITE}Nombre d'itérations: {num_iterations}{Colors.RESET}")
+        print(f"{Colors.WHITE}Durée par test: {test_duration} secondes{Colors.RESET}\n")
+
+        success_count = 0
+        crash_count = 0
+
+        for i in range(1, num_iterations + 1):
+            print(f"\n{Colors.BLUE}{'─'*80}{Colors.RESET}")
+            print(f"{Colors.BOLD}ITÉRATION {i}/{num_iterations}{Colors.RESET}")
+            print(f"{Colors.BLUE}{'─'*80}{Colors.RESET}\n")
+
+            instance = GameInstance(i, self.game_dir)
+
+            if instance.start():
+                # Attendre
+                print(f"{Colors.CYAN}Test en cours...{Colors.RESET}")
+                for remaining in range(test_duration, 0, -1):
+                    print(f"\r  Temps restant: {remaining}s ", end='', flush=True)
+                    time.sleep(1)
+                print()
+
+                # Vérifier si le processus est toujours vivant
+                if instance.process.poll() is None:
+                    success_count += 1
+                    print(f"{Colors.GREEN}✓ Le jeu fonctionne correctement{Colors.RESET}")
+                else:
+                    crash_count += 1
+                    print(f"{Colors.RED}✗ Le jeu a crashé!{Colors.RESET}")
+
+                instance.stop()
+                time.sleep(2)
+                instance.analyze_log()
+
+                self.results[i] = {
+                    'duration': instance.get_duration(),
+                    'crashed': instance.process.poll() is not None,
+                    'errors': len(instance.errors),
+                    'error_details': instance.errors[:5]
+                }
+
+                # Pause entre les tests
+                if i < num_iterations:
+                    print(f"\n{Colors.CYAN}Pause de 3 secondes...{Colors.RESET}\n")
+                    time.sleep(3)
+
+        # Résumé
+        print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")
+        print(f"{Colors.BOLD}RÉSUMÉ DU TEST DE STRESS{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{'='*80}{Colors.RESET}\n")
+
+        print(f"  {Colors.GREEN}Lancements réussis: {success_count}/{num_iterations}{Colors.RESET}")
+        print(f"  {Colors.RED}Crashes détectés: {crash_count}/{num_iterations}{Colors.RESET}")
+
+        if crash_count == 0:
+            print(f"\n  {Colors.GREEN}{Colors.BOLD}✓ EXCELLENT! Le jeu est stable{Colors.RESET}")
+        elif crash_count < num_iterations // 2:
+            print(f"\n  {Colors.YELLOW}{Colors.BOLD}⚠ ATTENTION: Quelques instabilités détectées{Colors.RESET}")
+        else:
+            print(f"\n  {Colors.RED}{Colors.BOLD}✗ PROBLÈME: Le jeu est instable{Colors.RESET}")
+
+        self.generate_report()
+
+    def run_compatibility_test(self):
+        """Teste différentes configurations"""
+        print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'TEST DE COMPATIBILITÉ':^80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+        tests = [
+            ("Démarrage rapide (5s)", 5),
+            ("Session courte (10s)", 10),
+            ("Session normale (20s)", 20),
+        ]
+
+        for test_name, duration in tests:
+            print(f"\n{Colors.BLUE}{'─'*80}{Colors.RESET}")
+            print(f"{Colors.BOLD}Test: {test_name}{Colors.RESET}")
+            print(f"{Colors.BLUE}{'─'*80}{Colors.RESET}\n")
+
+            instance = GameInstance(len(self.results) + 1, self.game_dir)
+
+            if instance.start():
+                # Attendre
+                for remaining in range(duration, 0, -1):
+                    print(f"\r  Temps restant: {remaining}s ", end='', flush=True)
+                    time.sleep(1)
+                print()
+
+                instance.stop()
+                time.sleep(2)
+                instance.analyze_log()
+
+                self.results[test_name] = {
+                    'duration': instance.get_duration(),
+                    'errors': len(instance.errors),
+                    'error_details': instance.errors[:3]
+                }
+
+                time.sleep(2)
+
+        self.generate_report()
+
+    def generate_report(self):
+        """Génère un rapport de test"""
+        report_dir = self.game_dir / "test_reports"
+        report_dir.mkdir(exist_ok=True)
+
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        report_file = report_dir / f"multiplayer_test_{timestamp}.txt"
+
+        print(f"\n{Colors.CYAN}Génération du rapport...{Colors.RESET}")
+
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write("="*80 + "\n")
+            f.write("  KOF ULTIMATE - RAPPORT DE TEST MULTIJOUEUR\n")
+            f.write("="*80 + "\n\n")
+
+            f.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Nombre de tests: {len(self.results)}\n\n")
+
+            f.write("-"*80 + "\n")
+            f.write("RÉSULTATS DÉTAILLÉS\n")
+            f.write("-"*80 + "\n\n")
+
+            total_errors = 0
+
+            for test_id, result in self.results.items():
+                f.write(f"Test #{test_id}:\n")
+                f.write(f"  Durée: {result.get('duration', 0):.2f}s\n")
+                f.write(f"  Erreurs: {result.get('errors', 0)}\n")
+
+                if result.get('crashed'):
+                    f.write(f"  CRASH DÉTECTÉ!\n")
+
+                if result.get('error_details'):
+                    f.write(f"  Détails:\n")
+                    for error in result['error_details']:
+                        f.write(f"    - {error}\n")
+
+                f.write("\n")
+
+                total_errors += result.get('errors', 0)
+
+            f.write("-"*80 + "\n")
+            f.write("RÉSUMÉ\n")
+            f.write("-"*80 + "\n\n")
+
+            f.write(f"Total erreurs: {total_errors}\n")
+            f.write(f"Tests réussis: {len([r for r in self.results.values() if r.get('errors', 0) == 0])}/{len(self.results)}\n\n")
+
+            if total_errors == 0:
+                f.write("✓ EXCELLENT! Aucune erreur détectée\n")
+            elif total_errors < 5:
+                f.write("⚠ Quelques erreurs mineures détectées\n")
+            else:
+                f.write("✗ Erreurs significatives détectées - révision recommandée\n")
+
+            f.write("\n" + "="*80 + "\n")
+
+        print(f"{Colors.GREEN}✓ Rapport sauvegardé: {report_file}{Colors.RESET}")
+
+def print_menu():
+    print(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}{Colors.RESET}")
+    print(f"{Colors.CYAN}{Colors.BOLD}{'KOF ULTIMATE - SYSTÈME DE TEST MULTIJOUEUR':^80}{Colors.RESET}")
+    print(f"{Colors.CYAN}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+    print(f"{Colors.BOLD}Modes de test disponibles:{Colors.RESET}\n")
+
+    print(f"  {Colors.GREEN}1.{Colors.RESET} Test Séquentiel")
+    print(f"     Lance 3 instances du jeu une après l'autre")
+    print(f"     Durée: ~2 minutes\n")
+
+    print(f"  {Colors.GREEN}2.{Colors.RESET} Test de Stress")
+    print(f"     Lance le jeu plusieurs fois pour tester la stabilité")
+    print(f"     Durée: ~1-2 minutes\n")
+
+    print(f"  {Colors.GREEN}3.{Colors.RESET} Test de Compatibilité")
+    print(f"     Teste différentes durées de session")
+    print(f"     Durée: ~1 minute\n")
+
+    print(f"  {Colors.GREEN}4.{Colors.RESET} Test Complet")
+    print(f"     Exécute tous les tests")
+    print(f"     Durée: ~5 minutes\n")
+
+    print(f"  {Colors.RED}0.{Colors.RESET} Quitter\n")
+
+def main():
+    game_dir = r"D:\KOF Ultimate Online"
+
+    while True:
+        print_menu()
+
+        choice = input(f"{Colors.CYAN}Votre choix (0-4): {Colors.RESET}")
+
+        if choice == '0':
+            print(f"\n{Colors.YELLOW}Au revoir!{Colors.RESET}\n")
+            break
+
+        system = MultiplayerTestSystem(game_dir)
+
+        if choice == '1':
+            system.run_sequential_test(test_duration=20)
+
+        elif choice == '2':
+            system.run_stress_test(num_iterations=3, test_duration=15)
+
+        elif choice == '3':
+            system.run_compatibility_test()
+
+        elif choice == '4':
+            print(f"\n{Colors.MAGENTA}{Colors.BOLD}LANCEMENT DU TEST COMPLET{Colors.RESET}\n")
+            system.run_sequential_test(test_duration=15)
+            time.sleep(3)
+            system.run_stress_test(num_iterations=3, test_duration=10)
+            time.sleep(3)
+            system.run_compatibility_test()
+
+        else:
+            print(f"\n{Colors.RED}❌ Choix invalide{Colors.RESET}")
+
+        input(f"\n{Colors.CYAN}Appuyez sur Entrée pour continuer...{Colors.RESET}")
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(f"\n\n{Colors.YELLOW}Interruption par l'utilisateur{Colors.RESET}")
+    except Exception as e:
+        print(f"\n{Colors.RED}❌ Erreur: {e}{Colors.RESET}")
+        import traceback
+        traceback.print_exc()

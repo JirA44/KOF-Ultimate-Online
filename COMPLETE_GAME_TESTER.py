@@ -12,7 +12,7 @@ from datetime import datetime
 import json
 import time
 
-game_dir = Path(r"D:\KOF Ultimate Online")
+game_dir = Path(r"D:\KOF Ultimate Online Online Online")
 exe_path = game_dir / "KOF_Ultimate_Online.exe"
 log_file = game_dir / "mugen.log"
 

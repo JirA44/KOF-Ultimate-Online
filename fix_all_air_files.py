@@ -72,7 +72,7 @@ def main():
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'CORRECTION MASSIVE FICHIERS .AIR':^80}{Colors.RESET}")
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
 
-    chars_dir = Path(r"D:\KOF Ultimate Online\chars")
+    chars_dir = Path(r"D:\KOF Ultimate Online Online Online\chars")
 
     if not chars_dir.exists():
         print(f"{Colors.RED}✗ Dossier chars/ introuvable{Colors.RESET}")

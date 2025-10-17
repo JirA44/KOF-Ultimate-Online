@@ -382,7 +382,7 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
             self.restore_select_def()
 
 def main():
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
     tester = CharacterTester(game_dir)
     tester.run_full_test()
 

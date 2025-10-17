@@ -85,7 +85,7 @@ def fix_air_file(file_path):
 
 def main():
     """Fonction principale"""
-    chars_dir = r'D:\KOF Ultimate Online\chars'
+    chars_dir = r'D:\KOF Ultimate Online Online Online\chars'
 
     print("🔍 Scan de tous les fichiers .air...")
 

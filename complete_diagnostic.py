@@ -33,7 +33,7 @@ def check_system_def():
     print(f"\n{Colors.CYAN}{Colors.BOLD}1. VÉRIFICATION system.def{Colors.RESET}")
     print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
 
-    system_def = Path(r"D:\KOF Ultimate Online\data\system.def")
+    system_def = Path(r"D:\KOF Ultimate Online Online Online\data\system.def")
 
     if not system_def.exists():
         print(f"{Colors.RED}✗ system.def INTROUVABLE!{Colors.RESET}")
@@ -110,7 +110,7 @@ def check_sprite_file():
     print(f"\n{Colors.CYAN}{Colors.BOLD}2. VÉRIFICATION system.sff (SPRITES){Colors.RESET}")
     print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
 
-    sff_file = Path(r"D:\KOF Ultimate Online\data\system.sff")
+    sff_file = Path(r"D:\KOF Ultimate Online Online Online\data\system.sff")
 
     if not sff_file.exists():
         print(f"{Colors.RED}✗ system.sff INTROUVABLE!{Colors.RESET}")
@@ -152,7 +152,7 @@ def check_select_def():
     print(f"\n{Colors.CYAN}{Colors.BOLD}3. VÉRIFICATION select.def{Colors.RESET}")
     print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
 
-    select_def = Path(r"D:\KOF Ultimate Online\data\select.def")
+    select_def = Path(r"D:\KOF Ultimate Online Online Online\data\select.def")
 
     if not select_def.exists():
         print(f"{Colors.RED}✗ select.def INTROUVABLE!{Colors.RESET}")
@@ -188,7 +188,7 @@ def check_essential_files():
     print(f"\n{Colors.CYAN}{Colors.BOLD}4. FICHIERS ESSENTIELS{Colors.RESET}")
     print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
 
-    game_dir = Path(r"D:\KOF Ultimate Online")
+    game_dir = Path(r"D:\KOF Ultimate Online Online Online")
 
     files = [
         (game_dir / "KOF_Ultimate_Online.exe", "Exécutable du jeu"),
@@ -219,16 +219,16 @@ echo ====================================
 echo.
 
 echo 1. Nettoyage des logs...
-if exist "D:\KOF Ultimate Online\mugen.log" del "D:\KOF Ultimate Online\mugen.log"
+if exist "D:\KOF Ultimate Online Online Online\mugen.log" del "D:\KOF Ultimate Online Online Online\mugen.log"
 echo    ✓ Logs nettoyés
 
 echo.
 echo 2. Vérification des fichiers...
-python "D:\KOF Ultimate Online\complete_diagnostic.py"
+python "D:\KOF Ultimate Online Online Online\complete_diagnostic.py"
 
 echo.
 echo 3. Lancement du jeu...
-cd /d "D:\KOF Ultimate Online"
+cd /d "D:\KOF Ultimate Online Online Online"
 start "" "KOF_Ultimate_Online.exe"
 
 echo.
@@ -236,7 +236,7 @@ echo ✓ Jeu lancé!
 pause
 '''
 
-    fix_path = Path(r"D:\KOF Ultimate Online\AUTO_FIX.bat")
+    fix_path = Path(r"D:\KOF Ultimate Online Online Online\AUTO_FIX.bat")
     with open(fix_path, 'w', encoding='utf-8') as f:
         f.write(fix_script)
 

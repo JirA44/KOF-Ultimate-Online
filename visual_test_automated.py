@@ -359,7 +359,7 @@ class VisualTester:
             return False
 
 def main():
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
 
     tester = VisualTester(game_dir)
     success = tester.run_full_test()

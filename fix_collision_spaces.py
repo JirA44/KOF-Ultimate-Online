@@ -5,7 +5,7 @@ Corrige les espaces dans les déclarations de collision boxes
 
 import re
 
-file_path = r'D:\KOF Ultimate Online\chars\orochi-iori\Iori-Orochi.air'
+file_path = r'D:\KOF Ultimate Online Online Online\chars\orochi-iori\Iori-Orochi.air'
 
 # Lit le fichier
 with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:

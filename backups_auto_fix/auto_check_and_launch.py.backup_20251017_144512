@@ -1,0 +1,394 @@
+"""
+KOF Ultimate - Auto-vérification complète avant lancement
+Vérifie tous les éléments critiques et lance le jeu automatiquement
+"""
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+class KOFAutoChecker:
+    def __init__(self, base_dir=r"D:\KOF Ultimate Online"):
+        self.base_dir = Path(base_dir)
+        self.errors = []
+        self.warnings = []
+        self.checks_passed = 0
+        self.checks_total = 0
+
+    def check(self, condition, success_msg, error_msg):
+        """Vérifie une condition et log le résultat"""
+        self.checks_total += 1
+        if condition:
+            self.checks_passed += 1
+            print(f"  ✓ {success_msg}")
+            return True
+        else:
+            self.errors.append(error_msg)
+            print(f"  ✗ {error_msg}")
+            return False
+
+    def warn(self, condition, success_msg, warning_msg):
+        """Vérifie avec avertissement non bloquant"""
+        self.checks_total += 1
+        if condition:
+            self.checks_passed += 1
+            print(f"  ✓ {success_msg}")
+            return True
+        else:
+            self.warnings.append(warning_msg)
+            print(f"  ⚠ {warning_msg}")
+            return False
+
+    def step_1_files_essentiels(self):
+        """Étape 1: Fichiers essentiels du système"""
+        print("\n" + "="*70)
+        print("📁 ÉTAPE 1/6: Vérification fichiers essentiels")
+        print("="*70)
+
+        # Fichiers critiques
+        self.check(
+            (self.base_dir / "data/system.def").exists(),
+            "system.def trouvé",
+            "CRITIQUE: data/system.def manquant!"
+        )
+
+        system_sff = self.base_dir / "data/system.sff"
+        self.check(
+            system_sff.exists(),
+            f"system.sff trouvé ({system_sff.stat().st_size // 1024 // 1024} MB)",
+            "CRITIQUE: data/system.sff manquant (sprites du jeu)!"
+        )
+
+        self.check(
+            (self.base_dir / "data/system.snd").exists(),
+            "system.snd trouvé (sons système)",
+            "CRITIQUE: data/system.snd manquant!"
+        )
+
+        self.check(
+            (self.base_dir / "data/mugen.cfg").exists(),
+            "mugen.cfg trouvé",
+            "CRITIQUE: data/mugen.cfg manquant!"
+        )
+
+        self.check(
+            (self.base_dir / "data/select.def").exists(),
+            "select.def trouvé",
+            "CRITIQUE: data/select.def manquant!"
+        )
+
+        exe_file = self.base_dir / "KOF_Ultimate_Online.exe"
+        self.check(
+            exe_file.exists(),
+            "KOF_Ultimate_Online.exe trouvé",
+            "CRITIQUE: KOF_Ultimate_Online.exe manquant!"
+        )
+
+    def step_2_configuration_menu(self):
+        """Étape 2: Configuration des menus"""
+        print("\n" + "="*70)
+        print("🎮 ÉTAPE 2/6: Configuration du menu principal")
+        print("="*70)
+
+        system_def = self.base_dir / "data/system.def"
+        if not system_def.exists():
+            print("  ✗ Impossible de vérifier (system.def manquant)")
+            return
+
+        try:
+            with open(system_def, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            # Vérifier les items de menu
+            menu_items = {
+                'arcade': 'Mode Arcade',
+                'versus': 'Mode VS (Multijoueur)',
+                'teamarcade': 'Team Arcade',
+                'training': 'Mode Training',
+                'options': 'Options'
+            }
+
+            found_items = []
+            for key, name in menu_items.items():
+                pattern = rf'menu\.itemname\.{key}\s*='
+                if re.search(pattern, content, re.IGNORECASE):
+                    found_items.append(name)
+                    if key == 'versus':
+                        print(f"  ✓ {name} trouvé dans le menu ← IMPORTANT!")
+                    else:
+                        print(f"  ✓ {name} trouvé")
+
+            self.check(
+                'Mode VS (Multijoueur)' in found_items,
+                "",  # Déjà affiché ci-dessus
+                "ERREUR: Mode VS manquant dans menu!"
+            )
+
+            self.check(
+                len(found_items) >= 3,
+                f"{len(found_items)} modes de jeu disponibles",
+                f"Seulement {len(found_items)} modes trouvés"
+            )
+
+        except Exception as e:
+            print(f"  ✗ Erreur lecture system.def: {e}")
+
+    def step_3_sprites_et_animations(self):
+        """Étape 3: Sprites et animations"""
+        print("\n" + "="*70)
+        print("🎨 ÉTAPE 3/6: Sprites et animations de fond")
+        print("="*70)
+
+        system_def = self.base_dir / "data/system.def"
+        if not system_def.exists():
+            print("  ✗ Impossible de vérifier")
+            return
+
+        try:
+            with open(system_def, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            # Vérifier TitleBG
+            has_titlebg = '[TitleBGdef]' in content or '[TitleBG' in content
+            self.check(
+                has_titlebg,
+                "Configuration TitleBG trouvée (fond animé du menu)",
+                "Configuration TitleBG manquante"
+            )
+
+            # Vérifier animations
+            anim_pattern = r'actionno\s*=\s*\d+'
+            animations = re.findall(anim_pattern, content)
+            self.check(
+                len(animations) > 0,
+                f"{len(animations)} animations définies dans system.def",
+                "Aucune animation trouvée"
+            )
+
+            # Vérifier sprites
+            sprite_pattern = r'spriteno\s*=\s*[\d,]+'
+            sprites = re.findall(sprite_pattern, content)
+            self.check(
+                len(sprites) > 0,
+                f"{len(sprites)} sprites définis pour le fond",
+                "Aucun sprite de fond trouvé"
+            )
+
+        except Exception as e:
+            print(f"  ✗ Erreur analyse sprites: {e}")
+
+    def step_4_personnages(self):
+        """Étape 4: Personnages"""
+        print("\n" + "="*70)
+        print("👥 ÉTAPE 4/6: Personnages disponibles")
+        print("="*70)
+
+        chars_dir = self.base_dir / "chars"
+        self.check(
+            chars_dir.exists() and chars_dir.is_dir(),
+            "Dossier chars/ trouvé",
+            "Dossier chars/ manquant!"
+        )
+
+        if chars_dir.exists():
+            char_folders = [d for d in chars_dir.iterdir() if d.is_dir()]
+            self.check(
+                len(char_folders) > 0,
+                f"{len(char_folders)} personnages détectés",
+                "Aucun personnage trouvé!"
+            )
+
+        # Vérifier select.def
+        select_def = self.base_dir / "data/select.def"
+        if select_def.exists():
+            try:
+                with open(select_def, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
+
+                chars_section = re.search(r'\[Characters\](.*?)(?:\[|$)', content, re.DOTALL | re.IGNORECASE)
+                if chars_section:
+                    char_lines = [line.strip() for line in chars_section.group(1).split('\n')
+                                 if line.strip() and not line.strip().startswith(';')]
+                    self.check(
+                        len(char_lines) > 10,
+                        f"{len(char_lines)} personnages dans select.def",
+                        f"Seulement {len(char_lines)} personnages dans select.def"
+                    )
+            except Exception as e:
+                print(f"  ⚠ Erreur lecture select.def: {e}")
+
+    def step_5_config_manettes(self):
+        """Étape 5: Configuration manettes"""
+        print("\n" + "="*70)
+        print("🎮 ÉTAPE 5/6: Configuration des manettes")
+        print("="*70)
+
+        mugen_cfg = self.base_dir / "data/mugen.cfg"
+        if not mugen_cfg.exists():
+            print("  ✗ Impossible de vérifier")
+            return
+
+        try:
+            with open(mugen_cfg, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            # Vérifier P1
+            p1_joy_pattern = r'p1\.joystick\s*=\s*\d+'
+            has_p1_joy = re.search(p1_joy_pattern, content, re.IGNORECASE)
+            self.check(
+                has_p1_joy is not None,
+                "Configuration P1 joystick trouvée",
+                "Configuration P1 joystick manquante"
+            )
+
+            # Vérifier P2
+            p2_joy_pattern = r'p2\.joystick\s*=\s*\d+'
+            has_p2_joy = re.search(p2_joy_pattern, content, re.IGNORECASE)
+            self.warn(
+                has_p2_joy is not None,
+                "Configuration P2 joystick trouvée",
+                "Configuration P2 joystick manquante (P2 devra utiliser clavier)"
+            )
+
+            # Vérifier sections [P1 Joystick] et [P2 Joystick]
+            self.check(
+                '[P1 Joystick]' in content,
+                "Section [P1 Joystick] présente",
+                "Section [P1 Joystick] manquante"
+            )
+
+            self.warn(
+                '[P2 Joystick]' in content,
+                "Section [P2 Joystick] présente",
+                "Section [P2 Joystick] manquante"
+            )
+
+        except Exception as e:
+            print(f"  ✗ Erreur lecture mugen.cfg: {e}")
+
+    def step_6_musique(self):
+        """Étape 6: Musique et sons"""
+        print("\n" + "="*70)
+        print("🎵 ÉTAPE 6/6: Musique et fichiers audio")
+        print("="*70)
+
+        # Vérifier musique titre
+        music_files = [
+            "data/musica/MENU SCREEN.mp3",
+            "data/musica/SELECT SCREEN.mp3",
+            "data/musica/VS SCREEN.mp3"
+        ]
+
+        for music_file in music_files:
+            music_path = self.base_dir / music_file
+            if music_path.exists():
+                size_kb = music_path.stat().st_size // 1024
+                self.check(
+                    True,
+                    f"{music_file.split('/')[-1]} trouvé ({size_kb} KB)",
+                    ""
+                )
+            else:
+                self.warn(
+                    False,
+                    "",
+                    f"{music_file.split('/')[-1]} manquant (pas critique)"
+                )
+
+    def generate_report(self):
+        """Génère le rapport final"""
+        print("\n" + "="*70)
+        print("📊 RAPPORT FINAL")
+        print("="*70)
+
+        score = (self.checks_passed / self.checks_total * 100) if self.checks_total > 0 else 0
+
+        print(f"\n✅ Vérifications réussies: {self.checks_passed}/{self.checks_total}")
+        print(f"📊 Score: {score:.1f}%")
+
+        if len(self.warnings) > 0:
+            print(f"\n⚠️  Avertissements ({len(self.warnings)}):")
+            for warn in self.warnings:
+                print(f"   - {warn}")
+
+        if len(self.errors) > 0:
+            print(f"\n❌ Erreurs critiques ({len(self.errors)}):")
+            for err in self.errors:
+                print(f"   - {err}")
+
+            print("\n" + "="*70)
+            print("⚠️  ATTENTION: Erreurs critiques détectées!")
+            print("   Le jeu pourrait ne pas fonctionner correctement.")
+            print("="*70)
+            return False
+        elif len(self.warnings) > 0:
+            print("\n" + "="*70)
+            print("✅ Le jeu est prêt avec quelques avertissements mineurs")
+            print("="*70)
+            return True
+        else:
+            print("\n" + "="*70)
+            print("🎉 PARFAIT! Tous les tests passés!")
+            print("="*70)
+            return True
+
+    def launch_game(self):
+        """Lance le jeu"""
+        print("\n" + "="*70)
+        print("🚀 LANCEMENT DU JEU")
+        print("="*70)
+
+        game_exe = self.base_dir / "KOF_Ultimate_Online.exe"
+
+        if not game_exe.exists():
+            print(f"\n❌ ERREUR: {game_exe} introuvable!")
+            return False
+
+        print(f"\nLancement de: {game_exe.name}")
+        print("Patientez...")
+
+        try:
+            subprocess.Popen([str(game_exe)], cwd=str(self.base_dir))
+            print("\n✅ Jeu lancé avec succès!")
+            return True
+        except Exception as e:
+            print(f"\n❌ ERREUR lors du lancement: {e}")
+            return False
+
+    def run(self, auto_launch=True):
+        """Exécute toutes les vérifications"""
+        print("="*70)
+        print("  KOF ULTIMATE - AUTO-VÉRIFICATION COMPLÈTE")
+        print("="*70)
+
+        # Exécuter toutes les étapes
+        self.step_1_files_essentiels()
+        self.step_2_configuration_menu()
+        self.step_3_sprites_et_animations()
+        self.step_4_personnages()
+        self.step_5_config_manettes()
+        self.step_6_musique()
+
+        # Rapport final
+        success = self.generate_report()
+
+        # Lancer le jeu si demandé
+        if auto_launch:
+            if success or len(self.errors) == 0:
+                print("\n")
+                response = input("Lancer le jeu maintenant? (O/n): ")
+                if response.lower() != 'n':
+                    self.launch_game()
+            else:
+                print("\n⚠️  Lancement annulé à cause des erreurs critiques.")
+                print("   Corrigez les problèmes avant de lancer le jeu.")
+
+        print("\n" + "="*70)
+        return success
+
+if __name__ == "__main__":
+    checker = KOFAutoChecker()
+    checker.run(auto_launch=True)
+
+    input("\nAppuyez sur Entrée pour quitter...")

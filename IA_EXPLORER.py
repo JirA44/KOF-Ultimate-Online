@@ -14,7 +14,7 @@ from datetime import datetime
 
 class IAExplorer:
     def __init__(self):
-        self.base_dir = Path(r'D:\KOF Ultimate Online')
+        self.base_dir = Path(r'D:\KOF Ultimate Online Online Online')
         self.rapport = {
             'timestamp': datetime.now().isoformat(),
             'tests_effectues': [],

@@ -1,0 +1,116 @@
+"""
+KOF Ultimate Online - Lanceur avec détection automatique des manettes
+Détecte les manettes branchées avant de lancer le jeu
+"""
+import os
+import subprocess
+import sys
+
+try:
+    import pygame
+    pygame.init()
+    pygame.joystick.init()
+except ImportError:
+    print("ATTENTION: pygame n'est pas installé.")
+    print("Installez-le avec: pip install pygame")
+    print("\nLancement du jeu sans détection de manettes...")
+    # Lance le jeu quand même
+    game_dir = r"D:\KOF Ultimate Online"
+    game_exe = "KOF_Ultimate_Online.exe"
+    game_path = os.path.join(game_dir, game_exe)
+    if os.path.exists(game_path):
+        subprocess.run([game_path], cwd=game_dir)
+    sys.exit(0)
+
+def detect_gamepads():
+    """Détecte toutes les manettes branchées"""
+    joystick_count = pygame.joystick.get_count()
+
+    print("=" * 60)
+    print("  KOF ULTIMATE ONLINE - DÉTECTION DES MANETTES")
+    print("=" * 60)
+    print(f"\nNombre de manettes détectées: {joystick_count}")
+
+    if joystick_count == 0:
+        print("\nAucune manette détectée!")
+        print("Vous pouvez jouer au clavier.")
+        return []
+
+    gamepads = []
+    for i in range(joystick_count):
+        joystick = pygame.joystick.Joystick(i)
+        joystick.init()
+        gamepads.append({
+            'id': i,
+            'name': joystick.get_name(),
+            'axes': joystick.get_numaxes(),
+            'buttons': joystick.get_numbuttons(),
+            'hats': joystick.get_numhats()
+        })
+
+        print(f"\nManette {i+1}:")
+        print(f"  Nom: {joystick.get_name()}")
+        print(f"  Axes: {joystick.get_numaxes()}")
+        print(f"  Boutons: {joystick.get_numbuttons()}")
+        print(f"  D-Pad: {joystick.get_numhats()}")
+
+    return gamepads
+
+def main():
+    """Fonction principale"""
+    # Détection des manettes
+    gamepads = detect_gamepads()
+
+    print("\n" + "=" * 60)
+
+    if len(gamepads) > 0:
+        print("\nManettes configurées avec succès!")
+        print("\nConfiguration:")
+        print("  - P1: Manette 1 OU Clavier (touches directionnelles)")
+        print("  - P2: Manette 2 OU Clavier (touches QWER)")
+        if len(gamepads) == 1:
+            print("\n  Note: Une seule manette détectée.")
+            print("        P2 peut utiliser le clavier.")
+    else:
+        print("\nMode clavier activé")
+        print("  - P1: Touches directionnelles")
+        print("  - P2: Touches QWER")
+
+    print("\n" + "=" * 60)
+    print("\nLancement du jeu dans 3 secondes...")
+    print("(Appuyez sur Ctrl+C pour annuler)")
+    print("=" * 60 + "\n")
+
+    try:
+        import time
+        time.sleep(3)
+    except KeyboardInterrupt:
+        print("\nLancement annulé.")
+        sys.exit(0)
+
+    # Lancer le jeu
+    game_dir = r"D:\KOF Ultimate Online"
+    game_exe = "KOF_Ultimate_Online.exe"
+    game_path = os.path.join(game_dir, game_exe)
+
+    if not os.path.exists(game_path):
+        print(f"ERREUR: Le jeu n'a pas été trouvé à: {game_path}")
+        print("Vérifiez le chemin dans le script.")
+        input("\nAppuyez sur Entrée pour quitter...")
+        sys.exit(1)
+
+    print("Lancement de KOF Ultimate Online...\n")
+
+    try:
+        # IMPORTANT: Utiliser le chemin complet ET spécifier cwd pour trouver data/mugen.cfg
+        subprocess.run([game_path], cwd=game_dir)
+    except Exception as e:
+        print(f"ERREUR lors du lancement: {e}")
+        input("\nAppuyez sur Entrée pour quitter...")
+        sys.exit(1)
+
+    # Nettoyage
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()

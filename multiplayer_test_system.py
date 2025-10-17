@@ -365,7 +365,7 @@ def print_menu():
     print(f"  {Colors.RED}0.{Colors.RESET} Quitter\n")
 
 def main():
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
 
     while True:
         print_menu()

@@ -15,7 +15,7 @@ except ImportError:
     print("Installez-le avec: pip install pygame")
     print("\nLancement du jeu sans détection de manettes...")
     # Lance le jeu quand même
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
     game_exe = "KOF_Ultimate_Online.exe"
     game_path = os.path.join(game_dir, game_exe)
     if os.path.exists(game_path):
@@ -89,7 +89,7 @@ def main():
         sys.exit(0)
 
     # Lancer le jeu
-    game_dir = r"D:\KOF Ultimate Online"
+    game_dir = r"D:\KOF Ultimate Online Online Online"
     game_exe = "KOF_Ultimate_Online.exe"
     game_path = os.path.join(game_dir, game_exe)
 

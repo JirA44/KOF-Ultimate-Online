@@ -10,7 +10,7 @@ from pathlib import Path
 import shutil
 from datetime import datetime
 
-game_dir = Path(r"D:\KOF Ultimate Online")
+game_dir = Path(r"D:\KOF Ultimate Online Online Online")
 chars_dir = game_dir / "chars"
 backup_dir = game_dir / "backups_clsn_regrouped"
 backup_dir.mkdir(exist_ok=True)

@@ -1,0 +1,17 @@
+======================================================================
+RAPPORT DES ERREURS DES LAUNCHERS
+======================================================================
+
+Total d'erreurs: 8
+Total d'avertissements: 0
+
+ERREURS:
+1. LAUNCHER_ULTIMATE.py - ENTER: [Errno 22] Invalid argument
+2. LAUNCHER_ULTIMATE.py - Choix 2 - Vérifier mises à jour: [Errno 22] Invalid argument
+3. LAUNCHER_ULTIMATE.py - ENTER: [Errno 22] Invalid argument
+4. LAUNCHER_ULTIMATE.py - Choix 3 - Auto-réparation: [Errno 22] Invalid argument
+5. LAUNCHER_ULTIMATE.py - ENTER: [Errno 22] Invalid argument
+6. LAUNCHER_ULTIMATE.py - Choix 4 - Diagnostic: [Errno 22] Invalid argument
+7. LAUNCHER_ULTIMATE.py - ENTER: [Errno 22] Invalid argument
+8. LAUNCHER_ULTIMATE.py - Choix 0 - Quitter: [Errno 22] Invalid argument
+

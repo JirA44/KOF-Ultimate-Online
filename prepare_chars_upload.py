@@ -171,7 +171,7 @@ def compress_chars(chars_dir, output_dir, split_size_mb=2000):
     instructions = {
         'project': 'KOF ULTIMATE ONLINE',
         'component': 'chars',
-        'version': open(Path(r"D:\KOF Ultimate Online\VERSION.txt")).read().strip(),
+        'version': open(Path(r"D:\KOF Ultimate Online Online Online\VERSION.txt")).read().strip(),
         'timestamp': timestamp,
         'original_size': total_size,
         'original_size_formatted': format_size(total_size),
@@ -329,8 +329,8 @@ Pour toute aide, consultez le README principal du projet.
     return True
 
 def main():
-    chars_dir = r"D:\KOF Ultimate Online\chars"
-    output_dir = r"D:\KOF Ultimate Online\chars_upload_package"
+    chars_dir = r"D:\KOF Ultimate Online Online Online\chars"
+    output_dir = r"D:\KOF Ultimate Online Online Online\chars_upload_package"
 
     try:
         compress_chars(chars_dir, output_dir, split_size_mb=2000)

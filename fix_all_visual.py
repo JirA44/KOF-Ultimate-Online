@@ -17,7 +17,7 @@ class VisualFixer:
     """Correcteur visuel automatique"""
 
     def __init__(self):
-        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.game_dir = Path(r"D:\KOF Ultimate Online Online Online")
         self.system_def = self.game_dir / "data" / "system.def"
         self.backup_dir = self.game_dir / "backups_visual"
         self.backup_dir.mkdir(exist_ok=True)

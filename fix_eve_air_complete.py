@@ -58,7 +58,7 @@ def fix_air_file(air_path):
     return fixes_applied
 
 def main():
-    air_path = Path(r"D:\KOF Ultimate Online\chars\Eve\Eve.air")
+    air_path = Path(r"D:\KOF Ultimate Online Online Online\chars\Eve\Eve.air")
 
     if not air_path.exists():
         print(f"❌ Fichier introuvable: {air_path}")

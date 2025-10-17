@@ -269,8 +269,8 @@ LP → MP → HP → Super Move
 
 def main():
     """Fonction principale"""
-    chars_dir = r'D:\KOF Ultimate Online\chars'
-    output_dir = r'D:\KOF Ultimate Online\FICHES_PERSONNAGES'
+    chars_dir = r'D:\KOF Ultimate Online Online Online\chars'
+    output_dir = r'D:\KOF Ultimate Online Online Online\FICHES_PERSONNAGES'
 
     # Crée le dossier de sortie
     os.makedirs(output_dir, exist_ok=True)

@@ -14,8 +14,8 @@ from threading import Thread
 import webbrowser
 
 # Configuration
-GAME_PATH = Path(r"D:\KOF Ultimate Online")
-IKEMEN_PATH = Path(r"D:\KOF Ultimate Online")
+GAME_PATH = Path(r"D:\KOF Ultimate Online Online Online")
+IKEMEN_PATH = Path(r"D:\KOF Ultimate Online Online Online")
 CONFIG_FILE = GAME_PATH / "multiplayer_config.json"
 
 class MultiplayerConfig:
