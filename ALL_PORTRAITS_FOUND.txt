@@ -1,0 +1,76 @@
+=== TOUS LES PORTRAITS TROUVÉS DANS LE SYSTÈME ===
+
+MINI-PORTRAITS (9000,0.*) - Total: 30
+================================================================================
+D:\KOF Ultimate Online\Ikemen_GO\chars\BLAKE V3-1.1\立绘\HLoader\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\BLAKE V3-1.1\立绘\HLoader\9000,0.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Clone Zero\resource\Omega Rugal Striker\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Final Sachiel WF\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Kei\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Orochi Kyo WF\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Orochi-EV1.55\Portraits for Orochi\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_42-1.1\立绘\HLoader\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_42-1.1\立绘\HLoader\9000,0.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_57-1.1\立绘参考与模板\HLoader\9000,0.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Sonic Vanesa\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Viper\9000,0\9000,0.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Viper\9000,0\pcx\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Xion-V\Potraits\9000,0.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Xion-V\Potraits\9000,0.png
+D:\KOF Ultimate Online\chars\BLAKE V3-1.1\立绘\HLoader\9000,0.pcx
+D:\KOF Ultimate Online\chars\BLAKE V3-1.1\立绘\HLoader\9000,0.png
+D:\KOF Ultimate Online\chars\Clone Zero\resource\Omega Rugal Striker\9000,0.pcx
+D:\KOF Ultimate Online\chars\Final Sachiel WF\9000,0.pcx
+D:\KOF Ultimate Online\chars\Kei\9000,0.pcx
+D:\KOF Ultimate Online\chars\Orochi Kyo WF\9000,0.pcx
+D:\KOF Ultimate Online\chars\Orochi-EV1.55\Portraits for Orochi\9000,0.pcx
+D:\KOF Ultimate Online\chars\Psyche_42-1.1\立绘\HLoader\9000,0.pcx
+D:\KOF Ultimate Online\chars\Psyche_42-1.1\立绘\HLoader\9000,0.png
+D:\KOF Ultimate Online\chars\Psyche_57-1.1\立绘参考与模板\HLoader\9000,0.png
+D:\KOF Ultimate Online\chars\Sonic Vanesa\9000,0.pcx
+D:\KOF Ultimate Online\chars\Viper\9000,0\9000,0.png
+D:\KOF Ultimate Online\chars\Viper\9000,0\pcx\9000,0.pcx
+D:\KOF Ultimate Online\chars\Xion-V\Potraits\9000,0.pcx
+D:\KOF Ultimate Online\chars\Xion-V\Potraits\9000,0.png
+
+
+================================================================================
+
+BIG PORTRAITS (9000,1.*) - Total: 36
+================================================================================
+D:\KOF Ultimate Online\Ikemen_GO\chars\BLAKE V3-1.1\立绘\HLoader\9000,1.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\BLAKE V3-1.1\立绘\HLoader\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\BLAKE V3-1.1\立绘\初音主程序\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\BLAKE V3-1.1\立绘\默认\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Final Sachiel WF\9000,1.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Orochi-EV1.55\Portraits for Orochi\9000,1.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_42-1.1\立绘\HLoader\9000,1.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_42-1.1\立绘\HLoader\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_42-1.1\立绘\初音主程序\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_42-1.1\立绘\默认\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_57-1.1\立绘参考与模板\HLoader\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_57-1.1\立绘参考与模板\初音主程序\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Psyche_57-1.1\立绘参考与模板\默认\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Sonic Vanesa\9000,1.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Viper\9000,0\9000,1.png
+D:\KOF Ultimate Online\Ikemen_GO\chars\Viper\9000,0\pcx\9000,1.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Xion-V\Potraits\9000,1.pcx
+D:\KOF Ultimate Online\Ikemen_GO\chars\Xion-V\Potraits\9000,1.png
+D:\KOF Ultimate Online\chars\BLAKE V3-1.1\立绘\HLoader\9000,1.pcx
+D:\KOF Ultimate Online\chars\BLAKE V3-1.1\立绘\HLoader\9000,1.png
+D:\KOF Ultimate Online\chars\BLAKE V3-1.1\立绘\初音主程序\9000,1.png
+D:\KOF Ultimate Online\chars\BLAKE V3-1.1\立绘\默认\9000,1.png
+D:\KOF Ultimate Online\chars\Final Sachiel WF\9000,1.pcx
+D:\KOF Ultimate Online\chars\Orochi-EV1.55\Portraits for Orochi\9000,1.pcx
+D:\KOF Ultimate Online\chars\Psyche_42-1.1\立绘\HLoader\9000,1.pcx
+D:\KOF Ultimate Online\chars\Psyche_42-1.1\立绘\HLoader\9000,1.png
+D:\KOF Ultimate Online\chars\Psyche_42-1.1\立绘\初音主程序\9000,1.png
+D:\KOF Ultimate Online\chars\Psyche_42-1.1\立绘\默认\9000,1.png
+D:\KOF Ultimate Online\chars\Psyche_57-1.1\立绘参考与模板\HLoader\9000,1.png
+D:\KOF Ultimate Online\chars\Psyche_57-1.1\立绘参考与模板\初音主程序\9000,1.png
+D:\KOF Ultimate Online\chars\Psyche_57-1.1\立绘参考与模板\默认\9000,1.png
+D:\KOF Ultimate Online\chars\Sonic Vanesa\9000,1.pcx
+D:\KOF Ultimate Online\chars\Viper\9000,0\9000,1.png
+D:\KOF Ultimate Online\chars\Viper\9000,0\pcx\9000,1.pcx
+D:\KOF Ultimate Online\chars\Xion-V\Potraits\9000,1.pcx
+D:\KOF Ultimate Online\chars\Xion-V\Potraits\9000,1.png
