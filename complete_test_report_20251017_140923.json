@@ -1,0 +1,1201 @@
+{
+  "timestamp": "2025-10-17T14:09:23.162589",
+  "results": {
+    "characters": [
+      {
+        "char": "03-A-Kyo LV2",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "A-Angel",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "ABYSS'Mega's",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "ALBA MEIRA KOF XI -MI2",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Aika",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Aika_MK",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Aileen",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Akari",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Akiha Orochi",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Akiha Yagami",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Akiha Yagami DK",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Akiha Yagami1",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Akira_Kazakami",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Alfred_WLS",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Alou_AKOF",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Alter Kyo",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Amoumi-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Andy-ROTD",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Aner Rolange KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Anette-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "AngusPurple-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Another Scarlet",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Arctic Emperor",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Ash",
+        "status": "ERROR",
+        "errors": [
+          "Error detected.",
+          "Error finding characters/stages in select.def",
+          "Initializing select screen...finding characters...Exit with an error."
+        ]
+      },
+      {
+        "char": "Athena",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Athena Asamiya MI KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Athena-Heidern",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Athena_XI",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "BLAKE V3-1.1",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "BW-Meiling",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Balto-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Beast Yeorin QS",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Benimaru-Nikaido-STAR",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "BlackPrincess_Tohka",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Boss Gustab M",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Business_Vanessa-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "C.Kyo.Blood-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Carlin.Blood-CKOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Caser.Yashiro",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Chalice",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Chaos-CKOFM",
+        "status": "ERROR",
+        "errors": [
+          "Error detected.",
+          "Error finding characters/stages in select.def",
+          "Initializing select screen...finding characters...Exit with an error."
+        ]
+      },
+      {
+        "char": "Chobi-Hige",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Choi_XI",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Clone Blood Rugal",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Clone Zero",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Cronus",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Cruelty Sula UM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "D.Yashiro.Rhythm(Dusk)1.x",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "D=Rockula",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "DF-Sula",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "DG.Rugal-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "D_DisciplineGirl",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Daiki_Final(Prototype)",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Daisu",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Delirus",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Dragondomainlords",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Drakyola",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Dual-flame_Magaki",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Duester",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Element Ash",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Element Scarlet",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Element-Adel",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Eputh Blood-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Error Zero",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Essence of Darkness",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Eve",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Fang",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Felix_THird",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Final Adel",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Final Goeniko",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Final Sachiel WF",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Final Zeroko B",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Final-IGNIZ",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Final-OriginalZero",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Flamme(S)",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "GARS",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "GOD_ADEL(2012-01-28 Trial)",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Garnet 1.1",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Geese-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "God_Wind",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Goktore-CKOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Graves",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "HIEL-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Hiel_SP",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Hiyoi",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Hunter_U6746",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Infernal_Wind",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "K9999_KOF",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kaneda-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kaori Yumiko",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kartis",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kasim_LV2-CKOFM[v0.40]",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kasumi-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kei",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kevenoce",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Keyser-Aunthmer",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kotone",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kyaga-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Kychiel",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "LUMIEL",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Littledevil-Phoenix",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Lord-Goenitz",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Magnus",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Mai Phoenix XI",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Maltet",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Maryl",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Matam",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Meld_Boss",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "N-Zeroko",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Nao-MX 1.0",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "NeoDio KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "NeoGeegus KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Nero",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "New_Kyouki",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Noa_MK",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Nox Bernstein",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "O.Zero-Prominence",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Olivia",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Original Psyqhical",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Orochi Kyo WF",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Orochi Leona-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Orochi-EV1.55",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Orochi.Yamazaki-CKOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "P-LEONA_ELEMENT",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Psyche_42-1.1",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Psyche_57-1.1",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "R.S.P",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Raika",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Raisen.blood-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Rayno",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Reas-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Reyna",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Rinne-RH",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Rocken",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Rose",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Rozwel S.K (LEGIT)",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Rugal7th",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Ryuji",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "S_Infezione",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Samael",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Sasin",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Shadow-Dancer",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Sonic Vanesa",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Spiritland Lords",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Tenrou_Kunagi",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "ThunderMiss.Shermie",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Titan_KOF",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "True Iori X_KOF",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Unfailed Gustab",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Unleashesd God Kula",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Valmar Rugal",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Viper",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "VladRose",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Voltage Zeroko-Pre",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "WatchTV",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "WhirlWind-Goenitz",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "White DeathRaGeroous Version",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Wild.O.Yashiro",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Wind_MMXIX",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Xion-V",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Yamazaki.Blood",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Yukida",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Yuno-KOFM",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Yuri_SV",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "Zerozuchi_Boss",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "_ArchiMurderer",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "ai",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "akuma",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "asura-kofa",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "baiyi",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "billy",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "bob",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "boss-orochi",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "ccihinako",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "ccijhun",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "cciking",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "ccishermie",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "clone benimaru",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "dr-yang-kofa",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "final-goenitz",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "god_orochi",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "heraclius",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "kfm",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "meteoricmarisa",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "mizore-kofmLV2",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "orochi-iori",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "orochi-kyoko",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "robo-kyo-kofa",
+        "status": "OK",
+        "errors": []
+      },
+      {
+        "char": "vandals",
+        "status": "OK",
+        "errors": []
+      }
+    ],
+    "stages": [
+      {
+        "stage": "Abyss-Rugal-Palace.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Anime Blu.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Anubis.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Reflection], [BGDef]"
+      },
+      {
+        "stage": "Basque Palace.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "BLACK SON DROTIME.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Black wall.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "clones lab destroyed.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Reflection], [BGDef]"
+      },
+      {
+        "stage": "DARK SAID RUGAL S .def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Darkness.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "DROBLOOD R 2.0.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Reflection], [BGDef]"
+      },
+      {
+        "stage": "Exagon Force.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Far from here.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Reflection], [BGDef]"
+      },
+      {
+        "stage": "forest infernal fire.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Galaxy BG.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "light kyouki.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Moon of dark wall.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Moon recidence.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "O.DB DRORANGE BLACK.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "Palece Mistery R.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "RED.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Reflection], [BGDef]"
+      },
+      {
+        "stage": "Red_Cliff.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Scaling], [BGDef]"
+      },
+      {
+        "stage": "space_binary.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Scaling], [BGDef]"
+      },
+      {
+        "stage": "space_deep.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Scaling], [BGDef]"
+      },
+      {
+        "stage": "space_galaxy.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Scaling], [BGDef]"
+      },
+      {
+        "stage": "space_nebula_purple.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Scaling], [BGDef]"
+      },
+      {
+        "stage": "space_planet.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Scaling], [BGDef]"
+      },
+      {
+        "stage": "space_void.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Scaling], [BGDef]"
+      },
+      {
+        "stage": "The Will Of Hades S .def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "TIME INGCODNITA.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Reflection], [BGDef]"
+      },
+      {
+        "stage": "Wall of paintings.def",
+        "status": "WARNING",
+        "error": "Missing sections: [BGDef]"
+      },
+      {
+        "stage": "xX-Hell-Dark-Xx.def",
+        "status": "WARNING",
+        "error": "Missing sections: [Shadow], [Reflection], [BGDef]"
+      }
+    ],
+    "select_screen": null,
+    "ai_matches": [
+      {
+        "p1": "ccishermie",
+        "p2": "Beast Yeorin QS",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "Cruelty Sula UM",
+        "p2": "Akiha Yagami1",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "Anette-KOFM",
+        "p2": "akuma",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "True Iori X_KOF",
+        "p2": "Benimaru-Nikaido-STAR",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "Benimaru-Nikaido-STAR",
+        "p2": "P-LEONA_ELEMENT",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "Anette-KOFM",
+        "p2": "meteoricmarisa",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "kfm",
+        "p2": "Olivia",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "god_orochi",
+        "p2": "Wind_MMXIX",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "Hiel_SP",
+        "p2": "Orochi Leona-KOFM",
+        "status": "OK",
+        "error": null
+      },
+      {
+        "p1": "vandals",
+        "p2": "Error Zero",
+        "status": "OK",
+        "error": null
+      }
+    ]
+  },
+  "errors": [
+    "Ash: Error detected.",
+    "Chaos-CKOFM: Error detected."
+  ],
+  "stats": {
+    "characters": {
+      "total": 189,
+      "ok": 187,
+      "errors": 2
+    },
+    "stages": {
+      "total": 31,
+      "ok": 0,
+      "errors": 0
+    },
+    "matches": {
+      "total": 10,
+      "ok": 10,
+      "errors": 0
+    }
+  }
+}
