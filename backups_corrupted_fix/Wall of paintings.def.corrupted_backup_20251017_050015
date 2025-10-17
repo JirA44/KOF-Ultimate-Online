@@ -1,0 +1,94 @@
+;--------------------------------------------------------
+[Info]
+name                = "Wall of paintings S."
+displayname    = "Wall of paintings"
+author              = "DROLLDIAMOND"
+mugenversion = 1.0
+versiondate     = 02,05,2021
+
+[Camera]
+startx         = 0         
+starty         = 0                                     
+boundleft      = -225       
+boundright     = 225        
+boundhigh      = -10          
+boundlow       = 0          
+verticalfollow = 0           
+tension        = 50          
+;------------------------------------------------------------------------------
+[PlayerInfo]
+;--- ƒvƒŒƒCƒ„[‚P ---           
+p1startx       = -140 
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1       
+;--- ƒvƒŒƒCƒ„[‚Q ---             
+p2startx       = 140         
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1          
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0           
+;------------------------------------------------------------------------------
+[Scaling]
+topz           = 0           
+botz           = 50         
+topscale       = 0.5        
+botscale       = 0.5     
+;------------------------------------------------------------------------------
+[Bound]
+screenleft     = 20          
+screenright    = 20          
+;------------------------------------------------------------------------------
+[StageInfo]
+zoffset          = 430  
+autoturn       = 1           
+resetBG        = 1           
+localcoord    = 640,480
+;--------------------------------------------------------
+[Shadow]
+color = 100,100,100
+yscale = -.6
+;-----------------------------------------
+[Reflection]
+intensity = 110
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/           
+bgmvolume = 255
+
+[BGdef]
+spr = Wall of paintings.sff
+debugbg = 0
+
+[BG]
+type = normal
+spriteno = 0,0
+trans = none
+delta = 2,2
+mask = 1
+
+[BG]
+type = normal
+spriteno = 0,1
+trans = add
+delta = 2,2
+mask = 1
+
+[BG]
+type = normal
+spriteno = 0,2
+trans = add
+delta = 2,2
+mask = 1
+
+
+
+
+
+
+
+

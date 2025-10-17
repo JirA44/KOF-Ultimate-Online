@@ -92,7 +92,7 @@ class AIExplorationSystem:
         # 1. Vérifier l'exécutable
         exe_files = [
             'KOF_Ultimate_Online.exe',
-            'KOF BLACK R.exe'
+            'KOF_Ultimate_Online.exe'
         ]
 
         exe_found = None
@@ -172,7 +172,7 @@ class AIExplorationSystem:
 
         # Détecter le bon exécutable
         exe_name = None
-        for exe in ['KOF_Ultimate_Online.exe', 'KOF BLACK R.exe']:
+        for exe in ['KOF_Ultimate_Online.exe', 'KOF_Ultimate_Online.exe']:
             if (self.base_dir / exe).exists():
                 exe_name = exe
                 break
@@ -191,7 +191,7 @@ class AIExplorationSystem:
                     content = f.read()
 
                 # Remplacer le nom d'exécutable
-                old_names = ['KOF BLACK R.exe', 'KOF_Ultimate_Online.exe']
+                old_names = ['KOF_Ultimate_Online.exe', 'KOF_Ultimate_Online.exe']
                 for old_name in old_names:
                     if old_name != exe_name and old_name in content:
                         content = content.replace(old_name, exe_name)

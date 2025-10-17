@@ -14,7 +14,7 @@ from threading import Thread
 import webbrowser
 
 # Configuration
-GAME_PATH = Path(r"D:\KOF Ultimate")
+GAME_PATH = Path(r"D:\KOF Ultimate Online")
 IKEMEN_PATH = Path(r"D:\KOF Ultimate Online")
 CONFIG_FILE = GAME_PATH / "multiplayer_config.json"
 
@@ -692,7 +692,7 @@ class MultiplayerMenu:
         self.config.set("last_player_name", self.player_name_var.get())
 
         # Lancer le jeu MUGEN en mode versus
-        exe_path = GAME_PATH / "KOF BLACK R.exe"
+        exe_path = GAME_PATH / "KOF_Ultimate_Online.exe"
 
         if not exe_path.exists():
             messagebox.showerror(

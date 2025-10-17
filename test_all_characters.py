@@ -122,7 +122,7 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
         self.clear_mugen_log()
 
         # Lancer le jeu
-        exe_path = self.game_dir / "KOF BLACK R.exe"
+        exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         process = None
 
         try:
@@ -382,7 +382,7 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
             self.restore_select_def()
 
 def main():
-    game_dir = r"D:\KOF Ultimate"
+    game_dir = r"D:\KOF Ultimate Online"
     tester = CharacterTester(game_dir)
     tester.run_full_test()
 

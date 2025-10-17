@@ -191,7 +191,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     if sys.argv[1] == 'demo':
-        create_demo_comparison(r"D:\KOF Ultimate\ai_enhanced_demos")
+        create_demo_comparison(r"D:\KOF Ultimate Online\ai_enhanced_demos")
     elif len(sys.argv) == 2:
         input_dir = sys.argv[1]
         output_dir = os.path.join(input_dir, "enhanced_retro")

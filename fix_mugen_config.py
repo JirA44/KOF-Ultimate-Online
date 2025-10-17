@@ -4,7 +4,7 @@ Répare mugen.cfg pour supprimer les doublons d'options plugin
 import re
 from pathlib import Path
 
-config_path = Path(r"D:\KOF Ultimate\data\mugen.cfg")
+config_path = Path(r"D:\KOF Ultimate Online\data\mugen.cfg")
 
 print("Réparation de mugen.cfg...")
 

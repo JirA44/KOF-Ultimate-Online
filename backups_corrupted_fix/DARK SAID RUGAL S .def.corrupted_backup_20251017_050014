@@ -1,0 +1,140 @@
+;--------------------------------------------------------
+[Info]
+name                = "Dark Said Rugal Stage"
+displayname    = "Dark Said Rugal S."
+author              = "DROLLDIAMOND"
+mugenversion = 1.1
+versiondate     = 30,09,2020
+
+[Camera]
+startx         = 0         
+starty         = 0           
+                             
+boundleft      = -215        
+boundright     = 215        
+boundhigh      = -10          
+boundlow       = 0          
+verticalfollow = 0           
+tension           = 50          
+;------------------------------------------------------------------------------
+[PlayerInfo]
+;--- ƒvƒŒƒCƒ„[‚P ---           
+p1startx       = -280 
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1 
+         
+;--- ƒvƒŒƒCƒ„[‚Q ---             
+p2startx       = 280         
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1  
+        
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0           
+
+
+;------------------------------------------------------------------------------
+[Scaling]
+topz           = 0           
+botz           = 50         
+topscale       = 0.5        
+botscale       = 0.5     
+
+;------------------------------------------------------------------------------
+[Bound]
+screenleft     = 20          
+screenright    = 20          
+
+;------------------------------------------------------------------------------
+[StageInfo]
+zoffset          = 840  ;pociotion del char
+autoturn       = 1           
+resetBG        = 1  
+localcoord    = 1250,1280 
+    
+;--------------------------------------------------------
+[Shadow]
+color = 100,100,100
+yscale = -.2
+
+[Reflection]
+intensity = 110
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/Dark Side Rugal .mp3     ;wav,ogg,mp3 etc. :v
+bgvolume = 255
+
+[BGdef]
+spr = DARK SAID RUGAL S .sff
+debugbg = 0
+
+[BG]
+type = normal
+spriteno = 0,26
+delta = 0.2,2
+layerno = 0
+mask = 1
+start = 0,0
+
+[BG]
+type = anim
+actionno = 2
+delta = 0.2,2
+layerno = 0
+mask = 1
+trans = add
+start = 0,0
+
+[BG]
+type = anim
+actionno = 1
+delta =  0.2,2
+layerno = 0
+mask = 1
+start = 0,0
+
+[BG]
+type = anim
+actionno = 3
+delta = 0.2,2
+layerno = 0
+mask = 1
+trans = add
+start = 0,0
+
+[Begin Action 1]
+0,0, 0,0, 7, , A, 4.2,4
+0,1, 0,0, 1, , A, 4.2,4
+0,1, 0,0, 7, , A, 4.2,4
+0,3, 0,0, 7, , A, 4.2,4
+LoopStart
+0,4, 0,0, 7, , A, 4.2,4
+0,5, 0,0, 7, , A, 4.2,4
+0,6, 0,0, 7, , A, 4.2,4
+0,7, 0,0, 7, , A, 4.2,4
+0,8, 0,0, 7, , A, 4.2,4
+0,9, 0,0, 7, , A, 4.2,4
+0,10, 0,0, 7, , A, 4.2,4
+0,11, 0,0, 7, , A, 4.2,4
+0,12, 0,0, 7, , A, 4.2,4
+0,13, 0,0, 7, , A, 4.2,4
+0,14, 0,0, 7, , A, 4.2,4
+0,15, 0,0, 7, , A, 4.2,4
+0,16, 0,0, 7, , A, 4.2,4
+0,17, 0,0, 7, , A, 4.2,4
+0,18, 0,0, 7, , A, 4.2,4
+0,19, 0,0, 7, , A, 4.2,4
+0,20, 0,0, 7, , A, 4.2,4
+0,21, 0,0, 7, , A, 4.2,4
+0,22, 0,0, 7, , A, 4.2,4
+0,23, 0,0, 7, , A, 4.2,4
+
+[Begin Action 2]
+0,24, 0,0, -1, , , 1.7,1.6
+
+[Begin Action 3]
+0,25, 0,0, -1, , , 2.1,2

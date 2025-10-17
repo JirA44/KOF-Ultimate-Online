@@ -1,0 +1,85 @@
+[Info]
+name = "space_deep"
+displayname = "Deep Space"
+mugenversion = 1.0
+author = "KOF Ultimate - Space Pack"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -139
+boundright = 139
+boundhigh = -25
+boundlow = 0
+verticalfollow = 0.8
+floortension = 100
+tension = 100
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound  = -1000
+rightbound = 1000
+topbound  = 0
+botbound  = 0
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 240
+zoffsetlink = -1
+autoturn = 1
+resetBG = 0
+Hires = 1
+
+[Shadow]
+intensity = 128
+color = 0,0,0
+yscale = 0.4
+fade.range = 0,0
+
+[Reflection]
+intensity = 0
+
+[Music]
+bgmusic = sound/space_ambient.ogg
+bgvolume = 180
+
+[BGdef]
+spr = stages/space_backgrounds/space_deep.sff
+debugbg = 0
+
+; Fond spatial principal
+[BG MainSpace]
+type = normal
+spriteno = 0, 0
+start = 0, 0
+delta = 0.5, 0.5
+trans = none
+mask = 0
+
+; Étoiles lointaines (parallaxe lent)
+[BG DistantStars]
+type = normal
+spriteno = 0, 1
+start = 0, 0
+delta = 0.3, 0.3
+trans = add
+mask = 0
+
+; Étoiles proches (parallaxe rapide)
+[BG CloseStars]
+type = normal
+spriteno = 0, 2
+start = 0, 0
+delta = 1.2, 1.2
+trans = add
+mask = 0

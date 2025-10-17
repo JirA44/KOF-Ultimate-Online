@@ -30,7 +30,7 @@ class GameInstance:
     def __init__(self, instance_id, game_dir):
         self.id = instance_id
         self.game_dir = Path(game_dir)
-        self.exe_path = self.game_dir / "KOF BLACK R.exe"
+        self.exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         self.log_path = self.game_dir / f"mugen_player{instance_id}.log"
         self.process = None
         self.errors = []
@@ -365,7 +365,7 @@ def print_menu():
     print(f"  {Colors.RED}0.{Colors.RESET} Quitter\n")
 
 def main():
-    game_dir = r"D:\KOF Ultimate"
+    game_dir = r"D:\KOF Ultimate Online"
 
     while True:
         print_menu()

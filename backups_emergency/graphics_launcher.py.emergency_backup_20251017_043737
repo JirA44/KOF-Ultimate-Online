@@ -1,0 +1,245 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+KOF ULTIMATE - Lanceur Graphique Avancé
+Applique des presets visuels et lance le jeu avec effets rétro-modernes
+"""
+
+import os
+import json
+import shutil
+import subprocess
+from pathlib import Path
+from datetime import datetime
+
+class Colors:
+    CYAN = '\033[96m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    MAGENTA = '\033[95m'
+    BLUE = '\033[94m'
+    BOLD = '\033[1m'
+    RESET = '\033[0m'
+
+class GraphicsLauncher:
+    def __init__(self, game_dir=r"D:\KOF Ultimate Online Online Online Online"):
+        self.game_dir = Path(game_dir)
+        self.mugen_cfg = self.game_dir / "data" / "mugen.cfg"
+        self.presets_file = self.game_dir / "graphics_presets.json"
+        self.backup_dir = self.game_dir / "config_backups"
+        self.backup_dir.mkdir(exist_ok=True)
+
+        self.presets = self.load_presets()
+
+    def load_presets(self):
+        """Charge les presets graphiques"""
+        if not self.presets_file.exists():
+            print(f"{Colors.RED}✗ Fichier presets manquant!{Colors.RESET}")
+            return {}
+
+        with open(self.presets_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+
+    def backup_config(self):
+        """Sauvegarde la configuration actuelle"""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        backup_file = self.backup_dir / f"mugen.cfg.backup_{timestamp}"
+        shutil.copy2(self.mugen_cfg, backup_file)
+        print(f"{Colors.GREEN}✓ Config sauvegardée: {backup_file.name}{Colors.RESET}")
+
+    def read_config(self):
+        """Lit la configuration actuelle"""
+        with open(self.mugen_cfg, 'r', encoding='utf-8', errors='ignore') as f:
+            return f.read()
+
+    def apply_preset(self, preset_name):
+        """Applique un preset graphique"""
+        if preset_name not in self.presets['presets']:
+            print(f"{Colors.RED}✗ Preset '{preset_name}' introuvable!{Colors.RESET}")
+            return False
+
+        preset = self.presets['presets'][preset_name]
+
+        print(f"\n{Colors.CYAN}{Colors.BOLD}🎨 Application du preset: {preset['name']}{Colors.RESET}")
+        print(f"{Colors.CYAN}{preset['description']}{Colors.RESET}\n")
+
+        # Backup avant modification
+        self.backup_config()
+
+        # Lire la config
+        config = self.read_config()
+
+        # Modifier les paramètres vidéo
+        video_settings = preset['video']
+        config = self.update_section(config, '[Video]', video_settings)
+
+        # Modifier les paramètres config
+        config_settings = preset['config']
+        config = self.update_section(config, '[Config]', config_settings)
+
+        # Sauvegarder
+        with open(self.mugen_cfg, 'w', encoding='utf-8') as f:
+            f.write(config)
+
+        # Afficher les changements
+        print(f"{Colors.GREEN}✓ Configuration mise à jour:{Colors.RESET}")
+        print(f"  Résolution: {video_settings['Width']}x{video_settings['Height']}")
+        print(f"  Mode: {video_settings['BlitMode']}")
+        print(f"  Render: {video_settings['RenderMode']}")
+        print(f"  VSync: {'ON' if video_settings['VRetrace'] else 'OFF'}")
+        print(f"  Plein écran: {'OUI' if video_settings['FullScreen'] else 'NON'}")
+
+        # Afficher les effets
+        if 'effects' in preset:
+            effects = preset['effects']
+            print(f"\n{Colors.MAGENTA}✨ Effets activés:{Colors.RESET}")
+            if effects.get('crt_filter'):
+                print(f"  • Filtre CRT (courbure: {effects.get('crt_curvature', 0.3)})")
+            if effects.get('scanlines'):
+                print(f"  • Scanlines (intensité: {effects.get('scanline_intensity', 0.2)})")
+            if effects.get('bloom'):
+                print(f"  • Bloom lumineux (intensité: {effects.get('bloom_intensity', 0.3)})")
+            if effects.get('vignette'):
+                print(f"  • Vignette (intensité: {effects.get('vignette', 0.3)})")
+
+        # Enregistrer le preset actuel
+        self.presets['current_preset'] = preset_name
+        with open(self.presets_file, 'w', encoding='utf-8') as f:
+            json.dump(self.presets, f, indent=2)
+
+        return True
+
+    def update_section(self, config, section_name, settings):
+        """Met à jour une section de configuration"""
+        lines = config.split('\n')
+        in_section = False
+        result = []
+        updated_keys = set()
+
+        for line in lines:
+            stripped = line.strip()
+
+            # Détecter la section
+            if stripped == section_name:
+                in_section = True
+                result.append(line)
+                continue
+
+            # Fin de section
+            if stripped.startswith('[') and stripped != section_name:
+                in_section = False
+
+            # Modifier les paramètres dans la section
+            if in_section and '=' in line:
+                key = line.split('=')[0].strip()
+
+                if key in settings:
+                    # Remplacer la valeur
+                    value = settings[key]
+                    indent = len(line) - len(line.lstrip())
+                    result.append(f"{' ' * indent}{key} = {value}")
+                    updated_keys.add(key)
+                    continue
+
+            result.append(line)
+
+        return '\n'.join(result)
+
+    def show_menu(self):
+        """Affiche le menu de sélection"""
+        print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'🎮 KOF ULTIMATE - LANCEUR GRAPHIQUE':^80}{Colors.RESET}")
+        print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
+
+        presets = self.presets['presets']
+        current = self.presets.get('current_preset', 'retro_authentic')
+
+        print(f"{Colors.CYAN}Presets disponibles:{Colors.RESET}\n")
+
+        for i, (key, preset) in enumerate(presets.items(), 1):
+            is_current = " ← ACTUEL" if key == current else ""
+            marker = "→" if key == current else " "
+
+            print(f"{Colors.BOLD}{i}. {marker} {preset['name']}{is_current}{Colors.RESET}")
+            print(f"   {Colors.CYAN}{preset['description']}{Colors.RESET}")
+
+            # Afficher la résolution
+            width = preset['video']['Width']
+            height = preset['video']['Height']
+            fullscreen = "Plein écran" if preset['video']['FullScreen'] else "Fenêtré"
+            print(f"   {Colors.YELLOW}Résolution: {width}x{height} ({fullscreen}){Colors.RESET}\n")
+
+        print(f"{Colors.BOLD}0. Lancer sans changer{Colors.RESET}")
+        print(f"{Colors.RED}Q. Quitter{Colors.RESET}")
+
+        return len(presets)
+
+    def launch_game(self):
+        """Lance le jeu"""
+        print(f"\n{Colors.CYAN}🚀 Lancement de KOF Ultimate...{Colors.RESET}")
+
+        exe_path = self.game_dir / "KOF BLACK R.exe"
+
+        if not exe_path.exists():
+            print(f"{Colors.RED}✗ Jeu introuvable: {exe_path}{Colors.RESET}")
+            return False
+
+        try:
+            subprocess.Popen([str(exe_path)], cwd=str(self.game_dir))
+            print(f"{Colors.GREEN}✓ Jeu lancé!{Colors.RESET}")
+            return True
+        except Exception as e:
+            print(f"{Colors.RED}✗ Erreur: {e}{Colors.RESET}")
+            return False
+
+    def run(self):
+        """Lance le launcher"""
+        while True:
+            num_presets = self.show_menu()
+
+            try:
+                choice = input(f"\n{Colors.BOLD}Votre choix: {Colors.RESET}").strip().lower()
+
+                if choice == 'q':
+                    print(f"\n{Colors.YELLOW}Au revoir!{Colors.RESET}")
+                    break
+
+                if choice == '0':
+                    self.launch_game()
+                    break
+
+                choice_num = int(choice)
+
+                if 1 <= choice_num <= num_presets:
+                    preset_keys = list(self.presets['presets'].keys())
+                    preset_key = preset_keys[choice_num - 1]
+
+                    if self.apply_preset(preset_key):
+                        print(f"\n{Colors.GREEN}✓ Preset appliqué avec succès!{Colors.RESET}")
+
+                        response = input(f"\n{Colors.BOLD}Lancer le jeu maintenant? (O/n): {Colors.RESET}").strip().lower()
+                        if response != 'n':
+                            self.launch_game()
+                            break
+                else:
+                    print(f"{Colors.RED}✗ Choix invalide!{Colors.RESET}")
+
+            except ValueError:
+                print(f"{Colors.RED}✗ Entrée invalide!{Colors.RESET}")
+            except KeyboardInterrupt:
+                print(f"\n\n{Colors.YELLOW}Interruption...{Colors.RESET}")
+                break
+
+def main():
+    launcher = GraphicsLauncher()
+    launcher.run()
+
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception as e:
+        print(f"\n{Colors.RED}Erreur: {e}{Colors.RESET}")
+        import traceback
+        traceback.print_exc()
+        input("\nAppuyez sur Entrée pour quitter...")

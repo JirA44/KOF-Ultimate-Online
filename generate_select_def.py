@@ -4,8 +4,8 @@ Script pour générer un select.def complet avec tous les personnages disponible
 import os
 
 # Chemin vers le dossier des personnages
-chars_dir = r"D:\KOF Ultimate\chars"
-output_file = r"D:\KOF Ultimate\data\select.def"
+chars_dir = r"D:\KOF Ultimate Online\chars"
+output_file = r"D:\KOF Ultimate Online\data\select.def"
 
 # Récupérer tous les dossiers de personnages
 char_folders = []

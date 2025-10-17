@@ -1,0 +1,103 @@
+;--------------------------------------------------------
+[Info]
+name                = "Basque Palace stage"
+displayname    = "Basque Palace"
+author              = "DROLLDIAMOND"
+mugenversion = 1.1
+versiondate     = 24,02,2021
+
+[Camera]
+startx         = 0         
+starty         = 0           
+                             
+boundleft      = -215        
+boundright     = 215        
+boundhigh      = -10          
+boundlow       = 0          
+verticalfollow = 0           
+tension        = 50          
+
+;------------------------------------------------------------------------------
+[PlayerInfo]
+;--- ƒvƒŒƒCƒ„[‚P ---           
+p1startx       = -160 
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1 
+         
+;--- ƒvƒŒƒCƒ„[‚Q ---             
+p2startx       = 160         
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1  
+        
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0
+;------------------------------------------------------------------------------
+[Scaling]
+topz           = 0           
+botz           = 50         
+topscale       = 0.5        
+botscale       = 0.5     
+
+;------------------------------------------------------------------------------
+[Bound]
+screenleft     = 20          
+screenright    = 20 
+;------------------------------------------------------------------------------
+[StageInfo]
+zoffset          = 430  ;pociotion del char
+autoturn       = 1           
+resetBG        = 1    
+hires             = 1
+localcoord = 640,700
+;--------------------------------------------------------
+[Shadow]
+color = 100,100,100
+yscale = -.2
+
+[Reflection]
+intensity = 110
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/  ;wav,ogg,mp3 etc. 
+bgmvolume = 255
+
+[BGdef]
+spr = Basque Palace.sff
+debugbg = 0
+;======comandos del stage no mover si no sabes como funcionan===================================
+[BG 0 ]
+type = anim
+actionno = 1
+delta = 1,1
+start = 0,0
+
+[BG 0 ]
+type = anim
+actionno = 2
+trans = add
+delta = 1,1
+start = 0,0
+mask = 1
+
+[BG 0 ]
+type = anim
+actionno = 3
+trans = add
+delta = 1,1
+start = 0,0
+mask = 1
+
+
+[Begin Action 1]
+0,0, 0,0, 10, , , 1.34,1.4
+
+[Begin Action 2]
+0,1, 0,0, 10, , , 1.34,1.4
+
+[Begin Action 3]
+0,2, 0,0, 10, , , 1.34,1.4

@@ -51,7 +51,7 @@ class OnlineBotMatchSystem:
 
     def __init__(self, game_dir):
         self.game_dir = Path(game_dir)
-        self.exe_path = self.game_dir / "KOF BLACK R.exe"
+        self.exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         self.players = []
         self.current_match = None
 
@@ -254,7 +254,7 @@ class OnlineBotMatchSystem:
         print(f"{Colors.GREEN}{Colors.BOLD}✓ Saison terminée!{Colors.RESET}\n")
 
 def main():
-    game_dir = r"D:\KOF Ultimate"
+    game_dir = r"D:\KOF Ultimate Online"
 
     system = OnlineBotMatchSystem(game_dir)
 

@@ -10,8 +10,8 @@ import os
 from pathlib import Path
 
 def test_title_animation():
-    base_dir = Path(r"D:\KOF Ultimate")
-    exe_path = base_dir / "KOF BLACK R.exe"
+    base_dir = Path(r"D:\KOF Ultimate Online")
+    exe_path = base_dir / "KOF_Ultimate_Online.exe"
     log_path = base_dir / "mugen.log"
 
     # Supprimer l'ancien log

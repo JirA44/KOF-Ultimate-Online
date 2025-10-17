@@ -1,0 +1,168 @@
+;--------------------------------------------------------
+
+[Info]
+name ="O.DB DRORANGE BLACK"
+author="DROLLDIAMOND"
+
+[Camera]
+startx         = 0         
+starty         = 0           
+                             
+boundleft      = -215        
+boundright     = 215        
+boundhigh      = -10          
+boundlow       = 0          
+verticalfollow = 0           
+tension        = 50          
+
+;------------------------------------------------------------------------------
+[PlayerInfo]
+;--- ƒvƒŒƒCƒ„[‚P ---           
+p1startx       = -70        
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1  
+         
+;--- ƒvƒŒƒCƒ„[‚Q ---             
+p2startx       = 70         
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1  
+        
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0           
+
+;------------------------------------------------------------------------------
+[Scaling]
+topz           = 0           
+botz           = 50         
+topscale       = 1           
+botscale       = 1.2        
+
+;------------------------------------------------------------------------------
+[Bound]
+screenleft     = 20          
+screenright    = 20          
+
+;------------------------------------------------------------------------------
+[StageInfo]
+zoffset        = 215         
+autoturn       = 1           
+resetBG       = 1           
+hires          = 1
+
+;--------------------------------------------------------
+
+[Shadow]
+intensity = 0
+color = 100,100,100
+yscale = -.2
+
+[Reflection]
+intensity = 150
+
+;--------------------------------------------------------
+
+[Music]
+bgmusic = sound/NEW stage Orange.mp3 
+bgvolume = 255
+
+[BGdef]
+spr =  O.DB DRORANGE BLACK.sff
+debugbg = 0
+
+[BG 0]
+type = normal
+spriteno = 10,1
+layerno = 0
+start = 0,240
+delta = 2,2
+mask= 0
+
+[BG 0]
+type = normal
+spriteno = 40,0
+start = 0,0
+delta = 2,2
+layerno = 0
+tile = 1,1
+trans = none
+velocity = 5,5
+mask = 1
+
+[BG 20]
+type = normal
+spriteno = 20,0
+layerno = 0
+start = 0,240
+delta = 2,2
+trans = none
+mask = 1
+
+[BG 0 ]
+type = normal
+spriteno = 30,0
+layerno = 0
+start = 0,0
+delta = 1,1
+tile = 1,1
+velocity = 1,1
+trans = add
+mask = 1 
+
+[BG 0]
+type = anim
+actionno = 1
+layerno = 0
+start = 0,405
+delta = 2,2
+mask = 1
+
+[BG 0]
+type = anim
+actionno = 2
+layerno = 0
+start = 0,370
+delta = 2,2
+mask = 1
+
+
+[Begin Action 1]
+30,1, 0,0, 1, , A
+-1,0, 0,0, 1
+
+[Begin Action 2]
+50,0, 0,0, 1, , A,1.999,1.400
+50,1, 0,0, 1, , A,1.999,1.400
+50,2, 0,0, 1, , A,1.999,1.400
+50,3, 0,0, 1, , A,1.999,1.400
+50,4, 0,0, 1, , A,1.999,1.400
+50,5, 0,0, 1, , A,1.999,1.400
+50,6, 0,0, 1, , A,1.999,1.400
+50,7, 0,0, 1, , A,1.999,1.400
+50,8, 0,0, 1, , A,1.999,1.400
+50,9, 0,0, 1, , A,1.999,1.400
+50,10, 0,0, 1, , A,1.999,1.400
+50,11, 0,0, 1, , A,1.999,1.400
+50,12, 0,0, 1, , A,1.999,1.400
+50,13, 0,0, 1, , A,1.999,1.400
+50,14, 0,0, 1, , A,1.999,1.400
+50,15, 0,0, 1, , A,1.999,1.400
+50,16, 0,0, 1, , A,1.999,1.400
+50,17, 0,0, 1, , A,1.999,1.400
+50,18, 0,0, 1, , A,1.999,1.400
+50,19, 0,0, 1, , A,1.999,1.400
+50,20, 0,0, 1, , A,1.999,1.400
+50,21, 0,0, 1, , A,1.999,1.400
+50,22, 0,0, 1, , A,1.999,1.400
+50,23, 0,0, 1, , A,1.999,1.400
+50,24, 0,0, 1, , A,1.999,1.400
+50,25, 0,0, 1, , A,1.999,1.400
+50,26, 0,0, 1, , A,1.999,1.400
+50,27, 0,0, 1, , A,1.999,1.400
+50,28, 0,0, 1, , A,1.999,1.400
+50,29, 0,0, 1, , A,1.999,1.400
+

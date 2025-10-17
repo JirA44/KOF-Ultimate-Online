@@ -555,7 +555,7 @@ class GameLauncher:
             self.set_fullscreen_mode()
 
         # Lancer le jeu
-        exe_path = GAME_PATH / "KOF BLACK R.exe"
+        exe_path = GAME_PATH / "KOF_Ultimate_Online.exe"
 
         if not exe_path.exists():
             messagebox.showerror(

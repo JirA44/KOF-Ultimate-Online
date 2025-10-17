@@ -1,0 +1,101 @@
+;--------------------------------------------------------
+[Info]
+name                = "stage: Anime Blu"
+displayname    = "Anime Blu"
+author              = "DROLLDIAMOND"
+mugenversion = 1.1
+versiondate     = 16,1,2021
+;============================
+[Camera]
+startx         = 0         
+starty         = 0                                  
+boundleft      = -215        
+boundright     = 215        
+boundhigh      = -10          
+boundlow       = 0          
+verticalfollow = 0           
+tension        = 50          
+
+;------------------------------------------------------------------------------
+[PlayerInfo]
+;--- ƒvƒŒƒCƒ„[‚P ---           
+p1startx       = -140 
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1        
+;--- ƒvƒŒƒCƒ„[‚Q ---             
+p2startx       = 140         
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1       
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0           
+;------------------------------------------------------------------------------
+[Scaling]
+topz           = 0           
+botz           = 50         
+topscale       = 0.5        
+botscale       = 0.5     
+;------------------------------------------------------------------------------
+[Bound]
+screenleft     = 20          
+screenright    = 20          
+;------------------------------------------------------------------------------
+[StageInfo]
+zoffset          = 430  ;pociotion del char
+autoturn       = 1           
+resetBG        = 1           
+localcoord    = 640,480
+;--------------------------------------------------------
+[Shadow]
+color = 100,100,100
+yscale = -.2
+
+[Reflection]
+intensity = 110
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/.mp3 ;wav,ogg,mp3 etc. :v
+bgmvolume = 255
+
+[BGdef]
+spr = Anime Blu.sff
+debugbg = 0
+
+[BG 0 ]
+type = normal
+spriteno = 0,0
+layerno = 0
+delta = 2,2
+start = 0,0
+mask = 1
+
+[BG 0 ]
+type = normal
+spriteno = 0,1
+layerno = 0
+delta = 2,2
+trans = add
+mask = 1
+
+[BG 0 ]
+type = normal
+spriteno = 0,3
+layerno = 0
+delta = 2,2
+trans = add
+mask = 1
+
+[BG 0 ]
+type = normal
+spriteno = 0,4
+layerno = 0
+trans = none
+delta = 2,2
+mask = 1
+
+
+ 

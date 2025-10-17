@@ -1,0 +1,406 @@
+"""
+KOF Ultimate Online - Système de Profils Joueurs
+Similaire au système de profils de Warcraft 3
+"""
+
+import json
+import hashlib
+from datetime import datetime
+from pathlib import Path
+
+
+class PlayerProfileSystem:
+    """Gestion des profils joueurs avec stats (comme WC3)"""
+
+    def __init__(self, base_path="D:/KOF Ultimate Online Online"):
+        self.base_path = Path(base_path)
+        self.profiles_dir = self.base_path / "profiles"
+        self.profiles_dir.mkdir(exist_ok=True)
+
+        self.profiles_db = self.profiles_dir / "profiles_database.json"
+        self.current_profile = None
+
+        # Initialiser la base de données
+        if not self.profiles_db.exists():
+            self._init_database()
+
+    def _init_database(self):
+        """Initialise la base de données des profils"""
+        db = {
+            "profiles": {},
+            "last_profile": None,
+            "version": "1.0"
+        }
+        self._save_database(db)
+
+    def _load_database(self):
+        """Charge la base de données"""
+        with open(self.profiles_db, 'r', encoding='utf-8') as f:
+            return json.load(f)
+
+    def _save_database(self, db):
+        """Sauvegarde la base de données"""
+        with open(self.profiles_db, 'w', encoding='utf-8') as f:
+            json.dump(db, f, indent=2, ensure_ascii=False)
+
+    def create_profile(self, username, password=None, pin=None):
+        """
+        Crée un nouveau profil joueur
+
+        Args:
+            username: Nom d'utilisateur (unique)
+            password: Mot de passe (requis)
+            pin: Code PIN à 4 chiffres (requis)
+
+        Returns:
+            dict: Profil créé ou None si erreur
+        """
+        db = self._load_database()
+
+        # Vérifier si le profil existe déjà
+        if username in db["profiles"]:
+            print(f"❌ Le profil '{username}' existe déjà!")
+            return None
+
+        # Vérifier que le mot de passe et le PIN sont fournis
+        if not password or not pin:
+            print("❌ Mot de passe et PIN requis!")
+            return None
+
+        # Vérifier que le PIN est un nombre à 4 chiffres
+        if not pin.isdigit() or len(pin) != 4:
+            print("❌ Le PIN doit être un nombre à 4 chiffres!")
+            return None
+
+        # Créer le nouveau profil
+        profile = {
+            "username": username,
+            "password_hash": hashlib.sha256(password.encode()).hexdigest(),
+            "pin_hash": hashlib.sha256(pin.encode()).hexdigest(),
+            "created_at": datetime.now().isoformat(),
+            "last_login": datetime.now().isoformat(),
+            "stats": {
+                "total_matches": 0,
+                "wins": 0,
+                "losses": 0,
+                "draws": 0,
+                "win_rate": 0.0,
+                "total_playtime_minutes": 0,
+                "favorite_character": None,
+                "level": 1,
+                "experience": 0,
+                "ranking_points": 1000  # Système de ranking ELO-like
+            },
+            "character_stats": {},  # Stats par personnage
+            "match_history": [],     # Historique des 50 derniers matchs
+            "achievements": [],      # Succès débloqués
+            "settings": {
+                "auto_login": False,
+                "show_stats_in_game": True
+            }
+        }
+
+        # Sauvegarder dans la DB
+        db["profiles"][username] = profile
+        db["last_profile"] = username
+        self._save_database(db)
+
+        print(f"✓ Profil '{username}' créé avec succès!")
+        return profile
+
+    def login(self, username, password=None, pin=None):
+        """
+        Connexion à un profil
+
+        Args:
+            username: Nom d'utilisateur
+            password: Mot de passe (si défini)
+            pin: Code PIN (si défini)
+
+        Returns:
+            bool: True si connexion réussie
+        """
+        db = self._load_database()
+
+        if username not in db["profiles"]:
+            print(f"❌ Profil '{username}' introuvable!")
+            return False
+
+        profile = db["profiles"][username]
+
+        # Vérifier le mot de passe si défini
+        if profile["password_hash"]:
+            if not password:
+                print("❌ Mot de passe requis!")
+                return False
+
+            password_hash = hashlib.sha256(password.encode()).hexdigest()
+            if password_hash != profile["password_hash"]:
+                print("❌ Mot de passe incorrect!")
+                return False
+
+        # Vérifier le PIN si défini
+        if profile.get("pin_hash"):
+            if not pin:
+                print("❌ Code PIN requis!")
+                return False
+
+            pin_hash = hashlib.sha256(pin.encode()).hexdigest()
+            if pin_hash != profile["pin_hash"]:
+                print("❌ Code PIN incorrect!")
+                return False
+
+        # Mettre à jour le dernier login
+        profile["last_login"] = datetime.now().isoformat()
+        db["last_profile"] = username
+        self._save_database(db)
+
+        self.current_profile = profile
+        print(f"✓ Connecté en tant que '{username}'")
+        return True
+
+    def get_profile(self, username):
+        """Récupère un profil"""
+        db = self._load_database()
+        return db["profiles"].get(username)
+
+    def list_profiles(self):
+        """Liste tous les profils"""
+        db = self._load_database()
+        return list(db["profiles"].keys())
+
+    def delete_profile(self, username, confirm=False):
+        """Supprime un profil"""
+        if not confirm:
+            print("⚠️  Confirmation requise pour supprimer un profil!")
+            return False
+
+        db = self._load_database()
+
+        if username not in db["profiles"]:
+            print(f"❌ Profil '{username}' introuvable!")
+            return False
+
+        del db["profiles"][username]
+
+        if db["last_profile"] == username:
+            db["last_profile"] = None
+
+        self._save_database(db)
+        print(f"✓ Profil '{username}' supprimé")
+        return True
+
+    def update_stats_after_match(self, username, match_result):
+        """
+        Met à jour les stats après un match
+
+        Args:
+            username: Nom du joueur
+            match_result: dict avec les infos du match
+                {
+                    "result": "win"|"loss"|"draw",
+                    "character_used": "nom_perso",
+                    "opponent": "nom_adversaire",
+                    "duration_minutes": 5,
+                    "ranking_change": +20
+                }
+        """
+        db = self._load_database()
+
+        if username not in db["profiles"]:
+            return False
+
+        profile = db["profiles"][username]
+        stats = profile["stats"]
+
+        # Mettre à jour les stats générales
+        stats["total_matches"] += 1
+
+        if match_result["result"] == "win":
+            stats["wins"] += 1
+        elif match_result["result"] == "loss":
+            stats["losses"] += 1
+        else:
+            stats["draws"] += 1
+
+        # Calculer le win rate
+        if stats["total_matches"] > 0:
+            stats["win_rate"] = (stats["wins"] / stats["total_matches"]) * 100
+
+        # Temps de jeu
+        stats["total_playtime_minutes"] += match_result.get("duration_minutes", 0)
+
+        # Ranking points
+        stats["ranking_points"] += match_result.get("ranking_change", 0)
+
+        # XP et niveau
+        xp_gained = 100 if match_result["result"] == "win" else 25
+        stats["experience"] += xp_gained
+        stats["level"] = 1 + (stats["experience"] // 1000)  # 1000 XP par niveau
+
+        # Stats par personnage
+        char = match_result.get("character_used", "Unknown")
+        if char not in profile["character_stats"]:
+            profile["character_stats"][char] = {
+                "matches": 0,
+                "wins": 0,
+                "losses": 0
+            }
+
+        profile["character_stats"][char]["matches"] += 1
+        if match_result["result"] == "win":
+            profile["character_stats"][char]["wins"] += 1
+        elif match_result["result"] == "loss":
+            profile["character_stats"][char]["losses"] += 1
+
+        # Déterminer le personnage favori
+        max_matches = 0
+        for c, c_stats in profile["character_stats"].items():
+            if c_stats["matches"] > max_matches:
+                max_matches = c_stats["matches"]
+                stats["favorite_character"] = c
+
+        # Ajouter à l'historique (garder seulement les 50 derniers)
+        match_entry = {
+            "date": datetime.now().isoformat(),
+            "result": match_result["result"],
+            "character": char,
+            "opponent": match_result.get("opponent", "Unknown"),
+            "duration": match_result.get("duration_minutes", 0)
+        }
+        profile["match_history"].insert(0, match_entry)
+        profile["match_history"] = profile["match_history"][:50]
+
+        # Sauvegarder
+        self._save_database(db)
+
+        return True
+
+    def get_stats_summary(self, username):
+        """Retourne un résumé des stats pour affichage"""
+        profile = self.get_profile(username)
+        if not profile:
+            return None
+
+        stats = profile["stats"]
+
+        summary = f"""
+╔════════════════════════════════════════════════╗
+║      PROFIL JOUEUR - {username.upper():^20}      ║
+╠════════════════════════════════════════════════╣
+║ Niveau: {stats['level']:>3}  |  XP: {stats['experience']:>6}           ║
+║ Ranking: {stats['ranking_points']:>4} pts                              ║
+╠════════════════════════════════════════════════╣
+║ STATISTIQUES DE COMBAT                         ║
+╠════════════════════════════════════════════════╣
+║ Matchs totaux:     {stats['total_matches']:>6}                   ║
+║ Victoires:         {stats['wins']:>6}                   ║
+║ Défaites:          {stats['losses']:>6}                   ║
+║ Match nuls:        {stats['draws']:>6}                   ║
+║ Win Rate:          {stats['win_rate']:>5.1f}%                  ║
+╠════════════════════════════════════════════════╣
+║ Temps de jeu:      {stats['total_playtime_minutes']:>6} min             ║
+║ Perso favori:      {(stats['favorite_character'] or 'N/A'):^20} ║
+╚════════════════════════════════════════════════╝
+"""
+        return summary
+
+    def get_leaderboard(self, top_n=10):
+        """Récupère le classement des joueurs"""
+        db = self._load_database()
+
+        # Trier par ranking points
+        profiles_list = []
+        for username, profile in db["profiles"].items():
+            profiles_list.append({
+                "username": username,
+                "ranking": profile["stats"]["ranking_points"],
+                "level": profile["stats"]["level"],
+                "wins": profile["stats"]["wins"],
+                "losses": profile["stats"]["losses"]
+            })
+
+        profiles_list.sort(key=lambda x: x["ranking"], reverse=True)
+
+        return profiles_list[:top_n]
+
+
+def main():
+    """Interface CLI pour tester le système"""
+    system = PlayerProfileSystem()
+
+    while True:
+        print("\n" + "=" * 50)
+        print("KOF ULTIMATE ONLINE - GESTION DES PROFILS")
+        print("=" * 50)
+        print("1. Créer un nouveau profil")
+        print("2. Se connecter à un profil")
+        print("3. Voir mes stats")
+        print("4. Lister tous les profils")
+        print("5. Voir le classement")
+        print("6. Simuler un match (test)")
+        print("7. Supprimer un profil")
+        print("0. Quitter")
+        print("=" * 50)
+
+        choice = input("\nChoix: ").strip()
+
+        if choice == "1":
+            username = input("Nom d'utilisateur: ").strip()
+            password = input("Mot de passe (optionnel): ").strip()
+            system.create_profile(username, password if password else None)
+
+        elif choice == "2":
+            username = input("Nom d'utilisateur: ").strip()
+            password = input("Mot de passe: ").strip()
+            system.login(username, password if password else None)
+
+        elif choice == "3":
+            if system.current_profile:
+                print(system.get_stats_summary(system.current_profile["username"]))
+            else:
+                print("❌ Aucun profil connecté!")
+
+        elif choice == "4":
+            profiles = system.list_profiles()
+            print(f"\n📋 {len(profiles)} profils:")
+            for p in profiles:
+                print(f"  - {p}")
+
+        elif choice == "5":
+            leaderboard = system.get_leaderboard()
+            print("\n🏆 CLASSEMENT")
+            print("-" * 60)
+            for i, p in enumerate(leaderboard, 1):
+                print(f"{i:>2}. {p['username']:<20} | Ranking: {p['ranking']:>4} | Niv.{p['level']:>2} | {p['wins']}W - {p['losses']}L")
+
+        elif choice == "6":
+            if system.current_profile:
+                result = input("Résultat (win/loss/draw): ").strip()
+                char = input("Personnage utilisé: ").strip()
+                system.update_stats_after_match(
+                    system.current_profile["username"],
+                    {
+                        "result": result,
+                        "character_used": char,
+                        "opponent": "TestOpponent",
+                        "duration_minutes": 5,
+                        "ranking_change": 20 if result == "win" else -10
+                    }
+                )
+                print("✓ Stats mises à jour!")
+            else:
+                print("❌ Aucun profil connecté!")
+
+        elif choice == "7":
+            username = input("Nom du profil à supprimer: ").strip()
+            confirm = input("Êtes-vous sûr? (oui/non): ").strip().lower()
+            system.delete_profile(username, confirm == "oui")
+
+        elif choice == "0":
+            print("À bientôt!")
+            break
+
+
+if __name__ == "__main__":
+    main()

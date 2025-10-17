@@ -1,0 +1,237 @@
+;--------------------------------------------------------
+
+[Info]
+name = "Time Incognita"
+author= "DROLLDIAMOND"
+
+[Camera]
+startx         = 0         
+starty         = 0           
+                          
+boundleft      = -215        
+boundright     = 215        
+boundhigh      = -10          
+boundlow       = 0          
+verticalfollow = 0           
+tension        = 50          
+
+[PlayerInfo]    
+p1startx       = -70        
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1  
+      
+p2startx       = 70         
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1  
+        
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0           
+
+[Scaling]
+topz           = 0           
+botz           = 50         
+topscale       = 1           
+botscale       = 1.2        
+
+[Bound]
+screenleft     = 20          
+screenright    = 20          
+
+[StageInfo]
+zoffset        = 215         
+autoturn       = 1           
+;resetBG       = 1           
+hires          = 1
+
+[Shadow]
+color = 100,100,100
+yscale = -.2
+reflect = 0
+
+
+;--------------------------------------------------------
+
+[Music]
+bgmusic = sound/DROTIME.mp3
+bgvolume = 255
+
+[BGdef]
+spr =  TIME INGCODNITA.sff
+debugbg = 0
+
+;------------------------
+
+;SUELO O BASE
+[BG 0 ]
+type = normal
+spriteno = 100,0
+layerno = 0
+start = 1,240
+mask = 1
+
+;FONDO
+[BG 1]
+type = normal
+spriteno = 100,1
+layerno = 0
+start = 0,240
+delta = 0,0
+mask= 1
+
+[BG 4]
+type = anim
+actionno = 45
+layerno = 0
+trans = sub
+start = 1,390
+mask = 1
+
+;GIF AGUJERO
+[BG 2]
+type = anim
+actionno = 100
+layerno = 0
+start = 0,280
+trans = add
+mask = 1
+
+[BG 3]
+type = anim
+actionno = 46
+layerno = 0
+start = 1,270
+mask = 1
+
+[BG 5]
+type = anim
+actionno = 40
+layerno = 0
+start = 140, 290
+mask = 1
+
+[BG 5]
+type = anim
+actionno = 40
+layerno = 0
+start = -430, 290
+mask = 1
+
+[BG 5]
+type = anim
+actionno = 40
+layerno = 0
+start = 430, 290
+mask = 1
+
+[BG 5]
+type = anim
+actionno = 40
+layerno = 0
+start = -140, 290
+mask = 1
+
+; AGUJERO
+[Begin Action 100]
+100,2, 0,0, 5, , A
+100,3, 0,0, 5, , A
+100,4, 0,0, 5, , A
+100,5, 0,0, 5, , A
+100,6, 0,0, 5, , A
+100,7, 0,0, 5, , A
+100,8, 0,0, 5, , A
+100,9, 0,0, 5, , A
+100,10, 0,0, 5, , A
+100,11, 0,0, 5, , A
+100,12, 0,0, 5, , A
+LoopStart
+100,13, 0,0, 5, , A
+100,14, 0,0, 5, , A
+100,15, 0,0, 5, , A
+100,16, 0,0, 5, , A
+100,17, 0,0, 5, , A
+100,18, 0,0, 5, , A
+100,19, 0,0, 5, , A
+100,20, 0,0, 5, , A
+100,21, 0,0, 5, , A
+100,22, 0,0, 5, , A
+100,23, 0,0, 5, , A
+100,24, 0,0, 5, , A
+100,25, 0,0, 5, , A
+100,26, 0,0, 5, , A
+100,27, 0,0, 5, , A
+100,28, 0,0, 5, , A
+100,29, 0,0, 5, , A
+100,30, 0,0, 5, , A
+100,31, 0,0, 5, , A
+100,32, 0,0, 5, , A
+100,33, 0,0, 5, , A
+100,34, 0,0, 5, , A
+100,35, 0,0, 5, , A
+100,36, 0,0, 5, , A
+100,37, 0,0, 5, , A
+100,38, 0,0, 5, , A
+100,39, 0,0, 5, , A
+100,40, 0,0, 5, , A
+100,41, 0,0, 5, , A
+100,42, 0,0, 5, , A
+100,43, 0,0, 5, , A
+100,44, 0,0, 5, , A
+100,45, 0,0, 5, , A
+100,46, 0,0, 5, , A
+100,47, 0,0, 5, , A
+100,48, 0,0, 5, , A
+100,49, 0,0, 5, , A
+100,50, 0,0, 5, , A
+100,51, 0,0, 5, , A
+100,52, 0,0, 5, , A
+100,53, 0,0, 5, , A
+
+
+[Begin Action 45]
+45,0, 0,11, 5, , AS25D256
+45,0, 0,0, 5, , AS50D256
+45,0, 0,0, 5, , AS100D256
+45,0, 0,0, 5, , AS150D256
+45,0, 0,0, 5, , AS200D256
+45,0, 0,0, 5, , A
+45,0, 0,0, 5, , AS200D256
+45,0, 0,0, 5, , AS150D256
+45,0, 0,0, 5, , AS100D256
+45,0, 0,0, 5, , AS50D256
+
+[Begin Action 46]
+46,0, 0,0, 5, , A
+46,1, 0,0, 5, , A
+46,2, 0,0, 5, , A
+46,3, 0,0, 5, , A
+46,4, 0,0, 5, , A
+46,5, 0,0, 5, , A
+46,6, 0,0, 5, , A
+46,7, 0,0, 5, , A
+46,8, 0,0, 5, , A
+46,9, 0,0, 5, , A
+46,10, 0,0, 5, , A
+46,11, 0,0, 5, , A
+
+; TERCER GIF
+[Begin Action 40]
+40,0, 0,0, 5, , A
+40,1, 0,0, 5, , A
+40,2, 0,0, 5, , A
+40,3, 0,0, 5, , A
+40,4, 0,0, 5, , A
+LoopStart
+40,5, 0,0, 5, , A
+40,6, 0,0, 5, , A
+40,7, 0,0, 5, , A
+40,8, 0,0, 5, , A
+40,9, 0,0, 5, , A
+40,10, 0,0, 5, , A
+40,11, 0,0, 5, , A
+40,12, 0,0, 5, , A
+

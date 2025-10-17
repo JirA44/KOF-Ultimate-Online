@@ -8,7 +8,7 @@ from pathlib import Path
 
 def modify_config_for_windowed():
     """Modifie temporairement la config pour mode fenêtré"""
-    config_file = Path(r"D:\KOF Ultimate\data\mugen.cfg")
+    config_file = Path(r"D:\KOF Ultimate Online\data\mugen.cfg")
 
     if not config_file.exists():
         print("❌ Fichier mugen.cfg non trouvé!")
@@ -41,7 +41,7 @@ def modify_config_for_windowed():
 
 def launch_game():
     """Lance le jeu"""
-    exe_path = Path(r"D:\KOF Ultimate\KOF BLACK R.exe")
+    exe_path = Path(r"D:\KOF Ultimate Online\KOF_Ultimate_Online.exe")
 
     if not exe_path.exists():
         print("❌ Executable non trouvé!")

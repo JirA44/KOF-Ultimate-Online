@@ -9,7 +9,7 @@ from pathlib import Path
 import configparser
 import subprocess
 
-GAME_PATH = Path("D:/KOF Ultimate")
+GAME_PATH = Path("D:/KOF Ultimate Online")
 CONFIG_FILE = GAME_PATH / "data" / "mugen.cfg"
 
 # Configurations prédéfinies pour les manettes populaires

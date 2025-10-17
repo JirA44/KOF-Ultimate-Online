@@ -23,7 +23,7 @@ def check_gamepad_config():
     print(f"\n{Colors.CYAN}{Colors.BOLD}VÉRIFICATION CONFIGURATION MANETTE{Colors.RESET}")
     print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
 
-    config_file = Path(r"D:\KOF Ultimate\data\mugen.cfg")
+    config_file = Path(r"D:\KOF Ultimate Online\data\mugen.cfg")
 
     if not config_file.exists():
         print(f"{Colors.RED}✗ mugen.cfg introuvable!{Colors.RESET}")
@@ -95,7 +95,7 @@ def enable_joystick_if_needed():
     """Active le joystick si nécessaire"""
     print(f"\n{Colors.CYAN}Activation automatique du joystick...{Colors.RESET}")
 
-    config_file = Path(r"D:\KOF Ultimate\data\mugen.cfg")
+    config_file = Path(r"D:\KOF Ultimate Online\data\mugen.cfg")
 
     with open(config_file, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()

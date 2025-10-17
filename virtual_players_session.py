@@ -84,9 +84,9 @@ class VirtualPlayer:
             exe_path = self.game_dir / "Ikemen_GO" / "Ikemen_GO.exe"
             if not exe_path.exists():
                 print(f"{Colors.RED}  ✗ Ikemen GO introuvable, utilisation M.U.G.E.N{Colors.RESET}")
-                exe_path = self.game_dir / "KOF BLACK R.exe"
+                exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         else:
-            exe_path = self.game_dir / "KOF BLACK R.exe"
+            exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
 
         self.process = subprocess.Popen(
             [str(exe_path)],
@@ -428,7 +428,7 @@ class MultiplayerSession:
 
 def main():
     """Point d'entrée principal"""
-    game_dir = r"D:\KOF Ultimate"
+    game_dir = r"D:\KOF Ultimate Online"
 
     print(f"{Colors.CYAN}Options:{Colors.RESET}")
     print(f"  1. Session 2 joueurs (rapide - 30s)")

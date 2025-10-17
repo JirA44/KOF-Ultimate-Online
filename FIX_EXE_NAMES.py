@@ -1,0 +1,126 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+KOF ULTIMATE - Correcteur Noms d'Exécutables
+Corrige automatiquement tous les mauvais noms d'exécutables
+"""
+
+import re
+from pathlib import Path
+import shutil
+from datetime import datetime
+
+class ExeNameFixer:
+    """Correcteur de noms d'exécutables"""
+
+    def __init__(self):
+        self.game_dir = Path(__file__).parent
+        self.correct_exe = "KOF_Ultimate_Online.exe"
+        self.wrong_exes = [
+            "KOF_Ultimate_Online.exe",
+            "KOF_Ultimate_Online.exe",
+            "KOF_Ultimate_Online.exe",
+        ]
+        self.backup_dir = self.game_dir / "backups_exe_fix"
+        self.backup_dir.mkdir(exist_ok=True)
+        self.files_fixed = 0
+
+    def log(self, message):
+        """Log un message"""
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        print(f"[{timestamp}] {message}")
+
+    def backup_file(self, filepath):
+        """Sauvegarde avant modification"""
+        try:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            backup_name = f"{filepath.name}.exe_fix_{timestamp}"
+            backup_path = self.backup_dir / backup_name
+            shutil.copy2(filepath, backup_path)
+            return True
+        except Exception as e:
+            self.log(f"⚠️  Erreur backup: {e}")
+            return False
+
+    def fix_exe_names_in_file(self, filepath):
+        """Corrige les noms d'exécutables dans un fichier"""
+        try:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            original_content = content
+            changes = 0
+
+            # Remplacer tous les mauvais noms d'exécutables
+            for wrong_exe in self.wrong_exes:
+                if wrong_exe in content:
+                    # Compter les occurrences
+                    count = content.count(wrong_exe)
+
+                    # Remplacer
+                    content = content.replace(wrong_exe, self.correct_exe)
+
+                    changes += count
+                    self.log(f"  ✓ {filepath.name}: {wrong_exe} → {self.correct_exe} ({count}x)")
+
+            # Si des changements ont été faits, sauvegarder
+            if content != original_content:
+                self.backup_file(filepath)
+
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(content)
+
+                self.files_fixed += 1
+                return True
+
+            return False
+
+        except Exception as e:
+            self.log(f"❌ Erreur avec {filepath.name}: {e}")
+            return False
+
+    def fix_all_files(self):
+        """Corrige tous les fichiers Python"""
+        self.log("\n🔧 CORRECTION NOMS D'EXÉCUTABLES")
+        self.log("=" * 70)
+
+        python_files = list(self.game_dir.glob("*.py"))
+
+        self.log(f"\n📁 Scan de {len(python_files)} fichiers...")
+        self.log("")
+
+        total_changes = 0
+
+        for py_file in python_files:
+            if self.fix_exe_names_in_file(py_file):
+                total_changes += 1
+
+        self.log("\n" + "=" * 70)
+        self.log(f"📊 RÉSULTAT: {self.files_fixed} fichier(s) corrigé(s)")
+        self.log(f"💾 Backups dans: {self.backup_dir}")
+        self.log("=" * 70)
+
+        if self.files_fixed > 0:
+            self.log("\n✅ CORRECTION TERMINÉE!")
+            self.log(f"\nTous les scripts utilisent maintenant: {self.correct_exe}")
+        else:
+            self.log("\n✅ Aucune correction nécessaire - Tout est OK!")
+
+def main():
+    """Point d'entrée"""
+    print("\n" + "=" * 70)
+    print("  🔧 CORRECTEUR NOMS D'EXÉCUTABLES")
+    print("=" * 70)
+    print("\n  Correction automatique:")
+    print("  'KOF_Ultimate_Online.exe' → 'KOF_Ultimate_Online.exe'")
+    print("  'KOF_Ultimate_Online.exe' → 'KOF_Ultimate_Online.exe'")
+    print("\n" + "=" * 70)
+    print()
+
+    fixer = ExeNameFixer()
+    fixer.fix_all_files()
+
+    print()
+
+if __name__ == '__main__':
+    main()

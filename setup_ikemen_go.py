@@ -59,7 +59,7 @@ def setup_ikemen_go():
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'INSTALLATION IKEMEN GO':^80}{Colors.RESET}")
     print(f"{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}\n")
 
-    base_dir = Path(r"D:\KOF Ultimate")
+    base_dir = Path(r"D:\KOF Ultimate Online")
     ikemen_dir = base_dir / "Ikemen_GO"
 
     # URLs pour télécharger Ikemen GO
@@ -185,7 +185,7 @@ set /p choice="Votre choix (1 ou 2): "
 if "%choice%"=="1" (
     echo.
     echo Lancement M.U.G.E.N...
-    start "" "KOF BLACK R.exe"
+    start "" "KOF_Ultimate_Online.exe"
 ) else if "%choice%"=="2" (
     echo.
     echo Lancement Ikemen GO...

@@ -19,7 +19,7 @@ except ImportError:
     print("✓ pygame installé!")
     import pygame
 
-GAME_PATH = Path("D:/KOF Ultimate")
+GAME_PATH = Path("D:/KOF Ultimate Online")
 CONFIG_FILE = GAME_PATH / "data" / "mugen.cfg"
 CHECK_INTERVAL = 2  # Vérifier toutes les 2 secondes
 

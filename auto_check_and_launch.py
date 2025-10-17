@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 class KOFAutoChecker:
-    def __init__(self, base_dir=r"D:\KOF Ultimate"):
+    def __init__(self, base_dir=r"D:\KOF Ultimate Online"):
         self.base_dir = Path(base_dir)
         self.errors = []
         self.warnings = []
@@ -78,11 +78,11 @@ class KOFAutoChecker:
             "CRITIQUE: data/select.def manquant!"
         )
 
-        exe_file = self.base_dir / "KOF BLACK R.exe"
+        exe_file = self.base_dir / "KOF_Ultimate_Online.exe"
         self.check(
             exe_file.exists(),
-            "KOF BLACK R.exe trouvé",
-            "CRITIQUE: KOF BLACK R.exe manquant!"
+            "KOF_Ultimate_Online.exe trouvé",
+            "CRITIQUE: KOF_Ultimate_Online.exe manquant!"
         )
 
     def step_2_configuration_menu(self):
@@ -339,7 +339,7 @@ class KOFAutoChecker:
         print("🚀 LANCEMENT DU JEU")
         print("="*70)
 
-        game_exe = self.base_dir / "KOF BLACK R.exe"
+        game_exe = self.base_dir / "KOF_Ultimate_Online.exe"
 
         if not game_exe.exists():
             print(f"\n❌ ERREUR: {game_exe} introuvable!")

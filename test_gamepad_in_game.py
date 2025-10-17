@@ -117,8 +117,8 @@ def monitor_gamepad_inputs(joystick, duration=5):
 
 def launch_game():
     """Lance le jeu KOF Ultimate"""
-    game_path = Path("D:/KOF Ultimate")
-    exe_path = game_path / "KOF BLACK R.exe"
+    game_path = Path("D:/KOF Ultimate Online")
+    exe_path = game_path / "KOF_Ultimate_Online.exe"
 
     if not exe_path.exists():
         print_error(f"Exécutable du jeu introuvable : {exe_path}")
@@ -143,7 +143,7 @@ def find_game_process():
     """Trouve le processus du jeu"""
     for proc in psutil.process_iter(['name', 'pid']):
         try:
-            if proc.info['name'] == "KOF BLACK R.exe":
+            if proc.info['name'] == "KOF_Ultimate_Online.exe":
                 return proc
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             pass
@@ -171,7 +171,7 @@ def stop_game():
 
 def check_mugen_log():
     """Vérifie les logs du jeu pour les entrées manette"""
-    log_path = Path("D:/KOF Ultimate/mugen.log")
+    log_path = Path("D:/KOF Ultimate Online/mugen.log")
 
     if not log_path.exists():
         print_error("Fichier mugen.log introuvable")

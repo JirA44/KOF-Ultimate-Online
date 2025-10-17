@@ -1,0 +1,882 @@
+[04:36:46] [INFO] 
+
+🎯 VÉRIFICATION EXÉCUTABLES
+[04:36:46] [INFO] ======================================================================
+[04:36:46] [INFO] ✅ KOF_Ultimate_Online.exe: Trouvé
+[04:36:46] [INFO] ⚠️  KOF BLACK R.exe: Non trouvé
+[04:36:46] [INFO] ⚠️  mugen.exe: Non trouvé
+[04:36:46] [INFO] 
+✓ Exécutable principal: KOF_Ultimate_Online.exe
+[04:36:46] [INFO] 
+
+🎮 VÉRIFICATION CONFIGURATION MUGEN
+[04:36:46] [INFO] ======================================================================
+[04:36:46] [INFO] ✅ system.def: Présent
+[04:36:46] [INFO] ✅ select.def: Présent
+[04:36:46] [INFO]    📊 0 personnages configurés
+[04:36:46] [INFO] ✅ mugen.cfg: Présent
+[04:36:46] [INFO] 
+
+📦 VÉRIFICATION PACKAGES PYTHON
+[04:36:46] [INFO] ======================================================================
+[04:36:46] [INFO] ✅ tkinter: Installé
+[04:36:47] [INFO] ✅ pyautogui: Installé
+[04:36:47] [INFO] ✅ Pillow: Installé
+[04:36:47] [INFO] ✅ pywin32: Installé
+[04:36:47] [INFO] ✅ psutil: Installé
+[04:36:47] [INFO] 
+🔍 SCAN DE TOUS LES FICHIERS PYTHON
+[04:36:47] [INFO] ======================================================================
+[04:36:47] [INFO] 
+📁 81 fichiers Python trouvés
+[04:36:47] [INFO] 
+[04:36:47] [INFO] ⚠️  advanced_menu_tester.py: 4 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ai_bug_diagnostic.py: 6 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ai_gamepad_configurator.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ai_gamepad_navigator.py: 1 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ai_installation_checker.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ✅ ai_netplay_opponent.py: OK
+[04:36:47] [INFO] ⚠️  ai_player_system.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ai_retro_enhancer.py: 4 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ai_select_def_generator.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ai_vs_ai_match.py: 6 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  auto_check_and_launch.py: 5 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  auto_clicker_kof.py: 4 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  AUTO_DETECT_FIX_ALL_ERRORS.py: 7 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  auto_diagnostic.py: 3 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  auto_matchmaking_test.py: 1 erreur(s) détectée(s)
+[04:36:47] [INFO] ✅ auto_repair_system.py: OK
+[04:36:47] [INFO] ✅ auto_setup_complete.py: OK
+[04:36:47] [INFO] ⚠️  auto_test_infinite.py: 3 erreur(s) détectée(s)
+[04:36:47] [INFO] ✅ auto_test_system.py: OK
+[04:36:47] [INFO] ⚠️  character_balancer.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  character_dashboard.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  complete_diagnostic.py: 4 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  configure_xbox_controller.py: 1 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  continuous_visual_tester.py: 5 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  create_menu_animation.py: 1 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  dev_live_window.py: 3 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  enhance_sprites_batch.py: 3 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  explore_all_with_ai.py: 6 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_ai_control.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_all_air_files.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_all_animation_errors.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_all_visual.py: 3 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_collision_spaces.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_cursor_animations.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_eve_air_complete.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_game.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  fix_mugen_config.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  gamepad_auto_config.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  gamepad_hotplug_monitor.py: 1 erreur(s) détectée(s)
+[04:36:47] [INFO] ✅ gamepad_to_keyboard_mapper.py: OK
+[04:36:47] [INFO] ✅ game_monitor.py: OK
+[04:36:47] [INFO] ⚠️  generate_character_sheets.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ✅ generate_final_report.py: OK
+[04:36:47] [INFO] ⚠️  generate_fixed_visualizer.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ✅ generate_full_select.py: OK
+[04:36:47] [INFO] ⚠️  generate_select_def.py: 2 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  graphics_launcher.py: 4 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  IA_EXPLORER.py: 3 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ia_navigator_simple.py: 3 erreur(s) détectée(s)
+[04:36:47] [INFO] ⚠️  ia_test_all_chars.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  integrate_backgrounds.py: 1 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  launcher.py: 4 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  launcher_ai_navigator.py: 2 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  launcher_auto_diagnostic.py: 6 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  launcher_modern.py: 2 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  LAUNCHER_ULTIMATE.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  LAUNCHER_ULTIMATE_V2.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  launcher_windowed.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  launcher_with_profiles.py: 1 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  launch_with_gamepad_detection.py: 5 erreur(s) détectée(s)
+[04:36:48] [INFO] ✅ matchmaking_client.py: OK
+[04:36:48] [INFO] ✅ matchmaking_server.py: OK
+[04:36:48] [INFO] ⚠️  multiplayer_menu.py: 5 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  multiplayer_test_system.py: 4 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  online_bot_match_system.py: 4 erreur(s) détectée(s)
+[04:36:48] [INFO] ✅ online_multiplayer_menu.py: OK
+[04:36:48] [INFO] ⚠️  player_profile_system.py: 2 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  prepare_chars_upload.py: 2 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  realtime_error_monitor.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  setup_ikemen_go.py: 7 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  simple_game_tester.py: 4 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  test_all_characters.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  test_all_launchers.py: 2 erreur(s) détectée(s)
+[04:36:48] [INFO] ✅ test_gamepad_interactive.py: OK
+[04:36:48] [INFO] ⚠️  test_gamepad_in_game.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  test_gamepad_nav.py: 2 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  test_title_animation.py: 3 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  verify_game.py: 1 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  virtual_players_session.py: 8 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  visual_inspector.py: 4 erreur(s) détectée(s)
+[04:36:48] [INFO] ⚠️  visual_test_automated.py: 5 erreur(s) détectée(s)
+[04:36:48] [INFO] 
+
+🔧 CORRECTION AUTOMATIQUE DES ERREURS
+[04:36:48] [INFO] ======================================================================
+[04:36:48] [INFO] 
+📝 Correction: advanced_menu_tester.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: advanced_menu_tester.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO] 
+📝 Correction: ai_bug_diagnostic.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ai_bug_diagnostic.py
+[04:36:48] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ai_gamepad_configurator.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ai_gamepad_configurator.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ai_gamepad_navigator.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ai_gamepad_navigator.py
+[04:36:48] [INFO] 
+📝 Correction: ai_installation_checker.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ai_installation_checker.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ai_player_system.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ai_retro_enhancer.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ai_retro_enhancer.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ai_select_def_generator.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ai_select_def_generator.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ai_vs_ai_match.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ai_vs_ai_match.py
+[04:36:48] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO]      • 7 blocs except trop larges
+[04:36:48] [INFO]        → Spécifier les exceptions à capturer
+[04:36:48] [INFO] 
+📝 Correction: auto_check_and_launch.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: auto_check_and_launch.py
+[04:36:48] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: auto_clicker_kof.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: auto_clicker_kof.py
+[04:36:48] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: AUTO_DETECT_FIX_ALL_ERRORS.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: AUTO_DETECT_FIX_ALL_ERRORS.py
+[04:36:48] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: mugen.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • 4 blocs except trop larges
+[04:36:48] [INFO]        → Spécifier les exceptions à capturer
+[04:36:48] [INFO] 
+📝 Correction: auto_diagnostic.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: auto_diagnostic.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: auto_matchmaking_test.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: auto_test_infinite.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: auto_test_infinite.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO] 
+📝 Correction: character_balancer.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: character_balancer.py
+[04:36:48] [INFO] 
+📝 Correction: character_dashboard.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: character_dashboard.py
+[04:36:48] [INFO] 
+📝 Correction: complete_diagnostic.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: complete_diagnostic.py
+[04:36:48] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO] 
+📝 Correction: configure_xbox_controller.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: configure_xbox_controller.py
+[04:36:48] [INFO] 
+📝 Correction: continuous_visual_tester.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: continuous_visual_tester.py
+[04:36:48] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • 4 blocs except trop larges
+[04:36:48] [INFO]        → Spécifier les exceptions à capturer
+[04:36:48] [INFO] 
+📝 Correction: create_menu_animation.py
+[04:36:48] [INFO] 
+📝 Correction: dev_live_window.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: dev_live_window.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO] 
+📝 Correction: enhance_sprites_batch.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: enhance_sprites_batch.py
+[04:36:48] [INFO] 
+📝 Correction: explore_all_with_ai.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: explore_all_with_ai.py
+[04:36:48] [INFO]   ⚠️  4 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: fix_ai_control.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_ai_control.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: fix_all_air_files.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_all_air_files.py
+[04:36:48] [INFO] 
+📝 Correction: fix_all_animation_errors.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_all_animation_errors.py
+[04:36:48] [INFO] 
+📝 Correction: fix_all_visual.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_all_visual.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: fix_collision_spaces.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_collision_spaces.py
+[04:36:48] [INFO] 
+📝 Correction: fix_cursor_animations.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_cursor_animations.py
+[04:36:48] [INFO] 
+📝 Correction: fix_eve_air_complete.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_eve_air_complete.py
+[04:36:48] [INFO] 
+📝 Correction: fix_game.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_game.py
+[04:36:48] [INFO] 
+📝 Correction: fix_mugen_config.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: fix_mugen_config.py
+[04:36:48] [INFO] 
+📝 Correction: gamepad_auto_config.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: gamepad_auto_config.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: gamepad_hotplug_monitor.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: gamepad_hotplug_monitor.py
+[04:36:48] [INFO] 
+📝 Correction: generate_character_sheets.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: generate_character_sheets.py
+[04:36:48] [INFO] 
+📝 Correction: generate_fixed_visualizer.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: generate_fixed_visualizer.py
+[04:36:48] [INFO] 
+📝 Correction: generate_select_def.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: generate_select_def.py
+[04:36:48] [INFO] 
+📝 Correction: graphics_launcher.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: graphics_launcher.py
+[04:36:48] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: IA_EXPLORER.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: IA_EXPLORER.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ia_navigator_simple.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ia_navigator_simple.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: ia_test_all_chars.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: ia_test_all_chars.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: integrate_backgrounds.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: integrate_backgrounds.py
+[04:36:48] [INFO] 
+📝 Correction: launcher.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: launcher.py
+[04:36:48] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: D:/KOF Ultimate Online/Ikemen_GO.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: launcher_ai_navigator.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: launcher_ai_navigator.py
+[04:36:48] [INFO] 
+📝 Correction: launcher_auto_diagnostic.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: launcher_auto_diagnostic.py
+[04:36:48] [INFO]   ⚠️  5 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: launcher_modern.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: LAUNCHER_ULTIMATE.py
+[04:36:48] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:48] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:48] [INFO] 
+📝 Correction: LAUNCHER_ULTIMATE_V2.py
+[04:36:48] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO] 
+📝 Correction: launcher_windowed.py
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: launcher_windowed.py
+[04:36:48] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:48] [INFO]      • Exécutable introuvable: D:\KOF Ultimate\KOF BLACK R.exe
+[04:36:48] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:48] [INFO] 
+📝 Correction: launcher_with_profiles.py
+[04:36:48] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:48] [INFO]   📝 Fichier modifié: launcher_with_profiles.py
+[04:36:48] [INFO] 
+📝 Correction: launch_with_gamepad_detection.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: launch_with_gamepad_detection.py
+[04:36:49] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:49] [INFO] 
+📝 Correction: multiplayer_menu.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: multiplayer_menu.py
+[04:36:49] [INFO]   ⚠️  3 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO] 
+📝 Correction: multiplayer_test_system.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: multiplayer_test_system.py
+[04:36:49] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:49] [INFO] 
+📝 Correction: online_bot_match_system.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: online_bot_match_system.py
+[04:36:49] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:49] [INFO] 
+📝 Correction: player_profile_system.py
+[04:36:49] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: player_profile_system.py
+[04:36:49] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:49] [INFO] 
+📝 Correction: prepare_chars_upload.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: prepare_chars_upload.py
+[04:36:49] [INFO] 
+📝 Correction: realtime_error_monitor.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: realtime_error_monitor.py
+[04:36:49] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:49] [INFO] 
+📝 Correction: setup_ikemen_go.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: setup_ikemen_go.py
+[04:36:49] [INFO]   ⚠️  5 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO] 
+📝 Correction: simple_game_tester.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: simple_game_tester.py
+[04:36:49] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:49] [INFO] 
+📝 Correction: test_all_characters.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: test_all_characters.py
+[04:36:49] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO] 
+📝 Correction: test_all_launchers.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: test_all_launchers.py
+[04:36:49] [INFO] 
+📝 Correction: test_gamepad_in_game.py
+[04:36:49] [INFO]   ✓ Corrigé: D:/KOF Ultimate → D:/KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: test_gamepad_in_game.py
+[04:36:49] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO] 
+📝 Correction: test_gamepad_nav.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: test_gamepad_nav.py
+[04:36:49] [INFO] 
+📝 Correction: test_title_animation.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: test_title_animation.py
+[04:36:49] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO] 
+📝 Correction: verify_game.py
+[04:36:49] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO] 
+📝 Correction: virtual_players_session.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: virtual_players_session.py
+[04:36:49] [INFO]   ⚠️  5 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: Ikemen_GO.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]        → Remplacer par une alternative non-bloquante
+[04:36:49] [INFO]      • 6 blocs except trop larges
+[04:36:49] [INFO]        → Spécifier les exceptions à capturer
+[04:36:49] [INFO] 
+📝 Correction: visual_inspector.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: visual_inspector.py
+[04:36:49] [INFO]   ⚠️  1 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO] 
+📝 Correction: visual_test_automated.py
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   ✓ Corrigé: D:\KOF Ultimate → D:\KOF Ultimate Online
+[04:36:49] [INFO]   📝 Fichier modifié: visual_test_automated.py
+[04:36:49] [INFO]   ⚠️  2 erreur(s) nécessitent une correction manuelle:
+[04:36:49] [INFO]      • Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]        → Vérifier le chemin ou télécharger le fichier
+[04:36:49] [INFO]      • 4 blocs except trop larges
+[04:36:49] [INFO]        → Spécifier les exceptions à capturer
+[04:36:49] [INFO] 
+
+📦 INSTALLATION PACKAGES MANQUANTS
+[04:36:49] [INFO] ======================================================================
+[04:36:49] [INFO] ✅ Tous les packages sont déjà installés!
+[04:36:49] [INFO] 
+
+======================================================================
+[04:36:49] [INFO] 📊 RAPPORT FINAL
+[04:36:49] [INFO] ======================================================================
+[04:36:49] [INFO] 
+📁 Fichiers scannés: 81
+[04:36:49] [INFO] 🔧 Fichiers corrigés: 62
+[04:36:49] [INFO] ⚠️  Erreurs détectées: 212
+[04:36:49] [INFO] ✅ Corrections appliquées: 65
+[04:36:49] [INFO] 
+📋 DÉTAILS DES ERREURS:
+[04:36:49] [INFO] 
+  WRONG_PATH: 111 occurrence(s)
+[04:36:49] [INFO]     • advanced_menu_tester.py: Chemin incorrect 'D:\KOF Ultimate' trouvé 1 fois
+[04:36:49] [INFO]     • advanced_menu_tester.py: Chemin incorrect 'D:\KOF Ultimate' trouvé 1 fois
+[04:36:49] [INFO]     • ai_bug_diagnostic.py: Chemin incorrect 'D:\KOF Ultimate' trouvé 1 fois
+[04:36:49] [INFO]     • ai_bug_diagnostic.py: Chemin incorrect 'D:/KOF Ultimate' trouvé 3 fois
+[04:36:49] [INFO]     • ai_bug_diagnostic.py: Chemin incorrect 'D:\KOF Ultimate' trouvé 1 fois
+[04:36:49] [INFO]     ... et 106 autre(s)
+[04:36:49] [INFO] 
+  MISSING_PACKAGE: 13 occurrence(s)
+[04:36:49] [INFO]     • advanced_menu_tester.py: Package 'Pillow' manquant
+[04:36:49] [INFO]     • ai_player_system.py: Package 'Pillow' manquant
+[04:36:49] [INFO]     • ai_retro_enhancer.py: Package 'Pillow' manquant
+[04:36:49] [INFO]     • ai_vs_ai_match.py: Package 'Pillow' manquant
+[04:36:49] [INFO]     • AUTO_DETECT_FIX_ALL_ERRORS.py: Package 'Pillow' manquant
+[04:36:49] [INFO]     ... et 8 autre(s)
+[04:36:49] [INFO] 
+  MISSING_EXE: 53 occurrence(s)
+[04:36:49] [INFO]     • advanced_menu_tester.py: Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]     • ai_bug_diagnostic.py: Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]     • ai_bug_diagnostic.py: Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]     • ai_vs_ai_match.py: Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]     • auto_check_and_launch.py: Exécutable introuvable: KOF BLACK R.exe
+[04:36:49] [INFO]     ... et 48 autre(s)
+[04:36:49] [INFO] 
+  BLOCKING_INPUT: 30 occurrence(s)
+[04:36:49] [INFO]     • ai_bug_diagnostic.py: input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]     • ai_gamepad_configurator.py: input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]     • ai_installation_checker.py: input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]     • ai_player_system.py: input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]     • ai_retro_enhancer.py: input() peut bloquer l'exécution automatique
+[04:36:49] [INFO]     ... et 25 autre(s)
+[04:36:49] [INFO] 
+  TOO_BROAD_EXCEPT: 5 occurrence(s)
+[04:36:49] [INFO]     • ai_vs_ai_match.py: 7 blocs except trop larges
+[04:36:49] [INFO]     • AUTO_DETECT_FIX_ALL_ERRORS.py: 4 blocs except trop larges
+[04:36:49] [INFO]     • continuous_visual_tester.py: 4 blocs except trop larges
+[04:36:49] [INFO]     • virtual_players_session.py: 6 blocs except trop larges
+[04:36:49] [INFO]     • visual_test_automated.py: 4 blocs except trop larges
+[04:36:49] [INFO] 
+✅ CORRECTIONS APPLIQUÉES:
+[04:36:49] [INFO]   • advanced_menu_tester.py: 4 correction(s)
+[04:36:49] [INFO]   • ai_bug_diagnostic.py: 9 correction(s)
+[04:36:49] [INFO]   • ai_gamepad_configurator.py: 1 correction(s)
+[04:36:49] [INFO]   • ai_gamepad_navigator.py: 1 correction(s)
+[04:36:49] [INFO]   • ai_installation_checker.py: 1 correction(s)
+[04:36:49] [INFO]   • ai_player_system.py: 0 correction(s)
+[04:36:49] [INFO]   • ai_retro_enhancer.py: 4 correction(s)
+[04:36:49] [INFO]   • ai_select_def_generator.py: 1 correction(s)
+[04:36:49] [INFO]   • ai_vs_ai_match.py: 4 correction(s)
+[04:36:49] [INFO]   • auto_check_and_launch.py: 4 correction(s)
+[04:36:49] [INFO]   • auto_clicker_kof.py: 4 correction(s)
+[04:36:49] [INFO]   • AUTO_DETECT_FIX_ALL_ERRORS.py: 9 correction(s)
+[04:36:49] [INFO]   • auto_diagnostic.py: 4 correction(s)
+[04:36:49] [INFO]   • auto_test_infinite.py: 4 correction(s)
+[04:36:49] [INFO]   • character_balancer.py: 4 correction(s)
+[04:36:49] [INFO]   • character_dashboard.py: 4 correction(s)
+[04:36:49] [INFO]   • complete_diagnostic.py: 4 correction(s)
+[04:36:49] [INFO]   • configure_xbox_controller.py: 1 correction(s)
+[04:36:49] [INFO]   • continuous_visual_tester.py: 4 correction(s)
+[04:36:49] [INFO]   • create_menu_animation.py: 0 correction(s)
+[04:36:49] [INFO]   • dev_live_window.py: 4 correction(s)
+[04:36:49] [INFO]   • enhance_sprites_batch.py: 4 correction(s)
+[04:36:49] [INFO]   • explore_all_with_ai.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_ai_control.py: 1 correction(s)
+[04:36:49] [INFO]   • fix_all_air_files.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_all_animation_errors.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_all_visual.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_collision_spaces.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_cursor_animations.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_eve_air_complete.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_game.py: 4 correction(s)
+[04:36:49] [INFO]   • fix_mugen_config.py: 4 correction(s)
+[04:36:49] [INFO]   • gamepad_auto_config.py: 1 correction(s)
+[04:36:49] [INFO]   • gamepad_hotplug_monitor.py: 1 correction(s)
+[04:36:49] [INFO]   • generate_character_sheets.py: 4 correction(s)
+[04:36:49] [INFO]   • generate_fixed_visualizer.py: 4 correction(s)
+[04:36:49] [INFO]   • generate_select_def.py: 4 correction(s)
+[04:36:49] [INFO]   • graphics_launcher.py: 4 correction(s)
+[04:36:49] [INFO]   • IA_EXPLORER.py: 4 correction(s)
+[04:36:49] [INFO]   • ia_navigator_simple.py: 4 correction(s)
+[04:36:49] [INFO]   • ia_test_all_chars.py: 4 correction(s)
+[04:36:49] [INFO]   • integrate_backgrounds.py: 1 correction(s)
+[04:36:49] [INFO]   • launcher.py: 1 correction(s)
+[04:36:49] [INFO]   • launcher_ai_navigator.py: 1 correction(s)
+[04:36:49] [INFO]   • launcher_auto_diagnostic.py: 1 correction(s)
+[04:36:49] [INFO]   • launcher_modern.py: 0 correction(s)
+[04:36:49] [INFO]   • launcher_windowed.py: 4 correction(s)
+[04:36:49] [INFO]   • launcher_with_profiles.py: 1 correction(s)
+[04:36:49] [INFO]   • launch_with_gamepad_detection.py: 4 correction(s)
+[04:36:49] [INFO]   • multiplayer_menu.py: 4 correction(s)
+[04:36:49] [INFO]   • multiplayer_test_system.py: 4 correction(s)
+[04:36:49] [INFO]   • online_bot_match_system.py: 4 correction(s)
+[04:36:49] [INFO]   • player_profile_system.py: 1 correction(s)
+[04:36:49] [INFO]   • prepare_chars_upload.py: 4 correction(s)
+[04:36:49] [INFO]   • realtime_error_monitor.py: 4 correction(s)
+[04:36:49] [INFO]   • setup_ikemen_go.py: 4 correction(s)
+[04:36:49] [INFO]   • simple_game_tester.py: 4 correction(s)
+[04:36:49] [INFO]   • test_all_characters.py: 4 correction(s)
+[04:36:49] [INFO]   • test_all_launchers.py: 4 correction(s)
+[04:36:49] [INFO]   • test_gamepad_in_game.py: 1 correction(s)
+[04:36:49] [INFO]   • test_gamepad_nav.py: 4 correction(s)
+[04:36:49] [INFO]   • test_title_animation.py: 4 correction(s)
+[04:36:49] [INFO]   • virtual_players_session.py: 4 correction(s)
+[04:36:49] [INFO]   • visual_inspector.py: 4 correction(s)
+[04:36:49] [INFO]   • visual_test_automated.py: 4 correction(s)
+[04:36:49] [INFO] 
+💾 Backups: D:\KOF Ultimate Online\backups_auto_fix
+[04:36:49] [INFO] 📄 Rapport complet: D:\KOF Ultimate Online\AUTO_FIX_REPORT.txt
+[04:36:49] [INFO] 
+======================================================================
+[04:36:49] [INFO] ✅ CORRECTIONS APPLIQUÉES - Relancez pour vérifier
+[04:36:49] [INFO] ======================================================================

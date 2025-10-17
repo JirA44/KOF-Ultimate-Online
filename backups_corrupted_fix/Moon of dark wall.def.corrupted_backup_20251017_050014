@@ -1,0 +1,89 @@
+;--------------------------------------------------------
+[Info]
+name                = "Moon of dark wall S."
+displayname    = "Moon of dark wall"
+author              = "DROLLDIAMOND"
+mugenversion = 1.0
+versiondate     = 02,05,2021
+
+[Camera]
+startx         = 0         
+starty         = 0           
+                             
+boundleft      = -330       
+boundright     = 330        
+boundhigh      = -10          
+boundlow       = 0         
+verticalfollow = 0  ;amplitud acia lo alto            
+tension        = 100          
+
+;------------------------------------------------------------------------------
+[PlayerInfo]
+;--- ƒvƒŒƒCƒ„[‚P ---           
+p1startx       = -280 
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1 
+         
+;--- ƒvƒŒƒCƒ„[‚Q ---             
+p2startx       = 280      
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1  
+        
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0           
+
+
+;------------------------------------------------------------------------------
+[Scaling]
+topz           = 0           
+botz           = 0      
+topscale       = 0       
+botscale       = 0     
+
+;------------------------------------------------------------------------------
+[Bound]
+screenleft     = 90          
+screenright    = 90         
+
+;------------------------------------------------------------------------------
+[StageInfo]
+zoffset          = 850  ;pociotion del char
+autoturn       = 1           
+resetBG        = 1           
+localcoord    = 1280,960
+;--------------------------------------------------------
+[Shadow]
+color = 100,100,100
+yscale = -.2
+
+[Reflection]
+intensity = 128
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/ .mp3 ;wav,ogg,mp3 etc. :v
+bgvolume = 255
+
+[BGdef]
+spr = Moon of dark wall.sff
+debugbg = 0
+
+[BG]
+type = normal
+spriteno = 0,0
+delta = 2,2
+mask = 1
+
+
+
+
+
+
+
+
+
+

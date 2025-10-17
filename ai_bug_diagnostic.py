@@ -119,11 +119,11 @@ class AIBugDiagnostic:
                 content = f.read()
 
             # Vérifie les mauvais chemins
-            if 'KOF BLACK R.exe' in content:
-                wrong_paths_found.append(f'{filename}: "KOF BLACK R.exe"')
+            if 'KOF_Ultimate_Online.exe' in content:
+                wrong_paths_found.append(f'{filename}: "KOF_Ultimate_Online.exe"')
 
-            if 'D:/KOF Ultimate"' in content and 'D:/KOF Ultimate Online' not in content:
-                wrong_paths_found.append(f'{filename}: "D:/KOF Ultimate"')
+            if 'D:/KOF Ultimate Online"' in content and 'D:/KOF Ultimate Online' not in content:
+                wrong_paths_found.append(f'{filename}: "D:/KOF Ultimate Online"')
 
         if wrong_paths_found:
             for path_issue in wrong_paths_found:

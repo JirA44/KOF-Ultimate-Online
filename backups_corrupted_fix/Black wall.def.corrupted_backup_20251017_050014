@@ -1,0 +1,97 @@
+;--------------------------------------------------------
+[Info]
+name                = "Black wall S."
+displayname    = "Black wall "
+author              = "DROLLDIAMOND"
+mugenversion = 1.1
+versiondate     = 27,04,2021
+
+[Camera]
+startx         = 0         
+starty         = 0           
+                             
+boundleft      = -330       
+boundright     = 330        
+boundhigh      = -10          
+boundlow       = 0         
+verticalfollow = 0  ;amplitud acia lo alto            
+tension        = 100          
+
+;------------------------------------------------------------------------------
+[PlayerInfo]
+;--- ƒvƒŒƒCƒ„[‚P ---           
+p1startx       = -280 
+p1starty       = 0           
+p1startz       = 0           
+p1facing       = 1 
+         
+;--- ƒvƒŒƒCƒ„[‚Q ---             
+p2startx       = 280      
+p2starty       = 0           
+p2startz       = 0           
+p2facing       = -1  
+        
+;--- Common ---              
+leftbound      = -1000       
+rightbound     = 1000        
+topbound       = 0           
+botbound       = 0           
+
+
+;------------------------------------------------------------------------------
+[Scaling]
+topz           = 0           
+botz           = 0      
+topscale       = 0       
+botscale       = 0     
+
+;------------------------------------------------------------------------------
+[Bound]
+screenleft     = 90          
+screenright    = 90         
+
+;------------------------------------------------------------------------------
+[StageInfo]
+zoffset          = 850  ;pociotion del char
+autoturn       = 1           
+resetBG        = 1           
+localcoord    = 1280,960
+;--------------------------------------------------------
+[Shadow]
+color = 100,100,100
+yscale = -.2
+
+[Reflection]
+intensity = 110
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/ .mp3 ;wav,ogg,mp3 etc. :v
+bgvolume = 255
+
+[BGdef]
+spr = Black wall.sff
+debugbg = 0
+
+[BG]
+type = normal
+spriteno = 0,0
+mask = 1
+
+[BG]
+type = anim
+actionno = 1
+start = 0,-25
+mask = 1
+
+[BG]
+type = normal
+spriteno = 0,5
+trans = add
+mask = 1
+
+[Begin Action 1]
+0,1, 0,300, 2, , S
+0,2, -1,301, 2, , S
+0,3, -1,302, 2, , S
+0,4, -1,302, 2, , S
+

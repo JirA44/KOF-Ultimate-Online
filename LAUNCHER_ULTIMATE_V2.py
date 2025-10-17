@@ -65,7 +65,7 @@ class ProgressiveInstaller:
     def can_play(self):
         """Détermine si le jeu peut être lancé"""
         essential_ok, _ = self.check_essential_files()
-        exe_exists = (GAME_PATH / "KOF BLACK R.exe").exists()
+        exe_exists = (GAME_PATH / "KOF_Ultimate_Online.exe").exists()
 
         return essential_ok and exe_exists
 
@@ -152,7 +152,7 @@ class AutoRepair:
         self.log("🔍 Diagnostic en cours...")
 
         # Vérifier l'exécutable
-        if not (GAME_PATH / "KOF BLACK R.exe").exists():
+        if not (GAME_PATH / "KOF_Ultimate_Online.exe").exists():
             self.issues_found.append({
                 'type': 'missing_exe',
                 'severity': 'critical',
@@ -607,7 +607,7 @@ class UltimateLauncher:
 
     def launch_game(self):
         """Lance le jeu"""
-        exe_path = GAME_PATH / "KOF BLACK R.exe"
+        exe_path = GAME_PATH / "KOF_Ultimate_Online.exe"
 
         if not exe_path.exists():
             messagebox.showerror("Erreur", "Exécutable non trouvé!")

@@ -27,8 +27,8 @@ class VisualInspector:
         self.root.geometry("1200x800")
         self.root.configure(bg='#0a0e27')
 
-        self.game_dir = Path(r"D:\KOF Ultimate")
-        self.exe_path = self.game_dir / "KOF BLACK R.exe"
+        self.game_dir = Path(r"D:\KOF Ultimate Online")
+        self.exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         self.process = None
         self.window_handle = None
         self.screenshots_dir = self.game_dir / "test_screenshots"

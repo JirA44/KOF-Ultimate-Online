@@ -23,7 +23,7 @@ class Colors:
     RESET = '\033[0m'
 
 class GraphicsLauncher:
-    def __init__(self, game_dir=r"D:\KOF Ultimate"):
+    def __init__(self, game_dir=r"D:\KOF Ultimate Online"):
         self.game_dir = Path(game_dir)
         self.mugen_cfg = self.game_dir / "data" / "mugen.cfg"
         self.presets_file = self.game_dir / "graphics_presets.json"
@@ -179,7 +179,7 @@ class GraphicsLauncher:
         """Lance le jeu"""
         print(f"\n{Colors.CYAN}🚀 Lancement de KOF Ultimate...{Colors.RESET}")
 
-        exe_path = self.game_dir / "KOF BLACK R.exe"
+        exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
 
         if not exe_path.exists():
             print(f"{Colors.RED}✗ Jeu introuvable: {exe_path}{Colors.RESET}")

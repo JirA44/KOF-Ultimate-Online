@@ -155,7 +155,7 @@ def generate_report():
     print_info("(Lance auto-repair + tests + jeu)")
 
     print(f"\n{Colors.BOLD}Ou lancez directement:{Colors.RESET}")
-    print(f"  {Colors.CYAN}→ Double-cliquez sur: KOF BLACK R.exe{Colors.RESET}")
+    print(f"  {Colors.CYAN}→ Double-cliquez sur: KOF_Ultimate_Online.exe{Colors.RESET}")
 
     print(f"\n{Colors.BOLD}Pour diagnostiquer des problèmes:{Colors.RESET}")
     print(f"  {Colors.CYAN}→ python auto_repair_system.py{Colors.RESET}")

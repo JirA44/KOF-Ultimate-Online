@@ -33,6 +33,9 @@ class KOFLauncher:
         self.github_repo = "JirA44/KOF-Ultimate-Online"
         self.github_api = f"https://api.github.com/repos/{self.github_repo}/releases/latest"
 
+        # Détecter si on est en mode interactif ou automatique
+        self.interactive_mode = sys.stdin.isatty()
+
     def print_banner(self):
         """Affiche le banner du launcher"""
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -116,7 +119,11 @@ class KOFLauncher:
                 print(f"\n{Colors.CYAN}Notes de version:{Colors.RESET}")
                 print(release_notes[:200])
 
-                response = input(f"\n{Colors.YELLOW}Voulez-vous mettre à jour maintenant? (o/n): {Colors.RESET}")
+                try:
+                    response = input(f"\n{Colors.YELLOW}Voulez-vous mettre à jour maintenant? (o/n): {Colors.RESET}")
+                except EOFError:
+                    # Mode automatique: ne pas mettre à jour
+                    response = 'n'
 
                 if response.lower() in ['o', 'oui', 'y', 'yes']:
                     self.download_update(data['zipball_url'], latest_version)
@@ -167,10 +174,10 @@ class KOFLauncher:
         print(f"\n{Colors.CYAN}🔧 Auto-réparation...{Colors.RESET}")
 
         # Vérifier fichiers essentiels
-        exe_file = self.game_dir / "KOF BLACK R.exe"
+        exe_file = self.game_dir / "KOF_Ultimate_Online.exe"
 
         if not exe_file.exists():
-            print(f"{Colors.RED}✗ KOF BLACK R.exe introuvable!{Colors.RESET}")
+            print(f"{Colors.RED}✗ KOF_Ultimate_Online.exe introuvable!{Colors.RESET}")
             return False
 
         # Nettoyer les logs
@@ -209,7 +216,7 @@ class KOFLauncher:
         """Lance le jeu"""
         print(f"\n{Colors.CYAN}🎮 Lancement du jeu...{Colors.RESET}")
 
-        exe_file = self.game_dir / "KOF BLACK R.exe"
+        exe_file = self.game_dir / "KOF_Ultimate_Online.exe"
 
         try:
             subprocess.Popen(
@@ -228,6 +235,24 @@ class KOFLauncher:
 
     def show_menu(self):
         """Affiche le menu principal"""
+        # Mode non-interactif: afficher le menu mais ne pas attendre d'input
+        if not self.interactive_mode:
+            self.print_banner()
+
+            print(f"{Colors.CYAN}╔═══════════════════════════════════════════════════════════════════════╗{Colors.RESET}")
+            print(f"{Colors.CYAN}║                            MENU PRINCIPAL                             ║{Colors.RESET}")
+            print(f"{Colors.CYAN}╠═══════════════════════════════════════════════════════════════════════╣{Colors.RESET}")
+            print(f"{Colors.GREEN}║  1. 🎮 JOUER                                                          ║{Colors.RESET}")
+            print(f"{Colors.CYAN}║  2. 🔄 Vérifier les mises à jour                                      ║{Colors.RESET}")
+            print(f"{Colors.YELLOW}║  3. 🔧 Auto-réparation                                                ║{Colors.RESET}")
+            print(f"{Colors.MAGENTA}║  4. 📊 Diagnostic complet                                             ║{Colors.RESET}")
+            print(f"{Colors.RED}║  0. ❌ Quitter                                                         ║{Colors.RESET}")
+            print(f"{Colors.CYAN}╚═══════════════════════════════════════════════════════════════════════╝{Colors.RESET}\n")
+
+            print(f"{Colors.YELLOW}Mode automatique détecté - Affichage menu pendant 3s...{Colors.RESET}")
+            time.sleep(3)
+            return
+
         while True:
             self.print_banner()
 
@@ -241,7 +266,12 @@ class KOFLauncher:
             print(f"{Colors.RED}║  0. ❌ Quitter                                                         ║{Colors.RESET}")
             print(f"{Colors.CYAN}╚═══════════════════════════════════════════════════════════════════════╝{Colors.RESET}\n")
 
-            choice = input(f"{Colors.CYAN}Votre choix: {Colors.RESET}")
+            try:
+                choice = input(f"{Colors.CYAN}Votre choix: {Colors.RESET}")
+            except EOFError:
+                # Mode automatique détecté pendant l'exécution
+                print(f"\n{Colors.YELLOW}Mode automatique - Sortie{Colors.RESET}")
+                return
 
             if choice == '1':
                 if self.auto_repair():
@@ -251,11 +281,17 @@ class KOFLauncher:
 
             elif choice == '2':
                 self.check_for_updates()
-                input(f"\n{Colors.CYAN}Appuyez sur ENTRÉE pour continuer...{Colors.RESET}")
+                try:
+                    input(f"\n{Colors.CYAN}Appuyez sur ENTRÉE pour continuer...{Colors.RESET}")
+                except EOFError:
+                    time.sleep(1)
 
             elif choice == '3':
                 self.auto_repair()
-                input(f"\n{Colors.CYAN}Appuyez sur ENTRÉE pour continuer...{Colors.RESET}")
+                try:
+                    input(f"\n{Colors.CYAN}Appuyez sur ENTRÉE pour continuer...{Colors.RESET}")
+                except EOFError:
+                    time.sleep(1)
 
             elif choice == '4':
                 diagnostic_script = self.game_dir / "complete_diagnostic.py"
@@ -263,7 +299,10 @@ class KOFLauncher:
                     subprocess.run([sys.executable, str(diagnostic_script)])
                 else:
                     print(f"{Colors.RED}✗ Script de diagnostic introuvable{Colors.RESET}")
-                input(f"\n{Colors.CYAN}Appuyez sur ENTRÉE pour continuer...{Colors.RESET}")
+                try:
+                    input(f"\n{Colors.CYAN}Appuyez sur ENTRÉE pour continuer...{Colors.RESET}")
+                except EOFError:
+                    time.sleep(1)
 
             elif choice == '0':
                 print(f"\n{Colors.CYAN}Au revoir! 👋{Colors.RESET}\n")
@@ -298,7 +337,10 @@ def main():
         print(f"\n{Colors.RED}Erreur critique: {e}{Colors.RESET}")
         import traceback
         traceback.print_exc()
-        input("\nAppuyez sur ENTRÉE pour fermer...")
+        try:
+            input("\nAppuyez sur ENTRÉE pour fermer...")
+        except EOFError:
+            time.sleep(2)
 
 if __name__ == '__main__':
     main()

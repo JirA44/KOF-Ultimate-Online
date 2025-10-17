@@ -18,7 +18,7 @@ class KOFAutoClicker:
 
     def __init__(self):
         self.game_dir = Path(r"D:\KOF Ultimate Online")
-        self.exe_path = self.game_dir / "KOF BLACK R.exe"
+        self.exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         self.process = None
         self.window_handle = None
         self.is_running = False

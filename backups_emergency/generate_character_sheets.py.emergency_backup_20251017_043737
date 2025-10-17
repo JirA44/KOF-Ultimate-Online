@@ -1,0 +1,344 @@
+# -*- coding: utf-8 -*-
+"""
+Générateur de fiches personnages KOF Ultimate Online
+Parse tous les fichiers .cmd et génère des fiches Markdown
+"""
+
+import os
+import re
+import glob
+from pathlib import Path
+
+# Mappages des commandes vers notation fighting game
+DIRECTION_MAP = {
+    'D': '↓',
+    'U': '↑',
+    'F': '→',
+    'B': '←',
+    'DF': '↘',
+    'DB': '↙',
+    'UF': '↗',
+    'UB': '↖',
+}
+
+BUTTON_MAP = {
+    'a': 'LP (Faible Punch)',
+    'b': 'MP (Moyen Punch)',
+    'c': 'HP (Fort Punch)',
+    'x': 'LK (Faible Kick)',
+    'y': 'MK (Moyen Kick)',
+    'z': 'HK (Fort Kick)',
+    's': 'START',
+}
+
+def parse_command(cmd_string):
+    """Convertit une commande MUGEN en notation lisible"""
+    if not cmd_string:
+        return ""
+
+    # Retire les espaces
+    cmd_string = cmd_string.strip()
+
+    # Split par virgules
+    parts = [p.strip() for p in cmd_string.split(',')]
+
+    result = []
+    for part in parts:
+        # Gère les combinaisons de boutons (a+b)
+        if '+' in part:
+            buttons = part.split('+')
+            btn_names = []
+            for btn in buttons:
+                btn = btn.strip()
+                # Retire les modificateurs spéciaux ($, ~, /, etc.)
+                btn = re.sub(r'[~$/]', '', btn)
+
+                # Direction ou bouton?
+                if btn.upper() in DIRECTION_MAP:
+                    btn_names.append(DIRECTION_MAP[btn.upper()])
+                elif btn.lower() in BUTTON_MAP:
+                    btn_names.append(btn.upper())
+                elif btn:
+                    btn_names.append(btn)
+
+            if btn_names:
+                result.append('+'.join(btn_names))
+        else:
+            # Partie simple
+            # Retire les modificateurs
+            part = re.sub(r'[~$/]', '', part)
+            part = re.sub(r'\d+', '', part)  # Retire les nombres (timing)
+
+            if part.upper() in DIRECTION_MAP:
+                result.append(DIRECTION_MAP[part.upper()])
+            elif part.lower() in BUTTON_MAP:
+                result.append(part.upper())
+            elif part:
+                result.append(part)
+
+    return ' '.join(result) if result else cmd_string
+
+def extract_moves_from_cmd(cmd_file_path):
+    """Extrait les mouvements d'un fichier .cmd"""
+    moves = {
+        'specials': [],
+        'supers': [],
+        'throws': [],
+        'other': []
+    }
+
+    try:
+        # Essaie plusieurs encodages
+        content = None
+        for encoding in ['utf-8', 'shift-jis', 'latin-1', 'cp1252']:
+            try:
+                with open(cmd_file_path, 'r', encoding=encoding, errors='ignore') as f:
+                    content = f.read()
+                break
+            except:
+                continue
+
+        if not content:
+            return moves
+
+        # Parse les sections [Command]
+        command_pattern = r'\[Command\]\s*name\s*=\s*"([^"]+)"\s*command\s*=\s*([^\n]+)'
+        matches = re.findall(command_pattern, content, re.MULTILINE | re.IGNORECASE)
+
+        for name, command in matches:
+            # Ignore les commandes AI/CPU
+            if 'CPU' in name.upper() or name.startswith('hold') or name.startswith('down_'):
+                continue
+
+            # Ignore les commandes de base
+            if name.lower() in ['a', 'b', 'c', 'x', 'y', 'z', 'start', 'holdfwd', 'holdback', 'holdup', 'holddown', 'FF', 'BB', 'recovery', 'jump']:
+                continue
+
+            # Parse la commande
+            readable_cmd = parse_command(command)
+
+            move_entry = {
+                'name': name,
+                'command': readable_cmd,
+                'raw': command.strip()
+            }
+
+            # Catégorisation basée sur le nom et la commande
+            raw_lower = command.lower()
+
+            # Super moves (souvent avec D,DF,F,D,DF,F ou similaire)
+            if ('d, df, f, d' in raw_lower or 'd,df,f,d' in raw_lower or
+                'd, db, b, d' in raw_lower or 'd,db,b,d' in raw_lower or
+                'super' in name.lower() or 'max' in name.lower() or
+                'desperation' in name.lower() or 'neomax' in name.lower() or
+                'climax' in name.lower() or 'final' in name.lower()):
+                moves['supers'].append(move_entry)
+            # Throws
+            elif ('throw' in name.lower() or 'grab' in name.lower() or
+                  'catch' in name.lower() or 'grap' in name.lower()):
+                moves['throws'].append(move_entry)
+            # Special moves (D,DF,F ou D,DB,B patterns)
+            elif any(x in raw_lower for x in ['d, df, f', 'd,df,f', 'd, db, b', 'd,db,b',
+                                               'qcf', 'qcb', 'dp', 'hcf', 'hcb']):
+                moves['specials'].append(move_entry)
+            # Autre
+            elif 'special' not in name.lower() and len(name) > 1:
+                moves['other'].append(move_entry)
+
+    except Exception as e:
+        print(f"Erreur lecture {cmd_file_path}: {e}")
+
+    return moves
+
+def generate_character_sheet(char_name, char_folder, moves):
+    """Génère une fiche Markdown pour un personnage"""
+
+    # Cherche une image du personnage
+    portrait = None
+    for ext in ['.png', '.gif', '.bmp', '.pcx']:
+        portrait_path = os.path.join(char_folder, f'{char_name}{ext}')
+        if os.path.exists(portrait_path):
+            portrait = f'{char_name}{ext}'
+            break
+
+    md = f"""# {char_name}
+
+## Informations
+- **Dossier**: `{os.path.basename(char_folder)}`
+"""
+
+    if portrait:
+        md += f"- **Portrait**: {portrait}\n"
+
+    md += "\n---\n\n"
+
+    # Légende des boutons
+    md += """## Légende des Commandes
+
+**Directions:**
+- → = Avant (F)
+- ← = Arrière (B)
+- ↓ = Bas (D)
+- ↑ = Haut (U)
+- ↘ = Bas-Avant (DF)
+- ↙ = Bas-Arrière (DB)
+- ↗ = Haut-Avant (UF)
+- ↖ = Haut-Arrière (UB)
+
+**Boutons:**
+- LP = Light Punch (a)
+- MP = Medium Punch (b)
+- HP = Heavy Punch (c)
+- LK = Light Kick (x)
+- MK = Medium Kick (y)
+- HK = Heavy Kick (z)
+
+---
+
+"""
+
+    # Super Moves
+    if moves['supers']:
+        md += "## 🔥 SUPER MOVES / DESPERATION MOVES\n\n"
+        for move in moves['supers']:
+            md += f"### {move['name']}\n"
+            md += f"**Commande**: `{move['command']}`\n\n"
+        md += "\n"
+
+    # Special Moves
+    if moves['specials']:
+        md += "## ⚡ COUPS SPÉCIAUX\n\n"
+        for move in moves['specials']:
+            md += f"### {move['name']}\n"
+            md += f"**Commande**: `{move['command']}`\n\n"
+        md += "\n"
+
+    # Throws
+    if moves['throws']:
+        md += "## 🤜 PROJECTIONS (THROWS)\n\n"
+        for move in moves['throws']:
+            md += f"### {move['name']}\n"
+            md += f"**Commande**: `{move['command']}`\n\n"
+        md += "\n"
+
+    # Autres
+    if moves['other']:
+        md += "## 🎯 AUTRES TECHNIQUES\n\n"
+        for move in moves['other']:
+            md += f"### {move['name']}\n"
+            md += f"**Commande**: `{move['command']}`\n\n"
+        md += "\n"
+
+    # Combos suggestions
+    md += """## 💥 SUGGESTIONS DE COMBOS
+
+> **Note**: Les combos ci-dessous sont des suggestions basiques. Expérimente avec les coups spéciaux ci-dessus!
+
+### Combo 1 - Basic
+```
+LP → MP → HP → Coup Spécial
+```
+
+### Combo 2 - Jumping
+```
+Jump HK → LP → MP → Special Move
+```
+
+### Combo 3 - Super Finish
+```
+LP → MP → HP → Super Move
+```
+
+---
+
+## 📝 NOTES
+
+**Pour bien jouer ce personnage:**
+1. Apprends d'abord les coups spéciaux de base (section COUPS SPÉCIAUX)
+2. Maîtrise les Super Moves (nécessitent de la barre de power)
+3. Entraîne-toi à enchaîner les normaux dans les spéciaux
+4. Utilise le mode TRAINING pour pratiquer
+
+**Configuration des touches recommandée:**
+- A/X/Z = Punches (faible/moyen/fort)
+- B/Y/C = Kicks (faible/moyen/fort)
+
+"""
+
+    return md
+
+def main():
+    """Fonction principale"""
+    chars_dir = r'D:\KOF Ultimate Online Online Online Online Online\chars'
+    output_dir = r'D:\KOF Ultimate Online Online Online Online Online\FICHES_PERSONNAGES'
+
+    # Crée le dossier de sortie
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Index des personnages
+    index_md = """# 📚 INDEX DES FICHES PERSONNAGES - KOF ULTIMATE ONLINE
+
+Cette documentation contient les fiches complètes de tous les personnages avec leurs coups spéciaux et combos.
+
+## Liste des Personnages
+
+"""
+
+    processed = 0
+
+    # Parcourt tous les dossiers de personnages
+    for char_folder in sorted(glob.glob(os.path.join(chars_dir, '*'))):
+        if not os.path.isdir(char_folder):
+            continue
+
+        char_name = os.path.basename(char_folder)
+
+        # Cherche les fichiers .cmd
+        cmd_files = glob.glob(os.path.join(char_folder, '*.cmd'))
+        if not cmd_files:
+            # Cherche dans les sous-dossiers
+            cmd_files = glob.glob(os.path.join(char_folder, '**', '*.cmd'), recursive=True)
+
+        if not cmd_files:
+            print(f"⚠️  Pas de .cmd trouvé pour {char_name}")
+            continue
+
+        # Utilise le premier fichier .cmd trouvé
+        cmd_file = cmd_files[0]
+
+        print(f"📋 Traitement de {char_name}...")
+
+        # Extrait les mouvements
+        moves = extract_moves_from_cmd(cmd_file)
+
+        # Vérifie qu'il y a des mouvements
+        total_moves = len(moves['specials']) + len(moves['supers']) + len(moves['throws']) + len(moves['other'])
+        if total_moves == 0:
+            print(f"   ⚠️  Aucun mouvement trouvé")
+            continue
+
+        # Génère la fiche
+        sheet = generate_character_sheet(char_name, char_folder, moves)
+
+        # Sauvegarde
+        output_file = os.path.join(output_dir, f'{char_name}.md')
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(sheet)
+
+        # Ajoute à l'index
+        index_md += f"- [{char_name}]({char_name}.md) - {total_moves} techniques\n"
+
+        print(f"   ✅ {total_moves} techniques trouvées")
+        processed += 1
+
+    # Sauvegarde l'index
+    index_md += f"\n---\n\n**Total**: {processed} personnages documentés\n"
+
+    with open(os.path.join(output_dir, 'INDEX.md'), 'w', encoding='utf-8') as f:
+        f.write(index_md)
+
+    print(f"\n✅ TERMINÉ! {processed} fiches générées dans {output_dir}")
+    print(f"📖 Ouvre INDEX.md pour voir la liste complète")
+
+if __name__ == '__main__':
+    main()

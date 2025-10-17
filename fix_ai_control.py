@@ -8,7 +8,7 @@ from pathlib import Path
 def fix_ai_control():
     """Désactive l'IA qui joue à la place du joueur"""
 
-    config_file = Path("D:/KOF Ultimate/data/mugen.cfg")
+    config_file = Path("D:/KOF Ultimate Online/data/mugen.cfg")
 
     if not config_file.exists():
         print(f"❌ Fichier de configuration introuvable: {config_file}")

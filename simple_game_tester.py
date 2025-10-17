@@ -21,8 +21,8 @@ class Colors:
     RESET = '\033[0m'
 
 def main():
-    game_dir = Path(r"D:\KOF Ultimate")
-    exe_path = game_dir / "KOF BLACK R.exe"
+    game_dir = Path(r"D:\KOF Ultimate Online")
+    exe_path = game_dir / "KOF_Ultimate_Online.exe"
     log_file = game_dir / "mugen.log"
 
     print(f"\n{Colors.MAGENTA}{Colors.BOLD}{'='*80}{Colors.RESET}")

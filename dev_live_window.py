@@ -45,7 +45,7 @@ class DevWindow:
 
         self.game_process = None
         self.observer = None
-        self.game_path = Path(r"D:\KOF Ultimate")
+        self.game_path = Path(r"D:\KOF Ultimate Online")
 
         self.setup_ui()
         self.start_monitoring()
@@ -149,7 +149,7 @@ class DevWindow:
             self.log("⚠ Le jeu est déjà en cours d'exécution")
             return
 
-        exe_path = self.game_path / "KOF BLACK R.exe"
+        exe_path = self.game_path / "KOF_Ultimate_Online.exe"
         if not exe_path.exists():
             self.log("❌ Executable non trouvé!")
             return

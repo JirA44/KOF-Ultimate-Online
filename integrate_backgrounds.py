@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 import configparser
 
-GAME_PATH = Path("D:/KOF Ultimate")
+GAME_PATH = Path("D:/KOF Ultimate Online")
 BACKGROUNDS_SOURCE = GAME_PATH / "data" / "backgrounds"
 MUGEN_CFG = GAME_PATH / "data" / "mugen.cfg"
 

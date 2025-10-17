@@ -1,0 +1,67 @@
+[04:41:12] 
+🔍 RECHERCHE DES LAUNCHERS
+[04:41:12] ============================================================
+[04:41:12]   ✓ Trouvé: launcher.py
+[04:41:12]   ✓ Trouvé: launcher_modern.py
+[04:41:12]   ✓ Trouvé: LAUNCHER_ULTIMATE.py
+[04:41:12]   ✓ Trouvé: LAUNCHER_ULTIMATE_V2.py
+[04:41:12]   ✓ Trouvé: character_dashboard.py
+[04:41:12]   ✓ Trouvé: visual_inspector.py
+[04:41:12] 
+📊 Total: 6 launchers trouvés
+[04:41:12] 
+🧪 TEST: launcher.py
+[04:41:12] ============================================================
+[04:41:12]   ✓ Lancé (PID: 18620)
+[04:41:15]   ✓ Processus actif
+[04:41:20]   ✓ Test interactions OK
+[04:41:20]   ✓ Fermé proprement
+[04:41:22] 
+🧪 TEST: launcher_modern.py
+[04:41:22] ============================================================
+[04:41:22]   ✓ Lancé (PID: 9308)
+[04:41:25]   ✓ Processus actif
+[04:41:28]   ❌ ERREUR: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
+[04:41:30] 
+🧪 TEST: LAUNCHER_ULTIMATE.py
+[04:41:30] ============================================================
+[04:41:30]   ✓ Lancé (PID: 19780)
+[04:41:33]   ❌ Processus terminé immédiatement
+[04:41:35] 
+🧪 TEST: LAUNCHER_ULTIMATE_V2.py
+[04:41:35] ============================================================
+[04:41:35]   ✓ Lancé (PID: 3848)
+[04:41:38]   ✓ Processus actif
+[04:41:40]   ❌ ERREUR: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
+[04:41:42] 
+🧪 TEST: character_dashboard.py
+[04:41:42] ============================================================
+[04:41:42]   ✓ Lancé (PID: 13712)
+[04:41:45]   ✓ Processus actif
+[04:41:50]   ✓ Test interactions OK
+[04:41:50]   ✓ Fermé proprement
+[04:41:52] 
+🧪 TEST: visual_inspector.py
+[04:41:52] ============================================================
+[04:41:52]   ✓ Lancé (PID: 18800)
+[04:41:55]   ✓ Processus actif
+[04:41:59]   ✓ Test interactions OK
+[04:41:59]   ✓ Fermé proprement
+[04:42:01] 
+============================================================
+[04:42:01] 📊 RAPPORT FINAL
+[04:42:01] ============================================================
+[04:42:01] Launchers testés: 6
+[04:42:01] ✅ Succès: 3
+[04:42:01] ❌ Échecs: 3
+[04:42:01] 
+📋 DÉTAILS PAR LAUNCHER:
+[04:42:01]   ✅ OK - launcher.py
+[04:42:01]   ❌ ERREUR - launcher_modern.py
+[04:42:01]   ❌ ERREUR - LAUNCHER_ULTIMATE.py
+[04:42:01]   ❌ ERREUR - LAUNCHER_ULTIMATE_V2.py
+[04:42:01]   ✅ OK - character_dashboard.py
+[04:42:01]   ✅ OK - visual_inspector.py
+[04:42:01] 
+📄 Log complet: D:\KOF Ultimate Online\launcher_test_results.txt
+[04:42:01] ============================================================

@@ -40,7 +40,7 @@ class VisualTester:
 
     def __init__(self, game_dir):
         self.game_dir = Path(game_dir)
-        self.exe_path = self.game_dir / "KOF BLACK R.exe"
+        self.exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
         self.process = None
         self.window_handle = None
         self.screenshots_dir = self.game_dir / "visual_test_results" / datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -359,7 +359,7 @@ class VisualTester:
             return False
 
 def main():
-    game_dir = r"D:\KOF Ultimate"
+    game_dir = r"D:\KOF Ultimate Online"
 
     tester = VisualTester(game_dir)
     success = tester.run_full_test()

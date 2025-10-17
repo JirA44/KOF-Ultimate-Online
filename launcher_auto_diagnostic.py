@@ -13,7 +13,7 @@ class SmartLauncher:
     """Launcher intelligent avec auto-diagnostic et correction"""
 
     def __init__(self):
-        self.base_path = Path("D:/KOF Ultimate")
+        self.base_path = Path("D:/KOF Ultimate Online")
         self.errors = []
         self.warnings = []
         self.fixes = []
@@ -34,18 +34,18 @@ class SmartLauncher:
         """Vérifie que MUGEN est disponible"""
         self.log("\n📦 Vérification M.U.G.E.N...", "INFO")
 
-        exe_path = self.base_path / "KOF BLACK R.exe"
+        exe_path = self.base_path / "KOF_Ultimate_Online.exe"
         data_path = self.base_path / "data"
         cfg_path = self.base_path / "data/mugen.cfg"
 
         all_ok = True
 
         if not exe_path.exists():
-            self.log("  KOF BLACK R.exe: MANQUANT", "ERROR")
+            self.log("  KOF_Ultimate_Online.exe: MANQUANT", "ERROR")
             self.errors.append("MUGEN executable missing")
             all_ok = False
         else:
-            self.log("  KOF BLACK R.exe: OK", "SUCCESS")
+            self.log("  KOF_Ultimate_Online.exe: OK", "SUCCESS")
 
         if not data_path.exists():
             self.log("  data/ folder: MANQUANT", "ERROR")
@@ -161,7 +161,7 @@ File = f-4x6.sff
         """Lance M.U.G.E.N"""
         self.log("\n🚀 Lancement M.U.G.E.N...", "INFO")
 
-        exe_path = self.base_path / "KOF BLACK R.exe"
+        exe_path = self.base_path / "KOF_Ultimate_Online.exe"
 
         try:
             # Lancer le jeu

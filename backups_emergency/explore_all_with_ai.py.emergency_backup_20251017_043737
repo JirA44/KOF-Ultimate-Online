@@ -1,0 +1,290 @@
+# -*- coding: utf-8 -*-
+"""
+Exploration complète du système KOF avec tous les agents IA
+"""
+
+import os
+import sys
+import subprocess
+import time
+from pathlib import Path
+import json
+
+class AIExplorationSystem:
+    def __init__(self):
+        self.base_dir = Path(r'D:\KOF Ultimate Online Online Online Online Online')
+        self.results = {
+            'system_test': None,
+            'game_monitor': None,
+            'error_analysis': None,
+            'file_integrity': None
+        }
+
+    def print_header(self, text):
+        print(f"\n{'='*80}")
+        print(f"  {text}")
+        print(f"{'='*80}\n")
+
+    def run_system_test(self):
+        """Exécute le test système complet"""
+        self.print_header("🔍 IA 1: TESTS SYSTÈME COMPLETS")
+
+        try:
+            result = subprocess.run(
+                ['python', 'test_complet_systeme.py'],
+                cwd=self.base_dir,
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+
+            print(result.stdout)
+            self.results['system_test'] = {
+                'status': 'SUCCESS' if result.returncode == 0 else 'FAILED',
+                'output': result.stdout
+            }
+
+            return result.returncode == 0
+
+        except Exception as e:
+            print(f"❌ Erreur: {e}")
+            self.results['system_test'] = {'status': 'ERROR', 'error': str(e)}
+            return False
+
+    def analyze_errors(self):
+        """Analyse les logs d'erreurs existants"""
+        self.print_header("🔍 IA 2: ANALYSE DES ERREURS")
+
+        log_file = self.base_dir / 'mugen.log'
+
+        if not log_file.exists():
+            print("✓ Aucun log d'erreur trouvé - Système propre!")
+            self.results['error_analysis'] = {'status': 'CLEAN', 'errors': 0}
+            return True
+
+        try:
+            result = subprocess.run(
+                ['python', 'realtime_error_monitor.py', '--analyze'],
+                cwd=self.base_dir,
+                capture_output=True,
+                text=True,
+                timeout=30
+            )
+
+            print(result.stdout)
+            self.results['error_analysis'] = {
+                'status': 'COMPLETED',
+                'output': result.stdout
+            }
+
+            return True
+
+        except Exception as e:
+            print(f"❌ Erreur: {e}")
+            return False
+
+    def check_file_integrity(self):
+        """Vérifie l'intégrité de tous les fichiers"""
+        self.print_header("🔍 IA 3: INTÉGRITÉ DES FICHIERS")
+
+        issues = []
+
+        # 1. Vérifier l'exécutable
+        exe_files = [
+            'KOF_Ultimate_Online.exe',
+            'KOF BLACK R.exe'
+        ]
+
+        exe_found = None
+        for exe in exe_files:
+            if (self.base_dir / exe).exists():
+                exe_found = exe
+                print(f"✓ Exécutable trouvé: {exe}")
+                break
+
+        if not exe_found:
+            issues.append("Aucun exécutable de jeu trouvé!")
+            print("❌ Aucun exécutable trouvé")
+
+        # 2. Vérifier les fichiers système
+        system_files = [
+            'data/system.def',
+            'data/select.def',
+            'data/system.sff',
+            'data/system.snd'
+        ]
+
+        for file in system_files:
+            filepath = self.base_dir / file
+            if filepath.exists():
+                size = filepath.stat().st_size
+                print(f"✓ {file}: {size:,} bytes")
+            else:
+                issues.append(f"Fichier manquant: {file}")
+                print(f"❌ Manquant: {file}")
+
+        # 3. Vérifier les personnages
+        chars_dir = self.base_dir / 'chars'
+        if chars_dir.exists():
+            char_folders = [f for f in chars_dir.iterdir() if f.is_dir()]
+            print(f"✓ {len(char_folders)} dossiers de personnages")
+
+            # Vérifier les 10 premiers
+            broken_chars = []
+            for char_folder in list(char_folders)[:10]:
+                def_files = list(char_folder.glob('*.def'))
+                if not def_files:
+                    broken_chars.append(char_folder.name)
+
+            if broken_chars:
+                print(f"⚠️  {len(broken_chars)} personnages sans fichier .def")
+                issues.append(f"{len(broken_chars)} personnages incomplets")
+
+        # 4. Vérifier les stages
+        stages_dir = self.base_dir / 'stages'
+        if stages_dir.exists():
+            stage_files = list(stages_dir.glob('*.def'))
+            print(f"✓ {len(stage_files)} stages")
+
+        # 5. Vérifier la documentation
+        docs = [
+            'VISUALISEUR_PERSONNAGES.html',
+            'FICHES_PERSONNAGES/INDEX.md'
+        ]
+
+        for doc in docs:
+            if (self.base_dir / doc).exists():
+                print(f"✓ Documentation: {doc}")
+            else:
+                print(f"⚠️  Documentation manquante: {doc}")
+
+        self.results['file_integrity'] = {
+            'status': 'COMPLETED',
+            'issues_found': len(issues),
+            'issues': issues
+        }
+
+        return len(issues) == 0
+
+    def fix_config_paths(self):
+        """Corrige les chemins d'exécutable dans les configs"""
+        self.print_header("🔧 IA 4: CORRECTION DES CONFIGURATIONS")
+
+        # Détecter le bon exécutable
+        exe_name = None
+        for exe in ['KOF_Ultimate_Online.exe', 'KOF BLACK R.exe']:
+            if (self.base_dir / exe).exists():
+                exe_name = exe
+                break
+
+        if not exe_name:
+            print("❌ Aucun exécutable trouvé pour configurer")
+            return False
+
+        print(f"✓ Exécutable détecté: {exe_name}")
+
+        # Corriger game_monitor.py
+        monitor_file = self.base_dir / 'game_monitor.py'
+        if monitor_file.exists():
+            try:
+                with open(monitor_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+
+                # Remplacer le nom d'exécutable
+                old_names = ['KOF BLACK R.exe', 'KOF_Ultimate_Online.exe']
+                for old_name in old_names:
+                    if old_name != exe_name and old_name in content:
+                        content = content.replace(old_name, exe_name)
+                        print(f"  → Remplacement: {old_name} → {exe_name}")
+
+                with open(monitor_file, 'w', encoding='utf-8') as f:
+                    f.write(content)
+
+                print("✓ game_monitor.py corrigé")
+
+            except Exception as e:
+                print(f"❌ Erreur correction game_monitor.py: {e}")
+
+        return True
+
+    def generate_report(self):
+        """Génère le rapport final"""
+        self.print_header("📊 RAPPORT FINAL D'EXPLORATION IA")
+
+        # Compter les résultats
+        total_tests = len(self.results)
+        successful = sum(1 for r in self.results.values() if r and r.get('status') in ['SUCCESS', 'CLEAN', 'COMPLETED'])
+
+        print(f"Tests effectués: {total_tests}")
+        print(f"Réussis: {successful}/{total_tests}")
+        print()
+
+        # Détails par test
+        for test_name, result in self.results.items():
+            if result:
+                status_emoji = {
+                    'SUCCESS': '✅',
+                    'CLEAN': '✅',
+                    'COMPLETED': '✅',
+                    'FAILED': '❌',
+                    'ERROR': '❌'
+                }.get(result.get('status'), '⚠️')
+
+                print(f"{status_emoji} {test_name.upper()}: {result.get('status')}")
+
+                if 'issues_found' in result:
+                    print(f"   Issues: {result['issues_found']}")
+                    if result['issues']:
+                        for issue in result['issues']:
+                            print(f"     - {issue}")
+
+        print()
+
+        # Recommandations
+        has_issues = any(
+            r and r.get('status') in ['FAILED', 'ERROR'] or r.get('issues_found', 0) > 0
+            for r in self.results.values()
+        )
+
+        if has_issues:
+            print("🔧 ACTIONS RECOMMANDÉES:")
+            print("  1. Relancer les tests après corrections")
+            print("  2. Vérifier le fichier mugen.log si des erreurs apparaissent")
+            print("  3. Utiliser launch_complete_system.bat pour démarrer avec monitoring")
+        else:
+            print("✅ SYSTÈME PRÊT!")
+            print("  → Tous les tests sont passés")
+            print("  → Le jeu peut être lancé en toute sécurité")
+            print("  → Utilise launch_complete_system.bat pour démarrer")
+
+        # Sauvegarder le rapport
+        report_file = self.base_dir / 'ai_exploration_report.json'
+        with open(report_file, 'w', encoding='utf-8') as f:
+            json.dump(self.results, f, indent=2, ensure_ascii=False)
+
+        print(f"\n📄 Rapport sauvegardé: {report_file}")
+
+    def run_full_exploration(self):
+        """Lance l'exploration complète"""
+        print("\n" + "="*80)
+        print("  🤖 EXPLORATION COMPLÈTE DU SYSTÈME AVEC AGENTS IA")
+        print("="*80)
+
+        # Exécuter tous les tests
+        self.run_system_test()
+        self.analyze_errors()
+        self.check_file_integrity()
+        self.fix_config_paths()
+
+        # Rapport final
+        self.generate_report()
+
+def main():
+    explorer = AIExplorationSystem()
+    explorer.run_full_exploration()
+
+    print("\n" + "="*80)
+    input("Appuyez sur Entrée pour fermer...")
+
+if __name__ == '__main__':
+    main()

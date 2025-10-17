@@ -157,7 +157,7 @@ class AIMatch:
         """Lance le jeu"""
         print(f"{Colors.CYAN}🎮 Lancement du jeu...{Colors.RESET}")
 
-        exe_path = self.game_dir / "KOF BLACK R.exe"
+        exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
 
         self.process = subprocess.Popen(
             [str(exe_path)],
@@ -410,7 +410,7 @@ class AIMatch:
 
 def main():
     """Point d'entrée"""
-    game_dir = r"D:\KOF Ultimate"
+    game_dir = r"D:\KOF Ultimate Online"
 
     print(f"\n{Colors.CYAN}Durée du match:{Colors.RESET}")
     print(f"  1. Court (30s)")

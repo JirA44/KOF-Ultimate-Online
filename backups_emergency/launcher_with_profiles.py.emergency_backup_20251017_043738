@@ -1,0 +1,449 @@
+"""
+KOF Ultimate Online - Launcher avec Système de Profils
+Interface graphique avec gestion de profils comme Warcraft 3
+"""
+
+import tkinter as tk
+from tkinter import ttk, messagebox
+from pathlib import Path
+import subprocess
+from player_profile_system import PlayerProfileSystem
+from online_multiplayer_menu import OnlineMultiplayerMenu
+
+
+class ProfileLauncher:
+    """Launcher avec gestion de profils"""
+
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.title("KOF Ultimate Online - Launcher")
+        self.root.geometry("800x600")
+        self.root.configure(bg="#1a1a2e")
+
+        self.profile_system = PlayerProfileSystem()
+        self.current_profile = None
+
+        self.create_ui()
+        self.load_profiles()
+
+    def create_ui(self):
+        """Crée l'interface utilisateur"""
+
+        # En-tête
+        header = tk.Frame(self.root, bg="#16213e", height=100)
+        header.pack(fill="x")
+
+        title = tk.Label(
+            header,
+            text="KOF ULTIMATE ONLINE",
+            font=("Arial", 24, "bold"),
+            bg="#16213e",
+            fg="#00d4ff"
+        )
+        title.pack(pady=20)
+
+        # Corps principal
+        main_frame = tk.Frame(self.root, bg="#1a1a2e")
+        main_frame.pack(fill="both", expand=True, padx=20, pady=20)
+
+        # Panel gauche - Profils
+        left_panel = tk.Frame(main_frame, bg="#0f3460", width=250)
+        left_panel.pack(side="left", fill="y", padx=(0, 10))
+
+        profile_label = tk.Label(
+            left_panel,
+            text="PROFILS JOUEURS",
+            font=("Arial", 14, "bold"),
+            bg="#0f3460",
+            fg="#ffffff"
+        )
+        profile_label.pack(pady=10)
+
+        # Liste des profils
+        self.profile_listbox = tk.Listbox(
+            left_panel,
+            bg="#16213e",
+            fg="#ffffff",
+            font=("Arial", 11),
+            selectbackground="#00d4ff",
+            height=15
+        )
+        self.profile_listbox.pack(padx=10, pady=5, fill="both", expand=True)
+        self.profile_listbox.bind("<<ListboxSelect>>", self.on_profile_select)
+
+        # Boutons de gestion des profils
+        btn_frame = tk.Frame(left_panel, bg="#0f3460")
+        btn_frame.pack(pady=10)
+
+        self.create_button(btn_frame, "Nouveau", self.create_profile).pack(side="left", padx=2)
+        self.create_button(btn_frame, "Supprimer", self.delete_profile).pack(side="left", padx=2)
+
+        # Panel droit - Informations du profil
+        right_panel = tk.Frame(main_frame, bg="#0f3460")
+        right_panel.pack(side="right", fill="both", expand=True)
+
+        # Zone d'informations
+        info_label = tk.Label(
+            right_panel,
+            text="STATISTIQUES DU JOUEUR",
+            font=("Arial", 14, "bold"),
+            bg="#0f3460",
+            fg="#ffffff"
+        )
+        info_label.pack(pady=10)
+
+        # Texte des stats
+        self.stats_text = tk.Text(
+            right_panel,
+            bg="#16213e",
+            fg="#00d4ff",
+            font=("Consolas", 10),
+            wrap="word",
+            state="disabled"
+        )
+        self.stats_text.pack(padx=10, pady=10, fill="both", expand=True)
+
+        # Zone de boutons d'action
+        action_frame = tk.Frame(right_panel, bg="#0f3460")
+        action_frame.pack(pady=15)
+
+        self.btn_play = self.create_button(
+            action_frame,
+            "JOUER",
+            self.launch_game,
+            width=15,
+            height=2,
+            font=("Arial", 14, "bold")
+        )
+        self.btn_play.pack(side="left", padx=10)
+        self.btn_play.config(state="disabled")
+
+        self.btn_online = self.create_button(
+            action_frame,
+            "MULTIJOUEUR",
+            self.show_online_menu,
+            width=15,
+            height=2,
+            font=("Arial", 12, "bold")
+        )
+        self.btn_online.pack(side="left", padx=10)
+        self.btn_online.config(state="disabled")
+
+        self.create_button(
+            action_frame,
+            "Classement",
+            self.show_leaderboard,
+            width=15,
+            height=2
+        ).pack(side="left", padx=10)
+
+    def create_button(self, parent, text, command, width=10, height=1, font=("Arial", 10)):
+        """Crée un bouton stylisé"""
+        btn = tk.Button(
+            parent,
+            text=text,
+            command=command,
+            bg="#00d4ff",
+            fg="#000000",
+            font=font,
+            width=width,
+            height=height,
+            relief="flat",
+            cursor="hand2"
+        )
+        return btn
+
+    def load_profiles(self):
+        """Charge la liste des profils"""
+        self.profile_listbox.delete(0, tk.END)
+
+        profiles = self.profile_system.list_profiles()
+        for profile_name in profiles:
+            self.profile_listbox.insert(tk.END, profile_name)
+
+        # Sélectionner le dernier profil utilisé
+        db = self.profile_system._load_database()
+        if db["last_profile"] and db["last_profile"] in profiles:
+            idx = profiles.index(db["last_profile"])
+            self.profile_listbox.selection_set(idx)
+            self.on_profile_select(None)
+
+    def on_profile_select(self, event):
+        """Événement quand un profil est sélectionné"""
+        selection = self.profile_listbox.curselection()
+        if not selection:
+            return
+
+        profile_name = self.profile_listbox.get(selection[0])
+        self.current_profile = self.profile_system.get_profile(profile_name)
+
+        if self.current_profile:
+            self.display_profile_stats()
+            self.btn_play.config(state="normal")
+            self.btn_online.config(state="normal")
+
+    def display_profile_stats(self):
+        """Affiche les stats du profil sélectionné"""
+        if not self.current_profile:
+            return
+
+        stats_text = self.profile_system.get_stats_summary(
+            self.current_profile["username"]
+        )
+
+        self.stats_text.config(state="normal")
+        self.stats_text.delete(1.0, tk.END)
+        self.stats_text.insert(1.0, stats_text)
+        self.stats_text.config(state="disabled")
+
+    def create_profile(self):
+        """Crée un nouveau profil"""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Créer un Profil")
+        dialog.geometry("400x350")
+        dialog.configure(bg="#1a1a2e")
+        dialog.grab_set()
+
+        # Username
+        tk.Label(
+            dialog,
+            text="Nom d'utilisateur:",
+            bg="#1a1a2e",
+            fg="#ffffff",
+            font=("Arial", 11)
+        ).pack(pady=10)
+
+        username_entry = tk.Entry(dialog, font=("Arial", 12), width=30)
+        username_entry.pack(pady=5)
+
+        # Password (requis)
+        tk.Label(
+            dialog,
+            text="Mot de passe:",
+            bg="#1a1a2e",
+            fg="#ffffff",
+            font=("Arial", 11)
+        ).pack(pady=10)
+
+        password_entry = tk.Entry(dialog, font=("Arial", 12), width=30, show="*")
+        password_entry.pack(pady=5)
+
+        # PIN (requis)
+        tk.Label(
+            dialog,
+            text="Code PIN (4 chiffres):",
+            bg="#1a1a2e",
+            fg="#ffffff",
+            font=("Arial", 11)
+        ).pack(pady=10)
+
+        pin_entry = tk.Entry(dialog, font=("Arial", 12), width=30, show="*")
+        pin_entry.pack(pady=5)
+
+        def confirm_create():
+            username = username_entry.get().strip()
+            password = password_entry.get().strip()
+            pin = pin_entry.get().strip()
+
+            if not username:
+                messagebox.showerror("Erreur", "Le nom d'utilisateur est requis!")
+                return
+
+            if not password:
+                messagebox.showerror("Erreur", "Le mot de passe est requis!")
+                return
+
+            if not pin:
+                messagebox.showerror("Erreur", "Le code PIN est requis!")
+                return
+
+            profile = self.profile_system.create_profile(username, password, pin)
+
+            if profile:
+                messagebox.showinfo("Succès", f"Profil '{username}' créé!")
+                self.load_profiles()
+                dialog.destroy()
+            else:
+                messagebox.showerror("Erreur", "Impossible de créer le profil!")
+
+        self.create_button(dialog, "Créer", confirm_create, width=15).pack(pady=15)
+
+    def delete_profile(self):
+        """Supprime le profil sélectionné"""
+        selection = self.profile_listbox.curselection()
+        if not selection:
+            messagebox.showwarning("Attention", "Sélectionnez un profil à supprimer!")
+            return
+
+        profile_name = self.profile_listbox.get(selection[0])
+
+        if messagebox.askyesno(
+            "Confirmation",
+            f"Voulez-vous vraiment supprimer le profil '{profile_name}'?\nCette action est irréversible!"
+        ):
+            if self.profile_system.delete_profile(profile_name, confirm=True):
+                messagebox.showinfo("Succès", f"Profil '{profile_name}' supprimé!")
+                self.load_profiles()
+                self.current_profile = None
+                self.btn_play.config(state="disabled")
+                self.stats_text.config(state="normal")
+                self.stats_text.delete(1.0, tk.END)
+                self.stats_text.config(state="disabled")
+
+    def launch_game(self):
+        """Lance le jeu avec le profil sélectionné"""
+        if not self.current_profile:
+            messagebox.showwarning("Attention", "Sélectionnez un profil!")
+            return
+
+        # Demander authentification
+        username = self.current_profile["username"]
+
+        # Créer dialog de connexion
+        auth_dialog = tk.Toplevel(self.root)
+        auth_dialog.title("Connexion")
+        auth_dialog.geometry("350x250")
+        auth_dialog.configure(bg="#1a1a2e")
+        auth_dialog.grab_set()
+
+        tk.Label(
+            auth_dialog,
+            text=f"Connexion - {username}",
+            font=("Arial", 14, "bold"),
+            bg="#1a1a2e",
+            fg="#00d4ff"
+        ).pack(pady=15)
+
+        # Mot de passe
+        tk.Label(
+            auth_dialog,
+            text="Mot de passe:",
+            bg="#1a1a2e",
+            fg="#ffffff",
+            font=("Arial", 11)
+        ).pack(pady=5)
+
+        password_entry = tk.Entry(auth_dialog, font=("Arial", 12), width=25, show="*")
+        password_entry.pack(pady=5)
+
+        # PIN
+        tk.Label(
+            auth_dialog,
+            text="Code PIN:",
+            bg="#1a1a2e",
+            fg="#ffffff",
+            font=("Arial", 11)
+        ).pack(pady=5)
+
+        pin_entry = tk.Entry(auth_dialog, font=("Arial", 12), width=25, show="*")
+        pin_entry.pack(pady=5)
+
+        def confirm_login():
+            password = password_entry.get().strip()
+            pin = pin_entry.get().strip()
+
+            if not password or not pin:
+                messagebox.showerror("Erreur", "Mot de passe et PIN requis!")
+                return
+
+            # Vérifier les credentials
+            if self.profile_system.login(username, password, pin):
+                auth_dialog.destroy()
+                self._launch_game_exe(username)
+            else:
+                messagebox.showerror("Erreur", "Mot de passe ou PIN incorrect!")
+
+        self.create_button(auth_dialog, "Connexion", confirm_login, width=12).pack(pady=15)
+
+    def _launch_game_exe(self, username):
+        """Lance l'exécutable du jeu"""
+        game_exe = Path("D:/KOF Ultimate Online Online/KOF_Ultimate_Online.exe")
+
+        if not game_exe.exists():
+            messagebox.showerror(
+                "Erreur",
+                f"Fichier du jeu introuvable:\n{game_exe}"
+            )
+            return
+
+        try:
+            # Lancer le jeu
+            subprocess.Popen([str(game_exe)])
+            messagebox.showinfo(
+                "Jeu lancé",
+                f"Bon jeu, {username}!"
+            )
+        except Exception as e:
+            messagebox.showerror("Erreur", f"Impossible de lancer le jeu:\n{e}")
+
+    def show_leaderboard(self):
+        """Affiche le classement"""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Classement")
+        dialog.geometry("600x400")
+        dialog.configure(bg="#1a1a2e")
+        dialog.grab_set()
+
+        tk.Label(
+            dialog,
+            text="CLASSEMENT - TOP 10",
+            font=("Arial", 16, "bold"),
+            bg="#1a1a2e",
+            fg="#00d4ff"
+        ).pack(pady=15)
+
+        # Tableau du classement
+        tree = ttk.Treeview(
+            dialog,
+            columns=("Rank", "Player", "Ranking", "Level", "W-L"),
+            show="headings",
+            height=15
+        )
+
+        tree.heading("Rank", text="Rang")
+        tree.heading("Player", text="Joueur")
+        tree.heading("Ranking", text="Points")
+        tree.heading("Level", text="Niveau")
+        tree.heading("W-L", text="W-L")
+
+        tree.column("Rank", width=50, anchor="center")
+        tree.column("Player", width=200, anchor="w")
+        tree.column("Ranking", width=100, anchor="center")
+        tree.column("Level", width=80, anchor="center")
+        tree.column("W-L", width=120, anchor="center")
+
+        leaderboard = self.profile_system.get_leaderboard(10)
+
+        for i, player in enumerate(leaderboard, 1):
+            tree.insert("", tk.END, values=(
+                i,
+                player["username"],
+                player["ranking"],
+                player["level"],
+                f"{player['wins']}-{player['losses']}"
+            ))
+
+        tree.pack(padx=20, pady=10, fill="both", expand=True)
+
+    def show_online_menu(self):
+        """Affiche le menu multijoueur en ligne"""
+        if not self.current_profile:
+            messagebox.showwarning("Attention", "Sélectionnez un profil!")
+            return
+
+        # Ouvrir le menu multijoueur en ligne
+        OnlineMultiplayerMenu(self.root, self.profile_system, self.current_profile)
+
+    def run(self):
+        """Lance l'interface"""
+        self.root.mainloop()
+
+
+def main():
+    """Point d'entrée"""
+    launcher = ProfileLauncher()
+    launcher.run()
+
+
+if __name__ == "__main__":
+    main()

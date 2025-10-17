@@ -163,7 +163,7 @@ def main():
     # 1. FICHIERS EXÉCUTABLES
     print_section("1. FICHIERS EXÉCUTABLES")
     executables = [
-        ('KOF BLACK R.exe', 'Exécutable principal du jeu'),
+        ('KOF_Ultimate_Online.exe', 'Exécutable principal du jeu'),
         ('KOF Ultimate Launcher.exe', 'Launcher moderne'),
         ('launch_complete_system.bat', 'Script de lancement complet'),
         ('LAUNCH_ULTIMATE.bat', 'Script de lancement simple'),

@@ -1,0 +1,229 @@
+[Info]
+name = "clones lab destroyed"
+autor= "tizo k"
+mugenversion = 1.0
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -220
+boundright = 216
+boundhigh = -31
+boundlow = 0
+verticalfollow = 1
+floortension = 100
+tension = 60
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz = 0
+botz = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 215
+autoturn = 1
+resetBG = 0
+
+[Shadow]
+intensity = 100
+color = 0,0,0
+yscale = -.1
+
+[Music]
+bgmusic = sound/clones lab destroyed.mp3
+bgvolume = 225
+
+[BGdef]
+spr = stages/clones lab destroyed.sff
+
+
+====================================================================
+
+;--------------------------------------------------------
+[BG FONDO ULTIMO]
+type = normal
+spriteno = 80,0
+start = 0, 0
+delta = 0.75, 0.75
+mask = 1
+trans = none
+layerno = 0
+velocity = 0,0
+tile = 0,0
+
+[BG FONDO PENULTIMO]
+type = normal
+spriteno = 70,0
+start = 0, 0
+delta = 0.75,0.75
+mask = 1
+trans = none
+layerno = 0
+velocity = 0,0
+tile = 0,0
+
+
+
+
+
+[BG Tubes 2]
+type = normal
+spriteno = 6,0
+start = 8,-7
+delta = 0.5,0.7
+mask = 1
+
+[BG Tubes 3]
+type = normal
+spriteno = 5,0
+start = 8,-22
+delta = 0.7,0.8
+mask = 1
+
+
+
+
+[BG Tubes 4]
+type = normal
+spriteno = 4,0
+start = 8,-5
+delta = 0.9,0.9
+mask = 1
+
+
+
+
+[BG 2,0]
+type = normal
+spriteno = 7,90
+start = -0,125.
+delta = 1,1
+mask = 1
+trans = none
+layerno = 1
+velocity = 0,0
+tile = 0,0
+
+[BG Pompe]
+type  = anim
+actionno = 890
+layerno = 0                
+start = -380,-1
+delta = 1, 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG Pompe]
+type  = anim
+actionno = 891
+layerno = 0                
+start = 380,-1
+delta = 1, 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG Floor]
+type = normal
+spriteno = 1,0
+start = 0,100
+delta = 1,1
+mask = 1
+
+
+
+
+[BG Shadows] 
+Type = normal
+LayerNo  = 1
+SpriteNo = 5,26
+start = 0,-180
+delta = 1,1 
+trans = sub
+Mask = 1
+
+
+
+
+
+[Begin Action 890]
+890,0, 0,0, 10
+890,1, 0,0, 10
+890,2, 0,0, 10
+890,3, 0,0, 10
+890,4, 0,0, 10
+890,5, 0,0, 10
+890,6, 0,0, 10
+890,7, 0,0, 10
+
+[Begin Action 891]
+890,0, 0,0, 10, H
+890,1, 0,0, 10, H
+890,2, 0,0, 10, H
+890,3, 0,0, 10, H
+890,4, 0,0, 10, H
+890,5, 0,0, 10, H
+890,6, 0,0, 10, H
+890,7, 0,0, 10, H
+
+[Begin Action 2]
+5,1, 0,0, 4, , A
+5,2,0,0,4, ,as256d256
+5,3,0,0,4, ,as256d256
+5,4,0,0,4, ,as256d256
+5,5,0,0,4, ,as256d256
+5,6,0,0,4, ,as256d256
+5,7,0,0,4, ,as256d256
+5,8,0,0,4, ,as256d256
+5,9,0,0,4, ,as256d256
+5,10,0,0,4, ,as256d256
+5,11,0,0,4, ,as256d256
+5,12,0,0,4, ,as256d256
+5,13,0,0,4, ,as256d256
+5,14,0,0,4, ,as256d256
+5,15,0,0,4, ,as256d256
+5,16,0,0,4, ,as256d256
+5,17,0,0,4, ,as256d256
+5,18,0,0,4, ,as256d256
+5,19,0,0,4, ,as256d256
+5,20,0,0,4, ,as256d256
+5,21, 0,0, 4, , A
+5,22,0,0,4, ,as256d256
+5,23,0,0,4, ,as256d256
+5,24,0,0,4, ,as256d256
+
+
+
+
+[Begin Action 12]
+12,0, 0,0, 15, , A
+-1,-1, 0,0, 3, , S
+
+
+[Begin Action 11]
+11,0, 0,0, 8,,A
+-1,-1,0,0,3
