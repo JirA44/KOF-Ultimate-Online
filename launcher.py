@@ -407,6 +407,23 @@ class GameLauncher:
         balance_btn.bind('<Enter>', lambda e: balance_btn.config(bg='#3d4571', fg='#ffffff'))
         balance_btn.bind('<Leave>', lambda e: balance_btn.config(bg='#2d3561', fg='#c0c0c0'))
 
+        chars_btn = tk.Button(
+            left_col,
+            text="👤  Personnages",
+            font=('Consolas', 10, 'bold'),
+            bg='#2d3561',
+            fg='#c0c0c0',
+            activebackground='#3d4571',
+            cursor='hand2',
+            relief=tk.RAISED,
+            bd=2,
+            pady=8,
+            command=self.launch_character_dashboard
+        )
+        chars_btn.pack(fill=tk.X, pady=3)
+        chars_btn.bind('<Enter>', lambda e: chars_btn.config(bg='#3d4571', fg='#ffffff'))
+        chars_btn.bind('<Leave>', lambda e: chars_btn.config(bg='#2d3561', fg='#c0c0c0'))
+
         # Colonne droite
         right_col = tk.Frame(secondary_frame, bg='#0d1b2a')
         right_col.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(8, 0))
@@ -444,6 +461,23 @@ class GameLauncher:
         update_btn.pack(fill=tk.X, pady=3)
         update_btn.bind('<Enter>', lambda e: update_btn.config(bg='#3d4571', fg='#ffffff'))
         update_btn.bind('<Leave>', lambda e: update_btn.config(bg='#2d3561', fg='#c0c0c0'))
+
+        inspector_btn = tk.Button(
+            right_col,
+            text="🔍  Inspecteur Visuel",
+            font=('Consolas', 10, 'bold'),
+            bg='#2d3561',
+            fg='#c0c0c0',
+            activebackground='#3d4571',
+            cursor='hand2',
+            relief=tk.RAISED,
+            bd=2,
+            pady=8,
+            command=self.launch_visual_inspector
+        )
+        inspector_btn.pack(fill=tk.X, pady=3)
+        inspector_btn.bind('<Enter>', lambda e: inspector_btn.config(bg='#3d4571', fg='#ffffff'))
+        inspector_btn.bind('<Leave>', lambda e: inspector_btn.config(bg='#2d3561', fg='#c0c0c0'))
 
         # Status bar améliorée
         self.status_bar = tk.Label(
@@ -687,6 +721,44 @@ Le guide complet est disponible dans GUIDE_MULTIJOUEUR.md
                 f"Script non trouvé:\n{balance_script}"
             )
             self.update_status("Erreur: Script balancer non trouvé")
+
+    def launch_character_dashboard(self):
+        """Lance le dashboard des personnages"""
+        self.update_status("Ouverture du dashboard personnages...")
+
+        dashboard_script = GAME_PATH / "character_dashboard.py"
+
+        if dashboard_script.exists():
+            try:
+                subprocess.Popen([sys.executable, str(dashboard_script)])
+                self.update_status("✓ Dashboard personnages lancé")
+            except Exception as e:
+                messagebox.showerror("Erreur", f"Impossible de lancer le dashboard:\n{e}")
+        else:
+            messagebox.showerror(
+                "Erreur",
+                f"Script non trouvé:\n{dashboard_script}"
+            )
+            self.update_status("Erreur: Script dashboard non trouvé")
+
+    def launch_visual_inspector(self):
+        """Lance l'inspecteur visuel"""
+        self.update_status("Ouverture de l'inspecteur visuel...")
+
+        inspector_script = GAME_PATH / "visual_inspector.py"
+
+        if inspector_script.exists():
+            try:
+                subprocess.Popen([sys.executable, str(inspector_script)])
+                self.update_status("✓ Inspecteur visuel lancé")
+            except Exception as e:
+                messagebox.showerror("Erreur", f"Impossible de lancer l'inspecteur:\n{e}")
+        else:
+            messagebox.showerror(
+                "Erreur",
+                f"Script non trouvé:\n{inspector_script}"
+            )
+            self.update_status("Erreur: Script inspecteur non trouvé")
 
     def open_guide(self):
         """Ouvre le guide multijoueur"""
