@@ -1,0 +1,32 @@
+; Definition file for Card Captor Iron King
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "King"
+displayname = "King"
+versiondate = 26,03,2005 ;Started
+mugenversion = 04,01,2001
+author = "David Demianoff" ;And Chloe
+pal.defaults = 1,2
+
+; Files for the player
+[Files]
+cmd      = coding/king.cmd	;Other config
+cns      = coding/king.cns	;Constants
+st       = coding/king.cns	;States
+st1      = coding/attacks.cns	;States
+st2      = coding/specials.cns	;States
+st3      = coding/hypers.cns	;States
+st4      = coding/misc.cns	;States
+stcommon = common1.cns		;Common states
+sprite   = files/king.sff	;Sprite
+anim     = coding/king.air	;Animation
+sound    = files/king.snd	;Sound
+pal1     = pal/king2k1a.act	;Normal palette
+pal2	 = pal/king2kbex.act
+
+; Arcade mode
+[Arcade]
+;intro.storyboard = end.def
+ending.storyboard = female.def

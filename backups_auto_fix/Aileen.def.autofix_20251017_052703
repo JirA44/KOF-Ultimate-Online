@@ -1,0 +1,38 @@
+[Info]
+Name         = "Aileen"
+DisplayName  = "Aileen"
+VersionDate  = 12,10,2007
+MugenVersion = 06,14,2003
+Author       = "YU"
+pal.defaults = 4
+
+[Files]
+cmd = Aileen.cmd   
+stcommon = common.cns
+Sprite = Aileen.sff
+Anim  = Aileen.air
+Sound = Aileen.snd
+Cns = Aileen.cns
+St  = Aileen.cns
+st1 = Aileen_N.cns
+st2 = Aileen_S.cns
+st3 = Aileen_H.cns
+st4 = helper.cns
+St5 = AI_Helper.cns
+
+pal1 = Aileen-1.act
+pal2 = Aileen-2.act
+pal3 = Aileen-3.act
+pal4 = Aileen-4.act
+pal5 = Aileen-5.act
+pal6 = Aileen-6.act
+pal7 = Aileen-1.act
+pal8 = Aileen-2.act
+pal9 = Aileen-3.act
+pal10 = Aileen-4.act
+pal11 = Aileen-5.act
+pal12 = Aileen-6.act
+
+[Arcade]
+intro.storyboard = intro.def
+ending.storyboard = The-end.def

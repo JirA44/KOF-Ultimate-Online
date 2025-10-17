@@ -1,0 +1,34 @@
+;このキャラクターの情報と使用ファイルリストです。
+;ここに登録されているファイルが全て揃っていないとエラーとなります。
+
+[Info];情報
+Name         = "Raika"
+DisplayName  = "Raika" 
+VersionDate  = 9999      ;月,日,西暦 または X.XX（1.02など）
+MugenVersion = 1.1         ;Win
+Author       = "BlackCurl"
+Pal.Defaults = 5,2,6,3
+LocalCoord   = 320,240         ;240p,480p,720pの区別
+
+
+[Files];ファイルリスト
+Cmd      = Data/Raika.c        ;拡張子を.cmdから.cに変えています
+Cns      = Cns/Raika.cns
+St       = Cns/Raika.cns
+St1      = Cns/Raika-NA.cns
+St2      = Cns/Raika-SA.cns
+St3      = Cns/Raika-HA.cns
+St4      = Cns/Raika-PA.cns
+StCommon = Cns/Raika-common.cns
+St5      = option.cns
+St6	 = CNS/Raika-EX.cns
+Sprite   = Data/Raika.sff
+Anim     = Data/Raika.air
+Sound    = Data/Raika.snd
+
+Pal1  = Data/Raika.ACT
+
+[Arcade];OP＆ED設定（現在未設定）
+Intro.Storyboard  = 
+Ending.Storyboard = 
+

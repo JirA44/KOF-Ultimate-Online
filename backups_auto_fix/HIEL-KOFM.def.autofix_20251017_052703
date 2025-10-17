@@ -1,0 +1,39 @@
+[Info]
+name = "hiel"
+displayname = "Force Hiel"
+versiondate = 6,6,2004
+mugenversion = 04,14,2001
+author="NAO&M."
+
+; Files for the player
+pal.defaults=1,4,7
+
+[Files]
+cmd     =cmd/HIEL-KOFM.cmd
+cns     =cns/HIEL-KOFM.cns
+st      =cns/HIEL-KOFM.cns
+st2     =cns/HIEL-KOFM-N.cns
+st3     =cns/HIEL-KOFM-S.cns
+st4     =cns/HIEL-KOFM-H.cns
+st5     =cns/HIEL-KOFM-2-3.cns
+st6     =cns/HIEL-KOFM-HELPER.cns
+stcommon = common1.cns
+sprite = sff/HIEL-KOFM.sff
+anim = air/HIEL-KOFM.air
+sound = snd/HIEL-KOFM.snd
+pal1 = Act/hiel1.act
+pal2 = Act/hiel2.act
+pal3 = Act/hiel3.act
+pal4 = Act/hiel4.act
+pal5 = Act/hiel5.act
+pal6 = Act/hiel6.act
+pal7 = Act/hiel7.act
+pal8 = Act/hiel8.act
+pal9 = Act/hiel9.act
+pal10 = Act/hiel10.act
+pal11 = Act/hiel11.act
+pal12 = Act/hiel12.act
+
+[Arcade]
+intro.storyboard = data/mugen1/intro.def
+ending.storyboard = 

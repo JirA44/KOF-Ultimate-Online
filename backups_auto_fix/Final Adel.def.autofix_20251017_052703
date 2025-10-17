@@ -1,0 +1,42 @@
+; Edited from ONI-MIKO's God Adel. Give credit to all three authors if used!
+[Info]
+Name         = "Final Adel"
+DisplayName  = "Final Adel"
+VersionDate  = 23/06/2019 ;DD/MM/YYYY
+MugenVersion = 1.0
+author       = "Shadow97"
+;God Adel author = "ONI-MIKO"
+;Original author = "jin"
+Pal.Defaults = 1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+Cmd      = Final Adel.cmd
+Cns      = Final Adel.cns
+St       = Final Adel.cns
+St1      = Final Adel-N.cns
+St2      = Final Adel-S.cns
+St3      = Final Adel-H.cns
+St4      = Final Adel-2-3.cns
+St5      = Final Adel Helper.cns
+StCommon = common1.cns
+Sprite   = Final Adel.sff
+Anim     = Final Adel.air
+Sound    = Final Adel.snd
+
+Pal1 = pal/Final Adel1.act
+Pal2 = pal/Final Adel2.act
+Pal3 = pal/Final Adel3.act
+Pal4 = pal/Final Adel4.act
+Pal5 = pal/Final Adel5.act
+Pal6 = pal/Final Adel6.act
+
+;cpu mode 7p~12p
+
+Pal7 = pal/Final Adel1.act
+Pal8 = pal/Final Adel2.act
+Pal9 = pal/Final Adel3.act
+Pal10 = pal/Final Adel4.act
+Pal11 = pal/Final Adel5.act
+Pal12 = pal/Final Adel12.act
+
+

@@ -78,22 +78,28 @@ cancel.snd =100,2
 ;----------------------------
 ;Title background definition
 [TitleBGdef]
-bgclearcolor = 15,25,60
+bgclearcolor = 0,0,0
+
+[TitleBG 0]
+type = anim
+actionno = 4
+layerno = 0
+mask = 1
 
 [TitleBG 1]
 type = anim
-actionno = 4
+actionno = 5
 layerno = 1
 mask = 1
 trans = add
 
 [TitleBG 2]
 type = anim
-actionno = 5
+actionno = 3
 layerno = 2
 mask = 1
 trans = addalpha
-alpha = 140,256
+alpha = 200,256
 
 ;-------------------------------------------------------------------
 ;Character select definition
@@ -133,9 +139,9 @@ stage.move.snd = 100,0
 stage.done.snd = 100,1
 cancel.snd = 100,2
 
-portrait.spr = 9000,2
-portrait.offset = 15,15
-portrait.scale = 0.6,0.6
+portrait.spr = 9000,0
+portrait.offset = 0,0
+portrait.scale = 1.0,1.0
 
 p1.face.offset = 25,20
 p1.face.scale = 0.5,0.5
@@ -186,33 +192,50 @@ p2.teammenu.value.snd = 100,0
 p2.teammenu.done.snd = 100,1
 ;-----------------------
 [SelectBGdef]
-bgclearcolor = 25,15,55
+bgclearcolor = 0,0,0
 
 [SelectBG 0]
 type = anim
-actionno = 7
+actionno = 4
+layerno = 0
 mask = 1
-
-[SelectBG 0]
-type = anim
-actionno = 8
-layerno = 1
-mask = 1
-
-[SelectBG 0]
-type = anim
-actionno = 496
-layerno = 1
-
-[SelectBG 0]
-type = anim
-actionno = 497
-layerno = 1
 
 [SelectBG 1]
 type = anim
-actionno = 495
+actionno = 7
 layerno = 1
+mask = 1
+trans = add
+
+[SelectBG 2]
+type = anim
+actionno = 8
+layerno = 2
+mask = 1
+trans = addalpha
+alpha = 220,256
+
+[SelectBG 3]
+type = anim
+actionno = 496
+layerno = 3
+mask = 1
+trans = add
+
+[SelectBG 4]
+type = anim
+actionno = 497
+layerno = 4
+mask = 1
+trans = addalpha
+alpha = 180,256
+
+[SelectBG 5]
+type = anim
+actionno = 495
+layerno = 5
+mask = 1
+trans = add
 
 ;-------------------------------------------------------------------
 [VS Screen]

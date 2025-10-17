@@ -1,0 +1,21 @@
+; ‚±‚±‚ÉƒLƒƒƒ‰î•ñ‚ð‘‚¢‚Ä‚­‚¾‚³‚¢
+[Info]
+name = "Rozwel S.K RENEWAL"        ;ƒLƒƒƒ‰‚Ì–¼‘O
+displayname = "Final Rozwel S.K-L" ;?Ž¦‚³‚ê‚éƒLƒƒƒ‰‚Ì–¼‘O
+versiondate = 11,22,2000    ;ƒLƒƒƒ‰‚ÌXVî•ñ
+mugenversion = 1.0   ;ƒLƒƒƒ‰‚ª“®‚­mugen‚Ìƒo?ƒWƒ‡ƒ“
+author = "Seijuro Kazuya, Lucifer Rhozwell & human human"
+pal.defaults = 1      ;“G‚Æ‚µ‚Ä‚Å‚éƒLƒƒƒ‰‚ÌƒpƒŒƒbƒg
+
+; Files for the player
+[Files]
+cmd     = Oswald_XI.cmd   ;ƒLƒƒƒ‰‚ÌƒR?ƒ“ƒh
+cns     = Oswald_XI.cns   ;ƒLƒƒƒ‰‚ÌƒvƒƒOƒ‰?
+st      = Oswald_XI.cns   ;Šî?“®ìA•KŽE‹ZA“ÁŽêƒQ?ƒWA-2A-3
+st2     = Oswald_XI2.cns  ;’´•KŽE‹Z
+st3     = -3.cns
+stcommon = common1.cns 
+sprite  = Rozwel.sff   ;ƒLƒƒƒ‰‚ÌŠG
+anim    = Oswald_XI.air   ;ƒLƒƒƒ‰‚Ì“®‚«
+sound   = Jakigan.snd   ;ƒLƒƒƒ‰‚Ì‰¹
+pal1    = 

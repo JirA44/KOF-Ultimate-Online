@@ -1,0 +1,33 @@
+[Info]
+Name         = "Nox"
+DisplayName  = "Nox Bernstein"
+VersionDate  = 13,4,2015
+MugenVersion = 06,14,2003
+Author       = "IO"
+Editor       = "AnimugenZ"
+Pal.Defaults = 1,2,3,4,5,6
+
+[Files]
+Cmd      =S-Adel.cmd
+Cns      =S-Adel.cns
+St       =S-Adel.cns
+StCommon =common1.cns
+Sprite   =S-Adel.sff
+Anim     =S-Adel.air
+Sound    =S-Adel.snd
+st1=S-Adel-N.cns
+st2=S-Adel-S.cns
+st3=S-Adel-H.cns
+st4=S-Adel-2-3.cns
+st5=helper.cns
+
+pal1=pal/A.act
+pal2=pal/B.act
+pal3=pal/C.act
+pal4=pal/D.act
+pal5=pal/E.act
+pal6=pal/F.act
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

@@ -1,0 +1,38 @@
+[Info]
+name = "Samael"        ;人物名
+displayname = "Samael" ;显示名
+versiondate = 2020,11,10    ;人物版本号 (月-日-年 或者 X.XX)
+mugenversion = 1.0          ;人物对应的MUGEN版本 (X.XX)
+author = "Keyser"         ;作者名
+pal.defaults=1,2,3,4,5,6;配色排列顺序
+
+; 人物文件
+[Files]
+cmd      = CNS/Samael.cmd         
+cns      = CNS/Samael.cns        
+st       = CNS/Samael.cns        
+St0      = CNS/Helper.cns
+St1      = CNS/Samael_N.cns
+St2      = CNS/Samael_S.cns
+St3      = CNS/Samael_H.cns
+St4      = CNS/Samael_2.cns
+St5      = CNS/Samael_SH.cns
+St6      = CNS/Samael_3.cns
+stcommon = CNS/Samael_C.cns     
+sprite   = SFF/Samael.sff     
+anim     = SFF/Samael.air    
+sound    = SFF/Samael.snd 
+
+Pal1=Paletas/Samael.act;色表文件 
+pal2=Paletas/Samael2.act;色表文件 
+pal3=Paletas/Samael3.act;色表文件 
+pal4=Paletas/Samael4.act;色表文件
+pal5=Paletas/Samael5.act;色表文件 
+pal6=Paletas/Samael6.act;色表文件
+
+
+
+; arcade模式的开头结局动画
+[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

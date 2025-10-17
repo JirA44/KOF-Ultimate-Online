@@ -1,0 +1,46 @@
+; 功夫人的中文化def文档。
+; 由MKII翻译。
+; 包括人物所需要的文件名。
+
+; 人物信息
+[Info]
+name = "Shadow Dancer"        ;人物名
+displayname = "Shadow Dancer" ;显示名
+versiondate = 07,30,2019    ;人物版本号 (月-日-年 或者 X.XX)
+author = "Nanaya"         ;作者名
+pal.defaults = 1,2,3,4      ;默认色表顺序 (最多4个)
+                            ;序号从1开始
+localcoord = 320,240        ;分辨率宽度和高度
+
+; 人物文件
+[Files]
+cmd      = Shadow-Dancer.cmd           ;操作输入
+cns      = Shadow-Dancer.cns           ;常量定义
+st       = Shadow-Dancer.cns           ;State定义
+st1      = Shadow-Dancer-skills.cns    ;State定义
+st2      = Shadow-Dancer-EXskills.cns  ;State定义
+st3      = Shadow-Dancer-ADskills.cns  ;State定义
+st4      = Shadow-Dancer-LAskills.cns  ;State定义
+st5      = Shadow-Dancer-RMskills.cns
+st6      = Shadow-Dancer-2.cns         ;State定义
+st7      = Shadow-Dancer-3.cns         ;State定义
+st8      = Shadow-Dancer-aihelper.cns  ;State定义
+st9      = Shadow-Dancer-settings.cns  ;State定义
+stcommon = Shadow-DancerCom.cns        ;公用state (人物文件夹或者common文件夹中)
+sprite   = Shadow-Dancer.sff           ;图像文件
+anim     = Shadow-Dancer.air           ;动作文件
+sound    = Shadow-Dancer.snd           ;声效文件
+
+; 色表文件
+Pal1	= act/Shadow-Dancer.act
+Pal2	= act/Shiki-Nanaya.act
+Pal3	= act/Shiki-Tohno.act
+Pal4	= act/Shadow-Diver.act
+Pal5	= act/BW.act
+Pal6	= act/Brown.act
+Pal7	= act/Shadow-Dancer.act
+Pal8	= act/Shiki-Nanaya.act
+Pal9	= act/Shiki-Tohno.act
+Pal10	= act/Shadow-Diver.act
+Pal11	= act/BW.act
+Pal12	= act/Brown.act

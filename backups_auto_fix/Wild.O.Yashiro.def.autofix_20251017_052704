@@ -1,0 +1,35 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Yashiro Nanakase"        ;Name of character
+displayname = "Wild.O.Yashiro" ;Name of character to display
+versiondate = 04,14,2002    ;Version date of character (MM-DD-YYYY)
+mugenversion = 1.1   ;Version of M.U.G.E.N character works on
+author = "Mojack"         ;Character author name
+pal.defaults = 2,1,3,4,5,6,7,8,9,10,11,12      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = Wild.O.Yashiro.cmd   ;Command set
+cns     = Wild.O.Yashiro.cns   ;Constants
+st      = Wild.O.Yashiro.cns   ;States
+st2     = Wild.O.Yashiro2.cns   ;States
+st3     = helper.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = Wild.O.Yashiro.sff   ;Sprite
+anim    = Wild.O.Yashiro.air   ;Animation
+sound   = Wild.O.Yashiro.snd   ;Sound
+pal1    = act/Orochi_Yashiro.act
+pal2    = act/Orochi_Yashiro.act
+pal3    = act/Orochi_Yashiro.act
+pal4   = act/Orochi_Yashiro.act
+pal5   = act/Yashiro_Nanakase6.act
+pal6   = act/Yashiro_Nanakase6.act
+pal7    = act/Yashiro_Nanakase6.act
+pal8    = act/Yashiro_Nanakase6.act
+pal9    = act/Orochi_Yashiro2.act
+pal10    = act/Orochi_Yashiro2.act
+pal11    = act/Orochi_Yashiro2.act
+pal12    = act/Orochi_Yashiro2.act

@@ -1,0 +1,37 @@
+[Info]
+Name         ="Geese Howard" ;Geese Howard ON
+DisplayName  ="Geese H."
+VersionDate  =23,04,2018
+MugenVersion =1.0
+Author       ="Jin"
+;edited by Orochi Nathan
+;cosas Nuevas by Kusanagi,pals,UM Effect, KOFM Portraits,Explods Fixeds,sound fixeds.etc
+Pal.Defaults =4,1,2,3,5,6
+
+[Files]
+Cmd      =Geese-KOFM.cmd
+Cns      =Geese-KOFM.cns
+St       =Geese-KOFM.cns
+StCommon =common1.cns
+Sprite   =Geese-KOFM.sff
+Anim     =Geese-KOFM.air
+Sound    =Geese-KOFM.snd
+pal1=N-Geese04.act
+pal2=N-Geese02.act
+pal3=N-Geese03.act
+pal4=Geese-KOF.act
+pal5=N-Geese05.act
+pal6=N-Geese06.act
+st1=N-Geese-N.cns
+st2=N-Geese-S.cns
+st3=N-Geese-H.cns
+st4=N-Geese-2-3.cns
+
+
+
+;---カラーパレット---
+
+
+[Arcade]
+intro.storyboard  =History.def
+ending.storyboard =

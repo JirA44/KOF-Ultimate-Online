@@ -1,0 +1,40 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "MeteoricMarisa"
+displayname = "Meteoric Marisa"
+versiondate = 18/05/2020
+mugenversion = 1.1
+author = "Deoxgigas"
+pal.defaults = 1
+
+[Files]
+sprite = meteoricmarisa.sff
+anim = meteoricmarisa.air
+sound = meteoricmarisa.snd
+cmd = meteoricmarisa.cmd
+cns = meteoricmarisa.cns
+stcommon = meteoricmarisa2.cns
+st = meteoricmarisa.cns
+st1 = meteoricmarisa3.cns
+st2 = meteoricmarisa4.cns
+st3 = meteoricmarisa5.cns
+pal1    = Palettes/pinknormal.act
+pal2    = Palettes/greynormal.act
+pal3    = Palettes/ogMarisa.act
+pal4    = Palettes/ogPink.act
+pal5    = Palettes/jam.act
+pal6    = Palettes/umikokoro.act
+pal7    = Palettes/azrael.act
+pal8    = Palettes/izayoi.act
+pal9    = Palettes/kagura.act
+pal10    = Palettes/utsuho.act
+pal11    = Palettes/pinknormal.act
+pal12    = Palettes/pinknormal.act
+
+[Arcade]
+;intro.storyboard = 
+;ending.storyboard = 

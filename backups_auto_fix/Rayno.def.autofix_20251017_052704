@@ -1,0 +1,38 @@
+[Info]
+Name         = "Z-Gold"
+DisplayName  = "Rayno"
+VersionDate  = 07,30,2010
+MugenVersion = 1.0;06,14,2003
+Author       = "Stara&BL(ﾆ蘯ﾚｴｦｵﾄｹ簔ﾁ"
+Pal.Defaults = 1,2,3,4,5,6
+
+[Files]
+Cmd      = Rayno.cmd
+Cns      =Rayno.cns
+St       = Rayno.cns
+St0      = Rayno-N.cns
+St1      = Rayno-S.cns
+St2      = Rayno-H.cns
+St3      = Rayno-2-3.cns
+st4      = helper.cns
+StCommon = common1.cns
+Sprite   = Rayno.sff
+Anim     = Rayno.air
+Sound    = Rayno.snd
+ai       = Rayno.ai
+
+;---カラーパレット---
+
+Pal1 = Rayno01.act
+Pal2 = Rayno01.act
+Pal3 = Rayno01.act
+Pal4 = Rayno01.act
+Pal5 = Rayno01.act
+Pal6 =Rayno01.act
+Pal7 = Rayno01.act
+Pal8 = Rayno01.act
+Pal9 = Rayno01.act
+Pal10 = Rayno01.act
+Pal11 = Rayno01.act
+Pal12 =Rayno01.act
+

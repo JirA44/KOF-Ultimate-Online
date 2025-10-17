@@ -1,0 +1,46 @@
+;一部変数メモ
+;var(26)~var(29) - 飛び道具検知
+;var(38) - 飛び道具検知フラグ
+;var(45) - AI敵判断
+;var(53) - 相手の起き上がりの投げ無敵を調べる
+;var(52) - ガード確率
+;var(55) - ガードレベル
+;var(57) - ガード切り替え
+;var(59) - AIスイッチ
+;sysvar(4) - gametime
+
+[Info]
+name = "Ryuji"        ;人物名
+displayname = "Ryuji" ;显示名
+mugenversion = 06,14,2003          ;人物对应的MUGEN版本 (X.XX)
+author = "Sikoli"         ;作者名
+pal.defaults =  1,2,3,4   ;默认色表顺序 (最多4个);序号从1开始
+localcoord = 320,240        ;分辨率宽度和高度
+
+; 人物文件
+[Files]
+cmd     = Ryuji.cmd           ;操作输入
+cns     = Ryuji.cns           ;常量定义
+st      = Ryuji.cns           ;State定义
+st2     = config.txt
+stcommon = common1.cns        ;公用state (人物文件夹或者common文件夹中)
+sprite  = Ryuji.sff           ;图像文件
+anim    = Ryuji.air           ;动作文件
+sound   = Ryuji.snd           ;声效文件
+pal1 = pal\pal1.act
+pal2 = pal\pal2.act
+pal3 = pal\pal3.act
+pal4 = pal\pal4.act
+pal5 = pal\pal5.act
+pal6 = pal\pal6.act
+pal7 = pal\pal7.act
+pal8 = pal\pal8.act
+pal9 = pal\pal9.act
+pal10 = pal\pal10.act
+pal11 = pal\pal11.act
+pal12 = pal\pal12.act
+
+; arcade模式的开头结局动画
+[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

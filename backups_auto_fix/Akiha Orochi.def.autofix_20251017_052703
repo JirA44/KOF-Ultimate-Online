@@ -1,0 +1,36 @@
+;---------------------------------
+; IORI YAGAMI ver 8.00. = 95,9%
+; -zelgadis-
+;---------------------------------
+
+;Información General
+;157
+[Info]
+Name         ="Akiha yagami orochi"
+DisplayName  ="Akiha yagami OROCHI"
+Author       ="Darkriel Akiyami";Sherlyn
+finaluptate  = 01,26,2007
+Pal.Defaults =4,1,2,3,5,6
+versiondate  =1/8/2006
+mugenversion =1.0
+ 
+[Files]
+Cmd      =Oroch_iakiha.cmd
+Cns      =Oroch_iakiha.cns
+St       =Oroch_iakiha.cns
+StCommon =common1.cns
+Sprite   =Oroch_iakiha.sff
+Anim     =Oroch_iakiha.air
+Sound    =Oroch_iakiha.snd
+pal1=Paletas/OrochiAkiha.act
+st1=Oroch_iakiha-N.cns
+st2=Oroch_iakiha-S.cns
+st3=Oroch_iakiha-H.cns
+st4=Oroch_iakiha-CTN.cns
+st5=Oroch_iakiha-2-3.cns
+st6=
+
+;Arcade mode
+[Arcade]
+intro.storyboard  =History.def
+ending.storyboard =Ending-Original.def

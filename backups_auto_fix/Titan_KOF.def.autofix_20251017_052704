@@ -1,0 +1,48 @@
+;===================================================================================;
+;TITAN BY OROCHIDARKKYO & VERGIL KUSANAGI
+;SI LO EDITAS, ERES UNA PUTA XD; ATTE: VERGIL KUSANAGI
+:IF YOU EDIT IT, YOU ARE A BITCH :V; ATTE: VERGIL KUSANAGI
+;===================================================================================;
+;===================================================================================;
+[info]
+name              = "Titan"
+displayname       = "Titan"
+versiondate       = 29/05/2020
+mugenversion      = 1.1
+author            = "Vergil Kusanagi & OrochiDarkKyo"
+pal.defaults      = 4,1,2,3,5,6
+
+;===================================================================================;
+[files]
+sprite	= sprites.sff
+anim	= animaciones.air
+sound	= sonidos.snd
+cmd	= comandos.cmd
+cns	= principal.cns
+st	= principal.cns
+st0	= common.cns
+st1	= estados kofm.cns
+st2 	= normal.cns
+st3	= supers.cns
+st4	= hypers.cns
+st5	= -2.cns
+st6	= -3.txt
+stcommon	= common1.cns
+pal1	= paletas\paleta01.act
+pal2	= paletas\paleta02.act
+pal3	= paletas\paleta03.act 
+pal4	= paletas\paleta04.act
+pal5	= paletas\paleta05.act
+pal6	= paletas\paleta06.act
+pal7	= paletas\paleta07.act
+pal8	= paletas\paleta08.act
+;===================================================================================;
+[arcade]
+intro.storyBoard	= 
+ending.storyBoard	= 
+;===================================================================================;
+;===================================================================================;
+;TITAN BY OROCHIDARKKYO & VERGIL KUSANAGI
+;SI LO EDITAS, ERES UNA PUTA XD; ATTE: VERGIL KUSANAGI
+:IF YOU EDIT IT, YOU ARE A BITCH :V; ATTE: VERGIL KUSANAGI
+;===================================================================================;

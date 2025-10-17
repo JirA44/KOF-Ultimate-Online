@@ -1,0 +1,38 @@
+
+[Info]
+Name         ="Hunter_U6746"
+DisplayName  ="Hunter U6746"
+VersionDate  =08,11,2020
+MugenVersion = 1.0
+Author       ="Player-One/NexT One"
+Pal.Defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+Cmd      =Hunter_U6746.cmd
+Cns      =Hunter_U6746.cns
+St       =Hunter_U6746.cns
+StCommon =common1.cns
+Sprite   =Hunter_U6746.sff
+Anim     =Hunter_U6746.air
+Sound    =Hunter_U6746.snd
+pal1=Hunter01.act
+pal2=Hunter02.act
+pal3=Hunter03.act
+pal4=Hunter04.act
+pal5=Hunter05.act
+pal6=Hunter06.act
+pal7=Hunter07.act
+pal8=Hunter08.act
+pal9=Hunter09.act
+pal10=Hunter10.act
+pal11=Hunter11.act
+pal12=Hunter12.act
+st1=Hunter_U6746-Normal.cns
+st2=Hunter_U6746-Specials.cns
+st3=Hunter_U6746-Hypers.cns
+st4=Hunter_U6746-Helpers.cns
+st5=Hunter_U6746-2-3.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

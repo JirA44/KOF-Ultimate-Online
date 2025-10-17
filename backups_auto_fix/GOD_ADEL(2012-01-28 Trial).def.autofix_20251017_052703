@@ -1,0 +1,31 @@
+[Info]
+Name         ="God_Adel"
+DisplayName  ="GOD ADEL"
+VersionDate  =2012-01-28
+MugenVersion =06,14,2003
+author ="ONI-MIKO"
+;Original author = "jin"
+Pal.Defaults =1
+
+[Files]
+Cmd      =GOD_ADEL.cmd
+Cns      =GOD_ADEL.cns
+St       =GOD_ADEL.cns
+StCommon =common1.cns
+Sprite   =GOD_ADEL.sff
+Anim     =GOD_ADEL.air
+Sound    =GOD_ADEL.snd
+pal1=pal/GOD_ADEL6.act
+st1=GOD_ADEL-N.cns
+st2=GOD_ADEL-S.cns
+st3=GOD_ADEL-H.cns
+st4=GOD_ADEL-2-3.cns
+
+
+;cpu mode 7p~12p
+
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

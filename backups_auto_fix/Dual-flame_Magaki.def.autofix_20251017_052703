@@ -1,0 +1,32 @@
+[Info]
+Name         = "Magaki"
+DisplayName  = "Dual-flame Magaki"
+VersionDate  = 03,27,2013
+MugenVersion = 03,27,2013
+Author       = "½ðÉßÌì×ð"
+Pal.Defaults = 1,2,3,4,5,6
+
+[Files]
+Cmd      = magaki.cmd
+Cns      = magaki.cns
+St       = magaki.cns
+St0      = magaki-N.cns
+St1      = magaki-S.cns
+St2      = magaki-2-3.cns
+StCommon = magaki-c1.cns
+Sprite   = magaki.sff
+Anim     = magaki.air
+Sound    = magaki.snd
+St3      = magaki-SS.cns
+St4      = magaki-SSS.cns
+St5      = magaki-608.cns
+
+
+
+Pal1 = magaki01.act
+Pal2 = magaki01.act
+Pal3 = magaki01.act
+Pal4 = magaki02.act
+Pal5 = magaki02.act
+Pal6 = magaki02.act
+

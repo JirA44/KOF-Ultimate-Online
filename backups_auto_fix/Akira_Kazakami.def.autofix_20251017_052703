@@ -1,0 +1,28 @@
+[Info]
+Name         ="Naomi Kokoro-KN"
+DisplayName  ="Kazakami-Akira"
+versiondate = 04,14,2002    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+Author       ="KN*RS"
+Pal.Defaults =1,1,2,4,5,6
+
+[Files]
+Cmd      =cmd.cns
+Cns      =Naomi-KOFM.cns
+St       =Attacks.cns
+St1      =Config.txt
+StCommon =commonEX.st
+Sprite   =Naomi-KOFM.sff
+Anim     =Naomi-KOFM.air
+Sound    =Naomi-KOFM.snd
+pal1=
+pal2=
+pal3=
+pal4=
+pal5=
+pal6=
+
+
+[Arcade]
+ending.storyboard =
+intro.storyboard=

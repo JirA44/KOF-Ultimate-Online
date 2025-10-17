@@ -1,0 +1,32 @@
+[Info]
+Name         = "Rocken"
+DisplayName  = "Rock"
+VersionDate  = 12,06,2009
+MugenVersion = 06,14,2003
+Author       = "nekome"
+Pal.Defaults = 1
+
+[Files]
+Cmd      = other/Rock.cmd
+Cns      = cns/Rock.cns
+St       = cns/Rock.cns
+St1      = cns/Helper.cns
+St2      = cns/Rock-N.cns
+St3      = cns/Rock-S.cns
+St4      = cns/Rock-H.cns
+St5      = cns/EX.cns
+St6      = cns/MAX.cns
+St7      = cns/Rock-2-3.cns
+StCommon = common1.cns
+Sprite   = other/Rock.sff
+Anim     = other/Rock.air
+Sound    = other/Rock.snd
+
+;---カラーパレット---
+
+Pal1 = act/Rock01.act
+Pal2 = act/Rock02.act
+Pal3 = act/Rock03.act
+Pal4 = act/Rock04.act
+Pal5 = act/Rock05.act
+Pal6 = act/Rock06.act

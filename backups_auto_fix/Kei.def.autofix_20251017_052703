@@ -1,0 +1,48 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+[Info]
+Name         = "Rock-19"  ;Kei 
+DisplayName  = "Rock-19"
+VersionDate  = 07,25,2019
+MugenVersion = 1.0
+Author       = "Passing"  ;"Kartara"
+;Original Author(s): "Jin"
+Pal.Defaults = 4,1,2,3,5,6
+;Localcoord = 427,240        ;For 16:9 Screenpack only
+
+;Do Not Nerf,Do Not Claim.
+
+;Do Not Ruin or Beat Up to feel better about yourself. ;)
+
+;As long as you credit the rightful owners and editors,I will allow recolors and copypaste.
+
+
+[Files]
+Cmd      = Rock.cmd              ;Contain commands to use skills and attacks or control the character  
+Cns      = Rock.cns              ;Stats,Intros,Outros and other stuff
+StCommon = common1.cns           ;States that all chars have in common,examples: Get-hit states
+Sprite   = Rock.sff              ;Sprites and Effects
+Anim     = Rock.air              ;Animations and Effects Animations
+Sound    = Rock.snd              ;Sounds used in game
+St       = Rock.cns              ;Stats,Intros,Outros and other stuff
+St1  = Normal.cns                ;Basic attacks
+St2  = Combo.cns                 ;Special attacks that are used in combos
+St3  = Super.cns                 ;Super Moves,cost 1 bar of power each
+St4  = Hyper.cns                 ;Super Moves but stronger,hence the word "Hyper"
+St5  = Ultimate.cns              ;Ultimate Attacks,deal a lot of damage
+St6  = Rock-2-3.cns              ;States that execute codes all the time
+Pal1 = Pals/Rock02.act           ;Pallete 1
+Pal2 = Pals/Rock04.act           ;Revenant Skin
+Pal3 = Pals/Rock03.act           ;Pallete 2
+Pal4 = Pals/Rock01.act           ;Original Colors
+Pal5 = Pals/Rock05.act           ;Pallete 3   
+Pal6 = Pals/Rock06.act           ;NESTS-Kyo Skin
+
+;---カラーパレット---
+
+
+[Arcade]
+Intro.storyboard  =
+Ending.storyboard =

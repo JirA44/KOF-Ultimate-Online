@@ -1,0 +1,42 @@
+[Info]
+Name         = "BLAKE"
+DisplayName  = "NOIR BLAKE"
+VersionDate  = 2020,2,20
+MugenVersion = 1.0
+Author       = "Zero_Maou"
+Pal.Defaults = 12,2,6,1,5,4
+
+[Files]
+Cmd      = CNS/BLAKE V3.cmd.cns
+Cns      = CNS/BLAKE V3.cns
+St       = CNS/BLAKE V3.cns
+StCommon = CNS/BLAKE V3-C-1.0.cns
+Sprite   = SFF/BLAKE V3.sff
+Anim     = BLAKE V3.air
+Sound    = BLAKE V3.snd
+st1 = CNS/BLAKE V3-N.cns
+st2 = CNS/BLAKE V3-S.cns
+st3 = CNS/BLAKE V3-H.cns
+st4 = CNS/BLAKE V3-2-1.0.cns
+st5 = CNS/BLAKE V3-3.cns
+st6 = CNS/BLAKE V3-X.cns
+st7 = CNS/AI_Helper.cns
+st8 = CNS/Empty_Helper.cns
+pal1 = Paletas/Ekald-01.act
+pal2 = Paletas/Ekald-02.act
+pal3 = Paletas/Ekald-03.act
+pal4 = Paletas/Ekald-04.act
+pal5 = Paletas/Ekald-05.act
+pal6 = Paletas/Ekald-06.act
+pal7 = Paletas/Ekald-07.act
+pal8 = Paletas/Ekald-08.act
+pal9 = Paletas/Ekald-09.act
+pal10 = Paletas/Ekald-10.act
+pal11 = Paletas/Ekald-11.act
+pal12 = Paletas/Ekald-12.act
+
+;---カラーパレット---
+
+[Arcade]
+intro.storyboard  =
+ending.storyboard =

@@ -1,0 +1,39 @@
+;Reas edit by Calcio911
+;Los sprites fueron editados por mi, "Roberto Leyva" y "Tomas XD"
+;Sprites nuevos editados por mi y Tomas XD
+;Portraits by Malebeja Fretes y Tomas XD
+;
+
+[Info]
+Name         ="Reas"
+DisplayName  ="Reas"
+VersionDate  =10,03,2014
+MugenVersion =1.0
+Author       ="Calcio911"
+Pal.Defaults =1,2,3,4,5,6
+
+[Files]
+Cmd      =Reas-KOFM.cmd
+Cns      =Reas-KOFM.cns
+St       =Reas-KOFM.cns
+StCommon =common1.cns
+Sprite   =Reas-KOFM.sff
+Anim     =Reas-KOFM.air
+Sound    =Reas-KOFM.snd
+pal1=Paletas/ReasOriginal.act
+pal2=Paletas/reas02.act
+pal3=Paletas/reas03.act
+pal4=Paletas/ReasOriginal2.act
+pal5=Paletas/reas04.act
+pal6=Paletas/reas05.act
+st1=Reas-KOFM-N.cns
+st2=Reas-KOFM-S.cns
+st3=Reas-KOFM-H.cns
+st4=Reas-KOFM-2-3.cns
+
+;---カラーパレット---
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

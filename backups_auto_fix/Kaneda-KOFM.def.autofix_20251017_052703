@@ -1,0 +1,36 @@
+[Info]
+Name         ="Kusanagi"
+DisplayName  ="Kusanagi"
+VersionDate  =03,09,2009
+MugenVersion =1.0
+Author       ="jin"
+Pal.Defaults =4,1,2,3,5,6
+
+
+[Files]
+Cmd      =KUSANAGI.cmd
+Cns      =KUSANAGI.cns
+St       =KUSANAGI.cns
+StCommon =common1.cns
+Sprite   =KUSANAGI.sff
+Anim     =KUSANAGI.air
+Sound    =KUSANAGI.snd
+pal1=KUSANAGI01.act
+pal2=KUSANAGI02.act
+pal3=KUSANAGI03.act
+pal4=KUSANAGI04.act
+pal5=KUSANAGI05.act
+pal6=KUSANAGI06.act
+st1=KUSANAGI-N.cns
+st2=KUSANAGI-S.cns
+st3=KUSANAGI-H.cns
+st4=KUSANAGI-2-3.cns
+
+
+
+;---カラーパレット---
+
+
+[Arcade]
+intro.storyboard=History.def
+ending.storyboard=

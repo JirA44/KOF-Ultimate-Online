@@ -1,0 +1,22 @@
+[Info]
+name = "Asura"
+displayname = "Asura"
+versiondate=06,02,2007
+author = "ahuron"
+pal.defaults = 1
+mugenversion = 1.0
+localcoord   = 320,240
+[Files]
+cmd     = asura_nbc.cmd
+cns     = asura_nbc.cns
+st      = asura_nbc.cns
+st2     = asura_nbc2.cns
+st3     = max.cns
+stcommon = common1.cns 
+sprite  = asura_nbc.sff
+anim    = asura_nbc.air
+sound   = asura_nbc.snd
+pal1    = pals/asura_nbc1.act
+pal2    = pals/asura_nbc2.act
+pal4    = pals/asura_nbc3.act
+pal5    = pals/asura_nbc4.act

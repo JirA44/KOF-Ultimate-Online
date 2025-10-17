@@ -1,0 +1,34 @@
+;このキャラクターの情報と使用ファイルリストです。
+;ここに登録されているファイルが全て揃っていないとエラーとなります。
+
+[Info]
+Name         = "Abyss Mega's"
+DisplayName  = "Abyss Mega'S"
+VersionDate  = 08,28,2015     ;キャラクターの最終更新日（変えなくてもＯＫ）
+MugenVersion = 1.0     ;キャラクターが動作出来るM.U.G.E.Nの改訂版
+Author       = "BlackCurl"
+Pal.Defaults = 1,2,3
+;localcoord = 427,240
+
+[Files]
+cmd        = Data/Abyss.c
+cns        = Cns/Abyss.cns
+st         = Cns/Abyss.cns
+st1        = Cns/Abyss-NA.cns
+st2        = Cns/Abyss-SA.cns
+st3        = Cns/Abyss-HA.cns
+st4	   = Cns/Abyss-PA.cns
+st5        = Cns/Abyss-Shot.cns
+st6        = option.cns
+stcommon   = Cns/Abyss-common.cns
+
+sprite     = Data/Abyss.sff
+anim       = Data/Abyss.air
+sound      = Data/Abyss.snd
+pal1        = Data/color2.act
+
+;---------------------------------------------
+;[Arcade]
+;intro.storyboard  = Intro.def
+;ending.storyboard = Ending.def
+

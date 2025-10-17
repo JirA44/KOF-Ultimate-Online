@@ -1,0 +1,36 @@
+[Info]
+Name         = "Unlimited Kyo"
+DisplayName  = "O. Kyo Kusanagi LV2"
+VersionDate  = 07,30,2010
+MugenVersion = 1.0
+Author       = "AnotherOrochi"
+Pal.Defaults = 1,2,3,4,5,6
+
+[Files]
+Cmd      = Kyo-XI.cmd
+Cns      = Kyo-XI.cns
+St       = Kyo-XI.cns
+St0      = Kyo-XI-N.cns
+St1      = Kyo-XI-S.cns
+St2      = Kyo-XI-H.cns
+St3      = Kyo-XI-2-3.cns
+StCommon = common1.cns
+Sprite   = Kyo-XI.sff
+Anim     = Kyo-XI.air
+Sound    = Kyo-XI.snd
+
+;---カラーパレット---
+
+Pal1 = Kyo-XI01.act
+Pal2 = Kyo-XI02.act
+Pal3 = Kyo-XI03.act
+Pal4 = Kyo-XI04.act
+Pal5 = Kyo-XI05.act
+Pal6 = Kyo-XI06.act
+Pal7 = Kyo-XI07.act
+Pal8 = Kyo-XI08.act
+Pal9 = Kyo-XI09.act
+Pal10 = Kyo-XI10.act
+Pal11 = Kyo-XI11.act
+Pal12 = Kyo-XI12.act
+

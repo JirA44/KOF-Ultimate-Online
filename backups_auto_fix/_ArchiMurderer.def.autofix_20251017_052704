@@ -1,0 +1,31 @@
+[Info]
+name = "Origin of Murder"
+displayname  = "ArchiMurderer"
+versiondate  = 05,30,2014
+mugenversion = 06,14,2003
+author  = "Powerless"
+pal.defaults = 5,6,1,2,3,4
+;localcoord = 400,300
+
+; Files for the player
+[Files]
+cmd     = kain.cmd
+cns     = kain.cns
+st      = kain.cns
+st2      = null.cns
+Stcommon = common1.cns
+sprite  = kain.sff
+anim    = kain.air
+sound   = kain.snd 
+pal1    = kain.act
+pal2    = kain.act
+pal3    = kain.act
+pal4    = kain.act
+pal5    = kain.act
+pal6    = kain.act
+pal7    = kain.act
+pal8    = kain.act
+pal9    = kain.act
+pal10   = kain.act
+pal11   = kain.act
+pal12   = kain.act

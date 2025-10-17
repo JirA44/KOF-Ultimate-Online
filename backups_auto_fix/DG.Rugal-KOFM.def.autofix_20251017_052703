@@ -1,0 +1,34 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name ="Dark God Rugal"
+displayname ="DG.Rugal"
+versiondate =28.04.2003
+mugenversion =1.0
+author ="Noel&Opirus&Vegetasan3654 - mugeningan&thesearchman&ptzptz7"
+edit=mugeningan&thesearchman&ptzptz7
+Sprite author = Vegetasan3654
+pal.defaults =1
+Thanks for = Truechapter
+;localcoord = 427,240
+[Files]
+sprite =Rugal-KOFM.sff
+anim =Rugal-KOFM.air
+sound =Rugal-KOFM.snd
+cmd =Rugal-KOFM.cmd
+cns =Rugal-KOFM.cns
+stcommon =Common1.cns
+st =Rugal-KOFM.cns
+pal1=Paletas\Rugal-KOFM-4.act
+st1=Rugal-KOFM-2-3.cns
+st2=Rugal-KOFM-N.st
+st3=Rugal-KOFM-S.st
+st4=Rugal-KOFM-H.st
+
+; Arcade mode
+[Arcade]
+intro.storyboard  =Story\intro.def
+ending.storyboard=ending/ending.def

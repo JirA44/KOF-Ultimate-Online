@@ -1,0 +1,40 @@
+
+[Info]
+name ="Meld_Boss"
+displayname ="Meld-Boss"
+VersionDate  =05,29,2020
+MugenVersion =06,14,2003
+author ="Player-One & NexT One"
+;Original Author ="Zenjidoh"
+pal.defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+; Files for the player
+[Files]
+cmd =MeldBoss.cmd
+cns =MeldBoss.cns
+st =MeldBoss.cns
+stcommon =common1.cns 
+sprite =MeldBoss.sff
+anim =MeldBoss.air
+sound =MeldBoss.snd
+pal1=MeldBoss.act
+pal2=MeldBoss2.act
+pal3=MeldBoss3.act
+pal4=MeldBoss4.act
+pal5=MeldBoss5.act
+pal6=MeldBoss6.act
+pal7=MeldBoss7.act
+pal8=MeldBoss8.act
+pal9=MeldBoss9.act
+pal10=MeldBoss10.act
+pal11=MeldBoss11.act
+pal12=MeldBoss12.act
+st1=MeldBoss-Normal.cns
+st2=MeldBoss-Specials.cns
+st3=MeldBoss-Hypers.cns
+st4=MeldBoss-Helpers.cns
+st5=MeldBoss-2-3.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

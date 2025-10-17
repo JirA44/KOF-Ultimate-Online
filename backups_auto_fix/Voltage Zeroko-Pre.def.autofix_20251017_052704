@@ -1,0 +1,105 @@
+
+;===========================================================================
+; 정보
+;===========================================================================
+
+[Info]
+name = "Voltage Zeroko"
+displayname = "Voltage Zeroko"
+versiondate = 12,27,2007
+mugenversion = 04,14,2002
+author = "Precious_QingQing"
+;original author = "DeltanoiD"
+pal.defaults = 1,2,3,4,5,6,12
+
+[Files]
+sprite = air-sff-snd/Sprite.sff
+anim = air-sff-snd/Animation.air
+sound = air-sff-snd/Sound.snd
+cmd = cns/Command.c
+cns = Voltage Zeroko-Pre.def
+stcommon = cns/Common.st
+st = cns/-2.cns
+st1 = cns/N.cns
+st2 = cns/I.cns
+st3 = cns/S.cns
+st4 = cns/H1.cns
+st5 = cns/H2.cns
+st6 = cns/H3.cns
+st7 = cns/Helper.cns
+st8 = cns/Striker.cns
+st9 = option.cns
+pal1    = act/Voltage-Zeroko-Pre.act 
+pal2    = act/Voltage-Zeroko-Pre02.act     
+pal3    = act/red2.act  
+pal4    = act/Zeroko.act 
+pal5    = act/Original.act 
+pal6    = act/qing.act 
+pal7    = act/Pallete.act 
+pal8    = act/blue.act  
+pal9    = act/red.act 
+pal10   = act/ae2.act 
+pal11   = act/zi.act 
+pal12   = act/Schlussel.act 
+
+
+
+[Arcade]
+intro.storyboard =
+ending.storyboard =
+
+;===========================================================================
+; 기본 수치
+;===========================================================================
+
+[Data]
+life = 3500
+power = 6000	
+attack = 50
+defence = 100
+fall.defence_up = 50
+liedown.time = 60
+airjuggle = 15
+sparkno = -1
+guard.sparkno = -1
+KO.echo = 0
+ volume = 200
+  IntPersistIndex = 0
+FloatPersistIndex = 0
+
+[Size]
+xscale = 1          
+yscale = 1         
+ground.back = 13   
+ground.front = 13    
+air.back = 12    
+air.front = 12   
+height = 60       
+attack.dist = 160    
+proj.attack.dist = 90
+proj.doscale = 0     
+head.pos = -0, -95 
+mid.pos = -3, -59    
+shadowoffset = 0    
+draw.offset = 0,0  
+
+[Velocity]
+walk.fwd  = 3.0      
+walk.back = -3.0     
+run.fwd = 7,0
+run.back = -10,-4
+jump.neu = 0,-9.4  
+jump.back = -2.55    
+jump.fwd = 2.5    
+runjump.back = -2.55,-9.4 
+runjump.fwd = 2.5,-9.4    
+airjump.neu = 0,-8.1     
+airjump.back = -2.55  
+airjump.fwd = 2.5       
+
+[Movement]
+airjump.num = 0     
+airjump.height = 3 
+yaccel = .55   
+stand.friction = .85 
+crouch.friction = .82

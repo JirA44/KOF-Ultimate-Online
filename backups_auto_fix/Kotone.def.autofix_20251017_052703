@@ -1,0 +1,58 @@
+;このキャラクターの情報と使用ファイルリストです。
+;ここに登録されているファイルが全て揃っていないとエラーとなります。
+
+[Info];情報
+Name         = "Kotone"
+DisplayName  = "Kotone" 
+VersionDate  = 12,05,2018      ;月,日,西暦 または X.XX（1.02など）
+MugenVersion = 1.0;"Win"         ;WinMugenOnly
+Author       = "BlackCurl"
+Pal.Defaults = 5,2,6,3
+;LocalCoord   = 640,480         ;240p,480p,720pの区別
+
+
+[Files];ファイルリスト
+Cmd      = Data/Kotone.c        ;拡張子を.cmdから.cに変えています
+Cns      = Cns/Kotone.cns
+St       = Cns/Kotone.cns
+St1      = Cns/Kotone-NA.cns
+St2      = Cns/Kotone-SA.cns
+St3      = Cns/Kotone-HA.cns
+St4      = Cns/Kotone-PA.cns
+StCommon = Cns/Kotone-common.cns
+St5      = option.cns
+Sprite   = Data/Kotone.sff
+Anim     = Data/Kotone.air
+Sound    = Data/Kotone.snd
+
+Pal1  = Data/Kotone.ACT
+Pal2  = Data/Kotone.ACT
+Pal3  = Data/Kotone.ACT
+Pal4  = Data/Kotone.ACT
+Pal5  = Data/Kotone.ACT
+Pal6  = Data/Kotone.ACT
+Pal7  = Data/Kotone.ACT
+Pal8  = Data/Kotone.ACT
+Pal9  = Data/Kotone.ACT
+Pal10  = Data/Kotone.ACT
+Pal11  = Data/Kotone.ACT
+Pal12  = Data/Kotone.ACT
+
+[Palette Keymap]
+x = 1 ;Press button X to select palette 1, etc.
+y = 2
+z = 3
+a = 4
+b = 5
+c = 6
+x2 = 7 ;Hold Start and press button X for palette 7, etc.
+y2 = 8
+z2 = 9
+a2 = 10
+b2 = 11
+c2 = 12
+
+[Arcade];OP＆ED設定（現在未設定）
+Intro.Storyboard  = 
+Ending.Storyboard = 
+

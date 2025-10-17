@@ -1,0 +1,33 @@
+[Info]
+Name         ="Kyo Clone-17"
+DisplayName  ="GARS"
+VersionDate  =02,02,2019
+MugenVersion =1.0
+Author       ="Jessica Torres && Nicolas Quinn"
+Otros        ="Nicol Quinn && Yadira Quinn"
+Mejoras de sprittes y codificación hechas por BLUE DEMON
+Pal.Defaults = 4,1,2,3,5,6
+
+[Files]
+Cmd      =Kyo 17 Toxic.cmd
+Cns      =Kyo 17 Toxic.cns
+St       =Kyo 17 Toxic.cns
+StCommon =common1.cns
+Sprite   =Kyo 17 Toxic.sff
+Anim     =Kyo 17 Toxic.air
+Sound    =Kyo 17 Toxic.snd
+pal1=Paletas/Kyo 17 Toxic-04.act
+pal2=Paletas/Kyo 17 Toxic-02.act
+pal3=Paletas/Kyo 17 Toxic-03.act
+pal4=Paletas/Kyo 17 Toxic-07.act
+pal5=Paletas/Kyo 17 Toxic-05.act
+pal6=Paletas/Kyo 17 Toxic-06.act
+st1=Kyo 17 Toxic-N.cns
+st2=Kyo 17 Toxic-S.cns
+st3=Kyo 17 Toxic-H.cns
+st4=Kyo 17 Toxic-2-3.cns
+
+
+[Arcade]
+intro.storyboard =History.def
+ending.storyboard =

@@ -1,0 +1,49 @@
+[Info]
+Name         ="Raisen"
+DisplayName  ="Dark Raisen"
+VersionDate  =24,08,2019
+MugenVersion =1.0
+Author       ="Crescendo"
+;special thanks to "Hell"
+Pal.Defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+Cmd      =Raisen-KOFM.cmd
+Cns      =Raisen-KOFM.cns
+St       =Raisen-KOFM.cns
+StCommon =common1.cns
+Sprite   =Raisen-KOFM.sff
+Anim     =Raisen-KOFM.air
+Sound    =Raisen.snd
+pal1=paletas\Raisen-KOFM-1.act
+pal2=paletas\Raisen-KOFM-2.act
+pal3=paletas\Raisen-KOFM-3.act
+pal4=paletas\Raisen-KOFM-4.act
+pal5=paletas\Raisen-KOFM-5.act
+pal6=paletas\Raisen-KOFM-6.act
+pal7=paletas\Raisen-KOFM-1.act
+pal8=paletas\Raisen-KOFM-2.act
+pal9=paletas\Raisen-KOFM-3.act
+pal10=paletas\Raisen-KOFM-4.act
+pal11=paletas\Raisen-KOFM-5.act
+pal12=paletas\Raisen-KOFM-6.act
+st1=Raisen-KOFM-N.cns
+st2=Raisen-KOFM-S.cns
+st3=Raisen-KOFM-H.cns
+st4=Raisen-KOFM-2-3.cns
+st5=12p.cns
+
+
+
+
+
+
+
+
+
+
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

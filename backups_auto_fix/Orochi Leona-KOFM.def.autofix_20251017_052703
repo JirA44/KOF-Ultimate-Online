@@ -1,0 +1,40 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Orochi Leona"
+displayname ="Orochi Leona"
+versiondate =08,10,2014
+mugenversion =1.0
+author ="Edited by Crisyagamiloquendo"
+pal.defaults =6,3,4,2
+
+; Files for the player
+[Files]
+cmd     =Orochi-Leona.cmd
+cns     =Orochi-Leona.cns
+st      =Orochi-Leona.cns
+stcommon =common1.cns
+sprite  =Orochi_Leona.sff
+anim    =Orochi_Leona.air
+sound   =Orochi_Leona.snd
+pal1=paletas/Orochi_Leona.act
+pal2=paletas/Orochi_Leona2.act
+pal3=paletas/Orochi_Leona3.act
+pal4=paletas/Orochi_Leona4.act
+pal5=paletas/Orochi_Leona5.act
+pal6=paletas/Orochi_Leona6.act
+pal7=paletas/Orochi_Leona.act
+pal8=
+pal9=
+st1=Orochi-Leona-N.cns
+st2=Orochi-Leona-S.cns
+st3=Orochi-Leona-H.cns
+st4=Orochi-Leona-2-3.cns
+st5=helper.cns
+st6=
+st7=
+[Arcade]
+intro.storyboard=
+ending.storyboard=

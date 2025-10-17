@@ -1,0 +1,31 @@
+[Info]
+Name         ="NEODIO"
+DisplayName  ="NEODIO"
+VersionDate  =05,27,2008
+MugenVersion =06,14,2003
+Author       ="jin"
+Pal.Defaults =1
+
+Upload/Join Group https://www.facebook.com/groups/626152780830438/
+
+[Files]
+Cmd      =NEODIO.cmd
+Cns      =NEODIO.cns
+St       =NEODIO.cns
+St0      = NEODIO-N.cns
+StCommon =common1.cns
+Sprite   =NEODIO.sff
+Anim     =NEODIO.air
+;Sound    = NEODIO01.snd   
+Sound    =NEODIO02.snd
+pal1=NEODIO.act
+st1=NEODIO-S.cns
+st2=NEODIO-H.cns
+st3=NEODIO-2-3.cns
+st4=NEODIO-AI.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=
+
+Upload/Join Group https://www.facebook.com/groups/626152780830438/

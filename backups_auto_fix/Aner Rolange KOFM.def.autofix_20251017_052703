@@ -1,0 +1,31 @@
+
+[Info]
+name = "Aner_Rolange"        
+displayname = "Aner Rolange" 
+versiondate = 04,24,2011    
+mugenversion = 1.1   
+author = "A-KUE"       
+pal.defaults = 1
+
+;Upload/Join Group https://www.facebook.com/groups/626152780830438/
+
+[Files]
+cmd     = Aner_Rolange.cmd   
+cns     = Aner_Rolange.cns   
+st      = Aner_Rolange.cns   
+st1     = Aner_Rolange-s.cns
+st2      = Aner_Rolange-s-L2-L3.cns
+st3      = Aner_Rolange-h.cns
+st4      = Aner_Rolange-h-L2-L3.cns
+st5     = jump.cns
+st6     = away.cns
+st7     = Aner_Rolange-MAX.cns
+st8     = Aner_Rolange-MAX2.cns
+st9     = Aner_Rolange-MAX3.cns
+StCommon =common1.cns
+sprite  = Aner_Rolange.sff   
+anim    = Aner_Rolange.air   
+sound   = Aner_Rolange.snd   
+pal1    = Aner_Rolange.act  
+
+;Upload/Join Group https://www.facebook.com/groups/626152780830438/

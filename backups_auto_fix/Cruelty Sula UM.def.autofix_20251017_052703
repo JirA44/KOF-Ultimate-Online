@@ -1,0 +1,44 @@
+;======================================
+; Author by ONI-MIKO's Cruelty Sula file
+;======================================
+[Info]
+name ="Cruelty Sula"
+displayname ="Cruelty Sula"
+versiondate =2013-05-20
+mugenversion =04,14,2001
+author ="ONI-MIKO"
+;Original author = "NAO&T-K"
+pal.defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+cmd =Sula.cmd
+cns =Sula.cns
+stcommon =common1.cns
+st =Sula.cns
+sprite =Sula.sff
+anim =Sula.air
+sound =Sula.snd
+pal1=act/Sula1.act
+pal2=act/Sula2.act
+pal3=act/Sula3.act
+pal4=act/Sula4.act
+pal5=act/Sula5.act
+pal6=act/Sula6.act
+pal7=act/Sula1.act
+pal8=act/Sula2.act
+pal9=act/Sula3.act
+pal10=act/Sula4.act
+pal11=act/Sula5.act
+pal12=act/Sula6.act
+st1=Sula_N.cns
+st2=Sula_H.cns
+st3=Sula_-2.st
+st4=Sula_-3.st
+st5=Sula_-3.st
+
+
+;cpu mode  7p~12p
+
+[Arcade]
+intro.storyboard  =
+ending.storyboard =

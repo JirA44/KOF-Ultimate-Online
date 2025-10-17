@@ -1,0 +1,36 @@
+;==========================================================
+; Definition file for CCI Hinako Shijou
+; For Winmugen
+; Ironmugen
+;==========================================================
+
+; Player information
+[Info]
+name ="Hinako Shijou"
+displayname ="Hinako Shijou"
+versiondate =09,06,2005
+mugenversion =04,01,2001
+author ="David Demianoff"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd      =coding\hinako.cmd
+cns      =coding\hinako.cns
+st       =coding\hinako.cns
+stcommon =common1.cns
+sprite   =files\hinako.sff
+anim     =coding\hinako.air
+sound    =files\hinako.snd
+pal1=pals\hinako.act
+pal2=pals\hinako2.act
+
+st1=coding\attacks.cns
+st2=coding\specials.cns
+st3=coding\hypers.cns
+st4=coding\misc.cns
+
+[Arcade]
+;intro.storyboard = .def
+ending.storyboard =girls.def
+intro.storyboard=

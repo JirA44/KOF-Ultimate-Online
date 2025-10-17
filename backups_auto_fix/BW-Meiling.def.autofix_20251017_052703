@@ -1,0 +1,49 @@
+;--| 基本情報 |---------------------------------------------------------------
+
+[Info]
+name = "BW-Meiling"
+displayname = "BW-Meiling"
+versiondate = 11,22,2000
+mugenversion = 04,14,2002
+author = "Soiux"
+pal.defaults = 1,2,3,4,7,10
+
+;--| 必要なファイルの設定 |---------------------------------------------------
+
+[Files]
+cmd     = sys\BW-Meiling.cmd
+sprite  = sys\BW-Meiling.sff
+anim    = sys\BW-Meiling.air
+sound   = sys\BW-Meiling.snd
+cns     = cns\BW.cns
+st      = cns\BW.cns
+st1     = Option.cns
+st2     = st\BW-BK.cns
+st3     = st\BW-WT.cns
+st4     = st\BW-BKS.cns
+st5     = st\BW-WTS.cns
+st6     = st\BW-helper.cns
+;st7     = 
+;st8     = 
+stcommon = st\BW-common.cns
+
+;--| カラーパレットファイル |-------------------------------------------------
+
+pal1    = act\BW-Meiling.act
+pal2    = act\BW-Meiling.act
+pal3    = act\BW-Meiling.act
+pal4    = act\BW-Meiling.act
+pal5    = act\BW-Meiling.act
+pal6    = act\BW-Meiling.act
+pal7    = act\BW-Meiling.act
+pal8    = act\BW-Meiling.act
+pal9    = act\BW-Meiling.act
+pal10   = act\BW-Meiling.act
+pal11   = act\BW-Meiling.act
+pal12   = act\BW-Meiling.act
+
+;--| ストーリーボード設定 |---------------------------------------------------
+
+[Arcade]
+Intro.Storyboard  = 
+Ending.Storyboard = 

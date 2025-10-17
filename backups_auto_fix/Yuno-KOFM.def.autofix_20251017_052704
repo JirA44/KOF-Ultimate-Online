@@ -1,0 +1,24 @@
+[Info]
+Name               = "Gasai Yuno"
+Displayname        = "Gasai Yuno"
+Versiondate        = 08,09,2019
+MugenVersion       = 1.0
+Author             = "Strong FS & BlackJudai"
+Pal.defaults       = 1
+
+[Files]
+cmd =Yuno-KOFM.txt
+cns =Yuno-KOFM-N.cns
+st =Yuno-KOFM-N.cns
+st0 =Yuno-KOFM-Helper.st
+st1=Yuno-KOFM-H.cns
+st2=Yuno-KOFM-2-3.st
+stcommon =common1.cns 
+sprite =Yuno-KOFM.sff
+anim =Yuno-KOFM.air
+sound =Yuno-KOFM.snd
+pal1=Yuno-KOFM.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

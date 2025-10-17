@@ -1,0 +1,41 @@
+;==========================================================
+; Definition file for CCI Shermie
+; For Winmugen
+; Ironmugen
+;==========================================================
+
+; Player information
+[Info]
+name ="Shermie"
+displayname ="Shermie"
+versiondate =26,11,2006
+mugenversion =04,01,2001
+author ="David Demianoff"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd      =shermie.cmd
+cns      =shermie.cns
+st       =shermie.cns
+stcommon =common1.cns
+sprite   =shermie.sff
+anim     =shermie.air
+sound    =shermie.snd
+pal1=pals/shermie.act
+pal2=pals/shermie03.act
+
+st1=attacks.cns
+st2=specials.cns
+st3=hypers.cns
+st4=misc.cns
+
+;Other palettes
+;(replace those by the ones above)
+
+;pal3     = pals/shermie02.act      ;Third palette (Kof2002)
+;pal4     = pals/shermie03.act      ;Fourth palette (Kof2002)
+;pal5     = pals/shermie04.act      ;O.Shermie 3rd palette (Kof2002)
+[Arcade]
+intro.storyboard=
+ending.storyboard=

@@ -1,0 +1,22 @@
+[Info]
+name ="Kaori Yumiko"
+displayname ="Kaori Yumiko"
+versiondate =04,14,2002
+mugenversion =1.0
+author ="hanma"
+pal.defaults =1
+ 
+
+[Files]
+cmd     =Kaori Yumiko.cmd
+cns     =Kaori Yumiko.cns
+st      =Kaori Yumiko.cns
+stcommon =common1.cns
+sprite  =Kaori Yumiko.sff
+anim    =Kaori Yumiko.air
+sound   =Kaori Yumiko.snd
+pal1=Kaori Yumiko.act
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

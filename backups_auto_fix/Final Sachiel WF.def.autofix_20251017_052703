@@ -1,0 +1,30 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "Final Sachiel White-Flame"
+displayname = "Final Sachiel"
+versiondate = 03,15,2007
+mugenversion = 1.0
+author = "Rikard"
+author  = "Dark Boss Final Black Nao By Javi_A_Chang"       ;Author edit
+pal.defaults = 1,2,3,4,5,6
+
+[Files]
+sprite = Sachiel.sff
+anim = Sachiel.air
+sound = Sachiel.snd
+cmd = Sachiel.cmd
+cns = Sachiel-2-3.cns
+stcommon = common1.cns
+st = Sachiel-2-3.cns
+st1 = Sachiel2.cns
+st2 = Sachiel3.cns
+st3 = Sachiel4.cns
+pal1 = act\Sachiel.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

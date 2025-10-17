@@ -1,0 +1,42 @@
+[Info]
+Name         	= "Cronus"
+DisplayName  	= "Cronus"
+VersionDate  	= 07,08,2019
+MugenVersion 	= 1.1
+Author 		= "Yama"
+Pal.Defaults 	= 1,2,3,4,5,6
+localcoord 	= 320,240
+
+[Files]
+;--------------------Etc-------------------;
+Sprite 	= Cronus.sff
+Anim 	= Cronus.air
+Sound 	= Cronus.snd
+;----------------Constants----------------;
+Cmd 	= Cns\Cronus.cmd
+Cns 	= Cns\Cronus.cns
+St 	= Cns\Cronus.cns
+St1 	= Cns\Cronus-N.cns
+St2 	= Cns\Cronus-S.cns
+St3 	= Cns\Cronus-H.cns
+St4 	= Cns\Cronus-2-3.cns
+St5 	= Cns\Cronus-Helper.cns
+St6 	= Option.txt
+StCommon = Cns\Cronus-Common.cns
+;----------------Paletas-------------------;
+Pal1 	= Act\Act01-Normal Cronus.act
+Pal2 	= Act\Act02-White Cronus.act
+Pal3 	= Act\Act03-Kusanagi.act
+Pal4 	= Act\Act04-Kyo Kusanagi.act
+Pal5 	= Act\Act05-Element Kyo.act
+Pal6 	= Act\Act06-Dark Cronus.act
+Pal7 	= Act\Act01-Normal Cronus.act
+Pal8 	= Act\Act02-White Cronus.act
+Pal9 	= Act\Act03-Kusanagi.act
+Pal10 	= Act\Act04-Kyo Kusanagi.act
+Pal11 	= Act\Act11-Chaos Cronus.act
+Pal12 	= Act\Act12-Chaos Cronus.act
+;--------------Arcade Mode---------------;
+[Arcade]
+Intro.StoryBoard 	= 
+Ending.StoryBoard 	= 

@@ -1,0 +1,38 @@
+
+[Info]
+name ="Daisu_M"
+displayname ="Daisu Miyazaki"
+versiondate =08,27,2020
+mugenversion =11,22,2000
+author ="Player-One/NexT One"
+pal.defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+cmd     =Daisu.cmd
+cns     =Daisu.cns
+st      =Daisu.cns
+stcommon =common1.cns 
+sprite  =Daisu.sff
+anim    =Daisu.air
+sound   =Daisu.snd
+pal1=Daisu.act
+pal2=Daisu2.act
+pal3=Daisu3.act
+pal4=Daisu4.act
+pal5=Daisu5.act
+pal6=Daisu6.act
+pal7=Daisu7.act
+pal8=Daisu8.act
+pal9=Daisu9.act
+pal10=Daisu10.act
+pal11=Daisu11.act
+pal12=Daisu12.act
+st1=Daisu-Normal.cns
+st2=Daisu-Specials.cns
+st3=Daisu-Hypers.cns
+st4=Daisu-Helpers.cns
+st5=Daisu-2-3.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

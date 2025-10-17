@@ -1,0 +1,37 @@
+;download:https://pan.baidu.com/s/1nvQIe05
+;============================================================
+[Info]
+name = "WatchTV"       
+displayname = "WatchTV" 
+versiondate = 08,28,2017   
+mugenversion = 06,14,2003
+author = "½ðÉßÌì×ð"        
+pal.defaults = 1,2,3,4,5,6,7,8,9,10,11,12      
+
+;============================================================
+[Files]
+cmd     = WatchTV.cmd   
+cns     = WatchTV.cns   
+st      = WatchTV.cns   
+stcommon =WatchTVcommon1.cns
+sprite  = WatchTV.sff  
+anim    = WatchTV.air   
+sound   = WatchTV.snd  
+st1      = WatchTV2.cns   
+st2      = WatchTV3.cns 
+st3      = WatchTV4.cns 
+st4      = WatchTV5.cns 
+st5      = WatchTV6.cns 
+st6      = WatchTV7.cns
+pal1    = WatchTV05.act;k
+pal2    = WatchTV02.act;i 
+pal3    = WatchTV03.act;o
+pal4    = WatchTV04.act;j
+pal5    = WatchTV01.act;u 
+pal6    = WatchTV06.act;l 
+pal7    = WatchTV04.act;s+k 
+pal8    = WatchTV05.act;s+i 
+pal9    = WatchTV05.act;s+o 
+pal10   = WatchTV06.act;s+j 
+pal11   = WatchTV06.act;s+u
+pal12   = WatchTV07.act;s+l 

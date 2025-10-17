@@ -1,0 +1,30 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "Robo-Kyo"
+displayname = "Robo-Kyo"
+versiondate = 05,18,2015
+mugenversion = 1.0
+author = "Vegetasan&Delusion" ;edited by The Raven Effect
+Original author = "Jin"
+pal.defaults = 1,2,3,4,5,6
+[Files]
+sprite = Robo-Kyo2.sff
+anim = Robo-Kyo2.air
+sound = Robo-Kyo2.snd
+cmd = Robo-Kyo2.cmd
+cns = Robo-Kyo2.cns
+stcommon = common1.cns
+st = Robo-Kyo2.cns
+st1 = Kyo Kusanagi-N.cns
+st2 = Kyo Kusanagi-S.cns
+st3 = Kyo Kusanagi-H.cns
+st4 = Kyo Kusanagi-2-3.cns
+pal1 = Paletas\Robo Kyo.act
+pal2 = Paletas\Robo Kyo  2.act
+[Arcade]
+;intro.storyboard = 
+;ending.storyboard = 

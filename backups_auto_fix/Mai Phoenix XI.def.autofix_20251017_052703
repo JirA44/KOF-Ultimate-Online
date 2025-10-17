@@ -1,0 +1,35 @@
+[Info]
+name = "Mai-phoenix"
+displayname = "Mai Phoenix XI"
+versiondate = 06,16,2016   
+mugenversion = 06,14,2003
+author = "½ðÉßÌì×ð"  ;AI off=playable version by RAMON GARCIA
+pal.defaults = 1,2,3,4,5,6
+
+;RAMON GARCIA youtube channel: https://www.youtube.com/user/ramongtg
+;*****If want more chars with automatic AI disabled or a specific work in hi-res or edit of some lifebar etc in my channel donate here in this link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=89HXL726XVEFG&source=url or donate in paypal to: iaramongtg@gmail.com and to contact me and ask about some work send a e-mail to: iaramongtg@gmail.com
+
+
+[Files]
+sprite 	= Mai-phoenix.sff
+anim 	= Mai-phoenix.air
+sound 	= Mai-phoenix.snd
+cmd	= Mai-phoenix.cmd
+cns 	= Mai-phoenix.cns
+stcommon= Mai-phoenix1.cns
+st0	= Mai-phoenix3.cns
+st 	= Mai-phoenix.cns
+st2 	= Mai-phoenix2.cns
+st3 	= Mai-phoenix4.cns
+st4 	= Mai-phoenix5.cns
+pal1 = pal/Mai-phoenix1.act
+pal2 = pal/Mai-phoenix2.act
+pal3 = pal/Mai-phoenix3.act
+pal4 = pal/Mai-phoenix4.act
+pal5 = pal/Mai-phoenix6.act
+pal6 = pal/Mai-phoenix5.act
+
+
+[Arcade]
+;intro.storyboard = 
+;ending.storyboard = 

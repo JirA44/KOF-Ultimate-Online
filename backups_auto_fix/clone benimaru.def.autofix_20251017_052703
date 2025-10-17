@@ -1,0 +1,42 @@
+;---------------------------
+; BENIMARU NIKAIDO
+; Version 1.0
+;---------------------------
+
+
+; Character information
+[Info]
+name         ="clone Benimaru-Nikaido"
+displayname  ="clone benimaru"
+;author       ="Deuce"
+;updated by   = "Sander71113"
+author       ="ýˆ°×·½"
+Pal.Defaults =4,1,2,3,5,6
+
+; Files for the character
+[Files]
+cmd=benimaru.c
+cns=benimaru.cns
+st=benimaru.cns
+st1=-2-3.cns
+st2=benimarua.cns
+;st3=aaa.txt
+stcommon =common1.cns
+sprite=benimaru.sff
+anim=benimaru.air
+sound=benimaru.snd
+pal1=pal/beni2ka.act
+pal2=pal/beni97d.act
+pal3=pal/beni99d.act
+pal4=pal/beni99a.act
+pal5=pal/beni94d.act
+pal6=pal/beni95d.act
+pal7=pal/beni98b.act
+pal8=pal/beni98c.act
+pal9=pal/beni98d.act
+pal10=pal/beni2ka.act
+pal11=pal/beni2kb.act
+pal12=pal/extra.act
+
+;http://ryushirohou.blog.fc2blog.net/
+;a412879606@live.com

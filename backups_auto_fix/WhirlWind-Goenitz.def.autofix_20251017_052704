@@ -1,0 +1,30 @@
+[Info]
+Name = "Goenitz"       
+DisplayName = "WhirlWind-Goenitz" 
+MugenVersion 
+Author = "Mojack"        
+Pal.Defaults = 1,2,3,4,5,6,7,8,9,10,11,12      
+
+[Files]
+Cmd = WhirlWind-Goenitz.cmd   
+Cns = WhirlWind-Goenitz.cns  
+St = WhirlWind-Goenitz.cns   
+St0 = WhirlWind-Goenitz_Helper.cns
+St1 = WhirlWind-Goenitz_-2.cns  
+St2 = WhirlWind-Goenitz_AI.txt
+StCommon = WhirlWind-Goenitz_common.cns
+Sprite = WhirlWind-Goenitz.sff   
+Anim = WhirlWind-Goenitz.air  
+Sound = WhirlWind-Goenitz.snd
+Pal1 = act/WhirlWind-Goenitz_01.act
+Pal2 = act/WhirlWind-Goenitz_01.act
+Pal3 = act/WhirlWind-Goenitz_01.act
+Pal4 = act/WhirlWind-Goenitz_02.act
+Pal5 = act/WhirlWind-Goenitz_02.act
+Pal6 = act/WhirlWind-Goenitz_02.act
+Pal7 = act/WhirlWind-Goenitz_03.act
+Pal8 = act/WhirlWind-Goenitz_03.act
+Pal9 = act/WhirlWind-Goenitz_03.act
+Pal10 = act/WhirlWind-Goenitz_04.act
+Pal11 = act/WhirlWind-Goenitz_04.act
+Pal12 = act/WhirlWind-Goenitz_04.act

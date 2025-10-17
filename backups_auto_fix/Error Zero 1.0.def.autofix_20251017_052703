@@ -1,0 +1,47 @@
+
+; 人物信息
+[Info]
+name = "Error_Zero_1.0"	;人物名
+displayname = "Error Zero"	;显示名
+versiondate = 2018, 11, 12		;人物版本号 (月-日-年 或者 X.XX)
+mugenversion = 1.1			;人物对应的MUGEN版本 (X.XX)
+author = "破晓雪风"			;作者名
+pal.defaults = 1, 2, 3, 4, 5, 6		;默认色表顺序 (最多4个)，序号从1开始
+localcoord = 320, 240			;分辨率宽度和高度
+;localcoord = 426.66, 320.25		;部分宽屏分辨率
+
+; 人物文件
+[Files]
+cmd     = others/ER.cmd			;操作输入
+cns     = cns/ER.cns			;常量定义
+st      = cns/ER.cns			;State定义
+st1     = cns/ER_Skills.cns
+st2     = cns/ER_SuperSkills.cns
+st3     = cns/ER_P2stateno.cns
+st4     = cns/ER_helper.cns
+st5     = cns/ER_-2.cns
+st6     = cns/option.txt
+
+st7     = cns/ER_AI.cns
+stcommon = cns/common1.cns		;公用state (人物文件夹或者common文件夹中)
+sprite  = others/ER_1.0.sff		;图像文件
+anim    = others/ER.air			;动作文件
+sound   = others/ER.snd			;声效文件
+
+pal1 = pal/ER_01.act
+pal2 = pal/ER_02.act
+pal3 = pal/ER_01.act
+pal4 = pal/ER_02.act
+pal5 = pal/ER_01.act
+pal6 = pal/ER_02.act
+pal7 = pal/ER_01.act
+pal8 = pal/ER_02.act
+pal9 = pal/ER_01.act
+pal10 = pal/ER_02.act
+pal11 = pal/ER_01.act
+pal12 = pal/ER_02.act
+
+; arcade模式的开头结局动画
+[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

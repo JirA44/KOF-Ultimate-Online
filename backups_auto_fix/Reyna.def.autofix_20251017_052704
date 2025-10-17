@@ -1,0 +1,31 @@
+[Info]
+name ="Reyna"
+displayname ="Reyna"
+versiondate =06,06,2006
+mugenversion =1.1
+author="Mr Kyo BR"
+pal.defaults =1,2
+;localcoord = 427,240
+[Files]
+cmd      =Reyna.cmd.cns
+cns      =Reyna.cns
+st       =Reyna.cns
+stcommon =common1.cns
+sprite   =Reyna.sff
+anim     =Reyna.air
+sound    =Reyna.snd
+pal1=act/Reyna Original.act
+pal2=act/Reyna.act
+st1=Reyna-N.cns
+st2=Reyna-S.cns
+st3=Reyna-H.cns
+st4=Reyna-P2Statenos.cns
+st5=Reyna_-2.cns
+st6=Reyna-AI.cns
+st7=helper.cns
+
+
+
+[Arcade]
+intro.storyboard  =
+ending.storyboard =

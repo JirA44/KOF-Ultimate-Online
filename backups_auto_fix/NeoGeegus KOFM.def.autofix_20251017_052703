@@ -1,0 +1,25 @@
+[Info]
+Name         ="NeoGeegus"
+DisplayName  ="NeoGeegus"
+VersionDate  =06,2,2010
+MugenVersion =06,14,2010
+Author       ="Hiram Yagami"
+Pal.Defaults =1
+
+Upload/Join Group https://www.facebook.com/groups/626152780830438/
+
+[Files]
+cmd      =NeoGeegus.cmd
+cns      =NeoGeegus.cns
+st       =NeoGeegus.cns 
+stcommon =common1.cns
+sprite   =NeoGeegus.sff
+anim     =NeoGeegus.air
+sound    =NeoGeegus.snd
+pal1=NeoGeegus.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard =data/ending.def
+
+Upload/Join Group https://www.facebook.com/groups/626152780830438/

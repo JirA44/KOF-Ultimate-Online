@@ -1,0 +1,30 @@
+[Info]
+name = "Tenrou Kunagi"        ;Name of character
+displayname = "TENROU Kunagi" ;Name of character to display
+versiondate = 03,23,2014    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "Songfu"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+;localcoord = 400,300
+
+[Files]
+cmd      = Kunagi_States/Kunagi.cmd		;Command set
+cns      = Kunagi_States/Kunagi_N.cns		;Constants
+st       = Kunagi_States/Kunagi_N.cns		;States
+st1      = Kunagi_States/Kunagi_H.cns		;Super&Hyper Moves
+st2      = Kunagi_States/Kunagi_A.cns		;-2 state
+st3      = Kunagi_States/Kunagi_E.cns		;Helper
+st4      = Kunagi_States/BBBR_Helper.cns	;Common Helper
+st5      = Kunagi_Config1.0.txt
+stcommon = Kunagi_States/Kunagi_C.cns		;Common states
+sprite   = Media/Kunagi.sff			;Sprite
+anim     = Media/Kunagi.air			;Animation
+sound    = Media/Kunagi.snd			;Sound
+pal1     = Act/Kunagi01.act			;Palettes
+pal2     = Act/Kunagi02.act
+pal3     = Act/Kunagi03.act
+pal4     = Act/Kunagi04.act
+
+[Arcade]
+intro.storyboard = ;intro.def
+ending.storyboard = ;ending.def

@@ -1,0 +1,39 @@
+[Info]
+Name         ="Mizore Shirayuki"
+DisplayName  ="Mizore Shirayuki"
+VersionDate  =07,30,2010
+MugenVersion =06,14,2003
+Author       ="Zelgadis"
+Pal.Defaults =1,2,3,4,5,6
+
+
+[Files]
+Cmd      =Mizore-KOFM.cmd
+Cns      =Mizore-KOFM.cns
+St       =Mizore-KOFM.cns
+StCommon =common1.cns
+Sprite   =Mizore-KOFM.sff
+Anim     =Mizore-KOFM.air
+Sound    =Mizore-KOFM.snd
+pal1=paletas\Mizore-1.act
+pal2=paletas\Mizore-1.act
+pal3=paletas\Mizore-1.act
+pal4=paletas\Mizore-Original.act
+pal5=paletas\Mizore-Original.act
+pal6=paletas\Mizore-Original.act
+st1=Mizore-KOFM-N.cns
+st2=Mizore-KOFM-S.cns
+st3=Mizore-KOFM-H.cns
+st4=Mizore-KOFM-2-3.cns
+
+
+
+
+
+
+
+
+
+[Arcade]
+intro.storyboard  =History.def
+ending.storyboard=

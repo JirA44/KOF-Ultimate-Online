@@ -1,0 +1,32 @@
+; ここにキャラ情報を書いてください
+[Info]
+name = "Mizuchi"        ;キャラの名前
+displayname = "God Orochi" ;表示されるキャラの名前
+;versiondate = 11,22,2000    ;キャラの更新情報
+;mugenversion = 11,22,2000   ;キャラが動くmugenのバージョン
+author = "ahuron"         ;キャラの製作者名
+pal.defaults = 1      ;敵としてでるキャラのパレット
+
+; Files for the player
+[Files]
+cmd     = Mizuchi_boss.cmd   ;キャラのコマンド
+cns     = Mizuchi_boss.cns   ;キャラのプログラム
+st      = Mizuchi_boss.cns   ;基本動作、必殺技、特殊ゲージ、-2、-3
+st2     = Mizuchi2_boss.cns  ;超必殺技
+st3     = Mizuchi3.cns  ;表示エフェクト
+stcommon = common1.cns 
+sprite  = Mizuchi.sff   ;キャラの絵
+anim    = Mizuchi.air   ;キャラの動き
+sound   = Mizuchi.snd   ;キャラの音
+pal1    = Mizuchi.act
+pal2    = Mizuchi.act
+pal3    = Mizuchi.act
+pal4    = Mizuchi.act
+pal5    = Mizuchi.act
+pal6    = Mizuchi.act
+pal7    = Orochi.act
+pal8    = Orochi.act
+pal9    = Orochi.act
+pal10   = Orochi.act
+pal11   = Orochi.act
+pal12   = Orochi.act

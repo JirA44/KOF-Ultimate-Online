@@ -1,0 +1,34 @@
+;==========================================================
+; Definition file for CCI Jhun
+; For Winmugen
+; Ironmugen
+;==========================================================
+
+; Player information
+[Info]
+name ="Jhun Hoon"
+displayname ="Jhun Hoon"
+versiondate =18,09,2005
+mugenversion =04,01,2001
+author ="David Demianoff"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd      =coding\jhun.cmd
+cns      =coding\jhun.cns
+st       =coding\jhun.cns
+stcommon =common1.cns
+sprite   =files\jhun.sff
+anim     =coding\jhun.air
+sound    =files\jhun.snd
+pal1=pals\jhun2k3-1.act
+pal2=pals\jhun.act
+
+st1=coding\attacks.cns
+st2=coding\specials.cns
+st3=coding\hypers.cns
+st4=coding\misc.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

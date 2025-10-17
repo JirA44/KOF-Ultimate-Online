@@ -1,0 +1,43 @@
+[Info]
+Name            = "Sasin"
+DisplayName     = "Sasin"
+VersionDate     = 2020,10,05
+MugenVersion    = 1.0
+Author          = "L-night"
+Pal.Defaults    = 1,2,3,4,5,6
+
+;
+[Files]
+Cmd      = CNS/Sasin.cmd
+Cns      = CNS/Sasin.cns
+St       = CNS/Sasin.cns
+St0      = CNS/Helper.cns
+St1      = CNS/Sasin_N.cns
+St2      = CNS/Sasin_S.cns
+St3      = CNS/Sasin_H.cns
+St4      = CNS/Sasin_3.cns
+St5      = CNS/Sasin_SH.cns
+StCommon = CNS/Sasin_C.cns
+Sprite   = SFF/Sasin.sff
+Anim     = SFF/Sasin.air
+Sound    = SFF/Sasin.snd        
+
+; 将选人时的按键对应到色表上
+[Palette Keymap]
+x = 1 ;按X按键选色表1，以此类推
+y = 2
+z = 3
+a = 4
+b = 5
+c = 6
+;x2 = 7 ;按start和X按键选色表7，以此类推
+;y2 = 8
+;z2 = 9
+;a2 = 10
+;b2 = 11
+;c2 = 12
+
+; arcade模式的开头结局动画
+[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

@@ -16,12 +16,11 @@ set /p choice="Votre choix (1 ou 2): "
 if "%choice%"=="1" (
     echo.
     echo Lancement M.U.G.E.N...
-    start "" "KOF BLACK R.exe"
+    start "" "KOF_Ultimate_Online.exe"
 ) else if "%choice%"=="2" (
     echo.
-    echo Lancement Ikemen GO...
-    cd "Ikemen_GO"
-    start "" "Ikemen_GO.exe"
+    echo Lancement Launcher Graphique...
+    start "" "KOF Ultimate Launcher.exe"
 ) else (
     echo.
     echo Choix invalide!

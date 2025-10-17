@@ -1,0 +1,31 @@
+[Info]
+Name         ="N-Kyo"
+DisplayName  ="Nightmare"
+VersionDate  =05,20,2007
+MugenVersion =1.0
+Author       ="???"
+Pal.Defaults =1
+
+[Files]
+Cmd      =N-Kyo.cmd
+Cns      =N-Kyo.cns
+St       =N-Kyo.cns
+StCommon =common1.cns
+Sprite   =N-Kyo.sff
+Anim     =N-Kyo.air
+Sound    =N-Kyo.snd
+pal1=Paletas/N-Kyo-01.act
+pal2=Paletas/N-Kyo-02.act
+pal3=Paletas/N-Kyo-03.act
+pal4=Paletas/N-Kyo-04.act
+pal5=Paletas/N-Kyo-05.act
+pal6=Paletas/N-Kyo-06.act
+st1=N-Kyo-N.cns
+st2=N-Kyo-S.cns
+st3=N-Kyo-H.cns
+st4=N-Kyo-2-3.cns
+
+
+[Arcade]
+intro.storyboard =History.def
+ending.storyboard =

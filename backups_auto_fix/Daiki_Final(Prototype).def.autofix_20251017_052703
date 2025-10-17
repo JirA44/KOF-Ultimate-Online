@@ -1,0 +1,38 @@
+[Info]
+Name         ="D-Daiki"
+DisplayName  ="Daiki"
+VersionDate  =03,17,2018
+MugenVersion =1.0
+Author       ="OverFlow"
+Pal.Defaults =1,2,3,4,5,6
+
+[Files]
+Cmd      =D-Daiki.cmd
+Cns      =D-Daiki.cns
+St       =D-Daiki.cns
+StCommon =common1.cns
+Sprite   =D-Daiki.sff
+Anim     =D-Daiki.air
+Sound    =D-Daiki.snd
+pal1=Paletas/D-Daiki01.act
+pal2=Paletas/D-Daiki02.act
+pal3=Paletas/D-Daiki03.act
+pal4=Paletas/D-Daiki04.act
+pal5=Paletas/D-Daiki05.act
+pal6=Paletas/D-Daiki06.act
+pal7=Paletas/D-Daiki07.act
+pal8=Paletas/D-Daiki08.act
+pal9=Paletas/D-Daiki09.act
+pal10=Paletas/D-Daiki10.act
+pal11=Paletas/D-Daiki11.act
+pal12=Paletas/D-Daiki12.act
+st1=D-Daiki-N.cns
+st2=D-Daiki-S.cns
+st3=D-Daiki-H.cns
+st4=D-Daiki-E.cns
+st5=D-Daiki-2-3.cns
+
+;---Storyboard---
+[Arcade]
+intro.storyboard=
+ending.storyboard=

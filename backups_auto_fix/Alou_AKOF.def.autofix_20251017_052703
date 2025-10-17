@@ -1,0 +1,41 @@
+[Info]
+Name         = "Alou_AKOF"
+DisplayName  = "Alou"
+VersionDate  = 08,1,2010
+Author       = "Reifi"
+Pal.Defaults = 1,2,3,4
+
+
+[Files]
+Cmd      = Aru.cmd
+Cns      = Aru.cns
+St       = Aru.cns
+St1      = Aru-N.cns
+St2      = Aru-S.cns
+St3      = Aru-H.cns
+St4      = Aru-MAX.cns
+St5      = Aru-MAX2.cns
+St6      = Aru-MAX3.cns
+St7      = Aru-A.cns
+St8      = Aru-2-3-b.cns
+StCommon = common1.cns
+Sprite   = Aru.sff			;いつものカットイン
+;Sprite   = Aru_FUSHIGIDA.sff		;FUSHIGIDA氏カットイン
+Anim     = Aru.air
+Sound    = Aru.snd
+Pal1     = Act/act1.act
+Pal2     = Act/act2.act
+Pal3     = Act/act3.act
+Pal4     = Act/act4.act
+Pal5     = Act/act5.act
+Pal6     = Act/act6.act
+Pal7     = Act/act1.act
+Pal8     = Act/act2.act
+Pal9     = Act/act3.act
+Pal10     = Act/act4.act
+Pal11     = Act/act5.act
+Pal12     = Act/act6.act
+
+[Arcade]
+;Intro.Storyboard  = Option/intro.def
+;Ending.Storyboard = Option/ending.def

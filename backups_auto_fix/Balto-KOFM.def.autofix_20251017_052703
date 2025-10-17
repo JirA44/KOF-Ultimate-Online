@@ -1,0 +1,31 @@
+[Info]
+Name         = "Balto"
+DisplayName  = "Balto"
+VersionDate  = 08,1,2010
+mugenversion = 1.1
+Author       = "Reifi"
+;Portraits & Fixed by "Mr. Zephyr"
+Pal.Defaults = 1,2,3,4
+
+
+[Files]
+Cmd      = Balto.cmd
+Cns      = Balto.cns
+St       = Balto.cns
+St1      = Balto-N.cns
+St2      = Balto-S.cns
+St3      = Balto-H.cns
+St4	 = Balto-MAX.cns
+St5	 = Balto-MAX2.cns
+St6	 = Balto-MAX3.cns
+St7      = Balto-A.cns
+St8      = Balto-2-3-b.cns
+StCommon = common1.cns
+Sprite   = Balto.sff
+Anim     = Balto.air
+Sound    = Balto.snd
+Pal1     = Act/Balto-KOFM.act
+
+[Arcade]
+;Intro.Storyboard  = Option/intro.def
+;Ending.Storyboard = Option/ending.def

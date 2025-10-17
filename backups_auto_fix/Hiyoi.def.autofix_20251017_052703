@@ -1,0 +1,34 @@
+;このキャラクターの情報と使用ファイルリストです。
+;ここに登録されているファイルが全て揃っていないとエラーとなります。
+
+[Info];情報
+Name         = "Hiyoi"
+DisplayName  = "Hiyoi" 
+VersionDate  = 05,24,2020      ;月,日,西暦 または X.XX（1.02など）
+MugenVersion = 0;"WinMugen"
+Author       = "BlackCurl"
+Pal.Defaults = 5,2,6,3
+LocalCoord   = 320,240         ;240p,480p,720pの区別
+
+[Files];ファイルリスト
+Cmd      = data\Hiyoi.c        ;拡張子を.cmdから.cに変えています
+Cns      = cns\Hiyoi.cns
+St       = cns\Hiyoi.cns
+St1      = cns\Hiyoi-NA.cns
+St2      = cns\Hiyoi-SA.cns
+St3      = cns\Hiyoi-HA.cns
+St4      = cns\Hiyoi-PA.cns
+St5      = cns\Hiyoi-Helper.cns
+St6      = option.cns
+
+StCommon = cns\Hiyoi-common.cns
+Sprite   = data\Hiyoi.sff
+Anim     = data\Hiyoi.air
+Sound    = data\Hiyoi.snd
+
+Pal1  = data\Hiyoi.ACT
+
+[Arcade];OP＆ED設定（現在未設定）
+Intro.Storyboard  = 
+Ending.Storyboard = 
+

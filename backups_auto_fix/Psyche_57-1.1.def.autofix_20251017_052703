@@ -1,0 +1,41 @@
+[Info]
+name = "Kyo Psyche Sign"
+displayname = "Return of Psyche Sign"
+versiondate = 2019,1,24
+mugenversion = 1.1
+author = "Zero_Maou"
+pal.defaults = 4,5,1,2,3,6
+;localcoord   = 427,240
+
+[Files]
+sprite   = Psyche_57.sff
+anim     = Psyche_57.air
+sound    = Psyche_57.snd
+cmd      = CNS\Psyche_57.cmd
+cns      = CNS\Psyche_57.cns
+st       = CNS\Psyche_57.cns
+stcommon = CNS\Psyche_57-C.cns
+st1      = CNS\Psyche_57-N.cns
+st2      = CNS\Psyche_57-S.cns
+st3      = CNS\Psyche_57-H.cns
+st4      = CNS\Psyche_57-2.cns
+;st4      = CNS\Psyche_57-X.cns
+st5      = CNS\Psyche_57-3.cns
+st6      = CNS\AI_Helper.cns
+st7      = CNS\Zoom_Helper.cns;Empty_Helper.cns;
+pal1     = Paletas\01.act
+pal2     = Paletas\02.act
+pal3     = Paletas\03.act
+pal4     = Paletas\04.act
+pal5     = Paletas\05.act
+pal6     = Paletas\06.act
+pal7     = Paletas\07.act
+pal8     = Paletas\08.act
+pal9     = Paletas\09.act
+pal10     = Paletas\10.act
+pal11     = Paletas\11.act
+pal12     = Paletas\12.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

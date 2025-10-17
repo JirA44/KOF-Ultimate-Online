@@ -1,0 +1,22 @@
+; Player information
+[Info]
+name = "Akari"
+displayname = "Akari"
+author = "Ainotenshi"
+pal.defaults = 1,2 
+
+; Files for the player
+[Files]
+cmd     = akari.cmd       ;Command set
+cns     = akari.cns       ;Constants
+st      = akari.cns    ;States
+stcommon = common1.cns       ;Common states
+sprite  = akari.sff       ;Sprite
+anim    = akari.air       ;Animation
+sound   = akari.snd       ;Sound
+pal1    = akari1.act      ;Palettes (can have up to 12)
+pal2    = akari2.act
+pal3    = akari3.act
+pal4    = akari4.act
+pal5    = akari5.act
+pal6    = akari6.act

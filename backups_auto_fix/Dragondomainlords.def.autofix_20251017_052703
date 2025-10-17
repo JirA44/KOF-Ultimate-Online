@@ -1,0 +1,40 @@
+;download:https://pan.baidu.com/s/1nvQIe05
+;============================================================
+[Info]
+name = "Dragondomainlords"
+displayname = "Dragondomainlords"
+versiondate = 12,04,2017  
+mugenversion = 06,14,2003
+author = "½ðÉßÌì×ð"
+pal.defaults = 1,2,3,4,5,6,7,8,9,10,11,12 
+;localcoord = 427,240
+;============================================================
+[Files]
+sprite = Dragondomainlords.sff
+anim = Dragondomainlords.air
+sound = Dragondomainlords.snd
+cmd = Dragondomainlords.cmd
+cns = Dragondomainlords.cns
+stcommon = DragondomainlordsC.cns
+st = Dragondomainlords.cns
+st1 = DragondomainlordsH.cns
+st2 = DragondomainlordsA.cns
+st3 = DragondomainlordsS.cns
+st4 = DragondomainlordsSS.cns
+st5 = DragondomainlordsKK.cns
+st6 = DragondomainlordsSSS.cns
+pal1 = Dragondomainlords1.act
+pal2 = Dragondomainlords2.act
+pal3 = Dragondomainlords3.act
+pal4 = Dragondomainlords4.act
+pal5 = Dragondomainlords5.act
+pal6 = Dragondomainlords6.act
+pal7 = Dragondomainlords1.act
+pal8 = Dragondomainlords2.act
+pal9 = Dragondomainlords3.act
+pal10 = Dragondomainlords4.act
+pal11 = Dragondomainlords5.act
+pal12 = Dragondomainlords7.act
+[Arcade]
+;intro.storyboard = 
+;ending.storyboard = 

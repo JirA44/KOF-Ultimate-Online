@@ -1,0 +1,33 @@
+; ここにキャラ情報を書いてください
+[Info]
+name = "Rugal7th"        ;キャラの名前
+displayname = "Omega God Rugal" ;表示されるキャラの名前
+versiondate = 11,22,2000    ;キャラの更新情報
+mugenversion = 11,22,2000   ;キャラが動くmugenのバージョン
+author = "STG"         ;キャラの製作者名
+pal.defaults = 2,4,6,8,10,12      ;敵としてでるキャラのパレット
+
+; Files for the player
+[Files]
+cmd     = kfm.cmd   ;キャラのコマンド
+cns     = kfm.cns   ;キャラのプログラム
+st      = kfm.cns   ;キャラのプログラム
+st2     = AI.txt
+st3     = Option.txt
+st4     = null.txt
+stcommon = common2_P.cns 
+sprite  = Rugal-KOFM.sff   ;キャラの絵
+anim    = Rugal-KOFM.air   ;キャラの動き
+sound   = Rugal-KOFM.snd   ;キャラの音
+pal1    = R1.act  ;キャラの色（最大１２個）
+pal2    = R1.act
+pal3    = R1.act
+pal4    = R2.act
+pal5    = R2.act
+pal6    = R2.act
+pal7    = R3.act
+pal8    = R3.act
+pal9    = R3.act
+pal10    = R4.act 
+pal11    = R4.act
+pal12    = R12.act

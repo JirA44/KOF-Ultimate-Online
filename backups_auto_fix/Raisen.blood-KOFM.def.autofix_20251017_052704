@@ -1,0 +1,49 @@
+[Info]
+Name         ="Raisen"
+DisplayName  ="Raisen.blood"
+VersionDate  =24,08,2019
+MugenVersion =1.0
+Author       ="Crescendo"
+;special thanks to "Hell"
+Pal.Defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+Cmd      =Raisen-KOFM.cmd
+Cns      =cns.blood\Raisen-KOFM.cns
+St       =cns.blood\Raisen-KOFM.cns
+StCommon =common1.cns
+Sprite   =sprite.blood\Raisen-KOFM.sff
+Anim     =Raisen-KOFM.air
+Sound    =Raisen.snd
+pal1=paletas.blood\Raisen-KOFM-1.act
+pal2=paletas.blood\Raisen-KOFM-2.act
+pal3=paletas.blood\Raisen-KOFM-3.act
+pal4=paletas.blood\Raisen-KOFM-4.act
+pal5=paletas.blood\Raisen-KOFM-5.act
+pal6=paletas.blood\Raisen-KOFM-6.act
+pal7=paletas.blood\Raisen-KOFM-1.act
+pal8=paletas.blood\Raisen-KOFM-2.act
+pal9=paletas.blood\Raisen-KOFM-3.act
+pal10=paletas.blood\Raisen-KOFM-4.act
+pal11=paletas.blood\Raisen-KOFM-5.act
+pal12=paletas.blood\Raisen-KOFM-6.act
+st1=cns.blood\Raisen-KOFM-N.cns
+st2=cns.blood\Raisen-KOFM-S.cns
+st3=cns.blood\Raisen-KOFM-H.cns
+st4=cns.blood\Raisen-KOFM-2-3.cns
+st5=12p.cns
+
+
+
+
+
+
+
+
+
+
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

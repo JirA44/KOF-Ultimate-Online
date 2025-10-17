@@ -1,0 +1,35 @@
+[Info]
+Name            = "Keyser Aunthmer"
+DisplayName     = "Aunthmer"
+VersionDate     = 2020,4,25
+MugenVersion    = 1.0
+Author          = "Keyser"
+Pal.Defaults    = 1,2,3,4,5,6
+
+;„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
+[Files]
+Cmd      = CNS/Aunthmer.cmd
+Cns      = CNS/Aunthmer.cns
+St       = CNS/Aunthmer.cns
+St0      = CNS/Helper.cns
+St1      = CNS/Aunthmer_N.cns
+St2      = CNS/Aunthmer_S.cns
+St3      = CNS/Aunthmer_H.cns
+St4      = CNS/Aunthmer_2.cns
+St5      = CNS/Aunthmer_3.cns
+St6      = CNS/Aunthmer_SH.cns
+StCommon = CNS/Aunthmer_C.cns
+Sprite   = SFF/Aunthmer.sff
+Anim     = SFF/Aunthmer.air
+Sound    = SFF/Aunthmer.snd
+
+Pal1     = Paletas/Aunthmer-1.act;
+Pal2     = Paletas/Aunthmer-2.act;
+Pal3     = Paletas/Aunthmer-3.act;
+Pal4     = Paletas/Aunthmer-4.act;
+Pal5     = Paletas/Aunthmer-5.act;
+Pal6     = Paletas/Aunthmer-6.act;
+
+[Arcade]
+intro.storyboard  =
+ending.storyboard =

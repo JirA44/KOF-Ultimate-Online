@@ -1,0 +1,39 @@
+; ¤³¤³¤Ë¥­¥ã¥éÇéˆó¤ò•ø¤¤¤Æ¤¯¤À¤µ¤¤
+[Info]
+name ="BlackPrincess_Tohka"
+displayname ="Black Princess Tohka"
+versiondate =11,22,2000
+mugenversion =11,22,2000
+author ="AnTor_M"
+pal.defaults =1
+
+; Files for the player
+[Files]
+cmd     =BlackPrincess_Tohka.cmd
+cns     =BlackPrincess_Tohka.cns
+st      =BlackPrincess_Tohka.cns
+stcommon =BlackPrincess_Tohka_common.cns 
+;stcommon = common1.cns 
+sprite  =BlackPrincess_Tohka.sff
+anim    =BlackPrincess_Tohka.air
+sound   =BlackPrincess_Tohka.snd
+pal1=BlackPrincess_Tohka01.act
+pal2=BlackPrincess_Tohka02.act
+pal3=BlackPrincess_Tohka03.act
+pal4=BlackPrincess_Tohka04.act
+pal5=BlackPrincess_Tohka05.act
+pal6=BlackPrincess_Tohka06.act
+pal7=BlackPrincess_Tohka07.act
+pal8=BlackPrincess_Tohka08.act
+pal9=BlackPrincess_Tohka09.act
+pal10=BlackPrincess_Tohka10.act
+pal11=BlackPrincess_Tohka11.act
+pal12=BlackPrincess_Tohka12.act
+st1=BlackPrincess_Tohka_2.cns
+st2=BlackPrincess_Tohka_UI.cns
+st3=BlackPrincess_Tohka_AI.cns
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

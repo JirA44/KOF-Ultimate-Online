@@ -1,0 +1,40 @@
+[Info]
+name = "Iori Psyche Sign"
+displayname = "Rebirth of Primordial Soul"
+versiondate = 2020,3,29
+mugenversion = 1.1
+author = "Zero_Maou"
+pal.defaults = 7,6,1,2,3,4,5
+;localcoord   = 427,240
+
+[Files]
+sprite   = Psyche_42.sff
+anim     = Psyche_42.air
+sound    = Psyche_42.snd
+cmd      = CNS\Psyche_42.cmd
+cns      = CNS\Psyche_42.cns
+st       = CNS\Psyche_42.cns
+stcommon = CNS\Psyche_42-C.cns
+st1      = CNS\Psyche_42-N.cns
+st2      = CNS\Psyche_42-S.cns
+st3      = CNS\Psyche_42-H.cns
+st4      = CNS\Psyche_42-2.cns
+st5      = CNS\Psyche_42-3.cns
+st6      = CNS\AI_Helper.cns
+st7      = CNS\Zoom_Helper.cns
+pal1     = Paletas\01.act
+pal2     = Paletas\01.act
+pal3     = Paletas\01.act
+pal4     = Paletas\01.act
+pal5     = Paletas\01.act
+pal6     = Paletas\01.act
+pal7     = Paletas\01.act
+pal8     = Paletas\01.act
+pal9     = Paletas\01.act
+pal10     = Paletas\01.act
+pal11     = Paletas\01.act
+pal12     = Paletas\01.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

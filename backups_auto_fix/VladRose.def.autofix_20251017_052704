@@ -1,0 +1,33 @@
+;このキャラクターの情報と使用ファイルリストです。
+;ここに登録されているファイルが全て揃っていないとエラーとなります。
+
+[Info];情報
+Name         = "Vlad-Rose"
+DisplayName  = "Vlad-Rose" 
+VersionDate  = 10,03,2016      ;月,日,西暦 または X.XX（1.02など）
+MugenVersion = 0.0;WINMUGEN             ;06,14,2003 または 1.0 など
+Author       = "BlackCurl"
+Pal.Defaults = 5,2,6,3
+LocalCoord   = 320,240         ;240p,480p,720pの区別
+
+
+[Files];ファイルリスト
+Cmd      = Data/VladRose.c        ;拡張子を.cmdから.cに変えています
+Cns      = Cns/VladRose.cns
+St       = Cns/VladRose.cns
+St1      = Cns/VladRose-NA.cns
+St2      = Cns/VladRose-SA.cns
+St3      = Cns/VladRose-HA.cns
+St4      = Cns/VladRose-PA.cns
+StCommon = Cns/VladRose-common.cns
+St5      = option.cns
+Sprite   = Data/VladRose.sff
+Anim     = Data/VladRose.air
+Sound    = Data/VladRose.snd
+
+Pal1  = Data/RED.ACT
+
+[Arcade];OP＆ED設定（現在未設定）
+Intro.Storyboard  = 
+Ending.Storyboard = 
+

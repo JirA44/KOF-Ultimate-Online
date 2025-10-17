@@ -1,0 +1,34 @@
+; 功夫人的中文化def文档。
+; 由MKII翻译。
+; 包括人物所需要的文件名。
+
+; 人物信息
+[Info]
+name = "Kevenoce"        ;人物名
+displayname = "Kevenoce" ;显示名
+versiondate = 2020,11,10    ;人物版本号 (月-日-年 或者 X.XX)
+mugenversion = 1.0          ;人物对应的MUGEN版本 (X.XX)
+author = "夜晓Keyser"         ;作者名
+pal.defaults = 1,2,3,4      ;默认色表顺序 (最多4个)
+
+; 人物文件
+[Files]
+cmd      = CNS/Kevenoce.cmd           ;操作输入
+cns      = CNS/Kevenoce.cns           ;常量定义
+st       = CNS/Kevenoce.cns           ;State定义
+St0      = CNS/Helper.cns
+St1      = CNS/Kevenoce_N.cns
+St2      = CNS/Kevenoce_S.cns
+St3      = CNS/Kevenoce_H.cns
+St4      = CNS/Kevenoce_2.cns
+St5      = CNS/Kevenoce_SH.cns
+St6      = AI/AI_helper.txt
+St7      = AI/AIstate.txt
+stcommon = CNS/Kevenoce_C.cns      ;公用state (人物文件夹或者common文件夹中)
+sprite   = SFF/Kevenoce.sff           ;图像文件
+anim     = SFF/Kevenoce.air           ;动作文件
+sound    = SFF/Kevenoce.snd           ;声效文件
+
+;[Arcade]
+;intro.storyboard  =
+;ending.storyboard =

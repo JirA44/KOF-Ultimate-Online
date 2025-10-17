@@ -1,0 +1,39 @@
+
+[Info]
+name         ="Wind_MMXIX"
+displayname  ="Wind MMXIX"
+versiondate  =04,08,2019
+mugenversion =04,14,2002
+author       ="Player-One"
+;Original Author = zy5678 + soyokaze + Negy + ruru + ブリスキャラ作ろうぜ！スレ諸氏
+pal.defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+cns      =Wind_MMXIX.cns
+sprite   =Wind_MMXIX.sff
+anim     =Wind_MMXIX.air
+sound    =Wind_MMXIX.snd
+cmd      =Wind_MMXIX.cmd
+st       =Wind_MMXIX.cns
+stcommon =common1.cns
+pal1=Wind01.act
+pal2=Wind02.act
+pal3=Wind03.act
+pal4=Wind04.act
+pal5=Wind05.act
+pal6=Wind06.act
+pal7=Wind01.act
+pal8=Wind02.act
+pal9=Wind03.act
+pal10=Wind04.act
+pal11=Wind05.act
+pal12=Wind06.act
+st1=Wind_MMXIX-Normal.cns
+st2=Wind_MMXIX-Specials.cns
+st3=Wind_MMXIX-Hypers.cns
+st4=Wind_MMXIX-Helpers.cns
+st5=Wind_MMXIX-2-3.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

@@ -1,0 +1,38 @@
+
+[Info]
+name ="Yukida"
+displayname ="Yukida"
+versiondate =05,06,2020
+mugenversion =11,22,2000
+author ="Player-One"
+pal.defaults =1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+cmd     =Yukida.cmd
+cns     =Yukida.cns
+st      =Yukida.cns
+stcommon =common1.cns 
+sprite  =Yukida.sff
+anim    =Yukida.air
+sound   =Yukida.snd
+pal1=Yukida.act
+pal2=Yukida2.act
+pal3=Yukida3.act
+pal4=Yukida4.act
+pal5=Yukida5.act
+pal6=Yukida6.act
+pal7=Yukida7.act
+pal8=Yukida8.act
+pal9=Yukida9.act
+pal10=Yukida10.act
+pal11=Yukida11.act
+pal12=Yukida12.act
+st1=Yukida-Normal.cns
+st2=Yukida-Specials.cns
+st3=Yukida-Hypers.cns
+st4=Yukida-Helpers.cns
+st5=Yukida-2-3.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

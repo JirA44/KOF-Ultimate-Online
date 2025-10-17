@@ -1,0 +1,45 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+[Info]
+name = "God_Wind"
+displayname = "God_Wind"
+versiondate = 2011-04-10  ;Birthday 2010-07-18
+mugenversion = 04,14,2002
+author = "ONI-MIKO"
+;Original author = "woman"
+pal.defaults = 1,2,3,4,5,6
+
+[Files]
+sprite = God_Wind.sff
+anim = God_Wind.air
+sound = God_Wind.snd
+cmd = God_Wind.cmd
+cns = God_Wind.cns
+stcommon = common1.cns
+st = wind_N.st
+st0 = wind_Helper.st
+st1 = wind_H.st
+st2 = wind_H2.st
+st3 = wind_O.st
+st4 = wind_S.st
+st5 = wind_-2.st
+st6 = wind_-3_AI.st
+
+pal1 = act\GodWind01.act
+pal2 = act\GodWind02.act
+pal3 = act\GodWind03.act
+pal4 = act\GodWind04.act
+pal5 = act\GodWind05.act
+pal6 = act\GodWind06.act
+pal7 = act\GodWind01.act
+pal8 = act\GodWind02.act
+pal9 = act\GodWind03.act
+pal10 = act\GodWind04.act
+pal11 = act\GodWind05.act
+pal12 = act\GodWind06.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

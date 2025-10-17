@@ -1,0 +1,35 @@
+£ªAmoumi-ÃÏ”√√°£
+
+[Info]
+Name         ="Amoumi"
+DisplayName  ="Amou-MI"
+VersionDate  =03,15,2007
+MugenVersion =1.0
+Author       ="Zelgadis"
+Pal.Defaults =1,2,3,4,5
+
+[Files]
+Cmd      =Sinobu-KOFM.cmd
+Cns      =Sinobu-KOFM.cns
+St       =Sinobu-KOFM.cns
+StCommon =common1.cns
+Sprite   =Sinobu-KOFM.sff
+Anim     =Sinobu-KOFM.air
+Sound    =Sinobu-KOFM.snd
+pal1=paletas\Sinobu-KOFM-3.act
+pal2=paletas\Sinobu-KOFM-2.act
+pal3=paletas\Sinobu-KOFM-1.act
+pal4=paletas\Sinobu-KOFM-Original.act
+pal5=paletas\Sinobu-KOFM-5.act
+pal6=paletas\Sinobu-KOFM-6.act
+st1=Sinobu-KOFM-N.cns
+st2=Sinobu-KOFM-S.cns
+st3=Sinobu-KOFM-H.cns
+st4=Sinobu-KOFM-2.cns
+st5=Sinobu-KOFM-3_AI.cns
+
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

@@ -1,0 +1,53 @@
+
+;========== キャラのインフォメーション ==========
+
+[Info]
+Name		="RSP"
+DisplayName	="R.S.P"
+Author		="Nachel""Remi"
+VersionDate	=03,20,2008
+MugenVersion	=06,14,2003
+Pal.Defaults	=1,2,3,4,5,6
+
+
+;========== キャラを構成するファイル ==========
+
+[Files]
+Cns		=Cns/R.S.P.cns
+Cmd		=Sys/R.S.P.cmd
+Sprite		=Sys/R.S.P.sff
+Anim		=Sys/R.S.P.air
+Sound		=Sys/Remilia.snd
+Stcommon	=common1.cns
+
+st              =St/R.S.P_St00.st
+st1             =St/R.S.P_St01_CO.st
+st2             =St/R.S.P_St02_NA.st
+st3             =St/R.S.P_St03_NP.st
+st4             =St/R.S.P_St04_SA.st
+st5             =St/R.S.P_St05_HA.st
+st6             =St/R.S.P_St07_HL.st
+st7             =St/target.st
+st8             =St/R.S.P_St08_-2.st
+st9             =St/R.S.P_St09_-3.st
+
+pal1=Pal/09.act
+pal2=Pal/07.act
+pal3=Pal/11.act
+pal4=Pal/03.act
+pal5=Pal/11.act
+pal6=Pal/03.act
+pal7=Pal/11.act
+pal8=Pal/03.act
+pal9=Pal/11.act
+pal10=Pal/03.act
+pal11=Pal/11.act
+pal12=Pal/03.act
+
+
+
+;========== カラーパレット ==========
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

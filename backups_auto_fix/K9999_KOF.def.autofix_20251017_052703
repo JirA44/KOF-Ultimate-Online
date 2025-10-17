@@ -1,0 +1,31 @@
+[Info]
+name ="K9999"
+displayname ="K'9999"
+versiondate =04,14,2001
+author ="BLACK"  
+Edit : Calcio911 & ptzptz7
+pal.defaults =1,4
+mugenversion =1.1
+ 
+[Files]
+cmd      =k9999.cmd
+cns      =k9999.cns
+st       =k9999.cns
+stcommon =common1.cns
+sprite   =k9999.sff
+anim     =k9999.air
+anim2    = k99992.air
+sound    =k49.snd
+pal1=pals/k9999_01.act
+pal2=pals/k9999_01.act
+pal3=pals/k9999_01.act
+pal4=pals/k9999_01.act
+pal5=pals/k9999_01.act
+;pal2=pals/k9999_04.act
+;pal3=pals/k9999_AKOF2.act
+;pal4=pals/k9999_05.act
+;pal5=pals/k9999_05.act
+st1=K49-2-3.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

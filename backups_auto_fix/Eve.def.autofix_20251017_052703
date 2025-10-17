@@ -1,0 +1,26 @@
+[Info]
+name ="Eve"
+displayname ="Eve"
+versiondate =04,14,2002
+mugenversion =1.0
+author ="hanma"
+pal.defaults =1
+
+[Files]
+cmd     =Eve.cmd
+cns     =Eve.cns
+st      =Eve.cns
+stcommon =common1.cns
+sprite  =Eve.sff
+anim    =Eve.air
+sound   =Eve.snd
+pal1=Eve01.act
+pal2=Eve02.act
+pal3=Eve03.act
+pal4=Eve04.act
+pal5=Eve05.act
+pal6=Eve06.act
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

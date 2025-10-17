@@ -1,0 +1,48 @@
+﻿  ; 功夫人的中文化def文档。
+; 由MKII翻译。
+; 包括人物所需要的文件名。
+
+; 人物信息
+[Info]
+Name         = "Graves"
+DisplayName  = "Graves"
+Author       = "倾辰谶"
+VersionDate  = 2021,2,10
+MugenVersion = 1.1
+Pal.Defaults = 4
+
+; 人物文件
+[Files]
+cmd     = Graves.cmd           ;操作输入
+cns     = Graves.cns           ;常量定义
+st      = Graves.cns           ;State定义
+st1     = Graves-1.cns
+st2     = Graves-2.cns
+st3     = -2-3.cns
+st4     = helper.cns
+st5     = aihelper.cns
+stcommon = common1.cns      ;公用state (人物文件夹或者common文件夹中)
+sprite  = Graves.sff           ;图像文件
+anim    = Graves.air           ;动作文件
+sound   = Graves.snd           ;声效文件
+;ai      = Graves.ai            ;系统AI用文件 (未实装，可以无视)
+
+; 将选人时的按键对应到色表上
+[Palette Keymap]
+a = 1
+b = 2
+c = 3
+x = 4 
+y = 5
+z = 6
+;x2 = 7 ;按start和X按键选色表7，以此类推
+;y2 = 8
+;z2 = 9
+;a2 = 10
+;b2 = 11
+;c2 = 12
+
+; arcade模式的开头结局动画
+[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

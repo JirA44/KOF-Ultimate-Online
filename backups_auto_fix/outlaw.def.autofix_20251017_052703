@@ -1,0 +1,40 @@
+KoF 2003 Outlaw team ending by Junior Chillage
+
+
+[SceneDef]
+spr =  outlaw.sff       
+
+[Scene 1]
+; Fade
+fadein.time = 60       ;Time to take for fading in
+fadein.col = 0,0,0     ;Use 255,255,255 for white-fade
+fadeout.time = 15
+fadeout.col = 0,0,0
+; Overlay Anims (from 0 to 9)
+layerall.pos = 160,120
+layer0.anim =  1		;Anim action number for slideshow pictures
+end.time = 3550		;600 ticks = 10 seconds
+bgm = ..\..\sound\OMEGA_ENDING_BGM02.mp3
+bgm.loop = 1	
+
+[Begin Action 1]
+0,1, 0,0, 200
+0,2, 0,0, 200
+0,3, 0,0, 200
+0,4, 0,0, 50
+0,5, 0,0, 50
+0,6, 0,0, 200
+0,7, 0,0, 200
+0,8, 0,0, 200
+0,9, 0,0, 200
+0,10, 0,0, 200
+0,11, 0,0, 200
+0,12, 0,0, 200
+0,13, 0,0, 200
+0,14, 0,0, 200
+0,15, 0,0, 200
+0,16, 0,0, 200
+0,17, 0,0, 200
+0,18, 0,0, 200
+0,19, 0,0, 50
+0,20, 0,0, 200

@@ -1,0 +1,24 @@
+
+[Info]
+name = "White - DeathRaGeoous Vesion"
+displayname = "White-DRG"
+versiondate = 11,28,2014
+mugenversion = 06,14,2003
+author = "DeathRaGeoous"
+pal.defaults = 1
+
+[Files]
+cmd     = White-DRG.cmd
+cns     = White-DRG.cns
+st      = White-DRG.cns
+st1      = White-DRG-N.cns
+st2      = White-DRG-S.cns
+st3      = White-DRG-H.cns
+st4      = -2.cns
+st5      = -3.cns
+st6      = Helper.cns
+stcommon = White-DRGcommon1.cns
+sprite  = White-DRG.sff
+anim    = White-DRG.air
+sound     = White-DRG.snd
+pal1    = White-DRG.act

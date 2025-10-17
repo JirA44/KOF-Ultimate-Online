@@ -1,0 +1,32 @@
+[Info]
+Name         = "Kartis"
+DisplayName  = "Kartis"
+VersionDate  = 29,3,2014
+MugenVersion = 06,14,2003
+Author       = "nekome"
+Pal.Defaults = 1,2,3,4,5,6
+Localcoord = 400,300
+
+[Files]
+Cmd      = other/Kartis.cmd
+Cns      = cns1/Kartis.cns
+St       = cns1/Kartis.cns
+St0      = cns1/Helper.cns
+St1      = cns1/Kartis-N.cns
+St2      = cns1/Kartis-S.cns
+St3      = cns1/Kartis-H.cns
+St4      = cns1/Kartis-MAX.cns
+St5      = cns1/Kartis-2-3.cns
+StCommon = common1.cns
+Sprite   = other/Kartis.sff
+Anim     = other/Kartis.air
+Sound    = other/Kartis.snd
+
+;---カラーパレット---
+
+Pal1 = act/Kartis.act
+Pal2 = act/Kartis.act
+Pal3 = act/Kartis.act
+Pal4 = act/Kartis.act
+Pal5 = act/Kartis.act
+Pal6 = act/Kartis.act
