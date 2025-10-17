@@ -69,6 +69,7 @@ class SmartLauncher:
         ikemen_path = self.base_path / "Ikemen_GO"
         exe_path = ikemen_path / "Ikemen_GO.exe"
         font_path = ikemen_path / "font"
+        data_path = ikemen_path / "data"
         debug_font_path = ikemen_path / "font/debug.def"
         log_path = ikemen_path / "Ikemen.log"
 
@@ -82,15 +83,38 @@ class SmartLauncher:
         else:
             self.log("  Ikemen_GO.exe: OK", "SUCCESS")
 
-        # Vérifier le dossier font
-        if not font_path.exists():
-            self.log("  font/ folder: MANQUANT", "ERROR")
-            self.errors.append("Ikemen GO font folder missing")
-            all_ok = False
-        else:
-            self.log("  font/ folder: OK", "SUCCESS")
+        # Vérifier les dossiers critiques (peuvent être des liens symboliques)
+        critical_folders = {
+            "data": data_path,
+            "font": font_path,
+            "chars": ikemen_path / "chars",
+            "stages": ikemen_path / "stages",
+            "sound": ikemen_path / "sound"
+        }
 
-            # Vérifier debug.def
+        missing_folders = []
+        for folder_name, folder_path in critical_folders.items():
+            if not folder_path.exists():
+                self.log(f"  {folder_name}/ folder: MANQUANT", "ERROR")
+                missing_folders.append(folder_name)
+                all_ok = False
+            else:
+                self.log(f"  {folder_name}/ folder: OK", "SUCCESS")
+
+        # Si des dossiers manquent, essayer de les réparer automatiquement
+        if missing_folders:
+            self.log("\n🔧 AUTO-FIX: Réparation des dossiers Ikemen GO...", "FIX")
+            if self.auto_fix_ikemen_folders(ikemen_path):
+                # Revérifier après fix
+                for folder_name, folder_path in critical_folders.items():
+                    if folder_name in missing_folders and folder_path.exists():
+                        self.log(f"  {folder_name}/ folder: RÉPARÉ ✓", "FIX")
+                        self.fixes.append(f"Fixed {folder_name} folder link")
+                        missing_folders.remove(folder_name)
+                        all_ok = True
+
+        # Vérifier debug.def seulement si font existe maintenant
+        if font_path.exists():
             if not debug_font_path.exists():
                 self.log("  font/debug.def: MANQUANT - AUTO-FIX", "WARNING")
                 self.auto_fix_debug_font(ikemen_path)
@@ -118,6 +142,41 @@ class SmartLauncher:
                 pass
 
         return all_ok
+
+    def auto_fix_ikemen_folders(self, ikemen_path):
+        """Répare automatiquement les dossiers Ikemen GO en exécutant le script PowerShell"""
+        try:
+            ps_script = self.base_path / "FIX_IKEMEN_FORCE.ps1"
+
+            if not ps_script.exists():
+                self.log("  ❌ Script FIX_IKEMEN_FORCE.ps1 introuvable", "ERROR")
+                return False
+
+            # Exécuter le script PowerShell avec variables d'environnement
+            import os
+            env = os.environ.copy()
+            env['AUTOMATED_RUN'] = '1'
+
+            result = subprocess.run(
+                ['powershell', '-ExecutionPolicy', 'Bypass', '-NoProfile',
+                 '-Command', f'& "{ps_script}"'],
+                capture_output=True,
+                text=True,
+                timeout=30,
+                env=env
+            )
+
+            if result.returncode == 0 or "data/system.def found" in result.stdout:
+                self.log("  ✓ Dossiers Ikemen GO réparés", "FIX")
+                self.fixes.append("Repaired Ikemen GO folder structure")
+                return True
+            else:
+                self.log(f"  ⚠️  Réparation partielle", "WARNING")
+                return False
+
+        except Exception as e:
+            self.log(f"  ❌ Impossible de réparer: {e}", "ERROR")
+            return False
 
     def auto_fix_debug_font(self, ikemen_path):
         """Crée automatiquement le fichier debug.def manquant"""

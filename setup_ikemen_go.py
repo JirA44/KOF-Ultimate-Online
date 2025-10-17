@@ -126,43 +126,38 @@ def setup_ikemen_go():
     # Détecter le répertoire racine Ikemen
     ikemen_root = ikemen_exe.parent
 
-    links_to_create = [
-        ("chars", base_dir / "chars"),
-        ("data", base_dir / "data"),
-        ("stages", base_dir / "stages"),
-        ("sound", base_dir / "sound"),
-        ("font", base_dir / "font")
-    ]
+    # Utiliser PowerShell pour créer les liens (plus fiable que Python)
+    print(f"{Colors.CYAN}Création des liens symboliques via PowerShell...{Colors.RESET}")
 
-    for link_name, target in links_to_create:
-        link_path = ikemen_root / link_name
+    import subprocess
+    ps_script = base_dir / "FIX_IKEMEN_FORCE.ps1"
 
-        # Si le lien/dossier existe déjà, le supprimer
-        if link_path.exists() or link_path.is_symlink():
-            if link_path.is_symlink():
-                link_path.unlink()
-            else:
-                # C'est un vrai dossier, le renommer en backup
-                backup = link_path.parent / f"{link_name}_backup"
-                if backup.exists():
-                    shutil.rmtree(backup)
-                shutil.move(str(link_path), str(backup))
-                print(f"{Colors.YELLOW}  Backup: {link_name} → {link_name}_backup{Colors.RESET}")
-
-        # Créer lien symbolique
+    if ps_script.exists():
         try:
-            # Sur Windows, utiliser junction pour dossiers
-            import subprocess
-            subprocess.run(['mklink', '/J', str(link_path), str(target)],
-                         shell=True, check=True, capture_output=True)
-            print(f"{Colors.GREEN}  ✓ Lien créé: {link_name} → {target}{Colors.RESET}")
-        except:
-            # Si échec, copier les fichiers importants
-            try:
-                shutil.copytree(target, link_path, dirs_exist_ok=True)
-                print(f"{Colors.YELLOW}  ⚠ Copie: {link_name} (lien symbolique échoué){Colors.RESET}")
-            except:
-                print(f"{Colors.RED}  ✗ Échec: {link_name}{Colors.RESET}")
+            # Set environment variable to run without pause
+            env = os.environ.copy()
+            env['AUTOMATED_RUN'] = '1'
+
+            result = subprocess.run(
+                ['powershell', '-ExecutionPolicy', 'Bypass', '-NoProfile',
+                 '-Command', f'& "{ps_script}" ; $Host.SetShouldExit(0)'],
+                capture_output=True,
+                text=True,
+                timeout=30,
+                env=env
+            )
+
+            if "data/system.def found" in result.stdout or "FILE EXISTS" in result.stdout:
+                print(f"{Colors.GREEN}✓ Configuration réussie!{Colors.RESET}")
+            else:
+                print(f"{Colors.YELLOW}⚠ Configuration partielle{Colors.RESET}")
+
+        except Exception as e:
+            print(f"{Colors.RED}✗ Erreur configuration: {e}{Colors.RESET}")
+            print(f"{Colors.YELLOW}Vous pouvez lancer manuellement: FIX_IKEMEN_FORCE.ps1{Colors.RESET}")
+    else:
+        print(f"{Colors.RED}✗ Script FIX_IKEMEN_FORCE.ps1 introuvable{Colors.RESET}")
+        print(f"{Colors.YELLOW}Création manuelle des liens requise{Colors.RESET}")
 
     # Étape 5: Créer launcher unifié
     print(f"\n{Colors.CYAN}{Colors.BOLD}Étape 5/5: Création launcher unifié{Colors.RESET}")
