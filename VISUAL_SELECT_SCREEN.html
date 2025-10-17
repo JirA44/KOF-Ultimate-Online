@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Select Screen - KOF Ultimate</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+        .screen {
+            position: relative;
+            width: 640px;
+            height: 480px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            border: 2px solid #4a90e2;
+            overflow: hidden;
+        }
+        .portrait {
+            position: absolute;
+            background: radial-gradient(circle, #ff6b6b 0%, #c92a2a 100%);
+            border: 3px solid #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            text-shadow: 1px 1px 2px #000;
+            z-index: 2;
+        }
+        .name-box {
+            position: absolute;
+            background: rgba(255,255,255,0.9);
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+            z-index: 3;
+        }
+        .grid {
+            position: absolute;
+            background: rgba(100,100,100,0.3);
+            border: 2px solid rgba(255,255,255,0.3);
+            z-index: 1;
+        }
+        .cell {
+            position: absolute;
+            background: rgba(100,150,200,0.4);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+        }
+        .stat-label {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .issue {
+            background: rgba(255,100,100,0.2);
+            border-left: 4px solid #ff6b6b;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: rgba(100,255,100,0.2);
+            border-left: 4px solid #51cf66;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .warning {
+            background: rgba(255,200,100,0.2);
+            border-left: 4px solid #ffa500;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Visual Select Screen Checker</h1>
+        <div class="subtitle" style="text-align: center; color: #aaa; margin-bottom: 20px;">
+            KOF Ultimate Online - 2025-10-17 20:51:41
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Grille</div>
+                <div class="stat-value">13×13</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Total Slots</div>
+                <div class="stat-value">169</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Personnages</div>
+                <div class="stat-value">169</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Cases Vides</div>
+                <div class="stat-value">0</div>
+            </div>
+        </div>
+
+        <h2 style="margin: 20px 0;">Rendu Visuel (640×480)</h2>
+        <div class="screen">
+            <!-- P1 Portrait -->
+            <div class="portrait" style="left: 10px; top: 240px; width: 80px; height: 80px;">
+                P1
+            </div>
+
+            <!-- P2 Portrait -->
+            <div class="portrait" style="left: 560px; top: 240px; width: 80px; height: 80px;">
+                P2
+            </div>
+
+            <!-- P1 Name -->
+            <div class="name-box" style="left: 10px; top: 320px;">
+                Player 1 Name
+            </div>
+
+            <!-- P2 Name -->
+            <div class="name-box" style="left: 560px; top: 320px;">
+                Player 2 Name
+            </div>
+
+            <!-- Grid -->
+            <div class="grid" style="left: 321px; top: 240px; width: 377px; height: 377px;">
+                <div class="cell" style="left: 0px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 0px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 29px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 58px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 87px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 116px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 145px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 174px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 203px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 232px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 261px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 290px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 319px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 0px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 29px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 58px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 87px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 116px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 145px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 174px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 203px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 232px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 261px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 290px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 319px; top: 348px; width: 28px; height: 28px;"></div>
+                <div class="cell" style="left: 348px; top: 348px; width: 28px; height: 28px;"></div>
+            </div>
+        </div>
+
+        <h2 style="margin: 20px 0;">Analyse</h2>
+        <div class="issue">❌ Portrait P1 chevauche la grille: bottom=320px, grid_top=240px (overlap de 80px)</div>
+        <div class="issue">❌ Portrait P2 chevauche la grille: bottom=320px, grid_top=240px (overlap de 80px)</div>
+        <div class="issue">❌ Nom P1 chevauche la grille: bottom=340px, grid_top=240px</div>
+        <div class="issue">❌ Nom P2 chevauche la grille: bottom=340px, grid_top=240px</div>
+        <div class="issue">❌ Grille dépasse l'écran: bottom=617px, screen=480px (dépasse de 137px)</div>
+        <div class="success">✓ Grille parfaitement remplie: 169 personnages pour 169 slots</div>
+
+        <h2 style="margin: 20px 0;">Coordonnées Détaillées</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Portrait P1</div>
+                <div class="stat-value" style="font-size: 1em;">
+                    X={config['p1_face_x']}, Y={config['p1_face_y']}<br>
+                    Size={portrait_w}×{portrait_h}px<br>
+                    Bottom={p1_bottom}px
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Portrait P2</div>
+                <div class="stat-value" style="font-size: 1em;">
+                    X={config['p2_face_x']}, Y={config['p2_face_y']}<br>
+                    Size={portrait_w}×{portrait_h}px<br>
+                    Bottom={p2_bottom}px
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Grille</div>
+                <div class="stat-value" style="font-size: 1em;">
+                    X={config['grid_x']}, Y={config['grid_y']}<br>
+                    Size={grid_w}×{grid_h}px<br>
+                    Bottom={grid_bottom}px
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

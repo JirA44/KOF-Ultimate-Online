@@ -125,14 +125,14 @@ alpha = 150,256
 [Select Info]
 fadeout.time = 15
 
-rows = 11
-columns = 18
+rows = 13
+columns = 15
 wrapping = 1
-pos = 6,52
-showemptyboxes = 1
-moveoveremptyboxes = 1
+pos = 70,130
+showemptyboxes = 0
+moveoveremptyboxes = 0
 
-cell.size = 34,34
+cell.size = 27,27
 cell.spacing = 2
 cell.bg.spr =
 cell.random.anim = 173
@@ -162,24 +162,30 @@ portrait.spr = 9000,0
 portrait.offset = 0,0
 portrait.scale = 0.34,0.34
 
-p1.face.offset = 20,15
-p1.face.scale = 0.45,0.45
+p1.face.offset = 18,13
+p1.face.scale = 1,1
 p1.face.facing = 1
+p1.face.spr = 9000,1
+p1.face.layerno = 2
 
-p2.face.offset = 620,15
-p2.face.scale = 0.45,0.45
+p2.face.offset = 500,13
+p2.face.scale = 1,1
 p2.face.facing = -1
+p2.face.spr = 9000,1
+p2.face.layerno = 2
 
 title.offset = 320,10
 title.font = 7,0,0
 
-p1.name.offset = 22,2
-p1.name.font = 7,4,1
-p1.name.spacing = 0,10
+p1.name.offset = 10,320
+p1.name.font = 3,0,0
+p1.name.spacing = 0,14
+p1.name.layerno = 3
 
-p2.name.offset = 618,2
-p2.name.font = 7,1,-1
-p2.name.spacing = 0,10
+p2.name.offset = 560,320
+p2.name.font = 3,0,0
+p2.name.spacing = 0,14
+p2.name.layerno = 3
 
 stage.pos = 320,460
 stage.active.font = 7,0,0
