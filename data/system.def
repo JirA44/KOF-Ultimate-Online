@@ -82,24 +82,43 @@ bgclearcolor = 0,0,0
 
 [TitleBG 0]
 type = anim
-actionno = 4
+actionno = 2
 layerno = 0
+start = 320,240
 mask = 1
+trans = add
 
 [TitleBG 1]
 type = anim
-actionno = 5
+actionno = 6
 layerno = 1
+start = 0,-80
 mask = 1
 trans = add
 
 [TitleBG 2]
 type = anim
-actionno = 3
+actionno = 7
 layerno = 2
 mask = 1
 trans = addalpha
-alpha = 200,256
+alpha = 180,256
+
+[TitleBG 3]
+type = anim
+actionno = 8
+layerno = 3
+mask = 1
+trans = add
+
+[TitleBG 4]
+type = anim
+actionno = 3
+layerno = 4
+velocity = -0.5, 0
+mask = 1
+trans = addalpha
+alpha = 150,256
 
 ;-------------------------------------------------------------------
 ;Character select definition
@@ -108,14 +127,14 @@ fadeout.time = 15
 
 rows = 13
 columns = 20
-wrapping = 1           
-pos = 10,75
-showemptyboxes = 1       
+wrapping = 1
+pos = 15,75
+showemptyboxes = 1
 moveoveremptyboxes = 1
 
-cell.size = 32,32
-cell.spacing = 1
-; cell.bg.spr = 
+cell.size = 29,29
+cell.spacing = 2
+; cell.bg.spr =
 cell.random.anim = 173
 cell.random.switchtime = 5
 
@@ -140,53 +159,53 @@ stage.done.snd = 100,1
 cancel.snd = 100,2
 
 portrait.spr = 9000,0
-portrait.offset = 0,0
-portrait.scale = 1.0,1.0
+portrait.offset = 20,20
+portrait.scale = 0.8,0.8
 
-p1.face.offset = 25,20
-p1.face.scale = 0.5,0.5
+p1.face.offset = 20,15
+p1.face.scale = 0.65,0.65
 p1.face.facing = 1
 
-p2.face.offset = 550,20
-p2.face.scale = 0.5,0.5
+p2.face.offset = 620,15
+p2.face.scale = 0.65,0.65
 p2.face.facing = -1
 
-title.offset = 320,62
+title.offset = 320,10
 title.font = 7,0,0
 
-p1.name.offset = 4,17
+p1.name.offset = 22,2
 p1.name.font = 7,4,1
-p1.name.spacing = 0,20
+p1.name.spacing = 0,10
 
-p2.name.offset = 635,17
+p2.name.offset = 618,2
 p2.name.font = 7,1,-1
-p2.name.spacing = 0,20
+p2.name.spacing = 0,10
 
-stage.pos = 320,251
+stage.pos = 320,460
 stage.active.font = 7,0,0
 stage.active2.font = 7,0,0
 stage.done.font = 7,0,0
 
 teammenu.move.wrapping = 1
 ;---------------------------------------------------------------------
-p1.teammenu.pos = 0,0
+p1.teammenu.pos = 15,75
 p1.teammenu.bg.spr = 172,0
-p1.teammenu.item.spacing = 0,38
+p1.teammenu.item.spacing = 0,35
 p1.teammenu.item.cursor.anim = 180
-p1.teammenu.value.icon.offset = 43,72
+p1.teammenu.value.icon.offset = 45,60
 p1.teammenu.value.icon.anim = 1001
-p1.teammenu.value.spacing = 15,0
+p1.teammenu.value.spacing = 14,0
 p1.teammenu.move.snd = 100,0
 p1.teammenu.value.snd = 100,0
 p1.teammenu.done.snd = 100,1
 ;----------------------------------------------------------------------
 p2.teammenu.pos = 0,0
 p2.teammenu.bg.spr = 172,1
-p2.teammenu.item.spacing = 0,38
+p2.teammenu.item.spacing = 0,35
 p2.teammenu.item.cursor.anim = 182
-p2.teammenu.value.icon.offset = 596,72
+p2.teammenu.value.icon.offset = 595,60
 p2.teammenu.value.icon.anim = 1001
-p2.teammenu.value.spacing = -15,0
+p2.teammenu.value.spacing = -14,0
 p2.teammenu.move.snd = 100,0
 p2.teammenu.value.snd = 100,0
 p2.teammenu.done.snd = 100,1
@@ -196,46 +215,58 @@ bgclearcolor = 0,0,0
 
 [SelectBG 0]
 type = anim
-actionno = 4
+actionno = 2
 layerno = 0
+start = 320,240
 mask = 1
+trans = add
 
 [SelectBG 1]
 type = anim
-actionno = 7
+actionno = 6
 layerno = 1
+start = 0,-80
 mask = 1
 trans = add
 
 [SelectBG 2]
 type = anim
-actionno = 8
+actionno = 7
 layerno = 2
 mask = 1
 trans = addalpha
-alpha = 220,256
+alpha = 200,256
 
 [SelectBG 3]
 type = anim
-actionno = 496
+actionno = 8
 layerno = 3
 mask = 1
 trans = add
 
 [SelectBG 4]
 type = anim
-actionno = 497
+actionno = 3
 layerno = 4
+velocity = -0.3, 0
 mask = 1
 trans = addalpha
-alpha = 180,256
+alpha = 160,256
 
 [SelectBG 5]
 type = anim
-actionno = 495
+actionno = 496
 layerno = 5
 mask = 1
 trans = add
+
+[SelectBG 6]
+type = anim
+actionno = 495
+layerno = 6
+mask = 1
+trans = addalpha
+alpha = 140,256
 
 ;-------------------------------------------------------------------
 [VS Screen]
