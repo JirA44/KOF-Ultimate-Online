@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport Test Matchmaking - KOF Ultimate</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-card h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .stat-card p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .quality-bar {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .quality-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .quality-label {
+            width: 120px;
+            font-weight: bold;
+        }
+        .quality-progress {
+            flex: 1;
+            height: 25px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+        .quality-fill {
+            height: 100%;
+            transition: width 0.3s;
+        }
+        .excellent { background: #4caf50; }
+        .good { background: #8bc34a; }
+        .acceptable { background: #ffc107; }
+        .poor { background: #f44336; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #667eea;
+            color: white;
+        }
+        tr:hover {
+            background: #f5f5f5;
+        }
+        .rating {
+            text-align: center;
+            font-size: 2em;
+            color: #667eea;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Rapport Test Matchmaking</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            KOF Ultimate Online - 22/10/2025 21:48
+        </p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>60</h3>
+                <p>Matchs Joués</p>
+            </div>
+            <div class="stat-card">
+                <h3>65</h3>
+                <p>Diff. MMR Moyenne</p>
+            </div>
+            <div class="stat-card">
+                <h3>10</h3>
+                <p>Joueurs Testés</p>
+            </div>
+        </div>
+
+        <div class="rating">
+            EXCELLENT ⭐⭐⭐⭐⭐
+        </div>
+
+        <h2>Qualité des Matchs</h2>
+        <div class="quality-bar">
+
+            <div class="quality-item">
+                <div class="quality-label">EXCELLENT</div>
+                <div class="quality-progress">
+                    <div class="quality-fill excellent" style="width: 85.0%"></div>
+                </div>
+                <div>51 (85.0%)</div>
+            </div>
+
+            <div class="quality-item">
+                <div class="quality-label">GOOD</div>
+                <div class="quality-progress">
+                    <div class="quality-fill good" style="width: 15.0%"></div>
+                </div>
+                <div>9 (15.0%)</div>
+            </div>
+
+            <div class="quality-item">
+                <div class="quality-label">ACCEPTABLE</div>
+                <div class="quality-progress">
+                    <div class="quality-fill acceptable" style="width: 0.0%"></div>
+                </div>
+                <div>0 (0.0%)</div>
+            </div>
+
+            <div class="quality-item">
+                <div class="quality-label">POOR</div>
+                <div class="quality-progress">
+                    <div class="quality-fill poor" style="width: 0.0%"></div>
+                </div>
+                <div>0 (0.0%)</div>
+            </div>
+
+        </div>
+
+        <h2>Statistiques des Joueurs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Joueur</th>
+                    <th>MMR</th>
+                    <th>Matchs</th>
+                    <th>Victoires</th>
+                    <th>Défaites</th>
+                    <th>Winrate</th>
+                    <th>Avg MMR Diff</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Master_Ivy</td>
+                    <td>1998</td>
+                    <td>15</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>73.3%</td>
+                    <td>69</td>
+                </tr>
+
+                <tr>
+                    <td>Legend_Jack</td>
+                    <td>1913</td>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>28.6%</td>
+                    <td>54</td>
+                </tr>
+
+                <tr>
+                    <td>Expert_Henry</td>
+                    <td>1786</td>
+                    <td>13</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>53.8%</td>
+                    <td>63</td>
+                </tr>
+
+                <tr>
+                    <td>Pro_Grace</td>
+                    <td>1723</td>
+                    <td>14</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>50.0%</td>
+                    <td>46</td>
+                </tr>
+
+                <tr>
+                    <td>Regular_Frank</td>
+                    <td>1601</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>50.0%</td>
+                    <td>141</td>
+                </tr>
+
+                <tr>
+                    <td>Average_Dave</td>
+                    <td>1452</td>
+                    <td>14</td>
+                    <td>9</td>
+                    <td>5</td>
+                    <td>64.3%</td>
+                    <td>52</td>
+                </tr>
+
+                <tr>
+                    <td>Mid_Emma</td>
+                    <td>1438</td>
+                    <td>15</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>33.3%</td>
+                    <td>44</td>
+                </tr>
+
+                <tr>
+                    <td>Beginner_Bob</td>
+                    <td>1286</td>
+                    <td>13</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>69.2%</td>
+                    <td>45</td>
+                </tr>
+
+                <tr>
+                    <td>Newbie_Charlie</td>
+                    <td>1240</td>
+                    <td>14</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>42.9%</td>
+                    <td>44</td>
+                </tr>
+
+                <tr>
+                    <td>Noob_Alex</td>
+                    <td>1063</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0.0%</td>
+                    <td>166</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
