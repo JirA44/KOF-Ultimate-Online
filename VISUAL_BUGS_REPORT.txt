@@ -1,0 +1,157 @@
+======================================================================
+  RAPPORT DES BUGS VISUELS - KOF ULTIMATE
+  Généré le: 1761150390.9108195
+======================================================================
+
+Total: 132 problèmes détectés
+
+
+MISSING_SFF:
+----------------------------------------------------------------------
+  • Akari (akari.sff;Sprite)
+  • Alou_AKOF (Aru.sff;̃JbgC)
+  • baiyi (baiyi.sff;图像文件)
+  • bob (bob.sff;图像文件)
+  • cciking (female.sff;Sprite)
+  • D.Yashiro.Rhythm(Dusk)1.x (D.Yashiro.Rhythm.sff;Sprite)
+  • D_DisciplineGirl (Orie_Harada.sff;̂obw摜܂Ƃ߂XvCgt@C̓o^)
+  • Error Zero (others/ER_1.0.sff;图像文件)
+  • Graves (Graves.sff;图像文件)
+  • Kei (Rock.sff;Sprites and Effects)
+  • Kevenoce (SFF/Kevenoce.sff;图像文件)
+  • Maltet (Maltet.sff;图像文件)
+  • Nao-MX 1.0 (nao-mx.sff;图像文件)
+  • Rozwel S.K (LEGIT) (Rozwel.sff;ƒLƒƒƒ‰‚ÌŠG)
+  • Rugal7th (Rugal-KOFM.sff;L̊G)
+  • Ryuji (Ryuji.sff;图像文件)
+  • Shadow-Dancer (Shadow-Dancer.sff;图像文件)
+  • Tenrou_Kunagi (Media/Kunagi.sff;Sprite)
+  • Wild.O.Yashiro (Wild.O.Yashiro.sff;Sprite)
+
+MISSING_AIR:
+----------------------------------------------------------------------
+  • Akari (akari.air ;Animation)
+  • baiyi (baiyi.air ;动作文件)
+  • bob (bob.air ;动作文件)
+  • cciking (coding/king.air ;Animation)
+  • D.Yashiro.Rhythm(Dusk)1.x (D.Yashiro.Rhythm.air ;Animation)
+  • D_DisciplineGirl (Orie_Harada.air ;Aj[Vt@C̓o^)
+  • Error Zero (others/ER.air ;动作文件)
+  • Graves (Graves.air ;动作文件)
+  • Kei (Rock.air ;Animations and Effects Animations)
+  • Kevenoce (SFF/Kevenoce.air ;动作文件)
+  • kfm (0 ;Anim action number)
+  • Maltet (Maltet.air ;动作文件)
+  • Nao-MX 1.0 (nao-mx.air ;动作文件)
+  • Rozwel S.K (LEGIT) (Oswald_XI.air ;ƒLƒƒƒ‰‚Ì“®‚«)
+  • Rugal7th (Rugal-KOFM.air ;L̓)
+  • Ryuji (Ryuji.air ;动作文件)
+  • Shadow-Dancer (Shadow-Dancer.air ;动作文件)
+  • Tenrou_Kunagi (Media/Kunagi.air ;Animation)
+  • Wild.O.Yashiro (Wild.O.Yashiro.air ;Animation)
+
+MISSING_DEF:
+----------------------------------------------------------------------
+  • Lane.Blood-CKOFM
+
+MISSING_STAGE_SFF:
+----------------------------------------------------------------------
+  • Anime Blu (Abyss-Rugal-Palace.sff Blu.sff)
+  • Basque Palace (Abyss-Rugal-Palace.sff Palace.sff)
+  • BLACK SON DROTIME (Abyss-Rugal-Palace.sff SON DROTIME.sff)
+  • Black wall (Abyss-Rugal-Palace.sff wall.sff)
+  • clones lab destroyed (Abyss-Rugal-Palace.sff lab destroyed.sff)
+  • DARK SAID RUGAL S  (Abyss-Rugal-Palace.sff SAID RUGAL S .sff)
+  • DROBLOOD R 2.0 (Abyss-Rugal-Palace.sff R 2.0.sff)
+  • Exagon Force (Abyss-Rugal-Palace.sff Force.sff)
+  • Far from here (Abyss-Rugal-Palace.sff from here.sff)
+  • forest infernal fire (Abyss-Rugal-Palace.sff infernal fire.sff)
+  • Galaxy BG (Abyss-Rugal-Palace.sff BG.sff)
+  • light kyouki (Abyss-Rugal-Palace.sff kyouki.sff)
+  • Moon of dark wall (Abyss-Rugal-Palace.sff of dark wall.sff)
+  • Moon recidence (Abyss-Rugal-Palace.sff recidence.sff)
+  • O.DB DRORANGE BLACK (Abyss-Rugal-Palace.sff DRORANGE BLACK.sff)
+  • Palece Mistery R (Abyss-Rugal-Palace.sff Mistery R.sff)
+  • The Will Of Hades S  (Abyss-Rugal-Palace.sff Will Of Hades S .sff)
+  • TIME INGCODNITA (Abyss-Rugal-Palace.sff INGCODNITA.sff)
+  • Wall of paintings (Abyss-Rugal-Palace.sff of paintings.sff)
+
+MISSING_SYSTEM_FILES:
+----------------------------------------------------------------------
+  • System SFF: cell.random.anim = 173
+  • System SFF: 9000
+  • System SFF: 9000
+  • System SFF: 9000
+  • System SFF: 172
+  • System SFF: 172
+  • System SFF: 9000
+  • System SFF: 9000
+  • System SFF: 9000
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System SND: 100
+  • System Font: font/FONT MENU.fnt
+  • System Font: font/Menu-Medium.fnt
+  • System Font: data/fonts/Combo.fnt
+  • System Font: data/fonts/Names.fnt
+  • System Font: data/fonts/Menu Black .fnt
+  • System Font: menu.item.active.font = 8
+  • System Font: 7
+  • System Font: 3
+  • System Font: 3
+  • System Font: 7
+  • System Font: 7
+  • System Font: 7
+  • System Font: 2
+  • System Font: 7
+  • System Font: 7
+  • System Font: 8
+  • System Font: 1
+  • System Font: 1
+  • System Font: 1
+  • System Font: 1
+  • System Font: 7
+  • System Font: 7
+  • System Font: 3
+  • System Font: 7
+
+LIFEBAR:
+----------------------------------------------------------------------
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: 2
+  • Font manquant: 3
+  • Font manquant: 3
+  • Font manquant: 8
+  • Font manquant: 1
+  • Font manquant: 1
+  • Font manquant: fontno
+  • Font manquant: 1
+  • Font manquant: 2
+  • Font manquant: 1

@@ -196,15 +196,15 @@ vandals
 
 [ExtraStages]
 stages/Abyss-Rugal-Palace.def
-stages/Anime Blu.def
+;FIXED_MISSING_SFF: stages/Anime Blu.def
 stages/Anubis.def
-stages/Basque Palace.def
-stages/BLACK SON DROTIME.def
-stages/Black wall.def
-stages/clones lab destroyed.def
+;FIXED_MISSING_SFF: stages/Basque Palace.def
+;FIXED_MISSING_SFF: stages/BLACK SON DROTIME.def
+;FIXED_MISSING_SFF: stages/Black wall.def
+;FIXED_MISSING_SFF: stages/clones lab destroyed.def
 stages/DARK SAID RUGAL S .def
 stages/Darkness.def
-stages/DROBLOOD R 2.0.def
+;FIXED_MISSING_SFF: stages/DROBLOOD R 2.0.def
 stages/space_void.def
 
 [Options]

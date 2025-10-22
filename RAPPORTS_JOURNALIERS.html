@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOF Ultimate Online - Rapports Journaliers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: fadeIn 0.8s;
+        }
+
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+            animation: slideUp 0.5s;
+        }
+
+        .stat-card h3 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .search-box {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .day-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            animation: fadeIn 0.6s;
+        }
+
+        .day-header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-header h2 {
+            color: #667eea;
+            font-size: 1.8em;
+        }
+
+        .day-header .count {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .report-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+
+        .report-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+
+        .report-card h3 {
+            color: #333;
+            margin-bottom: 8px;
+            padding-left: 10px;
+            font-size: 1.1em;
+        }
+
+        .report-card .meta {
+            color: #888;
+            font-size: 0.85em;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .report-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding-left: 10px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            color: #666;
+        }
+
+        .tag.rapport { background: #ffebee; color: #c62828; }
+        .tag.guide { background: #e3f2fd; color: #1565c0; }
+        .tag.readme { background: #f3e5f5; color: #6a1b9a; }
+        .tag.corrections { background: #fff3e0; color: #e65100; }
+        .tag.system { background: #e8f5e9; color: #2e7d32; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 KOF Ultimate Online</h1>
+            <p>Rapports et Documentation Journaliers</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="totalReports">40</h3>
+                <p>Documents Totaux</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="totalDays">3</h3>
+                <p>Jours Couverts</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="lastUpdate">17/10/2025</h3>
+                <p>Dernière Mise à Jour</p>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Rechercher un rapport, guide ou document...">
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="rapport">Rapports</button>
+            <button class="filter-btn" data-filter="guide">Guides</button>
+            <button class="filter-btn" data-filter="readme">READMEs</button>
+            <button class="filter-btn" data-filter="corrections">Corrections</button>
+        </div>
+
+        <div id="reportsContainer">
+            <!-- 17 Octobre 2025 -->
+            <div class="day-section" data-date="2025-10-17">
+                <div class="day-header">
+                    <h2>📅 17 Octobre 2025</h2>
+                    <div class="count">23 documents</div>
+                </div>
+                <div class="report-grid">
+                    <div class="report-card" onclick="window.open('GUIDE_LAUNCHERS.md', '_blank')">
+                        <h3>Guide Launchers</h3>
+                        <div class="meta">19:36 - Guide complet</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Launchers</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_FINAL_2025-10-17.md', '_blank')">
+                        <h3>Rapport Final 2025-10-17</h3>
+                        <div class="meta">19:22 - Rapport complet</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">Final</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('CORRECTIONS_APPLIQUEES.md', '_blank')">
+                        <h3>Corrections Appliquées</h3>
+                        <div class="meta">19:20 - Liste des corrections</div>
+                        <div class="tags">
+                            <span class="tag corrections">Corrections</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('COMMENT_JOUER.md', '_blank')">
+                        <h3>Comment Jouer</h3>
+                        <div class="meta">17:21 - Guide utilisateur</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Tutoriel</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_FINAL_COMPLET.md', '_blank')">
+                        <h3>Rapport Final Complet</h3>
+                        <div class="meta">15:05 - Analyse complète</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">Complet</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('CORRECTIONS_RAPPORT_FINAL.md', '_blank')">
+                        <h3>Corrections Rapport Final</h3>
+                        <div class="meta">14:42 - Corrections finales</div>
+                        <div class="tags">
+                            <span class="tag corrections">Corrections</span>
+                            <span class="tag rapport">Rapport</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('FINAL_ERROR_SUMMARY.md', '_blank')">
+                        <h3>Final Error Summary</h3>
+                        <div class="meta">14:17 - Résumé des erreurs</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">Erreurs</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_AUTOCHECKERS.md', '_blank')">
+                        <h3>README AutoCheckers</h3>
+                        <div class="meta">06:34 - Documentation</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">AutoCheck</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_CORRECTIONS_FINAL.md', '_blank')">
+                        <h3>Rapport Corrections Final</h3>
+                        <div class="meta">05:29 - Corrections appliquées</div>
+                        <div class="tags">
+                            <span class="tag corrections">Corrections</span>
+                            <span class="tag rapport">Rapport</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_AUTO_CORRECTEUR.md', '_blank')">
+                        <h3>README Auto Correcteur</h3>
+                        <div class="meta">04:46 - Documentation</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">Correcteur</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_AUTO_CORRECTEUR.md', '_blank')">
+                        <h3>Rapport Auto Correcteur</h3>
+                        <div class="meta">04:44 - Rapport système</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">Auto</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_IAs.md', '_blank')">
+                        <h3>README IAs</h3>
+                        <div class="meta">02:40 - Documentation IA</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_LANCEMENT.md', '_blank')">
+                        <h3>README Lancement</h3>
+                        <div class="meta">01:38 - Guide de lancement</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag guide">Guide</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('PLAN_AMELIORATIONS.md', '_blank')">
+                        <h3>Plan Améliorations</h3>
+                        <div class="meta">00:46 - Planification</div>
+                        <div class="tags">
+                            <span class="tag">Planning</span>
+                            <span class="tag">Améliorations</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('IA_EN_ACTION.md', '_blank')">
+                        <h3>IA En Action</h3>
+                        <div class="meta">00:44 - Démonstration IA</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('CORRECTIONS_LAUNCHER.md', '_blank')">
+                        <h3>Corrections Launcher</h3>
+                        <div class="meta">00:35 - Corrections launcher</div>
+                        <div class="tags">
+                            <span class="tag corrections">Corrections</span>
+                            <span class="tag">Launcher</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_FINAL_CORRECTIONS.md', '_blank')">
+                        <h3>Rapport Final Corrections</h3>
+                        <div class="meta">00:31 - Rapport final</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag corrections">Corrections</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('GUIDE_COMPLET_JEUX.md', '_blank')">
+                        <h3>Guide Complet Jeux</h3>
+                        <div class="meta">00:27 - Guide complet</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Jeux</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('SYSTEM_STATUS_REPORT.md', '_blank')">
+                        <h3>System Status Report</h3>
+                        <div class="meta">00:20 - État système</div>
+                        <div class="tags">
+                            <span class="tag system">Système</span>
+                            <span class="tag rapport">Rapport</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16 Octobre 2025 -->
+            <div class="day-section" data-date="2025-10-16">
+                <div class="day-header">
+                    <h2>📅 16 Octobre 2025</h2>
+                    <div class="count">11 documents</div>
+                </div>
+                <div class="report-grid">
+                    <div class="report-card" onclick="window.open('GUIDE_IMAGES_PERSONNAGES.md', '_blank')">
+                        <h3>Guide Images Personnages</h3>
+                        <div class="meta">20:07 - Guide graphique</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Personnages</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_MATCHMAKING.md', '_blank')">
+                        <h3>README Matchmaking</h3>
+                        <div class="meta">19:53 - Système matchmaking</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">Matchmaking</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('GUIDE_ANIMATIONS_MENUS.md', '_blank')">
+                        <h3>Guide Animations Menus</h3>
+                        <div class="meta">19:39 - Animations UI</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">UI</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_TESTS_AUTOMATISES.md', '_blank')">
+                        <h3>Rapport Tests Automatisés</h3>
+                        <div class="meta">15:53 - Tests auto</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">Tests</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RECAPITULATIF_AMELIORATIONS.md', '_blank')">
+                        <h3>Récapitulatif Améliorations</h3>
+                        <div class="meta">15:31 - Récap complet</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">Améliorations</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_TEST_COMPLET.md', '_blank')">
+                        <h3>Rapport Test Complet</h3>
+                        <div class="meta">15:00 - Tests complets</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">Tests</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('GUIDE_NETPLAY.md', '_blank')">
+                        <h3>Guide Netplay</h3>
+                        <div class="meta">11:38 - Jeu en ligne</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Netplay</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('RAPPORT_ETAT.md', '_blank')">
+                        <h3>Rapport État</h3>
+                        <div class="meta">11:29 - État système</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag system">Système</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README.md', '_blank')">
+                        <h3>README Principal</h3>
+                        <div class="meta">10:34 - Documentation principale</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">Principal</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('AI_ENHANCEMENT_GUIDE.md', '_blank')">
+                        <h3>AI Enhancement Guide</h3>
+                        <div class="meta">09:47 - Guide IA</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_FR.md', '_blank')">
+                        <h3>README Français</h3>
+                        <div class="meta">09:31 - Doc FR</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">Français</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15 Octobre 2025 -->
+            <div class="day-section" data-date="2025-10-15">
+                <div class="day-header">
+                    <h2>📅 15 Octobre 2025</h2>
+                    <div class="count">9 documents</div>
+                </div>
+                <div class="report-grid">
+                    <div class="report-card" onclick="window.open('AGENT_IA_RAPPORT.md', '_blank')">
+                        <h3>Agent IA Rapport</h3>
+                        <div class="meta">23:25 - Rapport IA</div>
+                        <div class="tags">
+                            <span class="tag rapport">Rapport</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('QUICK_START.md', '_blank')">
+                        <h3>Quick Start</h3>
+                        <div class="meta">23:17 - Démarrage rapide</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">QuickStart</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_COMPLETE_SYSTEM.md', '_blank')">
+                        <h3>README Complete System</h3>
+                        <div class="meta">23:16 - Système complet</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag system">Système</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_AI_NAVIGATOR.md', '_blank')">
+                        <h3>README AI Navigator</h3>
+                        <div class="meta">23:08 - Navigation IA</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('GUIDE_IKEMEN_GO.md', '_blank')">
+                        <h3>Guide Ikemen GO</h3>
+                        <div class="meta">22:25 - Moteur de jeu</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Ikemen</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('SUMMARY.md', '_blank')">
+                        <h3>Summary</h3>
+                        <div class="meta">22:10 - Résumé général</div>
+                        <div class="tags">
+                            <span class="tag">Résumé</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('LAUNCHER_README.md', '_blank')">
+                        <h3>Launcher README</h3>
+                        <div class="meta">22:09 - Documentation launcher</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">Launcher</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('STAGE_BACKGROUNDS_GUIDE.md', '_blank')">
+                        <h3>Stage Backgrounds Guide</h3>
+                        <div class="meta">21:34 - Décors stages</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Stages</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('README_AI_PLAYER.md', '_blank')">
+                        <h3>README AI Player</h3>
+                        <div class="meta">21:28 - Joueur IA</div>
+                        <div class="tags">
+                            <span class="tag readme">README</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </div>
+
+                    <div class="report-card" onclick="window.open('GUIDE_MULTIJOUEUR.md', '_blank')">
+                        <h3>Guide Multijoueur</h3>
+                        <div class="meta">21:12 - Multijoueur</div>
+                        <div class="tags">
+                            <span class="tag guide">Guide</span>
+                            <span class="tag">Multijoueur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Recherche en temps réel
+        const searchInput = document.getElementById('searchInput');
+        const reportCards = document.querySelectorAll('.report-card');
+        const daySections = document.querySelectorAll('.day-section');
+
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+
+            daySections.forEach(section => {
+                const cards = section.querySelectorAll('.report-card');
+                let visibleCards = 0;
+
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        card.style.display = 'block';
+                        visibleCards++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Masquer la section si aucune carte n'est visible
+                section.style.display = visibleCards > 0 ? 'block' : 'none';
+            });
+        });
+
+        // Filtres par catégorie
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Retirer la classe active de tous les boutons
+                filterButtons.forEach(b => b.classList.remove('active'));
+                // Ajouter la classe active au bouton cliqué
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+
+                daySections.forEach(section => {
+                    const cards = section.querySelectorAll('.report-card');
+                    let visibleCards = 0;
+
+                    cards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                            visibleCards++;
+                        } else {
+                            const tags = card.querySelectorAll('.tag');
+                            let hasTag = false;
+
+                            tags.forEach(tag => {
+                                if (tag.textContent.toLowerCase().includes(filter) ||
+                                    tag.className.includes(filter)) {
+                                    hasTag = true;
+                                }
+                            });
+
+                            if (hasTag) {
+                                card.style.display = 'block';
+                                visibleCards++;
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+
+                    // Masquer la section si aucune carte n'est visible
+                    section.style.display = visibleCards > 0 ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.day-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

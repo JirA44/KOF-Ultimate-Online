@@ -132,7 +132,7 @@ pos = 70,160
 showemptyboxes = 0
 moveoveremptyboxes = 0
 
-cell.size = 27,27
+cell.size = 32,32
 cell.spacing = 2
 cell.bg.spr =
 cell.random.anim = 173
@@ -160,7 +160,7 @@ cancel.snd = 100,2
 
 portrait.spr = 9000,0
 portrait.offset = 0,0
-portrait.scale = 0.34,0.34
+portrait.scale = 0.32,0.32
 
 p1.face.offset = 18,13
 p1.face.scale = 1,1
