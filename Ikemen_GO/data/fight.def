@@ -3,6 +3,7 @@ name = "BLACK R BARS"
 author = "DROLLDIAMOND"
 
 [Files]
+spr = fight.sff  ;Sprites
 sff = Fight.sff
 snd = Fight.snd
 font1 = data/fonts/Font black .fnt 
@@ -40,7 +41,7 @@ p2.front.layerno = 2
 p2.front.facing = -1
 p2.range.x = 50,260
 
-;-----------–---------------------------------
+;--------------------------------------------
 [Simul Lifebar]
 ;Player 1
 p1.pos    = 320,0
@@ -268,7 +269,7 @@ team2.displaytime = 100
 ;-----------------------------------------------------------
 [Round]
 match.wins = 2              ;Rondas necesarias para ganar un partido
-match.maxdrawgames =-1      ;Número máximo de tiradas permitidas (-1 para infinito) *2001.11.01 nuevo *
+match.maxdrawgames =-1      ;Nmero mximo de tiradas permitidas (-1 para infinito) *2001.11.01 nuevo *
 start.waittime = 1        ;Tiempo de espera antes de iniciar intro
 
 ; Default position for all components
@@ -313,7 +314,7 @@ fight.anim = 80             ;.
 fight.snd = 0,6             ;Sound to play
 fight.sndtime = 134         ;Time to play sound
 fight.layerno = 2
-ctrl.time = 224             ;Tiempo los jugadores obtienen el control después de la "lucha
+ctrl.time = 224             ;Tiempo los jugadores obtienen el control despus de la "lucha
 
 ; KO
 KO.time    = 0 
@@ -415,7 +416,8 @@ useiconupto = 4
 ;-----------------------------------------------------------
 ; How to customize
 ;-----------------------------------------------------------
-; First of all, set filenames under [Files].
+; First of all, set filenames under [Files]
+spr = fight.sff  ;Sprites.
 ; 
 ; Next, you can customize each component of the fight screen.
 ; A component can be anything from a piece of the lifebar,
@@ -437,11 +439,13 @@ useiconupto = 4
 ;    actionno is the number of the action to use. You must
 ;    specify a valid action that is defined within this file.
 ;    The sprites for the animation come from the file given
-;    for the "sff" parameter in the [Files] group below.
+;    for the "sff" parameter in the [Files]
+spr = fight.sff  ;Sprites group below.
 ;    You can define your animation actions anywhere in this
 ;    file, as long as it does not come in the middle of a
 ;    group (an example of a group is the block of text
-;    starting with [Files], and ending on the next group
+;    starting with [Files]
+spr = fight.sff  ;Sprites, and ending on the next group
 ;    [Lifebar]).
 ;    For example, to use action 5 for the p1.bg0 component:
 ;      p1.bg0.anim = 5
@@ -459,7 +463,8 @@ useiconupto = 4
 ;            text = text
 ;    This lets you set the font (and optionally the content
 ;    text). fontno is the number of the font defined under
-;    [Files]. For instance, for the line "font2 = font/num1.fnt",
+;    [Files]
+spr = fight.sff  ;Sprites. For instance, for the line "font2 = font/num1.fnt",
 ;    the fontno is 2.
 ;    fontbank is the color bank of the font to use. Refer to
 ;    the font for what color banks it has.
@@ -480,7 +485,8 @@ useiconupto = 4
 ;    Format: snd = sndgrp, sndno
 ;    This is the identifier pair for the sound effect to
 ;    play. The .snd file that the sound is played from
-;    is given in the "snd" parameter in the [Files] group.
+;    is given in the "snd" parameter in the [Files]
+spr = fight.sff  ;Sprites group.
 ;    This plays sound 21,0 for the "level1" component.
 ;      level1.snd = 21,0
 ; 

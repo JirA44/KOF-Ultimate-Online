@@ -202,7 +202,7 @@ stages/Anubis.def
 ;FIXED_MISSING_SFF: stages/BLACK SON DROTIME.def
 ;FIXED_MISSING_SFF: stages/Black wall.def
 ;FIXED_MISSING_SFF: stages/clones lab destroyed.def
-;FIXED_MISSING_SPR: stages/DARK SAID RUGAL S .def
+stages/DARK SAID RUGAL S .def
 stages/Darkness.def
 ;FIXED_MISSING_SFF: stages/DROBLOOD R 2.0.def
 stages/space_void.def
