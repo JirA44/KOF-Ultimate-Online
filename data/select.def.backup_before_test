@@ -1,24 +1,24 @@
-;KOF Ultimate Online - Liste complète des personnages
-;Généré automatiquement - 188 personnages
+; KOF ULTIMATE - select.def
+; Généré automatiquement avec TOUS les personnages
+; Total: 189 personnages
+
 [Characters]
+
 03-A-Kyo LV2
-_ArchiMurderer
 A-Angel
 ABYSS'Mega's
-ai
+ALBA MEIRA KOF XI -MI2
 Aika
 Aika_MK
 Aileen
-Akari
+;REMOVED_NO_PORTRAIT: Akari
 Akiha Orochi
 Akiha Yagami
 Akiha Yagami DK
 Akiha Yagami1
 Akira_Kazakami
-akuma
-ALBA MEIRA KOF XI -MI2
 Alfred_WLS
-Alou_AKOF
+;REMOVED_NO_PORTRAIT: Alou_AKOF
 Alter Kyo
 Amoumi-KOFM
 Andy-ROTD
@@ -28,48 +28,37 @@ AngusPurple-KOFM
 Another Scarlet
 Arctic Emperor
 Ash
-asura-kofa
 Athena
 Athena Asamiya MI KOFM
 Athena-Heidern
 Athena_XI
-baiyi
+BLAKE V3-1.1
+BW-Meiling
 Balto-KOFM
 Beast Yeorin QS
 Benimaru-Nikaido-STAR
-billy
 BlackPrincess_Tohka
-BLAKE V3-1.1
-bob
 Boss Gustab M
-boss-orochi
 Business_Vanessa-KOFM
-BW-Meiling
 C.Kyo.Blood-KOFM
 Carlin.Blood-CKOFM
 Caser.Yashiro
-ccihinako
-ccijhun
-cciking
-ccishermie
 Chalice
 Chaos-CKOFM
 Chobi-Hige
 Choi_XI
-clone benimaru
 Clone Blood Rugal
 Clone Zero
 Cronus
 Cruelty Sula UM
-D.Yashiro.Rhythm(Dusk)1.x
+;REMOVED_NO_PORTRAIT: D.Yashiro.Rhythm(Dusk)1.x
 D=Rockula
-D_DisciplineGirl
+DF-Sula
+DG.Rugal-KOFM
+;REMOVED_NO_PORTRAIT: D_DisciplineGirl
 Daiki_Final(Prototype)
 Daisu
 Delirus
-DF-Sula
-DG.Rugal-KOFM
-dr-yang-kofa
 Dragondomainlords
 Drakyola
 Dual-flame_Magaki
@@ -78,7 +67,7 @@ Element Ash
 Element Scarlet
 Element-Adel
 Eputh Blood-KOFM
-Error Zero
+;REMOVED_NO_PORTRAIT: Error Zero
 Essence of Darkness
 Eve
 Fang
@@ -87,19 +76,16 @@ Final Adel
 Final Goeniko
 Final Sachiel WF
 Final Zeroko B
-final-goenitz
 Final-IGNIZ
 Final-OriginalZero
 Flamme(S)
-Garnet 1.1
 GARS
-Geese-KOFM
 GOD_ADEL(2012-01-28 Trial)
-god_orochi
+Garnet 1.1
+Geese-KOFM
 God_Wind
 Goktore-CKOFM
-Graves
-heraclius
+;REMOVED_NO_PORTRAIT: Graves
 HIEL-KOFM
 Hiel_SP
 Hiyoi
@@ -111,25 +97,23 @@ Kaori Yumiko
 Kartis
 Kasim_LV2-CKOFM[v0.40]
 Kasumi-KOFM
-Kei
-Kevenoce
+;REMOVED_NO_PORTRAIT: Kei
+;REMOVED_NO_PORTRAIT: Kevenoce
 Keyser-Aunthmer
-kfm
 Kotone
 Kyaga-KOFM
 Kychiel
+LUMIEL
 Littledevil-Phoenix
 Lord-Goenitz
 Magnus
 Mai Phoenix XI
-Maltet
+;REMOVED_NO_PORTRAIT: Maltet
 Maryl
 Matam
 Meld_Boss
-meteoricmarisa
-mizore-kofmLV2
 N-Zeroko
-Nao-MX 1.0
+;REMOVED_NO_PORTRAIT: Nao-MX 1.0
 NeoDio KOFM
 NeoGeegus KOFM
 Nero
@@ -142,8 +126,6 @@ Original Psyqhical
 Orochi Kyo WF
 Orochi Leona-KOFM
 Orochi-EV1.55
-orochi-iori
-orochi-kyoko
 Orochi.Yamazaki-CKOFM
 P-LEONA_ELEMENT
 Psyche_42-1.1
@@ -155,33 +137,31 @@ Rayno
 Reas-KOFM
 Reyna
 Rinne-RH
-robo-kyo-kofa
 Rocken
 Rose
-Rozwel S.K (LEGIT)
-Rugal7th
-Ryuji
+;REMOVED_NO_PORTRAIT: Rozwel S.K (LEGIT)
+;REMOVED_NO_PORTRAIT: Rugal7th
+;REMOVED_NO_PORTRAIT: Ryuji
 S_Infezione
 Samael
 Sasin
-Shadow-Dancer
+;REMOVED_NO_PORTRAIT: Shadow-Dancer
 Sonic Vanesa
 Spiritland Lords
-Tenrou_Kunagi
+;REMOVED_NO_PORTRAIT: Tenrou_Kunagi
 ThunderMiss.Shermie
 Titan_KOF
 True Iori X_KOF
 Unfailed Gustab
 Unleashesd God Kula
 Valmar Rugal
-vandals
 Viper
 VladRose
 Voltage Zeroko-Pre
 WatchTV
 WhirlWind-Goenitz
 White DeathRaGeroous Version
-Wild.O.Yashiro
+;REMOVED_NO_PORTRAIT: Wild.O.Yashiro
 Wind_MMXIX
 Xion-V
 Yamazaki.Blood
@@ -189,9 +169,44 @@ Yukida
 Yuno-KOFM
 Yuri_SV
 Zerozuchi_Boss
+_ArchiMurderer
+ai
+akuma
+asura-kofa
+;REMOVED_NO_PORTRAIT: baiyi
+billy
+;REMOVED_NO_PORTRAIT: bob
+boss-orochi
+ccihinako
+ccijhun
+;REMOVED_NO_PORTRAIT: cciking
+ccishermie
+clone benimaru
+dr-yang-kofa
+final-goenitz
+god_orochi
+heraclius
+;REMOVED_NO_PORTRAIT: kfm
+meteoricmarisa
+mizore-kofmLV2
+orochi-iori
+orochi-kyoko
+robo-kyo-kofa
+vandals
 
 [ExtraStages]
+stages/Abyss-Rugal-Palace.def
+stages/Anime Blu.def
+stages/Anubis.def
+stages/Basque Palace.def
+stages/BLACK SON DROTIME.def
+stages/Black wall.def
+stages/clones lab destroyed.def
+stages/DARK SAID RUGAL S .def
+stages/Darkness.def
+stages/DROBLOOD R 2.0.def
+stages/space_void.def
 
 [Options]
 arcade.maxmatches = 6,1,1,0,0,0,0,0,0,0
-team.maxmatches = 6,1,1,1,0,0,0,0,0,0
+team.maxmatches = 4,1,1,1,0,0,0,0,0,0

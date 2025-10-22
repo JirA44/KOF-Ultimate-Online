@@ -99,7 +99,10 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
     def clear_mugen_log(self):
         """Efface le mugen.log"""
         if self.mugen_log.exists():
+            try:
             self.mugen_log.unlink()
+        except:
+            pass  # Ignore if file is locked
 
     def test_character(self, char_name):
         """Teste un personnage"""
@@ -382,7 +385,7 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
             self.restore_select_def()
 
 def main():
-    game_dir = r"D:\KOF Ultimate Online Online Online"
+    game_dir = r"D:\KOF Ultimate Online"
     tester = CharacterTester(game_dir)
     tester.run_full_test()
 
