@@ -1,0 +1,75 @@
+{
+  "installation": {
+    "files_ok": true,
+    "launchers_count": 21,
+    "docs_count": 25
+  },
+  "menus": {
+    "characters_available": 4
+  },
+  "progression": {
+    "stat_files_found": 1
+  },
+  "matchmaking": {
+    "files_found": 5,
+    "active_ports": [
+      8080
+    ]
+  },
+  "competitive": {},
+  "characters": {
+    "total": 190,
+    "working": 50,
+    "broken": []
+  },
+  "stages": {
+    "total": 31,
+    "working": 30,
+    "broken": []
+  },
+  "combat_sessions": [
+    {
+      "session_num": 1,
+      "duration": 46.019237995147705,
+      "timestamp": "2025-10-23T09:43:45.204375",
+      "status": "completed"
+    },
+    {
+      "session_num": 2,
+      "duration": 46.005382776260376,
+      "timestamp": "2025-10-23T09:44:46.236670",
+      "status": "completed"
+    },
+    {
+      "session_num": 3,
+      "duration": 46.00259304046631,
+      "timestamp": "2025-10-23T09:45:47.252145",
+      "status": "completed"
+    },
+    {
+      "session_num": 4,
+      "duration": 46.022117614746094,
+      "timestamp": "2025-10-23T09:46:48.315784",
+      "status": "completed"
+    },
+    {
+      "session_num": 5,
+      "duration": 46.021032094955444,
+      "timestamp": "2025-10-23T09:47:49.346221",
+      "status": "completed"
+    }
+  ],
+  "issues_found": [],
+  "improvements_needed": [
+    {
+      "area": "installation",
+      "suggestion": "Trop de launchers (21) - créer UN launcher principal clair",
+      "timestamp": "2025-10-23T09:42:40.955368"
+    },
+    {
+      "area": "menus",
+      "suggestion": "Peu de personnages visibles - ajouter plus de choix",
+      "timestamp": "2025-10-23T09:42:42.960224"
+    }
+  ]
+}

@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOF Ultimate Online - Matchmaking Dashboard</title>
     <style>
+        :root {
+            --bg-gradient-start: #667eea;
+            --bg-gradient-end: #764ba2;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --bg-card: rgba(255, 255, 255, 0.9);
+            --accent-1: #667eea;
+            --accent-2: #764ba2;
+            --border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-gradient-start: #0a0a0a;
+            --bg-gradient-end: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #00ffff;
+            --bg-card: rgba(255, 255, 255, 0.1);
+            --accent-1: #00ff88;
+            --accent-2: #00ffff;
+            --border-color: rgba(0, 255, 136, 0.3);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,9 +35,10 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            color: var(--text-primary);
             padding: 20px;
+            transition: all 0.3s ease;
         }
 
         .container {
@@ -23,24 +46,53 @@
             margin: 0 auto;
         }
 
+        .controls {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-control:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
         header {
             text-align: center;
             padding: 30px 0;
-            background: rgba(0, 0, 0, 0.3);
+            background: var(--bg-card);
             border-radius: 15px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--border-color);
         }
 
         h1 {
             font-size: 3em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 20px var(--accent-1);
+            color: var(--accent-1);
         }
 
         .subtitle {
             font-size: 1.2em;
             opacity: 0.9;
+            color: var(--text-secondary);
         }
 
         .stats-grid {
@@ -51,11 +103,11 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--bg-card);
             padding: 25px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--border-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -68,6 +120,7 @@
             font-size: 2.5em;
             font-weight: bold;
             margin: 10px 0;
+            color: var(--accent-1);
         }
 
         .stat-label {
@@ -75,21 +128,24 @@
             opacity: 0.8;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: var(--text-secondary);
         }
 
         .dashboard-section {
-            background: rgba(0, 0, 0, 0.3);
+            background: var(--bg-card);
             padding: 30px;
             border-radius: 15px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
         }
 
         .section-title {
             font-size: 1.8em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 2px solid var(--border-color);
+            color: var(--accent-1);
         }
 
         .leaderboard {
@@ -236,71 +292,188 @@
 </head>
 <body>
     <div class="container">
+        <div class="controls">
+            <button class="btn-control" onclick="toggleLanguage()">
+                <span id="lang-icon">🌐</span>
+                <span id="lang-text">FR</span>
+            </button>
+            <button class="btn-control" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span>
+                <span id="theme-text" data-i18n="theme-night">Mode Nuit</span>
+            </button>
+        </div>
+
         <header>
             <h1>⚔️ KOF ULTIMATE ONLINE</h1>
             <p class="subtitle">
                 <span class="status-indicator status-online"></span>
-                Matchmaking Dashboard - Amélioration Continue IA
+                <span data-i18n="subtitle">Matchmaking Dashboard - Amélioration Continue IA</span>
             </p>
         </header>
 
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-label">🎮 Joueurs En Ligne</div>
+                <div class="stat-label" data-i18n="stat-online">🎮 Joueurs En Ligne</div>
                 <div class="stat-value" id="playersOnline">0</div>
             </div>
             <div class="stat-card">
-                <div class="stat-label">🔍 En Recherche</div>
+                <div class="stat-label" data-i18n="stat-searching">🔍 En Recherche</div>
                 <div class="stat-value" id="playersSearching">0</div>
             </div>
             <div class="stat-card">
-                <div class="stat-label">⚔️ Matchs Actifs</div>
+                <div class="stat-label" data-i18n="stat-active">⚔️ Matchs Actifs</div>
                 <div class="stat-value" id="activeMatches">0</div>
             </div>
             <div class="stat-card">
-                <div class="stat-label">📊 Total Matchs</div>
+                <div class="stat-label" data-i18n="stat-total">📊 Total Matchs</div>
                 <div class="stat-value" id="totalMatches">0</div>
             </div>
         </div>
 
         <div class="dashboard-section">
-            <h2 class="section-title">🏆 Classement (Top 10)</h2>
+            <h2 class="section-title" data-i18n="section-ranking">🏆 Classement (Top 10)</h2>
             <ul class="leaderboard" id="leaderboard">
                 <!-- Rempli dynamiquement -->
             </ul>
         </div>
 
         <div class="dashboard-section">
-            <h2 class="section-title">⚔️ Matchs En Cours</h2>
+            <h2 class="section-title" data-i18n="section-matches">⚔️ Matchs En Cours</h2>
             <div class="active-matches" id="activeMatchesList">
-                <p style="text-align: center; opacity: 0.7;">Aucun match en cours</p>
+                <p style="text-align: center; opacity: 0.7;" data-i18n="no-matches">Aucun match en cours</p>
             </div>
         </div>
 
         <div class="dashboard-section">
-            <h2 class="section-title">🧠 Insights Machine Learning</h2>
+            <h2 class="section-title" data-i18n="section-ml">🧠 Insights Machine Learning</h2>
             <div class="ml-insights" id="mlInsights">
                 <div class="insight-card">
-                    <div class="insight-title">📈 Cycles d'apprentissage</div>
+                    <div class="insight-title" data-i18n="ml-cycles">📈 Cycles d'apprentissage</div>
                     <div class="insight-value" id="learningCycles">0</div>
                 </div>
                 <div class="insight-card">
-                    <div class="insight-title">🎯 Stratégie optimale</div>
+                    <div class="insight-title" data-i18n="ml-strategy">🎯 Stratégie optimale</div>
                     <div class="insight-value" id="optimalStrategy" style="font-size: 1.3em;">N/A</div>
                 </div>
                 <div class="insight-card">
-                    <div class="insight-title">⚡ MMR Moyen</div>
+                    <div class="insight-title" data-i18n="ml-mmr">⚡ MMR Moyen</div>
                     <div class="insight-value" id="avgMMR">1000</div>
                 </div>
             </div>
         </div>
 
         <div class="update-time" id="updateTime">
-            Dernière mise à jour : Jamais
+            <span data-i18n="update-time">Dernière mise à jour</span> : <span id="updateTimeValue">Jamais</span>
         </div>
     </div>
 
     <script>
+        // Système de traduction
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        const translations = {
+            fr: {
+                'subtitle': 'Matchmaking Dashboard - Amélioration Continue IA',
+                'theme-night': 'Mode Nuit',
+                'theme-day': 'Mode Jour',
+                'stat-online': '🎮 Joueurs En Ligne',
+                'stat-searching': '🔍 En Recherche',
+                'stat-active': '⚔️ Matchs Actifs',
+                'stat-total': '📊 Total Matchs',
+                'section-ranking': '🏆 Classement (Top 10)',
+                'section-matches': '⚔️ Matchs En Cours',
+                'section-ml': '🧠 Insights Machine Learning',
+                'ml-cycles': '📈 Cycles d\'apprentissage',
+                'ml-strategy': '🎯 Stratégie optimale',
+                'ml-mmr': '⚡ MMR Moyen',
+                'no-matches': 'Aucun match en cours',
+                'update-time': 'Dernière mise à jour'
+            },
+            en: {
+                'subtitle': 'Matchmaking Dashboard - Continuous AI Improvement',
+                'theme-night': 'Night Mode',
+                'theme-day': 'Day Mode',
+                'stat-online': '🎮 Players Online',
+                'stat-searching': '🔍 Searching',
+                'stat-active': '⚔️ Active Matches',
+                'stat-total': '📊 Total Matches',
+                'section-ranking': '🏆 Ranking (Top 10)',
+                'section-matches': '⚔️ Active Matches',
+                'section-ml': '🧠 Machine Learning Insights',
+                'ml-cycles': '📈 Learning Cycles',
+                'ml-strategy': '🎯 Optimal Strategy',
+                'ml-mmr': '⚡ Average MMR',
+                'no-matches': 'No matches in progress',
+                'update-time': 'Last updated'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('language', currentLang);
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function loadLanguage() {
+            currentLang = localStorage.getItem('language') || 'fr';
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+
+            const themeText = document.getElementById('theme-text');
+            const savedTheme = document.body.getAttribute('data-theme');
+            if (savedTheme === 'dark') {
+                themeText.textContent = translations[currentLang]['theme-day'];
+            } else {
+                themeText.textContent = translations[currentLang]['theme-night'];
+            }
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+
+            if (newTheme === 'dark') {
+                icon.textContent = '☀️';
+                text.textContent = translations[currentLang]['theme-day'];
+            } else {
+                icon.textContent = '🌙';
+                text.textContent = translations[currentLang]['theme-night'];
+            }
+        }
+
+        // Charger le thème et la langue au démarrage - MODE NUIT PAR DÉFAUT
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+
+            if (savedTheme === 'dark') {
+                document.getElementById('theme-icon').textContent = '☀️';
+            } else {
+                document.getElementById('theme-icon').textContent = '🌙';
+            }
+
+            loadLanguage();
+            loadData();
+            setInterval(loadData, 5000);
+        });
+
         // Fonction pour charger les données
         async function loadData() {
             try {
@@ -344,8 +517,7 @@
 
             // Heure de mise à jour
             const now = new Date();
-            document.getElementById('updateTime').textContent =
-                `Dernière mise à jour : ${now.toLocaleTimeString()}`;
+            document.getElementById('updateTimeValue').textContent = now.toLocaleTimeString();
         }
 
         function updateLeaderboard(matchmaking) {
@@ -395,10 +567,6 @@
                 `;
             }).join('');
         }
-
-        // Charger les données toutes les 5 secondes
-        loadData();
-        setInterval(loadData, 5000);
     </script>
 </body>
 </html>

@@ -15,8 +15,8 @@ super.targetdefencemul = .7
 
 [Config]
 gamespeed = 60
-GameWidth = 640   ; anchura
-GameHeight = 480  ;altura
+gamewidth = 640   ; anchura
+gameheight = 480  ;altura
 language = "zh"
 drawshadows = 1
 afterimagemax = 128
@@ -48,7 +48,7 @@ width = 1280
 height = 720
 depth = 32
 vretrace = 0
-FullScreen = 0
+fullscreen = 1
 blitmode = PageFlip
 rendermode = opengl
 
@@ -177,9 +177,3 @@ x = 0
 y = 2
 z = 4
 start = 7
-
-
-[Sound]
-MasterWavVolume = 0
-MasterMIDIVolume = 0
-MP3Volume = 0

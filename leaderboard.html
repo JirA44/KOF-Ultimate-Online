@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOF Ultimate - Leaderboard</title>
+    <style>
+        :root {
+            --bg-gradient-start: #667eea;
+            --bg-gradient-end: #764ba2;
+            --container-bg: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --accent-1: #667eea;
+            --accent-2: #764ba2;
+            --border-color: #eee;
+            --hover-bg: #f5f5f5;
+        }
+
+        [data-theme="dark"] {
+            --bg-gradient-start: #0a0a0a;
+            --bg-gradient-end: #1a1a2e;
+            --container-bg: rgba(0, 0, 0, 0.7);
+            --text-primary: #ffffff;
+            --text-secondary: #00ffff;
+            --accent-1: #00ff88;
+            --accent-2: #00ffff;
+            --border-color: rgba(0, 255, 136, 0.3);
+            --hover-bg: rgba(0, 255, 136, 0.05);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 2px solid var(--border-color);
+        }
+        .controls {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-control:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent-1);
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px var(--accent-1);
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        tr:hover {
+            background: var(--hover-bg);
+        }
+        .rank {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--accent-1);
+        }
+        .tier {
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .tier-grandmaster { background: linear-gradient(135deg, #ffd700, #ffed4e); color: #333; }
+        .tier-master { background: linear-gradient(135deg, #e0e0e0, #ffffff); color: #333; }
+        .tier-diamond { background: linear-gradient(135deg, #b9f2ff, #87ceeb); color: #333; }
+        .tier-platinum { background: linear-gradient(135deg, #c0c0c0, #e8e8e8); color: #333; }
+        .tier-gold { background: linear-gradient(135deg, #ffd700, #ffed4e); color: #333; }
+        .tier-silver { background: linear-gradient(135deg, #c0c0c0, #e8e8e8); color: #333; }
+        .tier-bronze { background: linear-gradient(135deg, #cd7f32, #b87333); color: white; }
+        .top3 {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        .stats {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <button class="btn-control" onclick="toggleLanguage()">
+                <span id="lang-icon">🌐</span>
+                <span id="lang-text">FR</span>
+            </button>
+            <button class="btn-control" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span>
+                <span id="theme-text" data-i18n="theme-night">Mode Nuit</span>
+            </button>
+        </div>
+
+        <h1>🏆 LEADERBOARD</h1>
+        <p class="subtitle" data-i18n="subtitle">KOF Ultimate Online - Classement MMR</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th data-i18n="th-player">Joueur</th>
+                    <th>MMR</th>
+                    <th data-i18n="th-tier">Tier</th>
+                    <th data-i18n="th-wins">Victoires</th>
+                    <th data-i18n="th-losses">Défaites</th>
+                    <th data-i18n="th-ratio">Ratio</th>
+                    <th data-i18n="th-streak">Streak</th>
+                    <th data-i18n="th-total">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="rank top3">1</td>
+                    <td>CrystalBlade</td>
+                    <td><strong>1223</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>88.9%</td>
+                    <td>🔥 6</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td class="rank top3">2</td>
+                    <td>BlazeFury</td>
+                    <td><strong>1218</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>85.7%</td>
+                    <td>🔥 5</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td class="rank top3">3</td>
+                    <td>WildFang</td>
+                    <td><strong>1211</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>80.0%</td>
+                    <td>🔥 7</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">4</td>
+                    <td>FrostBite</td>
+                    <td><strong>1188</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>80.0%</td>
+                    <td>🔥 1</td>
+                    <td>5</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">5</td>
+                    <td>RagingBull</td>
+                    <td><strong>1160</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>85.7%</td>
+                    <td>🔥 2</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">6</td>
+                    <td>MoonlightAssassin</td>
+                    <td><strong>1138</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>62.5%</td>
+                    <td>🔥 0</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">7</td>
+                    <td>NightHawk</td>
+                    <td><strong>1098</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>75.0%</td>
+                    <td>🔥 2</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">8</td>
+                    <td>DragonFist</td>
+                    <td><strong>1089</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>25.0%</td>
+                    <td>🔥 0</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">9</td>
+                    <td>ThunderGod</td>
+                    <td><strong>1086</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>25.0%</td>
+                    <td>🔥 1</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">10</td>
+                    <td>IronFist</td>
+                    <td><strong>1053</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>62.5%</td>
+                    <td>🔥 0</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">11</td>
+                    <td>ShadowKing</td>
+                    <td><strong>1038</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>33.3%</td>
+                    <td>🔥 0</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">12</td>
+                    <td>StormBreaker</td>
+                    <td><strong>1021</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>66.7%</td>
+                    <td>🔥 1</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">13</td>
+                    <td>SilverArrow</td>
+                    <td><strong>998</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>54.5%</td>
+                    <td>🔥 3</td>
+                    <td>11</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">14</td>
+                    <td>TigerClaw</td>
+                    <td><strong>992</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>57.1%</td>
+                    <td>🔥 2</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">15</td>
+                    <td>DarkViper</td>
+                    <td><strong>975</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>46.2%</td>
+                    <td>🔥 0</td>
+                    <td>13</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">16</td>
+                    <td>IceQueen</td>
+                    <td><strong>959</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>37.5%</td>
+                    <td>🔥 1</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">17</td>
+                    <td>SolarFlare</td>
+                    <td><strong>950</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>28.6%</td>
+                    <td>🔥 0</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">18</td>
+                    <td>GoldenWarrior</td>
+                    <td><strong>933</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>30.0%</td>
+                    <td>🔥 0</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">19</td>
+                    <td>EmeraldKnight</td>
+                    <td><strong>900</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>25.0%</td>
+                    <td>🔥 0</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">20</td>
+                    <td>CrimsonWave</td>
+                    <td><strong>888</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>45.5%</td>
+                    <td>🔥 1</td>
+                    <td>11</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">21</td>
+                    <td>PhoenixRising</td>
+                    <td><strong>886</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>33.3%</td>
+                    <td>🔥 1</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">22</td>
+                    <td>SwiftEagle</td>
+                    <td><strong>867</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>42.9%</td>
+                    <td>🔥 0</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">23</td>
+                    <td>LightningStrike</td>
+                    <td><strong>837</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>50.0%</td>
+                    <td>🔥 1</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">24</td>
+                    <td>MysticSage</td>
+                    <td><strong>826</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>16.7%</td>
+                    <td>🔥 0</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td class="rank ">25</td>
+                    <td>DiamondShield</td>
+                    <td><strong>755</strong></td>
+                    <td><span class="tier tier-bronze">🥉 Bronze</span></td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>16.7%</td>
+                    <td>🔥 0</td>
+                    <td>12</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div class="stats">
+            <p><span data-i18n="stats-update">Dernière mise à jour</span>: 2025-10-23 09:42:04</p>
+            <p><span data-i18n="stats-total">Total joueurs classés</span>: 25</p>
+        </div>
+    </div>
+
+    <script>
+        // Système de traduction
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        const translations = {
+            fr: {
+                'subtitle': 'KOF Ultimate Online - Classement MMR',
+                'theme-night': 'Mode Nuit',
+                'theme-day': 'Mode Jour',
+                'th-player': 'Joueur',
+                'th-tier': 'Tier',
+                'th-wins': 'Victoires',
+                'th-losses': 'Défaites',
+                'th-ratio': 'Ratio',
+                'th-streak': 'Streak',
+                'th-total': 'Total',
+                'stats-update': 'Dernière mise à jour',
+                'stats-total': 'Total joueurs classés'
+            },
+            en: {
+                'subtitle': 'KOF Ultimate Online - MMR Ranking',
+                'theme-night': 'Night Mode',
+                'theme-day': 'Day Mode',
+                'th-player': 'Player',
+                'th-tier': 'Tier',
+                'th-wins': 'Wins',
+                'th-losses': 'Losses',
+                'th-ratio': 'Ratio',
+                'th-streak': 'Streak',
+                'th-total': 'Total',
+                'stats-update': 'Last updated',
+                'stats-total': 'Total ranked players'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('language', currentLang);
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function loadLanguage() {
+            currentLang = localStorage.getItem('language') || 'fr';
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+
+            const themeText = document.getElementById('theme-text');
+            const savedTheme = document.body.getAttribute('data-theme');
+            if (savedTheme === 'dark') {
+                themeText.textContent = translations[currentLang]['theme-day'];
+            } else {
+                themeText.textContent = translations[currentLang]['theme-night'];
+            }
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+
+            if (newTheme === 'dark') {
+                icon.textContent = '☀️';
+                text.textContent = translations[currentLang]['theme-day'];
+            } else {
+                icon.textContent = '🌙';
+                text.textContent = translations[currentLang]['theme-night'];
+            }
+        }
+
+        // Charger le thème et la langue au démarrage - MODE NUIT PAR DÉFAUT
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+
+            if (savedTheme === 'dark') {
+                document.getElementById('theme-icon').textContent = '☀️';
+            } else {
+                document.getElementById('theme-icon').textContent = '🌙';
+            }
+
+            loadLanguage();
+        });
+    </script>
+</body>
+</html>

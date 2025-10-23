@@ -90,6 +90,30 @@
             transform: scale(1.05);
         }
 
+        .controls-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .lang-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -389,12 +413,18 @@
         <div class="header-content">
             <div>
                 <h1>🎮 KOF Ultimate Online</h1>
-                <p>Dashboard Central - Tous vos rapports et statistiques</p>
+                <p data-i18n="header-subtitle">Dashboard Central - Tous vos rapports et statistiques</p>
             </div>
-            <button class="theme-toggle" onclick="toggleTheme()">
-                <span id="theme-icon">🌙</span>
-                <span id="theme-text">Mode Nuit</span>
-            </button>
+            <div class="controls-group">
+                <button class="lang-toggle" onclick="toggleLanguage()">
+                    <span id="lang-icon">🌐</span>
+                    <span id="lang-text">FR</span>
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span id="theme-icon">🌙</span>
+                    <span id="theme-text" data-i18n="theme-night">Mode Nuit</span>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -403,48 +433,48 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <h3>✅ 100%</h3>
-                <p>Erreurs Corrigées</p>
+                <p data-i18n="stat-errors">Erreurs Corrigées</p>
             </div>
             <div class="stat-card">
                 <h3>⭐ 5/5</h3>
-                <p>Matchmaking</p>
+                <p data-i18n="stat-matchmaking">Matchmaking</p>
             </div>
             <div class="stat-card">
                 <h3>📊 57</h3>
-                <p>Matchs Testés</p>
+                <p data-i18n="stat-matches">Matchs Testés</p>
             </div>
             <div class="stat-card">
                 <h3>🎯 71</h3>
-                <p>MMR Diff Moyenne</p>
+                <p data-i18n="stat-mmr">MMR Diff Moyenne</p>
             </div>
         </div>
 
         <!-- Actions Rapides -->
         <div class="quick-actions">
             <button class="btn" onclick="window.location.href='KOF_Ultimate_Online.exe'">
-                🎮 Lancer le Jeu
+                <span data-i18n="btn-launch">🎮 Lancer le Jeu</span>
             </button>
             <button class="btn btn-secondary" onclick="window.location.href='TEST_AUTO_SIMPLE.bat'">
-                🧪 Test Auto
+                <span data-i18n="btn-auto-test">🧪 Test Auto</span>
             </button>
             <button class="btn btn-secondary" onclick="runMatchmakingTest()">
-                ⚔️ Test Matchmaking
+                <span data-i18n="btn-matchmaking-test">⚔️ Test Matchmaking</span>
             </button>
             <button class="btn btn-secondary" onclick="runErrorScan()">
-                🔍 Scanner Erreurs
+                <span data-i18n="btn-scan">🔍 Scanner Erreurs</span>
             </button>
         </div>
 
         <!-- Recherche -->
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="🔍 Rechercher un rapport, guide ou document..." oninput="filterCards()">
+            <input type="text" id="searchInput" data-i18n-placeholder="search-placeholder" placeholder="🔍 Rechercher un rapport, guide ou document..." oninput="filterCards()">
         </div>
 
         <!-- Rapports Principaux -->
         <div class="section">
             <div class="section-header">
-                <h2>📊 Rapports Principaux</h2>
-                <span class="badge">5 documents</span>
+                <h2 data-i18n="section-reports">📊 Rapports Principaux</h2>
+                <span class="badge"><span data-i18n="badge-documents">5 documents</span></span>
             </div>
             <div class="cards-grid">
                 <div class="card" onclick="openFile('RAPPORT_CORRECTIONS_FINAL_20251022.md')">
@@ -522,8 +552,8 @@
         <!-- Guides -->
         <div class="section">
             <div class="section-header">
-                <h2>📖 Guides & Documentation</h2>
-                <span class="badge">8 guides</span>
+                <h2 data-i18n="section-guides">📖 Guides & Documentation</h2>
+                <span class="badge"><span data-i18n="badge-guides">8 guides</span></span>
             </div>
             <div class="cards-grid">
                 <div class="card" onclick="openFile('COMMENT_JOUER.md')">
@@ -587,8 +617,8 @@
         <!-- Scripts de Test -->
         <div class="section">
             <div class="section-header">
-                <h2>🧪 Scripts de Test</h2>
-                <span class="badge">6 scripts</span>
+                <h2 data-i18n="section-scripts">🧪 Scripts de Test</h2>
+                <span class="badge"><span data-i18n="badge-scripts">6 scripts</span></span>
             </div>
             <div class="cards-grid">
                 <div class="card" onclick="showScriptInfo('TEST_AUTO_SIMPLE.bat')">
@@ -668,6 +698,92 @@
     </div>
 
     <script>
+        // Système de traduction
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        const translations = {
+            fr: {
+                'header-subtitle': 'Dashboard Central - Tous vos rapports et statistiques',
+                'theme-night': 'Mode Nuit',
+                'theme-day': 'Mode Jour',
+                'stat-errors': 'Erreurs Corrigées',
+                'stat-matchmaking': 'Matchmaking',
+                'stat-matches': 'Matchs Testés',
+                'stat-mmr': 'MMR Diff Moyenne',
+                'btn-launch': '🎮 Lancer le Jeu',
+                'btn-auto-test': '🧪 Test Auto',
+                'btn-matchmaking-test': '⚔️ Test Matchmaking',
+                'btn-scan': '🔍 Scanner Erreurs',
+                'search-placeholder': '🔍 Rechercher un rapport, guide ou document...',
+                'section-reports': '📊 Rapports Principaux',
+                'badge-documents': '5 documents',
+                'section-guides': '📖 Guides & Documentation',
+                'badge-guides': '8 guides',
+                'section-scripts': '🧪 Scripts de Test',
+                'badge-scripts': '6 scripts'
+            },
+            en: {
+                'header-subtitle': 'Central Dashboard - All your reports and statistics',
+                'theme-night': 'Night Mode',
+                'theme-day': 'Day Mode',
+                'stat-errors': 'Fixed Errors',
+                'stat-matchmaking': 'Matchmaking',
+                'stat-matches': 'Tested Matches',
+                'stat-mmr': 'Avg MMR Diff',
+                'btn-launch': '🎮 Launch Game',
+                'btn-auto-test': '🧪 Auto Test',
+                'btn-matchmaking-test': '⚔️ Matchmaking Test',
+                'btn-scan': '🔍 Scan Errors',
+                'search-placeholder': '🔍 Search for a report, guide or document...',
+                'section-reports': '📊 Main Reports',
+                'badge-documents': '5 documents',
+                'section-guides': '📖 Guides & Documentation',
+                'badge-guides': '8 guides',
+                'section-scripts': '🧪 Test Scripts',
+                'badge-scripts': '6 scripts'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('language', currentLang);
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function loadLanguage() {
+            currentLang = localStorage.getItem('language') || 'fr';
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function updateLanguage() {
+            // Mettre à jour tous les éléments avec data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+
+            // Mettre à jour les placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[currentLang][key]) {
+                    element.placeholder = translations[currentLang][key];
+                }
+            });
+
+            // Mettre à jour le texte du thème
+            const themeText = document.getElementById('theme-text');
+            const savedTheme = document.body.getAttribute('data-theme');
+            if (savedTheme === 'dark') {
+                themeText.textContent = translations[currentLang]['theme-day'];
+            } else {
+                themeText.textContent = translations[currentLang]['theme-night'];
+            }
+        }
+
         // Gestion du thème
         function toggleTheme() {
             const body = document.body;
@@ -682,22 +798,26 @@
 
             if (newTheme === 'dark') {
                 icon.textContent = '☀️';
-                text.textContent = 'Mode Jour';
+                text.textContent = translations[currentLang]['theme-day'];
             } else {
                 icon.textContent = '🌙';
-                text.textContent = 'Mode Nuit';
+                text.textContent = translations[currentLang]['theme-night'];
             }
         }
 
-        // Charger le thème sauvegardé
+        // Charger le thème et la langue au démarrage - MODE NUIT PAR DÉFAUT
         window.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             document.body.setAttribute('data-theme', savedTheme);
 
             if (savedTheme === 'dark') {
                 document.getElementById('theme-icon').textContent = '☀️';
-                document.getElementById('theme-text').textContent = 'Mode Jour';
+            } else {
+                document.getElementById('theme-icon').textContent = '🌙';
             }
+
+            // Charger la langue sauvegardée
+            loadLanguage();
         });
 
         // Ouvrir un fichier

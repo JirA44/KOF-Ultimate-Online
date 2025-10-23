@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOF Ultimate Online - Rapports Journaliers</title>
     <style>
+        :root {
+            --bg-gradient-start: #667eea;
+            --bg-gradient-end: #764ba2;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --accent-1: #667eea;
+            --accent-2: #764ba2;
+            --border-color: rgba(0, 0, 0, 0.1);
+            --stat-text: #333333;
+        }
+
+        [data-theme="dark"] {
+            --bg-gradient-start: #0a0a0a;
+            --bg-gradient-end: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #00ffff;
+            --bg-card: rgba(0, 0, 0, 0.7);
+            --accent-1: #00ff88;
+            --accent-2: #00ffff;
+            --border-color: rgba(0, 255, 136, 0.3);
+            --stat-text: #00ffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,9 +37,10 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
             min-height: 100vh;
             padding: 20px;
+            transition: all 0.3s ease;
         }
 
         .container {
@@ -23,22 +48,50 @@
             margin: 0 auto;
         }
 
+        .controls {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-control:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
         header {
             text-align: center;
-            color: white;
+            color: var(--text-primary);
             margin-bottom: 40px;
             animation: fadeIn 0.8s;
         }
 
         header h1 {
             font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 0 20px var(--accent-1);
             margin-bottom: 10px;
+            color: var(--accent-1);
         }
 
         header p {
             font-size: 1.2em;
             opacity: 0.9;
+            color: var(--text-secondary);
         }
 
         .stats {
@@ -49,59 +102,71 @@
         }
 
         .stat-card {
-            background: white;
+            background: var(--bg-card);
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: center;
             animation: slideUp 0.5s;
+            border: 1px solid var(--border-color);
         }
 
         .stat-card h3 {
-            color: #667eea;
+            color: var(--accent-1);
             font-size: 2.5em;
             margin-bottom: 10px;
+            text-shadow: 0 0 10px var(--accent-1);
         }
 
         .stat-card p {
-            color: #666;
+            color: var(--stat-text);
             font-size: 0.9em;
+            opacity: 0.8;
         }
 
         .search-box {
-            background: white;
+            background: var(--bg-card);
             padding: 15px;
             border-radius: 15px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
         }
 
         .search-box input {
             width: 100%;
             padding: 15px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid var(--border-color);
             border-radius: 10px;
             font-size: 1.1em;
             transition: all 0.3s;
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+
+        .search-box input::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.7;
         }
 
         .search-box input:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+            border-color: var(--accent-1);
+            box-shadow: 0 0 10px var(--accent-1);
         }
 
         .day-section {
-            background: white;
+            background: var(--bg-card);
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             animation: fadeIn 0.6s;
+            border: 1px solid var(--border-color);
         }
 
         .day-header {
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid var(--accent-1);
             padding-bottom: 15px;
             margin-bottom: 20px;
             display: flex;
@@ -110,16 +175,18 @@
         }
 
         .day-header h2 {
-            color: #667eea;
+            color: var(--accent-1);
             font-size: 1.8em;
+            text-shadow: 0 0 10px var(--accent-1);
         }
 
         .day-header .count {
-            background: #667eea;
-            color: white;
+            background: var(--bg-card);
+            color: var(--accent-1);
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.9em;
+            border: 1px solid var(--accent-1);
         }
 
         .report-grid {
@@ -129,19 +196,21 @@
         }
 
         .report-card {
-            border: 2px solid #e0e0e0;
+            border: 2px solid rgba(0, 255, 136, 0.3);
             border-radius: 10px;
             padding: 15px;
             transition: all 0.3s;
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            background: rgba(0, 0, 0, 0.5);
         }
 
         .report-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.5);
+            border-color: #00ff88;
+            background: rgba(0, 255, 136, 0.05);
         }
 
         .report-card::before {
@@ -151,21 +220,22 @@
             left: 0;
             width: 4px;
             height: 100%;
-            background: linear-gradient(180deg, #667eea, #764ba2);
+            background: linear-gradient(180deg, #00ff88, #00ffff);
         }
 
         .report-card h3 {
-            color: #333;
+            color: #ffffff;
             margin-bottom: 8px;
             padding-left: 10px;
             font-size: 1.1em;
         }
 
         .report-card .meta {
-            color: #888;
+            color: #00ffff;
             font-size: 0.85em;
             padding-left: 10px;
             margin-bottom: 10px;
+            opacity: 0.7;
         }
 
         .report-card .tags {
@@ -176,18 +246,19 @@
         }
 
         .tag {
-            background: #f0f0f0;
+            background: rgba(255, 255, 255, 0.1);
             padding: 4px 10px;
             border-radius: 15px;
             font-size: 0.75em;
-            color: #666;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .tag.rapport { background: #ffebee; color: #c62828; }
-        .tag.guide { background: #e3f2fd; color: #1565c0; }
-        .tag.readme { background: #f3e5f5; color: #6a1b9a; }
-        .tag.corrections { background: #fff3e0; color: #e65100; }
-        .tag.system { background: #e8f5e9; color: #2e7d32; }
+        .tag.rapport { background: rgba(244, 67, 54, 0.2); color: #ef5350; border-color: #ef5350; }
+        .tag.guide { background: rgba(33, 150, 243, 0.2); color: #42a5f5; border-color: #42a5f5; }
+        .tag.readme { background: rgba(156, 39, 176, 0.2); color: #ab47bc; border-color: #ab47bc; }
+        .tag.corrections { background: rgba(255, 152, 0, 0.2); color: #ffa726; border-color: #ffa726; }
+        .tag.system { background: rgba(76, 175, 80, 0.2); color: #66bb6a; border-color: #66bb6a; }
 
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -213,9 +284,9 @@
         }
 
         .filter-btn {
-            background: white;
-            border: 2px solid #667eea;
-            color: #667eea;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff88;
+            color: #00ff88;
             padding: 10px 20px;
             border-radius: 20px;
             cursor: pointer;
@@ -225,43 +296,55 @@
 
         .filter-btn:hover,
         .filter-btn.active {
-            background: #667eea;
-            color: white;
+            background: #00ff88;
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="controls">
+            <button class="btn-control" onclick="toggleLanguage()">
+                <span id="lang-icon">🌐</span>
+                <span id="lang-text">FR</span>
+            </button>
+            <button class="btn-control" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span>
+                <span id="theme-text" data-i18n="theme-night">Mode Nuit</span>
+            </button>
+        </div>
+
         <header>
             <h1>📊 KOF Ultimate Online</h1>
-            <p>Rapports et Documentation Journaliers</p>
+            <p data-i18n="subtitle">Rapports et Documentation Journaliers</p>
         </header>
 
         <div class="stats">
             <div class="stat-card">
                 <h3 id="totalReports">40</h3>
-                <p>Documents Totaux</p>
+                <p data-i18n="stat-documents">Documents Totaux</p>
             </div>
             <div class="stat-card">
                 <h3 id="totalDays">3</h3>
-                <p>Jours Couverts</p>
+                <p data-i18n="stat-days">Jours Couverts</p>
             </div>
             <div class="stat-card">
                 <h3 id="lastUpdate">17/10/2025</h3>
-                <p>Dernière Mise à Jour</p>
+                <p data-i18n="stat-update">Dernière Mise à Jour</p>
             </div>
         </div>
 
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="🔍 Rechercher un rapport, guide ou document...">
+            <input type="text" id="searchInput" data-i18n-placeholder="search-placeholder" placeholder="🔍 Rechercher un rapport, guide ou document...">
         </div>
 
         <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">Tous</button>
-            <button class="filter-btn" data-filter="rapport">Rapports</button>
-            <button class="filter-btn" data-filter="guide">Guides</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tous</button>
+            <button class="filter-btn" data-filter="rapport" data-i18n="filter-reports">Rapports</button>
+            <button class="filter-btn" data-filter="guide" data-i18n="filter-guides">Guides</button>
             <button class="filter-btn" data-filter="readme">READMEs</button>
-            <button class="filter-btn" data-filter="corrections">Corrections</button>
+            <button class="filter-btn" data-filter="corrections" data-i18n="filter-corrections">Corrections</button>
         </div>
 
         <div id="reportsContainer">
@@ -653,6 +736,109 @@
     </div>
 
     <script>
+        // Système de traduction
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        const translations = {
+            fr: {
+                'subtitle': 'Rapports et Documentation Journaliers',
+                'theme-night': 'Mode Nuit',
+                'theme-day': 'Mode Jour',
+                'stat-documents': 'Documents Totaux',
+                'stat-days': 'Jours Couverts',
+                'stat-update': 'Dernière Mise à Jour',
+                'search-placeholder': '🔍 Rechercher un rapport, guide ou document...',
+                'filter-all': 'Tous',
+                'filter-reports': 'Rapports',
+                'filter-guides': 'Guides',
+                'filter-corrections': 'Corrections'
+            },
+            en: {
+                'subtitle': 'Daily Reports and Documentation',
+                'theme-night': 'Night Mode',
+                'theme-day': 'Day Mode',
+                'stat-documents': 'Total Documents',
+                'stat-days': 'Days Covered',
+                'stat-update': 'Last Updated',
+                'search-placeholder': '🔍 Search for a report, guide or document...',
+                'filter-all': 'All',
+                'filter-reports': 'Reports',
+                'filter-guides': 'Guides',
+                'filter-corrections': 'Fixes'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('language', currentLang);
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function loadLanguage() {
+            currentLang = localStorage.getItem('language') || 'fr';
+            updateLanguage();
+            document.getElementById('lang-text').textContent = currentLang.toUpperCase();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[currentLang][key]) {
+                    element.placeholder = translations[currentLang][key];
+                }
+            });
+
+            const themeText = document.getElementById('theme-text');
+            const savedTheme = document.body.getAttribute('data-theme');
+            if (savedTheme === 'dark') {
+                themeText.textContent = translations[currentLang]['theme-day'];
+            } else {
+                themeText.textContent = translations[currentLang]['theme-night'];
+            }
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+
+            if (newTheme === 'dark') {
+                icon.textContent = '☀️';
+                text.textContent = translations[currentLang]['theme-day'];
+            } else {
+                icon.textContent = '🌙';
+                text.textContent = translations[currentLang]['theme-night'];
+            }
+        }
+
+        // Charger le thème et la langue au démarrage - MODE NUIT PAR DÉFAUT
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+
+            if (savedTheme === 'dark') {
+                document.getElementById('theme-icon').textContent = '☀️';
+            } else {
+                document.getElementById('theme-icon').textContent = '🌙';
+            }
+
+            loadLanguage();
+        });
+
         // Recherche en temps réel
         const searchInput = document.getElementById('searchInput');
         const reportCards = document.querySelectorAll('.report-card');
