@@ -1,0 +1,17 @@
+{
+  "date": "2025-10-23T11:19:01.249757",
+  "verdict": "ERRORS",
+  "errors": [
+    "pywin32 manquant - Nécessaire pour: Tests automatiques (injection inputs)",
+    "Ikemen_GO.exe manquant - Moteur de jeu alternatif",
+    "2 personnages listés mais fichiers manquants!"
+  ],
+  "warnings": [
+    "MaxPlayerCache non trouvé - Cache personnages",
+    "1 types d'erreurs dans le log"
+  ],
+  "infos": [
+    "   Installation: pip install pywin32",
+    "Utilisez CORRIGER_CRASH.bat pour nettoyer"
+  ]
+}
