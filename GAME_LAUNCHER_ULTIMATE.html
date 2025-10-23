@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOF Ultimate Online - Launcher</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            overflow-y: auto;
+            min-height: 100vh;
+        }
+
+        /* Fond vidéo/image animé */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #000000 0%, #1a0033 50%, #330066 100%);
+            animation: bgShift 10s ease infinite;
+        }
+
+        @keyframes bgShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255, 0, 100, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+        }
+
+        /* Grille cyber */
+        .cyber-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: perspective(500px) rotateX(60deg) translateY(0);
+            }
+            100% {
+                transform: perspective(500px) rotateX(60deg) translateY(50px);
+            }
+        }
+
+        /* Particules flottantes */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(0, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Container principal */
+        .main-container {
+            position: relative;
+            z-index: 10;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header ultra stylisé */
+        .header {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%);
+            padding: 30px;
+            text-align: center;
+            border-bottom: 3px solid rgba(0, 255, 255, 0.5);
+            box-shadow: 0 10px 50px rgba(0, 255, 255, 0.3);
+        }
+
+        .logo-title {
+            font-size: 72px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff0080 0%, #00ffff 50%, #ff0080 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shineTitle 3s linear infinite;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            text-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+            margin-bottom: 10px;
+        }
+
+        @keyframes shineTitle {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-top: 10px;
+        }
+
+        /* Corps principal */
+        .main-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 300px 1fr 300px;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        /* Panneau gauche - Stats */
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: rgba(0, 255, 255, 0.8);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.5);
+            transform: translateX(5px);
+        }
+
+        .stat-title {
+            font-size: 14px;
+            color: #00ffff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff0080 0%, #00ffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Centre - Actions principales */
+        .center-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .action-button {
+            background: linear-gradient(135deg, rgba(255, 0, 128, 0.2) 0%, rgba(0, 255, 255, 0.2) 100%);
+            border: 3px solid rgba(0, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        .action-button:hover {
+            transform: scale(1.05) translateY(-5px);
+            border-color: rgba(0, 255, 255, 1);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.4);
+            background: linear-gradient(135deg, rgba(255, 0, 128, 0.3) 0%, rgba(0, 255, 255, 0.3) 100%);
+        }
+
+        .action-icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8));
+        }
+
+        .action-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .action-desc {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Bouton principal géant */
+        .main-play-button {
+            width: 400px;
+            height: 120px;
+            background: linear-gradient(135deg, #ff0080 0%, #ff4444 100%);
+            border: none;
+            border-radius: 60px;
+            font-size: 36px;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 20px 60px rgba(255, 0, 128, 0.6);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 5px;
+        }
+
+        .main-play-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: buttonShine 2s infinite;
+        }
+
+        @keyframes buttonShine {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .main-play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 25px 80px rgba(255, 0, 128, 0.8);
+        }
+
+        .main-play-button:active {
+            transform: scale(1.05);
+        }
+
+        /* Panneau droit - News */
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .news-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(255, 0, 128, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(255, 0, 128, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            border-color: rgba(255, 0, 128, 0.8);
+            box-shadow: 0 10px 40px rgba(255, 0, 128, 0.5);
+            transform: translateX(-5px);
+        }
+
+        .news-title {
+            font-size: 14px;
+            color: #ff0080;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .news-content {
+            font-size: 13px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            text-align: center;
+            border-top: 2px solid rgba(0, 255, 255, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .version {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .social-link:hover {
+            background: rgba(0, 255, 255, 0.3);
+            border-color: rgba(0, 255, 255, 1);
+            transform: translateY(-3px);
+        }
+
+        /* Modal de chargement */
+        .loading-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .loading-modal.active {
+            display: flex;
+        }
+
+        .loading-spinner {
+            width: 100px;
+            height: 100px;
+            border: 5px solid rgba(0, 255, 255, 0.2);
+            border-top-color: #00ffff;
+            border-bottom-color: #ff0080;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .left-panel, .right-panel {
+                flex-direction: row;
+            }
+
+            .action-grid {
+                max-width: 1000px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-play-button {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fond -->
+    <div class="bg-container">
+        <div class="bg-overlay"></div>
+        <div class="cyber-grid"></div>
+    </div>
+
+    <!-- Particules -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Container principal -->
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-title">⚔️ KOF ULTIMATE ⚔️</div>
+            <div class="subtitle">The King of Fighters - Ultimate Edition</div>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="main-content">
+            <!-- Panneau gauche -->
+            <div class="left-panel">
+                <div class="stat-card">
+                    <div class="stat-title">🏆 Votre Niveau</div>
+                    <div class="stat-value">25</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">⚡ Total Combats</div>
+                    <div class="stat-value">245</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">👑 Rang Global</div>
+                    <div class="stat-value">#1,337</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">🔥 Série en cours</div>
+                    <div class="stat-value">7W</div>
+                </div>
+            </div>
+
+            <!-- Centre -->
+            <div class="center-panel">
+                <button class="main-play-button" onclick="launchGame()">
+                    ▶️ JOUER
+                </button>
+
+                <div class="action-grid">
+                    <div class="action-button" onclick="openMultiplayer()">
+                        <div class="action-icon">🌐</div>
+                        <div class="action-title">Multijoueur</div>
+                        <div class="action-desc">Affrontez des joueurs du monde entier</div>
+                    </div>
+
+                    <div class="action-button" onclick="openTraining()">
+                        <div class="action-icon">🎯</div>
+                        <div class="action-title">Entraînement</div>
+                        <div class="action-desc">Perfectionnez vos combos</div>
+                    </div>
+
+                    <div class="action-button" onclick="openStory()">
+                        <div class="action-icon">📖</div>
+                        <div class="action-title">Histoire</div>
+                        <div class="action-desc">Campagne solo épique</div>
+                    </div>
+
+                    <div class="action-button" onclick="openSettings()">
+                        <div class="action-icon">⚙️</div>
+                        <div class="action-title">Paramètres</div>
+                        <div class="action-desc">Configuration du jeu</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panneau droit -->
+            <div class="right-panel">
+                <div class="news-card">
+                    <div class="news-title">🔥 Nouveauté</div>
+                    <div class="news-content">
+                        Nouveau personnage disponible : "Shadow Master" ! Débloquez-le en complétant le défi hebdomadaire.
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-title">⚔️ Tournoi</div>
+                    <div class="news-content">
+                        Le Grand Tournoi commence ce weekend ! Inscription ouverte. Prix : 10,000 crédits !
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-title">🎮 Patch Notes</div>
+                    <div class="news-content">
+                        v2.5.0 : Équilibrage des personnages, nouveaux stages, corrections de bugs.
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-title">🌟 Événement</div>
+                    <div class="news-content">
+                        Double XP ce weekend ! Profitez-en pour progresser rapidement dans les rangs.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="version">KOF Ultimate Online v2.5.0 | Build 20251023</div>
+            <div class="social-links">
+                <div class="social-link" title="Discord">💬</div>
+                <div class="social-link" title="Twitter">🐦</div>
+                <div class="social-link" title="YouTube">📺</div>
+                <div class="social-link" title="Twitch">🎥</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de chargement -->
+    <div class="loading-modal" id="loading-modal">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Chargement en cours...</div>
+    </div>
+
+    <script>
+        // Génération des particules
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+
+                // Couleurs variées
+                const colors = [
+                    'rgba(0, 255, 255, 0.8)',
+                    'rgba(255, 0, 128, 0.8)',
+                    'rgba(255, 255, 0, 0.8)',
+                    'rgba(0, 255, 0, 0.8)'
+                ];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.boxShadow = `0 0 10px ${particle.style.background}`;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Lancer le jeu
+        function launchGame() {
+            const modal = document.getElementById('loading-modal');
+            modal.classList.add('active');
+
+            setTimeout(() => {
+                alert('Lancement du jeu KOF Ultimate Online...\n\nBonne chance ! 🎮');
+                modal.classList.remove('active');
+                // Ici on pourrait lancer le jeu via Python
+                window.location.href = 'command://launch_game';
+            }, 2000);
+        }
+
+        // Ouvrir multijoueur
+        function openMultiplayer() {
+            window.location.href = 'MULTIPLAYER_BATTLENET.html';
+        }
+
+        // Ouvrir entraînement
+        function openTraining() {
+            alert('Mode Entraînement\n\nPerfectionnez vos compétences dans le dojo ! 🥋');
+            // window.location.href = 'command://launch_training';
+        }
+
+        // Ouvrir mode histoire
+        function openStory() {
+            alert('Mode Histoire\n\nVivez l\'épopée des combattants KOF ! 📖');
+            // window.location.href = 'command://launch_story';
+        }
+
+        // Ouvrir paramètres
+        function openSettings() {
+            alert('Paramètres\n\nConfiguration des contrôles, graphismes, audio... ⚙️');
+            // window.location.href = 'command://open_settings';
+        }
+
+        // Initialisation
+        createParticles();
+
+        // Animations au survol des stats
+        const statCards = document.querySelectorAll('.stat-card');
+        statCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) translateX(5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) translateX(0)';
+            });
+        });
+
+        // Effets sonores (optionnel - nécessite des fichiers audio)
+        function playSound(type) {
+            // const audio = new Audio(`sounds/${type}.mp3`);
+            // audio.play();
+        }
+
+        // Animations des boutons
+        const actionButtons = document.querySelectorAll('.action-button');
+        actionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                playSound('click');
+            });
+        });
+    </script>
+</body>
+</html>
