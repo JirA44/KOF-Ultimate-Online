@@ -1,0 +1,147 @@
+═══════════════════════════════════════════════════════════════
+ ⚠️  IMPORTANT - LIRE AVANT DE LANCER LE SYSTÈME ⚠️
+═══════════════════════════════════════════════════════════════
+
+🚨 PROBLÈME: Le jeu s'ouvre en plein écran en boucle
+
+CAUSE:
+- Les scripts "LAUNCH_EVERYTHING.bat" et "LAUNCH_SILENT.bat"
+  lancent le jeu automatiquement
+- Le script "auto_combat_new_maps.py" ouvre et ferme le jeu en boucle
+
+
+═══════════════════════════════════════════════════════════════
+ ✅ SOLUTION: Utiliser UNIQUEMENT ces launchers
+═══════════════════════════════════════════════════════════════
+
+🔒 MODE SÉCURISÉ (RECOMMANDÉ):
+   Fichier: SAFE_LAUNCH.bat
+
+   ✅ Lance le matchmaking virtuel
+   ✅ Lance les 20 bots IA
+   ✅ Lance le système ML
+   ✅ Ouvre le dashboard
+   ❌ NE LANCE JAMAIS LE JEU
+
+
+🛑 ARRÊT D'URGENCE:
+   Fichier: EMERGENCY_STOP.bat
+
+   Arrête TOUT immédiatement:
+   - Tous les processus Python
+   - Tous les jeux
+   - Tous les CMD
+
+
+═══════════════════════════════════════════════════════════════
+ ⚠️  NE PAS UTILISER CES FICHIERS:
+═══════════════════════════════════════════════════════════════
+
+❌ LAUNCH_EVERYTHING.bat     → Lance le jeu
+❌ LAUNCH_SILENT.bat          → Peut lancer le jeu
+❌ auto_combat_new_maps.py    → Lance le jeu en boucle
+
+
+═══════════════════════════════════════════════════════════════
+ 📊 COMMENT SURVEILLER LE SYSTÈME:
+═══════════════════════════════════════════════════════════════
+
+1. Le dashboard s'ouvre automatiquement dans le navigateur
+   → Actualisation toutes les 3 secondes
+   → Affiche tout en temps réel
+
+2. Consulter les logs:
+   type logs\matchmaking.log
+   type logs\players.log
+   type logs\ml_system.log
+
+3. Consulter les données:
+   type matchmaking_state.json
+   type ml_system_meta.json
+
+
+═══════════════════════════════════════════════════════════════
+ 🎯 USAGE RECOMMANDÉ:
+═══════════════════════════════════════════════════════════════
+
+1. Double-cliquer sur: SAFE_LAUNCH.bat
+2. Attendre 10 secondes
+3. Le dashboard s'ouvre dans le navigateur
+4. Observer les stats en temps réel
+5. Laisser tourner en arrière-plan
+
+Pour arrêter:
+- Double-cliquer sur: EMERGENCY_STOP.bat
+- OU: taskkill /IM pythonw.exe /F
+
+
+═══════════════════════════════════════════════════════════════
+ ✅ CE QUI TOURNE (MODE SÉCURISÉ):
+═══════════════════════════════════════════════════════════════
+
+🌐 Serveur de matchmaking (port 9999)
+   → Gère les connexions et le matchmaking
+
+🤖 20 Joueurs virtuels IA
+   → Se connectent et jouent entre eux
+   → Apprennent après chaque match
+
+🧠 Système ML (amélioration continue)
+   → Analyse les matchs toutes les 30 min
+   → Améliore les joueurs faibles
+   → Transfère les connaissances
+
+📊 Dashboard de monitoring
+   → Interface web élégante
+   → Stats temps réel
+   → Leaderboard
+   → Graphiques
+
+
+═══════════════════════════════════════════════════════════════
+ ❌ CE QUI NE TOURNE PAS (MODE SÉCURISÉ):
+═══════════════════════════════════════════════════════════════
+
+❌ Jeu KOF (pas de plein écran!)
+❌ Auto-combat
+❌ Processus qui ouvrent des fenêtres
+
+
+═══════════════════════════════════════════════════════════════
+ 🔧 DÉPANNAGE:
+═══════════════════════════════════════════════════════════════
+
+Le jeu continue à s'ouvrir:
+1. Lancer EMERGENCY_STOP.bat
+2. Attendre 5 secondes
+3. Relancer SAFE_LAUNCH.bat
+
+Le dashboard ne montre rien:
+1. Attendre 10-15 secondes
+2. Actualiser la page (F5)
+
+Rien ne se lance:
+1. Vérifier que Python est installé
+2. Taper: python --version
+3. Si erreur, installer Python
+
+
+═══════════════════════════════════════════════════════════════
+ 📂 FICHIERS CRÉÉS:
+═══════════════════════════════════════════════════════════════
+
+✅ SAFE_LAUNCH.bat               → À UTILISER
+✅ EMERGENCY_STOP.bat            → Pour arrêter
+✅ monitoring_dashboard.html     → Dashboard
+✅ logs/                         → Dossier des logs
+✅ matchmaking_state.json        → État du serveur
+✅ ml_system_meta.json          → Stats ML
+✅ player_profiles/              → Profils joueurs
+
+
+═══════════════════════════════════════════════════════════════
+
+Date: 2025-10-23
+Version: 1.0 - Mode Sécurisé
+
+═══════════════════════════════════════════════════════════════
