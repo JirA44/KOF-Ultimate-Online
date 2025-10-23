@@ -1,0 +1,253 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║         KOF ULTIMATE ONLINE - NOUVELLES FONCTIONNALITÉS             ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+🎯 DEMANDES UTILISATEUR RÉALISÉES
+═══════════════════════════════════════════════════════════════════════
+
+1️⃣  ✅ Système de profils avec fond animé personnalisable
+2️⃣  ✅ Tests automatiques qui N'UTILISENT PAS le clavier
+
+═══════════════════════════════════════════════════════════════════════
+
+🎨 SYSTÈME DE PROFILS
+═══════════════════════════════════════════════════════════════════════
+
+📋 FONCTIONNALITÉS:
+   • Créer plusieurs profils utilisateur
+   • Choisir un fond animé pour chaque profil
+   • Basculer entre profils facilement
+   • Sauvegarde automatique des préférences
+
+🎨 FONDS DISPONIBLES:
+
+1. KOF DM BLACK (Default)
+   → Fond par défaut du jeu
+   → Animations: 6 layers
+
+2. Flammes Bleues
+   → Fond avec flammes bleues animées
+   → Animations: 3 layers (plus léger)
+
+3. Énergie Rouge
+   → Fond avec énergie rouge
+   → Animations: 3 layers
+
+4. Minimaliste
+   → Fond simple et épuré
+   → Animations: 1 layer (performance maximale)
+
+5. Ultra Animé
+   → Maximum d'animations
+   → Animations: 8 layers (effet spectaculaire)
+
+🚀 COMMENT UTILISER:
+
+Option A - Via le launcher:
+   1. Double-cliquez sur LAUNCHER_COMPLET.bat
+   2. Choisissez "2. Gestionnaire de profils"
+   3. Sélectionnez un fond animé
+   4. Le fond sera appliqué au prochain lancement
+
+Option B - Directement:
+   1. Lancez: python PROFILE_MANAGER.py
+   2. Menu interactif avec toutes les options
+
+📝 UTILISATION DÉTAILLÉE:
+
+Menu principal:
+   1. Changer de profil → Basculer entre vos profils
+   2. Créer nouveau profil → Ajouter un profil
+   3. Changer le fond → Sélectionner parmi les 5 fonds
+   4. Lister fonds → Voir tous les fonds disponibles
+   5. Lancer le jeu → Démarrer avec le profil actif
+
+💾 FICHIERS CRÉÉS:
+   • profiles.json → Sauvegarde de vos profils
+   • data/system.def.backup_profile → Backup de l'original
+
+═══════════════════════════════════════════════════════════════════════
+
+🧪 TESTS AUTOMATIQUES SANS CLAVIER
+═══════════════════════════════════════════════════════════════════════
+
+⚠️  IMPORTANT:
+   Ces tests envoient les touches DIRECTEMENT à la fenêtre du jeu
+   via l'API Windows (PostMessage).
+
+   ✅ Votre clavier reste TOTALEMENT LIBRE
+   ✅ Vous pouvez taper pendant les tests
+   ✅ Aucune interférence avec vos touches
+
+🎮 FONCTIONNALITÉS:
+   • Lance le jeu automatiquement
+   • Navigue dans les menus
+   • Sélectionne des personnages
+   • Lance des combats
+   • Analyse les erreurs
+
+🚀 COMMENT UTILISER:
+
+Option A - Via le launcher:
+   1. Double-cliquez sur LAUNCHER_COMPLET.bat
+   2. Choisissez "3" pour 1 test
+   3. Ou "4" pour 5 tests continus
+
+Option B - Directement:
+   python TEST_AUTO_SANS_CLAVIER.py
+
+📊 MODES DISPONIBLES:
+   1. Test unique → 1 cycle complet (~30s)
+   2. Tests continus → 5 cycles (~3 minutes)
+
+🔍 CE QUE FONT LES TESTS:
+   1. Lancent KOF_Ultimate_Online.exe
+   2. Trouvent la fenêtre du jeu
+   3. Passent l'écran titre (Entrée)
+   4. Sélectionnent mode Arcade
+   5. Naviguent dans la grille de personnages
+   6. Sélectionnent 2 personnages
+   7. Observent le match 15 secondes
+   8. Quittent et ferment le jeu
+   9. Analysent mugen.log pour erreurs
+
+💡 DIFFÉRENCE AVEC LES ANCIENS TESTS:
+
+   ❌ ANCIENS (pyautogui):
+      • Utilisaient votre clavier
+      • Écrivaient n'importe quoi si vous tapiez
+      • Perturbaient votre travail
+
+   ✅ NOUVEAUX (win32api):
+      • Messages directs à la fenêtre
+      • Zéro impact sur votre clavier
+      • Vous pouvez travailler pendant les tests
+
+═══════════════════════════════════════════════════════════════════════
+
+🎮 LAUNCHER COMPLET
+═══════════════════════════════════════════════════════════════════════
+
+📋 MENU PRINCIPAL:
+
+1. Lancer le jeu normalement
+   → Démarre KOF_Ultimate_Online.exe
+
+2. Gestionnaire de profils
+   → Personnaliser fond animé
+
+3. Tests automatiques (1 test)
+   → 1 cycle de test sans clavier
+
+4. Tests automatiques (5 tests)
+   → 5 cycles continus sans clavier
+
+5. Diagnostic complet
+   → Scan de tous les personnages/stages
+
+6. Corriger les erreurs
+   → Sous-menu de corrections automatiques
+
+0. Quitter
+
+📋 SOUS-MENU CORRECTIONS:
+
+1. Corriger erreurs de configuration
+   → Répare .def, crée fichiers manquants
+
+2. Reconstruire select.def intelligent
+   → Active uniquement les personnages fonctionnels
+
+3. Scanner erreurs CLSN
+   → Détecte fichiers .air corrompus
+
+═══════════════════════════════════════════════════════════════════════
+
+🛠️  FICHIERS CRÉÉS
+═══════════════════════════════════════════════════════════════════════
+
+Système de profils:
+   ✅ PROFILE_MANAGER.py
+   ✅ profiles.json (créé automatiquement)
+
+Tests sans clavier:
+   ✅ TEST_AUTO_SANS_CLAVIER.py
+
+Launcher:
+   ✅ LAUNCHER_COMPLET.bat
+
+Outils existants (toujours disponibles):
+   • DIAGNOSTIC_PRO_COMPLET.py
+   • AUTO_FIX_ALL_ERRORS.py
+   • FIX_SELECT_INTELLIGENT.py
+   • SCAN_AND_FIX_CLSN_ERRORS.py
+   • FIND_AND_FIX_ALL_ERRORS.py
+   • TEST_GAMEPLAY_COMPLET.py
+
+═══════════════════════════════════════════════════════════════════════
+
+🚀 DÉMARRAGE RAPIDE
+═══════════════════════════════════════════════════════════════════════
+
+1️⃣  PERSONNALISER LE FOND:
+    → Double-clic sur LAUNCHER_COMPLET.bat
+    → Choix 2 (Profils)
+    → Choix 3 (Changer fond)
+    → Sélectionner votre fond préféré
+
+2️⃣  LANCER DES TESTS AUTOMATIQUES:
+    → Double-clic sur LAUNCHER_COMPLET.bat
+    → Choix 3 ou 4
+    → Les tests tournent, vous pouvez travailler !
+
+3️⃣  JOUER NORMALEMENT:
+    → Double-clic sur LAUNCHER_COMPLET.bat
+    → Choix 1
+    → Le jeu démarre avec votre fond personnalisé
+
+═══════════════════════════════════════════════════════════════════════
+
+💡 ASTUCES
+═══════════════════════════════════════════════════════════════════════
+
+• Créez plusieurs profils pour différentes ambiances:
+  - Profil "Performance" avec fond Minimaliste
+  - Profil "Spectacle" avec fond Ultra Animé
+  - Profil "Classic" avec fond Default
+
+• Lancez les tests en continu pendant que vous travaillez:
+  - Ils trouveront les bugs automatiquement
+  - Aucune interruption de votre travail
+  - Rapport d'erreurs dans mugen.log
+
+• Utilisez le diagnostic avant/après les tests:
+  - Avant: Voir l'état initial
+  - Après: Identifier nouveaux problèmes
+
+═══════════════════════════════════════════════════════════════════════
+
+❓ FAQ
+═══════════════════════════════════════════════════════════════════════
+
+Q: Le fond ne change pas ?
+A: Relancez le jeu après avoir changé le fond dans les profils.
+
+Q: Les tests perturbent mon clavier ?
+A: NON ! Les nouveaux tests (TEST_AUTO_SANS_CLAVIER.py) utilisent
+   l'API Windows et n'affectent PAS votre clavier.
+
+Q: Comment revenir au fond par défaut ?
+A: Gestionnaire profils → Choix 3 → Sélectionner "KOF DM BLACK"
+
+Q: Puis-je créer mes propres fonds ?
+A: Oui ! Éditez PROFILE_MANAGER.py et ajoutez vos animations
+   dans le dictionnaire self.backgrounds
+
+Q: Les profils sont-ils sauvegardés ?
+A: Oui, dans profiles.json. Backupez ce fichier pour conserver
+   vos profils.
+
+═══════════════════════════════════════════════════════════════════════
+Créé le: 2025-10-23
+État: ✅ TOUTES LES FONCTIONNALITÉS OPÉRATIONNELLES
+═══════════════════════════════════════════════════════════════════════

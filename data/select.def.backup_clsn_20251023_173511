@@ -32,15 +32,15 @@ Ash, stages/Abyss-Rugal-Palace.def
 asura-kofa, stages/Abyss-Rugal-Palace.def
 Athena, stages/Abyss-Rugal-Palace.def
 Athena Asamiya MI KOFM, stages/Abyss-Rugal-Palace.def
-; Athena-Heidern, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+Athena-Heidern, stages/Abyss-Rugal-Palace.def
 Athena_XI, stages/Abyss-Rugal-Palace.def
 ; baiyi, stages/Abyss-Rugal-Palace.def
 Balto-KOFM, stages/Abyss-Rugal-Palace.def
 Beast Yeorin QS, stages/Abyss-Rugal-Palace.def
 Benimaru-Nikaido-STAR, stages/Abyss-Rugal-Palace.def
-; billy, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+billy, stages/Abyss-Rugal-Palace.def
 BlackPrincess_Tohka, stages/Abyss-Rugal-Palace.def
-; bob, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+bob, stages/Abyss-Rugal-Palace.def
 Boss Gustab M, stages/Abyss-Rugal-Palace.def
 boss-orochi, stages/Abyss-Rugal-Palace.def
 Business_Vanessa-KOFM, stages/Abyss-Rugal-Palace.def
@@ -66,7 +66,7 @@ DG.Rugal-KOFM, stages/Abyss-Rugal-Palace.def
 dr-yang-kofa, stages/Abyss-Rugal-Palace.def
 Dragondomainlords, stages/Abyss-Rugal-Palace.def
 Drakyola, stages/Abyss-Rugal-Palace.def
-; Dual-flame_Magaki, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+Dual-flame_Magaki, stages/Abyss-Rugal-Palace.def
 Duester, stages/Abyss-Rugal-Palace.def
 Element Ash, stages/Abyss-Rugal-Palace.def
 Element Scarlet, stages/Abyss-Rugal-Palace.def
@@ -85,7 +85,7 @@ Final-IGNIZ, stages/Abyss-Rugal-Palace.def
 Final-OriginalZero, stages/Abyss-Rugal-Palace.def
 Garnet 1.1, stages/Abyss-Rugal-Palace.def
 GARS, stages/Abyss-Rugal-Palace.def
-; Geese-KOFM, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+Geese-KOFM, stages/Abyss-Rugal-Palace.def
 GOD_ADEL(2012-01-28 Trial), stages/Abyss-Rugal-Palace.def
 god_orochi, stages/Abyss-Rugal-Palace.def
 God_Wind, stages/Abyss-Rugal-Palace.def
@@ -99,10 +99,10 @@ K9999_KOF, stages/Abyss-Rugal-Palace.def
 Kaneda-KOFM, stages/Abyss-Rugal-Palace.def
 Kaori Yumiko, stages/Abyss-Rugal-Palace.def
 Kasim_LV2-CKOFM[v0.40], stages/Abyss-Rugal-Palace.def
-; Kasumi-KOFM, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+Kasumi-KOFM, stages/Abyss-Rugal-Palace.def
 Kei, stages/Abyss-Rugal-Palace.def
 kfm, stages/Abyss-Rugal-Palace.def
-; Kychiel, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+Kychiel, stages/Abyss-Rugal-Palace.def
 Lord-Goenitz, stages/Abyss-Rugal-Palace.def
 Magnus, stages/Abyss-Rugal-Palace.def
 Mai Phoenix XI, stages/Abyss-Rugal-Palace.def
@@ -121,9 +121,9 @@ Nox Bernstein, stages/Abyss-Rugal-Palace.def
 O.Zero-Prominence, stages/Abyss-Rugal-Palace.def
 Original Psyqhical, stages/Abyss-Rugal-Palace.def
 Orochi Kyo WF, stages/Abyss-Rugal-Palace.def
-; Orochi Leona-KOFM, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+Orochi Leona-KOFM, stages/Abyss-Rugal-Palace.def
 Orochi-EV1.55, stages/Abyss-Rugal-Palace.def
-; orochi-iori, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+orochi-iori, stages/Abyss-Rugal-Palace.def
 orochi-kyoko, stages/Abyss-Rugal-Palace.def
 P-LEONA_ELEMENT, stages/Abyss-Rugal-Palace.def
 Psyche_42-1.1, stages/Abyss-Rugal-Palace.def
@@ -140,7 +140,7 @@ Ryuji, stages/Abyss-Rugal-Palace.def
 S_Infezione, stages/Abyss-Rugal-Palace.def
 Shadow-Dancer, stages/Abyss-Rugal-Palace.def
 Spiritland Lords, stages/Abyss-Rugal-Palace.def
-; Titan_KOF, stages/Abyss-Rugal-Palace.def  ; AUTO-DISABLED: Erreur CLSN dans .air
+Titan_KOF, stages/Abyss-Rugal-Palace.def
 True Iori X_KOF, stages/Abyss-Rugal-Palace.def
 Unfailed Gustab, stages/Abyss-Rugal-Palace.def
 Unleashesd God Kula, stages/Abyss-Rugal-Palace.def
