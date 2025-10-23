@@ -1,0 +1,10 @@
+DIAGNOSTIC CRASH MODE VS
+======================================================================
+
+Date: 2025-10-23 11:10:57.362468
+
+PROBLÈMES CRITIQUES: 0
+
+AVERTISSEMENTS: 2
+- Config Configuration VS (Team.1.VS.2) non trouvée
+- 2 personnages listés mais fichiers manquants
