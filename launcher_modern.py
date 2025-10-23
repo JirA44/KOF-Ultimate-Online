@@ -19,17 +19,141 @@ import time
 GAME_PATH = Path(__file__).parent
 VERSION = "2.0.0"
 
+# Traductions
+TRANSLATIONS = {
+    'fr': {
+        'title': '⚡ KOF ULTIMATE ONLINE ⚡',
+        'subtitle': '━━━━━━━  ULTIMATE EDITION  ━━━━━━━',
+        'version': 'v{} • Jeu de Combat Nouvelle Génération',
+        'play': '▶  J O U E R  ◀',
+        'multiplayer': '🌐  MULTIJOUEUR',
+        'ai_player': '🤖  IA JOUEUR',
+        'settings': '⚙️  PARAMÈTRES',
+        'characters': '🎭 PERSONNAGES DISPONIBLES',
+        'char_kyo': 'Kyo Kusanagi',
+        'char_iori': 'Iori Yagami',
+        'char_terry': 'Terry Bogard',
+        'char_mai': 'Mai Shiranui',
+        'char_king': 'King',
+        'char_ryo': 'Ryo Sakazaki',
+        'char_leona': 'Leona Heidern',
+        'char_athena': 'Athena Asamiya'
+    },
+    'en': {
+        'title': '⚡ KOF ULTIMATE ONLINE ⚡',
+        'subtitle': '━━━━━━━  ULTIMATE EDITION  ━━━━━━━',
+        'version': 'v{} • Next-Gen Fighter',
+        'play': '▶  P L A Y  ◀',
+        'multiplayer': '🌐  MULTIPLAYER',
+        'ai_player': '🤖  AI PLAYER',
+        'settings': '⚙️  SETTINGS',
+        'characters': '🎭 AVAILABLE CHARACTERS',
+        'char_kyo': 'Kyo Kusanagi',
+        'char_iori': 'Iori Yagami',
+        'char_terry': 'Terry Bogard',
+        'char_mai': 'Mai Shiranui',
+        'char_king': 'King',
+        'char_ryo': 'Ryo Sakazaki',
+        'char_leona': 'Leona Heidern',
+        'char_athena': 'Athena Asamiya'
+    }
+}
+
+# Personnages disponibles (liste complète du jeu)
+CHARACTERS = [
+    {'name': 'Kyo Kusanagi', 'icon': '🔥', 'stars': 5},
+    {'name': 'Iori Yagami', 'icon': '🌙', 'stars': 5},
+    {'name': 'Terry Bogard', 'icon': '⭐', 'stars': 4},
+    {'name': 'Mai Shiranui', 'icon': '🌸', 'stars': 4},
+    {'name': 'King', 'icon': '👑', 'stars': 4},
+    {'name': 'Ryo Sakazaki', 'icon': '🥋', 'stars': 4},
+    {'name': 'Leona Heidern', 'icon': '💣', 'stars': 5},
+    {'name': 'Athena Asamiya', 'icon': '✨', 'stars': 4},
+    {'name': 'Kula Diamond', 'icon': '❄️', 'stars': 5},
+    {'name': 'K\'', 'icon': '🔪', 'stars': 5},
+    {'name': 'Ash Crimson', 'icon': '💚', 'stars': 4},
+    {'name': 'Angel', 'icon': '😈', 'stars': 4},
+    {'name': 'Andy Bogard', 'icon': '⚡', 'stars': 4},
+    {'name': 'Akuma', 'icon': '👹', 'stars': 5},
+    {'name': 'Asura', 'icon': '💪', 'stars': 5},
+    {'name': 'Akiha Yagami', 'icon': '🌑', 'stars': 4},
+    {'name': 'Alba Meira', 'icon': '⚔️', 'stars': 4},
+    {'name': 'Alter Kyo', 'icon': '🔴', 'stars': 5},
+    {'name': 'Aika', 'icon': '💃', 'stars': 3},
+    {'name': 'Aileen', 'icon': '🎀', 'stars': 3},
+    {'name': 'Akari', 'icon': '🌺', 'stars': 3},
+    {'name': 'Akira Kazama', 'icon': '🥊', 'stars': 4},
+    {'name': 'Alfred', 'icon': '🎩', 'stars': 3},
+    {'name': 'Another Scarlet', 'icon': '🩸', 'stars': 4},
+    {'name': 'Arctic Emperor', 'icon': '🧊', 'stars': 5},
+    {'name': 'Benimaru', 'icon': '⚡', 'stars': 4},
+    {'name': 'Billy Kane', 'icon': '🎱', 'stars': 4},
+    {'name': 'Blue Mary', 'icon': '💙', 'stars': 4},
+    {'name': 'Chang', 'icon': '⚙️', 'stars': 3},
+    {'name': 'Choi', 'icon': '🔪', 'stars': 3},
+    {'name': 'Chris', 'icon': '🔥', 'stars': 4},
+    {'name': 'Clark Still', 'icon': '💪', 'stars': 4},
+    {'name': 'Duo Lon', 'icon': '🌫️', 'stars': 4},
+    {'name': 'Elisabeth', 'icon': '⚜️', 'stars': 5},
+    {'name': 'Gato', 'icon': '🐱', 'stars': 4},
+    {'name': 'Geese Howard', 'icon': '👔', 'stars': 5},
+    {'name': 'Goenitz', 'icon': '🌪️', 'stars': 5},
+    {'name': 'Heidern', 'icon': '🎖️', 'stars': 4},
+    {'name': 'Igniz', 'icon': '👼', 'stars': 5},
+    {'name': 'Joe Higashi', 'icon': '🥊', 'stars': 4},
+    {'name': 'Jhun Hoon', 'icon': '🦵', 'stars': 4},
+    {'name': 'Kim Kaphwan', 'icon': '🥋', 'stars': 4},
+    {'name': 'Krizalid', 'icon': '🧬', 'stars': 5},
+    {'name': 'Kusanagi', 'icon': '🔱', 'stars': 5},
+    {'name': 'Kyo-1', 'icon': '🔥', 'stars': 4},
+    {'name': 'Kyo-2', 'icon': '🔥', 'stars': 4},
+    {'name': 'Lucky Glauber', 'icon': '🏀', 'stars': 3},
+    {'name': 'Mature', 'icon': '💜', 'stars': 4},
+    {'name': 'Maxima', 'icon': '🤖', 'stars': 4},
+    {'name': 'May Lee', 'icon': '🦸', 'stars': 3},
+    {'name': 'Mr. Big', 'icon': '🎯', 'stars': 4},
+    {'name': 'Orochi', 'icon': '🐍', 'stars': 5},
+    {'name': 'Oswald', 'icon': '🃏', 'stars': 4},
+    {'name': 'Ralf Jones', 'icon': '💣', 'stars': 4},
+    {'name': 'Ramon', 'icon': '🤼', 'stars': 4},
+    {'name': 'Robert Garcia', 'icon': '🐉', 'stars': 4},
+    {'name': 'Rock Howard', 'icon': '🎸', 'stars': 4},
+    {'name': 'Rugal', 'icon': '😈', 'stars': 5},
+    {'name': 'Saisyu', 'icon': '👴', 'stars': 4},
+    {'name': 'Shermie', 'icon': '💃', 'stars': 4},
+    {'name': 'Shingo', 'icon': '📓', 'stars': 3},
+    {'name': 'Sho Hayate', 'icon': '🌪️', 'stars': 4},
+    {'name': 'Sie Kensou', 'icon': '🥟', 'stars': 4},
+    {'name': 'Takuma', 'icon': '👊', 'stars': 4},
+    {'name': 'Vice', 'icon': '🖤', 'stars': 4},
+    {'name': 'Whip', 'icon': '🔗', 'stars': 4},
+    {'name': 'Yamazaki', 'icon': '🔪', 'stars': 4},
+    {'name': 'Yashiro', 'icon': '🎸', 'stars': 4},
+    {'name': 'Yuki', 'icon': '❄️', 'stars': 3},
+    {'name': 'Yuri Sakazaki', 'icon': '🌼', 'stars': 4},
+    {'name': 'Zero', 'icon': '0️⃣', 'stars': 5}
+]
+
 class ModernLauncher:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("KOF ULTIMATE ONLINE - Launcher")
-        self.root.geometry("900x650")
-        self.root.resizable(False, False)
+        self.root.geometry("1000x750")
+        self.root.resizable(True, True)  # Permettre le redimensionnement
         self.root.configure(bg='#000000')
+
+        # Permettre le plein écran avec F11
+        self.is_fullscreen = False
+        self.root.bind('<F11>', self.toggle_fullscreen)
+        self.root.bind('<Escape>', self.exit_fullscreen)
 
         # Variables
         self.mode_var = tk.StringVar(value="windowed")
         self.animation_running = True
+        self.current_lang = 'fr'
+        self.current_view = 'main'  # 'main' ou 'characters'
+        self.main_frame = None
+        self.chars_view_frame = None
 
         # Centrer
         self.center_window()
@@ -57,8 +181,8 @@ class ModernLauncher:
         # Canvas pour l'animation de fond
         self.bg_canvas = tk.Canvas(
             self.root,
-            width=900,
-            height=650,
+            width=1000,
+            height=750,
             bg='#000000',
             highlightthickness=0
         )
@@ -67,8 +191,8 @@ class ModernLauncher:
         # Particules animées
         self.particles = []
         for _ in range(50):
-            x = random.randint(0, 900)
-            y = random.randint(0, 650)
+            x = random.randint(0, 1000)
+            y = random.randint(0, 750)
             size = random.randint(2, 4)
             speed = random.uniform(0.5, 2.0)
             color = random.choice(['#00ffff', '#ff00ff', '#ffff00', '#00ff00'])
@@ -99,9 +223,9 @@ class ModernLauncher:
             particle['y'] += particle['speed'] * math.sin(particle['angle'])
 
             # Rebondir sur les bords
-            if particle['x'] < 0 or particle['x'] > 900:
+            if particle['x'] < 0 or particle['x'] > 1000:
                 particle['angle'] = math.pi - particle['angle']
-            if particle['y'] < 0 or particle['y'] > 650:
+            if particle['y'] < 0 or particle['y'] > 750:
                 particle['angle'] = -particle['angle']
 
             # Mettre à jour la position
@@ -118,6 +242,45 @@ class ModernLauncher:
 
     def setup_modern_ui(self):
         """Configure l'interface ultra-moderne"""
+        # Initialiser la liste des labels de personnages
+        self.char_labels = []
+
+        # Boutons de langue en haut à droite (position ajustée)
+        lang_frame = tk.Frame(self.root, bg='#000000')
+        lang_frame.place(x=820, y=60)
+
+        self.lang_fr_btn = tk.Button(
+            lang_frame,
+            text="🇫🇷 FR",
+            font=('Consolas', 11, 'bold'),
+            bg='#00ff00',
+            fg='#000000',
+            activebackground='#00ff88',
+            relief=tk.FLAT,
+            bd=0,
+            padx=15,
+            pady=8,
+            cursor='hand2',
+            command=lambda: self.change_language('fr')
+        )
+        self.lang_fr_btn.pack(side=tk.LEFT, padx=3)
+
+        self.lang_en_btn = tk.Button(
+            lang_frame,
+            text="🇬🇧 EN",
+            font=('Consolas', 11, 'bold'),
+            bg='#333333',
+            fg='#888888',
+            activebackground='#555555',
+            relief=tk.FLAT,
+            bd=0,
+            padx=15,
+            pady=8,
+            cursor='hand2',
+            command=lambda: self.change_language('en')
+        )
+        self.lang_en_btn.pack(side=tk.LEFT, padx=3)
+
         # Frame principal transparent
         main_frame = tk.Frame(self.root, bg='#000000')
         main_frame.place(relx=0.5, rely=0.5, anchor='center')
@@ -153,23 +316,23 @@ class ModernLauncher:
         )
 
         # Sous-titre stylé
-        subtitle = tk.Label(
+        self.subtitle_label = tk.Label(
             main_frame,
-            text="━━━━━━━  ULTIMATE EDITION  ━━━━━━━",
+            text=TRANSLATIONS[self.current_lang]['subtitle'],
             font=('Consolas', 12, 'bold'),
             fg='#00ffff',
             bg='#000000'
         )
-        subtitle.pack(pady=(0, 10))
+        self.subtitle_label.pack(pady=(0, 10))
 
-        version_label = tk.Label(
+        self.version_label = tk.Label(
             main_frame,
-            text=f"v{VERSION}  •  Next-Gen Fighter",
+            text=TRANSLATIONS[self.current_lang]['version'].format(VERSION),
             font=('Consolas', 10, 'italic'),
             fg='#888888',
             bg='#000000'
         )
-        version_label.pack(pady=(0, 40))
+        self.version_label.pack(pady=(0, 40))
 
         # Container pour les boutons avec effet de glassmorphism
         buttons_container = tk.Frame(
@@ -182,9 +345,9 @@ class ModernLauncher:
         play_frame = tk.Frame(buttons_container, bg='#000000')
         play_frame.pack(pady=10)
 
-        play_btn = tk.Button(
+        self.play_btn = tk.Button(
             play_frame,
-            text="▶  J O U E R  ◀",
+            text=TRANSLATIONS[self.current_lang]['play'],
             font=('Impact', 28, 'bold'),
             bg='#00ff00',
             fg='#000000',
@@ -197,75 +360,92 @@ class ModernLauncher:
             cursor='hand2',
             command=self.launch_game
         )
-        play_btn.pack()
+        self.play_btn.pack()
 
         # Effet hover pour le bouton PLAY
         def on_play_enter(e):
-            play_btn.config(
+            self.play_btn.config(
                 bg='#00ff88',
                 font=('Impact', 30, 'bold')
             )
 
         def on_play_leave(e):
-            play_btn.config(
+            self.play_btn.config(
                 bg='#00ff00',
                 font=('Impact', 28, 'bold')
             )
 
-        play_btn.bind('<Enter>', on_play_enter)
-        play_btn.bind('<Leave>', on_play_leave)
+        self.play_btn.bind('<Enter>', on_play_enter)
+        self.play_btn.bind('<Leave>', on_play_leave)
 
         # Boutons secondaires en ligne
         secondary_row = tk.Frame(buttons_container, bg='#000000')
         secondary_row.pack(pady=20)
 
-        secondary_buttons = [
-            {
-                'text': '🌐  MULTIPLAYER',
-                'command': self.launch_multiplayer,
-                'color': '#0099ff'
-            },
-            {
-                'text': '🤖  AI PLAYER',
-                'command': self.launch_ai_player,
-                'color': '#ff6600'
-            },
-            {
-                'text': '⚙️  SETTINGS',
-                'command': self.show_settings,
-                'color': '#9900ff'
-            }
-        ]
+        # Créer les boutons secondaires et stocker les références
+        self.multi_btn = tk.Button(
+            secondary_row,
+            text=TRANSLATIONS[self.current_lang]['multiplayer'],
+            font=('Consolas', 13, 'bold'),
+            bg='#0099ff',
+            fg='#ffffff',
+            activebackground=self.lighten_color('#0099ff'),
+            activeforeground='#ffffff',
+            relief=tk.FLAT,
+            bd=0,
+            padx=20,
+            pady=12,
+            cursor='hand2',
+            command=self.launch_multiplayer
+        )
+        self.multi_btn.pack(side=tk.LEFT, padx=8)
 
-        for btn_info in secondary_buttons:
-            btn = tk.Button(
-                secondary_row,
-                text=btn_info['text'],
-                font=('Consolas', 13, 'bold'),
-                bg=btn_info['color'],
-                fg='#ffffff',
-                activebackground=self.lighten_color(btn_info['color']),
-                activeforeground='#ffffff',
-                relief=tk.FLAT,
-                bd=0,
-                padx=20,
-                pady=12,
-                cursor='hand2',
-                command=btn_info['command']
-            )
-            btn.pack(side=tk.LEFT, padx=8)
+        self.ai_btn = tk.Button(
+            secondary_row,
+            text=TRANSLATIONS[self.current_lang]['ai_player'],
+            font=('Consolas', 13, 'bold'),
+            bg='#ff6600',
+            fg='#ffffff',
+            activebackground=self.lighten_color('#ff6600'),
+            activeforeground='#ffffff',
+            relief=tk.FLAT,
+            bd=0,
+            padx=20,
+            pady=12,
+            cursor='hand2',
+            command=self.launch_ai_player
+        )
+        self.ai_btn.pack(side=tk.LEFT, padx=8)
 
-            # Effet hover
-            def make_hover(button, original_color):
-                def on_enter(e):
-                    button.config(bg=self.lighten_color(original_color))
+        self.settings_btn = tk.Button(
+            secondary_row,
+            text=TRANSLATIONS[self.current_lang]['settings'],
+            font=('Consolas', 13, 'bold'),
+            bg='#9900ff',
+            fg='#ffffff',
+            activebackground=self.lighten_color('#9900ff'),
+            activeforeground='#ffffff',
+            relief=tk.FLAT,
+            bd=0,
+            padx=20,
+            pady=12,
+            cursor='hand2',
+            command=self.show_settings
+        )
+        self.settings_btn.pack(side=tk.LEFT, padx=8)
 
-                def on_leave(e):
-                    button.config(bg=original_color)
+        # Effets hover pour les boutons secondaires
+        def make_hover(button, original_color):
+            def on_enter(e):
+                button.config(bg=self.lighten_color(original_color))
 
-                return on_enter, on_leave
+            def on_leave(e):
+                button.config(bg=original_color)
 
-            enter_func, leave_func = make_hover(btn, btn_info['color'])
+            return on_enter, on_leave
+
+        for btn, color in [(self.multi_btn, '#0099ff'), (self.ai_btn, '#ff6600'), (self.settings_btn, '#9900ff')]:
+            enter_func, leave_func = make_hover(btn, color)
             btn.bind('<Enter>', enter_func)
             btn.bind('<Leave>', leave_func)
 
@@ -316,6 +496,26 @@ class ModernLauncher:
         )
         fullscreen_rb.pack(side=tk.LEFT, padx=15)
 
+        # Bouton pour voir les personnages
+        view_chars_btn = tk.Button(
+            main_frame,
+            text="🎭  VOIR LES PERSONNAGES  🎭",
+            font=('Consolas', 13, 'bold'),
+            bg='#ff00ff',
+            fg='#ffffff',
+            activebackground='#ff66ff',
+            relief=tk.FLAT,
+            bd=0,
+            padx=30,
+            pady=15,
+            cursor='hand2',
+            command=self.show_characters_view
+        )
+        view_chars_btn.pack(pady=(30, 0))
+
+        # Stocker le main_frame pour pouvoir le cacher/afficher
+        self.main_frame = main_frame
+
         # Barre de statut moderne en bas
         status_frame = tk.Frame(self.root, bg='#111111', height=40)
         status_frame.pack(side=tk.BOTTOM, fill=tk.X)
@@ -344,6 +544,197 @@ class ModernLauncher:
         b = min(255, int(b * 1.3))
 
         return f'#{r:02x}{g:02x}{b:02x}'
+
+    def change_language(self, lang):
+        """Change la langue de l'interface"""
+        self.current_lang = lang
+        t = TRANSLATIONS[lang]
+
+        # Mettre à jour tous les labels stockés
+        self.subtitle_label.config(text=t['subtitle'])
+        self.version_label.config(text=t['version'].format(VERSION))
+        self.play_btn.config(text=t['play'])
+        self.multi_btn.config(text=t['multiplayer'])
+        self.ai_btn.config(text=t['ai_player'])
+        self.settings_btn.config(text=t['settings'])
+
+        # Mettre à jour les boutons de langue
+        if lang == 'fr':
+            self.lang_fr_btn.config(bg='#00ff00', fg='#000000')
+            self.lang_en_btn.config(bg='#333333', fg='#888888')
+        else:
+            self.lang_en_btn.config(bg='#00ff00', fg='#000000')
+            self.lang_fr_btn.config(bg='#333333', fg='#888888')
+
+    def show_characters_view(self):
+        """Affiche la vue des personnages avec scrolling"""
+        if self.current_view == 'characters':
+            return
+
+        # Cacher le menu principal
+        if self.main_frame:
+            self.main_frame.place_forget()
+
+        # Créer la vue personnages si elle n'existe pas
+        if not self.chars_view_frame:
+            self.chars_view_frame = tk.Frame(self.root, bg='#000000')
+
+            # Titre
+            title_label = tk.Label(
+                self.chars_view_frame,
+                text="🎭 PERSONNAGES DISPONIBLES 🎭",
+                font=('Impact', 28, 'bold'),
+                fg='#ff00ff',
+                bg='#000000'
+            )
+            title_label.pack(pady=(20, 10))
+
+            # Bouton Retour
+            back_btn = tk.Button(
+                self.chars_view_frame,
+                text="◀  RETOUR AU MENU",
+                font=('Consolas', 12, 'bold'),
+                bg='#ff0000',
+                fg='#ffffff',
+                activebackground='#ff3333',
+                relief=tk.FLAT,
+                bd=0,
+                padx=20,
+                pady=10,
+                cursor='hand2',
+                command=self.show_main_view
+            )
+            back_btn.pack(pady=(0, 20))
+
+            # Créer un canvas avec scrollbar
+            canvas_frame = tk.Frame(self.chars_view_frame, bg='#000000')
+            canvas_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=(0, 20))
+
+            # Canvas
+            canvas = tk.Canvas(
+                canvas_frame,
+                bg='#000000',
+                highlightthickness=0,
+                width=920,
+                height=550
+            )
+            canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+            # Scrollbar
+            scrollbar = tk.Scrollbar(
+                canvas_frame,
+                orient=tk.VERTICAL,
+                command=canvas.yview,
+                bg='#333333',
+                troughcolor='#111111',
+                activebackground='#555555'
+            )
+            scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+            canvas.configure(yscrollcommand=scrollbar.set)
+
+            # Frame scrollable à l'intérieur du canvas
+            scrollable_frame = tk.Frame(canvas, bg='#000000')
+            canvas_window = canvas.create_window((0, 0), window=scrollable_frame, anchor='nw')
+
+            # Grille de personnages (5 colonnes)
+            for i, char_data in enumerate(CHARACTERS):
+                row = i // 5
+                col = i % 5
+
+                # Frame pour chaque personnage
+                char_card = tk.Frame(
+                    scrollable_frame,
+                    bg='#1a1a3e',
+                    highlightbackground='#00ffff',
+                    highlightthickness=2
+                )
+                char_card.grid(row=row, column=col, padx=8, pady=8)
+
+                # Icône du personnage
+                icon_label = tk.Label(
+                    char_card,
+                    text=char_data['icon'],
+                    font=('Segoe UI Emoji', 32),
+                    bg='#1a1a3e',
+                    fg='#ffffff'
+                )
+                icon_label.pack(pady=(12, 4))
+
+                # Nom du personnage
+                name_label = tk.Label(
+                    char_card,
+                    text=char_data['name'],
+                    font=('Consolas', 10, 'bold'),
+                    bg='#1a1a3e',
+                    fg='#ffffff',
+                    width=15,
+                    wraplength=140
+                )
+                name_label.pack(pady=(0, 4))
+
+                # Étoiles
+                stars = '⭐' * char_data['stars']
+                stars_label = tk.Label(
+                    char_card,
+                    text=stars,
+                    font=('Segoe UI Emoji', 10),
+                    bg='#1a1a3e',
+                    fg='#ffdd00'
+                )
+                stars_label.pack(pady=(0, 12))
+
+            # Mettre à jour la région de scroll
+            scrollable_frame.update_idletasks()
+            canvas.configure(scrollregion=canvas.bbox('all'))
+
+            # Bind mousewheel pour scrolling
+            def on_mousewheel(event):
+                canvas.yview_scroll(int(-1*(event.delta/120)), "units")
+
+            canvas.bind_all("<MouseWheel>", on_mousewheel)
+
+            # Ajuster la largeur du frame scrollable
+            def on_canvas_configure(event):
+                canvas.itemconfig(canvas_window, width=event.width)
+
+            canvas.bind('<Configure>', on_canvas_configure)
+
+        # Afficher la vue personnages
+        self.chars_view_frame.place(relx=0.5, rely=0.5, anchor='center')
+        self.current_view = 'characters'
+
+    def show_main_view(self):
+        """Retourne au menu principal"""
+        if self.current_view == 'main':
+            return
+
+        # Cacher la vue personnages
+        if self.chars_view_frame:
+            self.chars_view_frame.place_forget()
+
+        # Afficher le menu principal
+        if self.main_frame:
+            self.main_frame.place(relx=0.5, rely=0.5, anchor='center')
+
+        self.current_view = 'main'
+
+    def toggle_fullscreen(self, event=None):
+        """Bascule en mode plein écran (F11)"""
+        self.is_fullscreen = not self.is_fullscreen
+        self.root.attributes('-fullscreen', self.is_fullscreen)
+
+        if self.is_fullscreen:
+            self.update_status("Mode PLEIN ÉCRAN activé (Échap pour quitter)", '#00ff00')
+        else:
+            self.update_status("Mode fenêtré", '#00ffff')
+
+    def exit_fullscreen(self, event=None):
+        """Quitte le mode plein écran (Échap)"""
+        if self.is_fullscreen:
+            self.is_fullscreen = False
+            self.root.attributes('-fullscreen', False)
+            self.update_status("Mode fenêtré", '#00ffff')
 
     def update_status(self, message, color='#00ff88'):
         """Met à jour le statut"""

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOF Ultimate Online - Matchmaking Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .dashboard-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .leaderboard {
+            list-style: none;
+        }
+
+        .leaderboard li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .leaderboard li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .rank {
+            font-size: 1.5em;
+            font-weight: bold;
+            min-width: 40px;
+        }
+
+        .player-info {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .player-name {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .player-stats {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .mmr-badge {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .active-matches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .match-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .vs {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #ffd700;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88 0%, #00b8ff 100%);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .update-time {
+            text-align: center;
+            opacity: 0.7;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: blink 2s infinite;
+        }
+
+        .status-online {
+            background: #00ff88;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .ml-insights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .insight-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #00ff88;
+        }
+
+        .insight-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .insight-value {
+            font-size: 2em;
+            color: #00ff88;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚔️ KOF ULTIMATE ONLINE</h1>
+            <p class="subtitle">
+                <span class="status-indicator status-online"></span>
+                Matchmaking Dashboard - Amélioration Continue IA
+            </p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">🎮 Joueurs En Ligne</div>
+                <div class="stat-value" id="playersOnline">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">🔍 En Recherche</div>
+                <div class="stat-value" id="playersSearching">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">⚔️ Matchs Actifs</div>
+                <div class="stat-value" id="activeMatches">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">📊 Total Matchs</div>
+                <div class="stat-value" id="totalMatches">0</div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2 class="section-title">🏆 Classement (Top 10)</h2>
+            <ul class="leaderboard" id="leaderboard">
+                <!-- Rempli dynamiquement -->
+            </ul>
+        </div>
+
+        <div class="dashboard-section">
+            <h2 class="section-title">⚔️ Matchs En Cours</h2>
+            <div class="active-matches" id="activeMatchesList">
+                <p style="text-align: center; opacity: 0.7;">Aucun match en cours</p>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2 class="section-title">🧠 Insights Machine Learning</h2>
+            <div class="ml-insights" id="mlInsights">
+                <div class="insight-card">
+                    <div class="insight-title">📈 Cycles d'apprentissage</div>
+                    <div class="insight-value" id="learningCycles">0</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-title">🎯 Stratégie optimale</div>
+                    <div class="insight-value" id="optimalStrategy" style="font-size: 1.3em;">N/A</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-title">⚡ MMR Moyen</div>
+                    <div class="insight-value" id="avgMMR">1000</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="update-time" id="updateTime">
+            Dernière mise à jour : Jamais
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour charger les données
+        async function loadData() {
+            try {
+                // Charger l'état du matchmaking
+                const matchmakingResponse = await fetch('matchmaking_state.json');
+                const matchmakingData = await matchmakingResponse.json();
+
+                // Charger les métadonnées ML
+                const mlResponse = await fetch('ml_system_meta.json');
+                const mlData = await mlResponse.json();
+
+                updateDashboard(matchmakingData, mlData);
+            } catch (error) {
+                console.error('Erreur de chargement:', error);
+            }
+        }
+
+        function updateDashboard(matchmaking, ml) {
+            // Statistiques de base
+            const totalPlayers = Object.keys(matchmaking.elo_ratings || {}).length;
+            document.getElementById('playersOnline').textContent = totalPlayers;
+            document.getElementById('totalMatches').textContent = (matchmaking.match_history || []).length;
+
+            // MMR moyen
+            const elos = Object.values(matchmaking.elo_ratings || {});
+            const avgElo = elos.length > 0 ? Math.round(elos.reduce((a, b) => a + b, 0) / elos.length) : 1000;
+            document.getElementById('avgMMR').textContent = avgElo;
+
+            // Classement
+            updateLeaderboard(matchmaking);
+
+            // ML Insights
+            if (ml && ml.global_meta) {
+                document.getElementById('learningCycles').textContent = ml.global_meta.total_learning_cycles || 0;
+
+                if (ml.global_meta.optimal_strategies && ml.global_meta.optimal_strategies.length > 0) {
+                    document.getElementById('optimalStrategy').textContent =
+                        ml.global_meta.optimal_strategies[0].strategy || 'N/A';
+                }
+            }
+
+            // Heure de mise à jour
+            const now = new Date();
+            document.getElementById('updateTime').textContent =
+                `Dernière mise à jour : ${now.toLocaleTimeString()}`;
+        }
+
+        function updateLeaderboard(matchmaking) {
+            const leaderboard = document.getElementById('leaderboard');
+
+            if (!matchmaking.elo_ratings || !matchmaking.player_stats) {
+                leaderboard.innerHTML = '<li style="text-align: center;">Aucune donnée disponible</li>';
+                return;
+            }
+
+            // Créer un tableau de joueurs
+            const players = Object.keys(matchmaking.elo_ratings).map(playerId => {
+                const elo = matchmaking.elo_ratings[playerId];
+                const stats = matchmaking.player_stats[playerId] || {};
+
+                return {
+                    id: playerId,
+                    elo: elo,
+                    wins: stats.wins || 0,
+                    losses: stats.losses || 0,
+                    winrate: stats.winrate || 0,
+                    skill_level: stats.skill_level || 'Beginner'
+                };
+            });
+
+            // Trier par ELO
+            players.sort((a, b) => b.elo - a.elo);
+
+            // Afficher le top 10
+            leaderboard.innerHTML = players.slice(0, 10).map((player, index) => {
+                const medals = ['🥇', '🥈', '🥉'];
+                const rank = index < 3 ? medals[index] : `${index + 1}`;
+
+                return `
+                    <li>
+                        <span class="rank">${rank}</span>
+                        <div class="player-info">
+                            <div class="player-name">${player.id}</div>
+                            <div class="player-stats">
+                                ${player.wins}W - ${player.losses}L |
+                                WR: ${(player.winrate * 100).toFixed(1)}% |
+                                ${player.skill_level}
+                            </div>
+                        </div>
+                        <div class="mmr-badge">${Math.round(player.elo)}</div>
+                    </li>
+                `;
+            }).join('');
+        }
+
+        // Charger les données toutes les 5 secondes
+        loadData();
+        setInterval(loadData, 5000);
+    </script>
+</body>
+</html>
