@@ -125,7 +125,7 @@ alpha = 150,256
 [Select Info]
 fadeout.time = 15
 
-rows = 11
+rows = 10
 columns = 19
 wrapping = 1
 pos = 70,160
