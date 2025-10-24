@@ -14,7 +14,8 @@ _ArchiMurderer, stages/Abyss-Rugal-Palace.def
 A-Angel, stages/Abyss-Rugal-Palace.def
 ai, stages/Abyss-Rugal-Palace.def
 Aika, stages/Abyss-Rugal-Palace.def
-Aika_MK, stages/Abyss-Rugal-Palace.def
+; Aika_MK, stages/Abyss-Rugal-Palace.def
+  ; DÉSACTIVÉ TEMPORAIREMENT: Crash après sélection P1 (test en cours)
 Aileen, stages/Abyss-Rugal-Palace.def
 Akari, stages/Abyss-Rugal-Palace.def
 Akiha Orochi, stages/Abyss-Rugal-Palace.def
@@ -62,7 +63,8 @@ DF-Sula, stages/Abyss-Rugal-Palace.def
 DG.Rugal-KOFM, stages/Abyss-Rugal-Palace.def
 dr-yang-kofa, stages/Abyss-Rugal-Palace.def
 Dragondomainlords, stages/Abyss-Rugal-Palace.def
-Drakyola, stages/Abyss-Rugal-Palace.def
+; Drakyola, stages/Abyss-Rugal-Palace.def
+  ; DÉSACTIVÉ: Erreur CLSN dans Drakyola.air:686 (Action 438)
 Duester, stages/Abyss-Rugal-Palace.def
 Element Ash, stages/Abyss-Rugal-Palace.def
 Element Scarlet, stages/Abyss-Rugal-Palace.def
@@ -89,7 +91,8 @@ Hunter_U6746, stages/Abyss-Rugal-Palace.def
 Infernal_Wind, stages/Abyss-Rugal-Palace.def
 K9999_KOF, stages/Abyss-Rugal-Palace.def
 Kaneda-KOFM, stages/Abyss-Rugal-Palace.def
-Kasim_LV2-CKOFM[v0.40], stages/Abyss-Rugal-Palace.def
+; Kasim_LV2-CKOFM[v0.40], stages/Abyss-Rugal-Palace.def
+  ; DÉSACTIVÉ: Animations manquantes (12, 42, 43, 150, 151, 152, 5006, 5007 et plus)
 Kei, stages/Abyss-Rugal-Palace.def
 Lord-Goenitz, stages/Abyss-Rugal-Palace.def
 ; Magnus,  ; DÉSACTIVÉ: Animations manquantes stages/Abyss-Rugal-Palace.def
