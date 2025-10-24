@@ -115,6 +115,7 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
 
         # Vérifier que le dossier existe
         char_path = self.game_dir / "chars" / char_name
+        print(f"[DEBUG: checking {char_path}]", end=" ")
         if not char_path.exists():
             print(f"{Colors.RED}✗ (Dossier introuvable){Colors.RESET}")
             self.results['skipped'].append({
