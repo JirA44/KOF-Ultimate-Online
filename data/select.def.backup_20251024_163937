@@ -90,7 +90,7 @@ Kaneda-KOFM, stages/Abyss-Rugal-Palace.def
 Kasim_LV2-CKOFM[v0.40], stages/Abyss-Rugal-Palace.def
 Kei, stages/Abyss-Rugal-Palace.def
 Lord-Goenitz, stages/Abyss-Rugal-Palace.def
-; Magnus,  ; DÉSACTIVÉ: Animations manquantes stages/Abyss-Rugal-Palace.def
+Magnus, stages/Abyss-Rugal-Palace.def
 Mai Phoenix XI, stages/Abyss-Rugal-Palace.def
 Maltet, stages/Abyss-Rugal-Palace.def
 Maryl, stages/Abyss-Rugal-Palace.def
@@ -114,7 +114,7 @@ Psyche_57-1.1, stages/Abyss-Rugal-Palace.def
 Raisen.blood-KOFM, stages/Abyss-Rugal-Palace.def
 Rayno, stages/Abyss-Rugal-Palace.def
 Reas-KOFM, stages/Abyss-Rugal-Palace.def
-; Reyna,  ; DÉSACTIVÉ: Erreur CLSN dans .air stages/Abyss-Rugal-Palace.def
+Reyna, stages/Abyss-Rugal-Palace.def
 robo-kyo-kofa, stages/Abyss-Rugal-Palace.def
 Rose, stages/Abyss-Rugal-Palace.def
 Rozwel S.K (LEGIT), stages/Abyss-Rugal-Palace.def

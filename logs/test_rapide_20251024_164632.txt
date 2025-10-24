@@ -1,0 +1,9 @@
+TEST RAPIDE - KOF ULTIMATE ONLINE
+============================================================
+
+Date: 2025-10-24 16:46:32
+Durée: 33.4s
+Problèmes: 1
+
+PROBLÈMES DÉTECTÉS:
+1. Fenêtre du jeu jamais apparue (timeout 30s)
