@@ -54,8 +54,7 @@ Cronus, stages/Abyss-Rugal-Palace.def
 Cruelty Sula UM, stages/Abyss-Rugal-Palace.def
 D.Yashiro.Rhythm(Dusk)1.x, stages/Abyss-Rugal-Palace.def
 D_DisciplineGirl, stages/Abyss-Rugal-Palace.def
-; Daiki_Final(Prototype), stages/Abyss-Rugal-Palace.def
-  ; DÉSACTIVÉ: Crash détecté pendant tests
+Daiki_Final(Prototype), stages/Abyss-Rugal-Palace.def
 Daisu, stages/Abyss-Rugal-Palace.def
 Delirus, stages/Abyss-Rugal-Palace.def
 DF-Sula, stages/Abyss-Rugal-Palace.def
@@ -81,8 +80,7 @@ GOD_ADEL(2012-01-28 Trial), stages/Abyss-Rugal-Palace.def
 god_orochi, stages/Abyss-Rugal-Palace.def
 God_Wind, stages/Abyss-Rugal-Palace.def
 Goktore-CKOFM, stages/Abyss-Rugal-Palace.def
-; Graves, stages/Abyss-Rugal-Palace.def
-  ; DÉSACTIVÉ: Crash détecté pendant tests
+Graves, stages/Abyss-Rugal-Palace.def
 heraclius, stages/Abyss-Rugal-Palace.def
 Hiel_SP, stages/Abyss-Rugal-Palace.def
 Hunter_U6746, stages/Abyss-Rugal-Palace.def

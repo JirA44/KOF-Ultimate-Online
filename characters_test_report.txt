@@ -2,21 +2,146 @@
 KOF ULTIMATE - RAPPORT DE TEST DES PERSONNAGES
 ================================================================================
 
-Date: 2025-10-16 14:53:46
+Date: 2025-10-24 19:03:45
 
-Total testés: 1
-✓ OK: 1
+Total testés: 124
+✓ OK: 0
 ✗ ÉCHOUÉS: 0
-⊘ IGNORÉS: 0
+⊘ IGNORÉS: 124
 
 ================================================================================
 
 PERSONNAGES FONCTIONNELS:
 --------------------------------------------------------------------------------
-  ✓ Aika
 
 
 PERSONNAGES AVEC ERREURS:
 --------------------------------------------------------------------------------
 
 
+PERSONNAGES IGNORÉS:
+--------------------------------------------------------------------------------
+  ⊘ 03-A-Kyo LV2, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ _ArchiMurderer, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ A-Angel, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ ai, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Aika, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Aika_MK, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Aileen, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Akari, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Akiha Orochi, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Akiha Yagami1, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Akira_Kazakami, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ akuma, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ ALBA MEIRA KOF XI -MI2, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Alfred_WLS, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Alou_AKOF, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Alter Kyo, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Amoumi-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Andy-ROTD, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Aner Rolange KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Anette-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Ash, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ asura-kofa, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Athena, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Athena_XI, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Balto-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Beast Yeorin QS, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Benimaru-Nikaido-STAR, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ BlackPrincess_Tohka, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Boss Gustab M, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ boss-orochi, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Business_Vanessa-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ ccihinako, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ cciking, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ ccishermie, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Chalice, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Chaos-CKOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Chobi-Hige, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Choi_XI, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ clone benimaru, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Clone Blood Rugal, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Clone Zero, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Cronus, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Cruelty Sula UM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ D.Yashiro.Rhythm(Dusk)1.x, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ D_DisciplineGirl, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Daisu, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Delirus, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ DF-Sula, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ DG.Rugal-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ dr-yang-kofa, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Dragondomainlords, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Drakyola, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Duester, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Element Ash, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Element Scarlet, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Element-Adel, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Essence of Darkness, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Eve, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Fang, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Felix_THird, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Final Sachiel WF, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Final Zeroko B, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ final-goenitz, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Final-IGNIZ, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Final-OriginalZero, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Garnet 1.1, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ GOD_ADEL(2012-01-28 Trial), stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ god_orochi, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ God_Wind, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Goktore-CKOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ heraclius, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Hiel_SP, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Hunter_U6746, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Infernal_Wind, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ K9999_KOF, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Kaneda-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Kasim_LV2-CKOFM[v0.40], stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Kei, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Lord-Goenitz, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Mai Phoenix XI, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Maltet, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Maryl, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Matam, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Meld_Boss, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ meteoricmarisa, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ mizore-kofmLV2, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ N-Zeroko, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Nao-MX 1.0, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ NeoDio KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ NeoGeegus KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Nero, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Nox Bernstein, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ O.Zero-Prominence, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Original Psyqhical, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Orochi-EV1.55, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ orochi-kyoko, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ P-LEONA_ELEMENT, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Psyche_42-1.1, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Psyche_57-1.1, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Raisen.blood-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Rayno, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Reas-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ robo-kyo-kofa, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Rose, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Rozwel S.K (LEGIT), stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Rugal7th, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Ryuji, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ S_Infezione, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Shadow-Dancer, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Spiritland Lords, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ True Iori X_KOF, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Unfailed Gustab, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Valmar Rugal, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ vandals, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Viper, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ WatchTV, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ WhirlWind-Goenitz, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ White DeathRaGeroous Version, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Wild.O.Yashiro, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Wind_MMXIX, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Xion-V, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Yukida, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Yuno-KOFM, stages/Abyss-Rugal-Palace.def: Dossier introuvable
+  ⊘ Zerozuchi_Boss, stages/Abyss-Rugal-Palace.def: Dossier introuvable

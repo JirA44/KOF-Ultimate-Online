@@ -74,8 +74,13 @@ class CharacterTester:
             if not line or line.startswith(";") or line == "x":
                 continue
 
-            # C'est un personnage valide
-            self.characters.append(line)
+            # Extraire le nom du personnage (avant la virgule)
+            if ',' in line:
+                char_name = line.split(',')[0].strip()
+                self.characters.append(char_name)
+            else:
+                # Ligne sans virgule, ignorer
+                continue
 
         print(f"{Colors.GREEN}  ✓ {len(self.characters)} personnages trouvés{Colors.RESET}")
         return len(self.characters)
@@ -84,7 +89,7 @@ class CharacterTester:
         """Crée un select.def temporaire avec UN SEUL personnage"""
         content = f""";Test automatique - 1 personnage
 [Characters]
-{char_name}
+{char_name}, stages/Abyss-Rugal-Palace.def
 
 [ExtraStages]
 
@@ -100,9 +105,9 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
         """Efface le mugen.log"""
         if self.mugen_log.exists():
             try:
-            self.mugen_log.unlink()
-        except:
-            pass  # Ignore if file is locked
+                self.mugen_log.unlink()
+            except:
+                pass  # Ignore if file is locked
 
     def test_character(self, char_name):
         """Teste un personnage"""
@@ -244,12 +249,18 @@ team.maxmatches = 1,1,1,1,0,0,0,0,0,0
                     safe_lines.append(line)
                     continue
 
-                # Vérifier si ce personnage est OK
-                if stripped in self.results['ok']:
-                    safe_lines.append(line)
+                # Extraire le nom du personnage pour comparaison
+                if ',' in stripped:
+                    char_name = stripped.split(',')[0].strip()
+                    # Vérifier si ce personnage est OK
+                    if char_name in self.results['ok']:
+                        safe_lines.append(line)
+                    else:
+                        # Commenter le personnage problématique
+                        safe_lines.append(f"; {line}")
                 else:
-                    # Commenter le personnage problématique
-                    safe_lines.append(f"; {line}")
+                    # Ligne sans virgule, garder telle quelle
+                    safe_lines.append(line)
             else:
                 # Hors section Characters, copier tel quel
                 safe_lines.append(line)
