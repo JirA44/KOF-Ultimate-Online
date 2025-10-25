@@ -1,0 +1,327 @@
+{
+  "timestamp": "2025-10-25T15:01:09.300096",
+  "total": 190,
+  "ok": [
+    "03-A-Kyo LV2",
+    "A-Angel",
+    "ai",
+    "Aika",
+    "Aika_MK",
+    "Aileen",
+    "Akari",
+    "Akiha Orochi",
+    "Akiha Yagami",
+    "Akiha Yagami DK",
+    "Akiha Yagami1",
+    "Akira_Kazakami",
+    "akuma",
+    "ALBA MEIRA KOF XI -MI2",
+    "Alfred_WLS",
+    "Alou_AKOF",
+    "Alter Kyo",
+    "Amoumi-KOFM",
+    "Andy-ROTD",
+    "Aner Rolange KOFM",
+    "Anette-KOFM",
+    "Ash",
+    "asura-kofa",
+    "Athena",
+    "Athena Asamiya MI KOFM",
+    "Athena-Heidern",
+    "Athena_XI",
+    "baiyi",
+    "Balto-KOFM",
+    "Beast Yeorin QS",
+    "Benimaru-Nikaido-STAR",
+    "billy",
+    "BlackPrincess_Tohka",
+    "bob",
+    "Boss Gustab M",
+    "boss-orochi",
+    "Business_Vanessa-KOFM",
+    "ccishermie",
+    "Chalice",
+    "Chaos-CKOFM",
+    "Chobi-Hige",
+    "Choi_XI",
+    "clone benimaru",
+    "Clone Blood Rugal",
+    "Clone Zero",
+    "Cronus",
+    "Cruelty Sula UM",
+    "D.Yashiro.Rhythm(Dusk)1.x",
+    "Daiki_Final(Prototype)",
+    "Daisu",
+    "Delirus",
+    "DF-Sula",
+    "DG.Rugal-KOFM",
+    "dr-yang-kofa",
+    "Dragondomainlords",
+    "Drakyola",
+    "Dual-flame_Magaki",
+    "Duester",
+    "D_DisciplineGirl",
+    "Element Ash",
+    "Element Scarlet",
+    "Element-Adel",
+    "Eputh Blood-KOFM",
+    "Essence of Darkness",
+    "Eve",
+    "Fang",
+    "Felix_THird",
+    "Final Adel",
+    "Final Goeniko",
+    "Final Sachiel WF",
+    "Final Zeroko B",
+    "final-goenitz",
+    "Final-IGNIZ",
+    "Final-OriginalZero",
+    "Garnet 1.1",
+    "GARS",
+    "Geese-KOFM",
+    "GOD_ADEL(2012-01-28 Trial)",
+    "god_orochi",
+    "God_Wind",
+    "Goktore-CKOFM",
+    "Graves",
+    "heraclius",
+    "Hiel_SP",
+    "Hunter_U6746",
+    "Infernal_Wind",
+    "K9999_KOF",
+    "Kaneda-KOFM",
+    "Kaori Yumiko",
+    "Kasim_LV2-CKOFM[v0.40]",
+    "Kasumi-KOFM",
+    "Kei",
+    "kfm",
+    "Kychiel",
+    "Lord-Goenitz",
+    "Magnus",
+    "Mai Phoenix XI",
+    "Maltet",
+    "Maryl",
+    "Matam",
+    "Meld_Boss",
+    "meteoricmarisa",
+    "mizore-kofmLV2",
+    "N-Zeroko",
+    "Nao-MX 1.0",
+    "NeoDio KOFM",
+    "NeoGeegus KOFM",
+    "Nero",
+    "Nox Bernstein",
+    "O.Zero-Prominence",
+    "Original Psyqhical",
+    "Orochi Kyo WF",
+    "Orochi Leona-KOFM",
+    "Orochi-EV1.55",
+    "orochi-iori",
+    "orochi-kyoko",
+    "P-LEONA_ELEMENT",
+    "Psyche_42-1.1",
+    "Psyche_57-1.1",
+    "Raisen.blood-KOFM",
+    "Rayno",
+    "Reas-KOFM",
+    "Reyna",
+    "robo-kyo-kofa",
+    "Rose",
+    "Rozwel S.K (LEGIT)",
+    "Rugal7th",
+    "Ryuji",
+    "Spiritland Lords",
+    "S_Infezione",
+    "Titan_KOF",
+    "True Iori X_KOF",
+    "Unfailed Gustab",
+    "Unleashesd God Kula",
+    "Valmar Rugal",
+    "vandals",
+    "Viper",
+    "WatchTV",
+    "WhirlWind-Goenitz",
+    "White DeathRaGeroous Version",
+    "Wild.O.Yashiro",
+    "Wind_MMXIX",
+    "Xion-V",
+    "Yukida",
+    "Yuno-KOFM",
+    "Zerozuchi_Boss",
+    "_ArchiMurderer"
+  ],
+  "broken": [
+    {
+      "name": "ABYSS'Mega's",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "AngusPurple-KOFM",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Another Scarlet",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Arctic Emperor",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "BLAKE V3-1.1",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "BW-Meiling",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "C.Kyo.Blood-KOFM",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Carlin.Blood-CKOFM",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Caser.Yashiro",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "ccihinako",
+      "reason": "Fichier .air manquant"
+    },
+    {
+      "name": "ccijhun",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "cciking",
+      "reason": "Fichier .air manquant"
+    },
+    {
+      "name": "D=Rockula",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Error Zero",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Flamme(S)",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "HIEL-KOFM",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Hiyoi",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Kartis",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Kevenoce",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Keyser-Aunthmer",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Kotone",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Kyaga-KOFM",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Lane.Blood-CKOFM",
+      "reason": "Fichier .def manquant"
+    },
+    {
+      "name": "Littledevil-Phoenix",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "LUMIEL",
+      "reason": "Fichier .def manquant"
+    },
+    {
+      "name": "New_Kyouki",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Noa_MK",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Olivia",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Orochi.Yamazaki-CKOFM",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "R.S.P",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Raika",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Rinne-RH",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Rocken",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Samael",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Sasin",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Shadow-Dancer",
+      "reason": "Fichier .air manquant"
+    },
+    {
+      "name": "Sonic Vanesa",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Tenrou_Kunagi",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "ThunderMiss.Shermie",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "VladRose",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Voltage Zeroko-Pre",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Yamazaki.Blood",
+      "reason": "Fichier .sff manquant"
+    },
+    {
+      "name": "Yuri_SV",
+      "reason": "Fichier .sff manquant"
+    }
+  ]
+}
