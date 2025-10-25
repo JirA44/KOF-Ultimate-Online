@@ -1,0 +1,221 @@
+{
+  "start_time": "2025-10-25T16:55:51.964344",
+  "phases": {
+    "launch": {
+      "total": 5,
+      "success": 4,
+      "crashes": 1
+    },
+    "individual_chars": {
+      "total": 124,
+      "success": 110,
+      "crashes": 14,
+      "problem_chars": [
+        {
+          "name": "03-A-Kyo LV2",
+          "reason": "Crash après 43s"
+        },
+        {
+          "name": "Choi_XI",
+          "reason": "Crash après 46s"
+        },
+        {
+          "name": "D.Yashiro.Rhythm(Dusk)1.x",
+          "reason": "Crash après 44s"
+        },
+        {
+          "name": "D_DisciplineGirl",
+          "reason": "Crash après 44s"
+        },
+        {
+          "name": "Daisu",
+          "reason": "Crash après 46s"
+        },
+        {
+          "name": "DF-Sula",
+          "reason": "Crash après 43s"
+        },
+        {
+          "name": "Element Ash",
+          "reason": "Crash après 48s"
+        },
+        {
+          "name": "Garnet 1.1",
+          "reason": "Jeu ne lance pas"
+        },
+        {
+          "name": "GOD_ADEL(2012-01-28 Trial)",
+          "reason": "Jeu ne lance pas"
+        },
+        {
+          "name": "Kasim_LV2-CKOFM[v0.40]",
+          "reason": "Crash après 42s"
+        },
+        {
+          "name": "robo-kyo-kofa",
+          "reason": "Crash après 50s"
+        },
+        {
+          "name": "Rugal7th",
+          "reason": "Crash après 45s"
+        },
+        {
+          "name": "vandals",
+          "reason": "Crash après 44s"
+        },
+        {
+          "name": "WatchTV",
+          "reason": "Crash après 46s"
+        }
+      ]
+    },
+    "stages": {
+      "total": 31,
+      "success": 10,
+      "crashes": 0,
+      "problem_stages": []
+    }
+  },
+  "characters_tested": [
+    "03-A-Kyo LV2",
+    "_ArchiMurderer",
+    "A-Angel",
+    "ai",
+    "Aika",
+    "Aika_MK",
+    "Aileen",
+    "Akari",
+    "Akiha Orochi",
+    "Akiha Yagami1",
+    "Akira_Kazakami",
+    "akuma",
+    "ALBA MEIRA KOF XI -MI2",
+    "Alfred_WLS",
+    "Alou_AKOF",
+    "Alter Kyo",
+    "Amoumi-KOFM",
+    "Andy-ROTD",
+    "Aner Rolange KOFM",
+    "Anette-KOFM",
+    "Ash",
+    "asura-kofa",
+    "Athena",
+    "Athena_XI",
+    "Balto-KOFM",
+    "Beast Yeorin QS",
+    "Benimaru-Nikaido-STAR",
+    "BlackPrincess_Tohka",
+    "Boss Gustab M",
+    "boss-orochi",
+    "Business_Vanessa-KOFM",
+    "ccihinako",
+    "cciking",
+    "ccishermie",
+    "Chalice",
+    "Chaos-CKOFM",
+    "Chobi-Hige",
+    "Choi_XI",
+    "clone benimaru",
+    "Clone Blood Rugal",
+    "Clone Zero",
+    "Cronus",
+    "Cruelty Sula UM",
+    "D.Yashiro.Rhythm(Dusk)1.x",
+    "D_DisciplineGirl",
+    "Daisu",
+    "Delirus",
+    "DF-Sula",
+    "DG.Rugal-KOFM",
+    "dr-yang-kofa",
+    "Dragondomainlords",
+    "Drakyola",
+    "Duester",
+    "Element Ash",
+    "Element Scarlet",
+    "Element-Adel",
+    "Essence of Darkness",
+    "Eve",
+    "Fang",
+    "Felix_THird",
+    "Final Sachiel WF",
+    "Final Zeroko B",
+    "final-goenitz",
+    "Final-IGNIZ",
+    "Final-OriginalZero",
+    "Garnet 1.1",
+    "GOD_ADEL(2012-01-28 Trial)",
+    "god_orochi",
+    "God_Wind",
+    "Goktore-CKOFM",
+    "heraclius",
+    "Hiel_SP",
+    "Hunter_U6746",
+    "Infernal_Wind",
+    "K9999_KOF",
+    "Kaneda-KOFM",
+    "Kasim_LV2-CKOFM[v0.40]",
+    "Kei",
+    "Lord-Goenitz",
+    "Mai Phoenix XI",
+    "Maltet",
+    "Maryl",
+    "Matam",
+    "Meld_Boss",
+    "meteoricmarisa",
+    "mizore-kofmLV2",
+    "N-Zeroko",
+    "Nao-MX 1.0",
+    "NeoDio KOFM",
+    "NeoGeegus KOFM",
+    "Nero",
+    "Nox Bernstein",
+    "O.Zero-Prominence",
+    "Original Psyqhical",
+    "Orochi-EV1.55",
+    "orochi-kyoko",
+    "P-LEONA_ELEMENT",
+    "Psyche_42-1.1",
+    "Psyche_57-1.1",
+    "Raisen.blood-KOFM",
+    "Rayno",
+    "Reas-KOFM",
+    "robo-kyo-kofa",
+    "Rose",
+    "Rozwel S.K (LEGIT)",
+    "Rugal7th",
+    "Ryuji",
+    "S_Infezione",
+    "Shadow-Dancer",
+    "Spiritland Lords",
+    "True Iori X_KOF",
+    "Unfailed Gustab",
+    "Valmar Rugal",
+    "vandals",
+    "Viper",
+    "WatchTV",
+    "WhirlWind-Goenitz",
+    "White DeathRaGeroous Version",
+    "Wild.O.Yashiro",
+    "Wind_MMXIX",
+    "Xion-V",
+    "Yukida",
+    "Yuno-KOFM",
+    "Zerozuchi_Boss"
+  ],
+  "stages_tested": [
+    "light kyouki.def",
+    "Darkness.def",
+    "space_planet.def",
+    "Wall of paintings.def",
+    "BLACK SON DROTIME.def",
+    "Abyss-Rugal-Palace.def",
+    "forest infernal fire.def",
+    "clones lab destroyed.def",
+    "RED.def",
+    "Exagon Force.def"
+  ],
+  "total_crashes": 14,
+  "total_tests": 139,
+  "success_rate": 89.20863309352518,
+  "end_time": "2025-10-25T19:28:22.780325"
+}
