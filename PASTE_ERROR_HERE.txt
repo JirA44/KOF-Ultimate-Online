@@ -1,0 +1,11 @@
+Colle ici les erreurs du jeu quand ça crash.
+
+Exemple:
+Error in clsn2 in [Begin Action 41] elem 0
+Error detected.
+Error loading storyboard: chars/final-goenitz/ending.storyboard
+Error in goenitz.air:73
+Error loading chars/final-goenitz/final-goenitz.def
+Error loading p1
+
+Puis lance: python ANALYZE_AND_FIX_ERRORS.py

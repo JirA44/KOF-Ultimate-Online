@@ -125,8 +125,8 @@ alpha = 150,256
 [Select Info]
 fadeout.time = 15
 
-rows = 4
-columns = 7
+rows = 11
+columns = 19
 wrapping = 1
 pos = 70,160
 showemptyboxes = 0
@@ -163,15 +163,15 @@ portrait.offset = 0,0
 portrait.scale = 0.32,0.32
 
 p1.face.offset = 18,13
-p1.face.scale = 1.5,1.5
+p1.face.scale = 1,1
 p1.face.facing = 1
-p1.face.spr = 9000,0
+p1.face.spr = 9000,1
 p1.face.layerno = 2
 
 p2.face.offset = 500,13
-p2.face.scale = 1.5,1.5
+p2.face.scale = 1,1
 p2.face.facing = -1
-p2.face.spr = 9000,0
+p2.face.spr = 9000,1
 p2.face.layerno = 2
 
 title.offset = 320,10

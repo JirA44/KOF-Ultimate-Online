@@ -1,0 +1,354 @@
+======================================================================
+🛠️  RÉPARATION COMPLÈTE - CLSN + STORYBOARDS
+======================================================================
+
+✓ 27 personnages à analyser
+
+[1/27] Athena
+  ⚠️  Action 121: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 132: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 141: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 142: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 150: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 440: Clsn2 déclare 5, mais trouve 4
+      ✓ Corrigé: Clsn2: 4
+  ⚠️  Action 800: Clsn2 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn2: 1
+  ⚠️  Action 5150: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1215: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+[2/27] Athena_XI
+  ⚠️  Action 100: Clsn2 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn2: 3
+  ⚠️  Action 1215: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2025: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+[3/27] Ash
+  ⚠️  Action 100: Clsn2 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn2: 2
+[4/27] Kei
+  ⚠️  Rock.air ;Animations and Effects Animations introuvable
+[5/27] boss-orochi
+  ⚠️  Action 0: Clsn2 déclare 9, mais trouve 8
+      ✓ Corrigé: Clsn2: 8
+  ⚠️  Action 1011: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2213: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 11011: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action Unknown: Clsn2 déclare 24, mais trouve 23
+      ✓ Corrigé: Clsn2: 23
+  ⚠️  Action 10801: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 10622: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 10311: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 22120: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 4477: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+[6/27] god_orochi
+  ⚠️  Action 1011: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1410: Clsn2 déclare 2, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1062: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2557: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 3313: Clsn2 déclare 24, mais trouve 22
+      ✓ Corrigé: Clsn2: 22
+  ⚠️  Action 11503: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 22079: Clsn2 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn2: 3
+[7/27] final-goenitz
+  ⚠️  Action 974: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1107: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2211: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+[8/27] Lord-Goenitz
+[9/27] WhirlWind-Goenitz
+  ⚠️  Action 1476: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1700: Clsn2 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn2: 2
+  ⚠️  Action 2200: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 3001: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 9101: Clsn2 déclare 3, mais trouve 1
+      ✓ Corrigé: Clsn2: 1
+[10/27] Final-IGNIZ
+  ⚠️  Action 923: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 927: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 941: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1003: Clsn1 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn1: 3
+  ⚠️  Action 2103: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 2223: Clsn1 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn1: 1
+[11/27] Final-OriginalZero
+[12/27] Clone Zero
+  ⚠️  Action 100: Clsn2 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn2: 3
+  ⚠️  Action 3111: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 4011: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 6011: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 122: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+[13/27] O.Zero-Prominence
+  ⚠️  Action 1049: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1096: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1217: Clsn2 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn2: 2
+  ⚠️  Action 1273: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 3005: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 3027: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ✓ Créé: Arcade/oping.def
+  ✓ Créé: Arcade/ending.def
+[14/27] Clone Blood Rugal
+  ⚠️  Action 1031: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1605: Clsn1 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn1: 1
+  ⚠️  Action 2244: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2371: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2755: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 2801: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 3055: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 9002: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 33442: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+[15/27] DG.Rugal-KOFM
+[16/27] Valmar Rugal
+  ⚠️  Action 0: Clsn2 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn2: 3
+  ⚠️  Action 1200: Clsn2 déclare 21, mais trouve 20
+      ✓ Corrigé: Clsn2: 20
+  ⚠️  Action 1210: Clsn1 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn1: 1
+  ⚠️  Action 1625: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2011: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 7002: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 8705: Clsn1 déclare 5, mais trouve 4
+      ✓ Corrigé: Clsn1: 4
+  ⚠️  Action 100522: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 10097: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+[17/27] akuma
+  ⚠️  Action 5201: Clsn2 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn2: 1
+  ⚠️  Action 195: Clsn2 déclare 15, mais trouve 14
+      ✓ Corrigé: Clsn2: 14
+  ⚠️  Action 670: Clsn2 déclare 5, mais trouve 4
+      ✓ Corrigé: Clsn2: 4
+[18/27] Rose
+  ⚠️  Action 34: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 34: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 47: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 140: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 150: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1000: Clsn1 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn1: 1
+  ⚠️  Action 1120: Clsn1 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn1: 2
+  ⚠️  Action 1341: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 2000: Clsn1 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn1: 1
+  ⚠️  Action 2303: Clsn1 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn1: 2
+  ⚠️  Action 2354: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 5051: Clsn2 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn2: 3
+  ⚠️  Action 5062: Clsn2 déclare 7, mais trouve 6
+      ✓ Corrigé: Clsn2: 6
+  ⚠️  Action 5070: Clsn2 déclare 5, mais trouve 4
+      ✓ Corrigé: Clsn2: 4
+  ⚠️  Action 5170: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 30011: Clsn1 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn1: 1
+[19/27] Viper
+  ⚠️  Action 41: Clsn2 déclare 14, mais trouve 13
+      ✓ Corrigé: Clsn2: 13
+  ⚠️  Action 437: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1051: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1402: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1405: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 2205: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2206: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 3028: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 3610: Clsn2 déclare 9, mais trouve 8
+      ✓ Corrigé: Clsn2: 8
+  ⚠️  Action 9990: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+[20/27] Ryuji
+  ⚠️  Ryuji.air ;动作文件 introuvable
+  ✓ Créé: intro.def
+  ✓ Créé: ending.def
+[21/27] Nero
+  ⚠️  Action 6090: Clsn2 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn2: 3
+  ⚠️  Action 6162: Clsn2 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn2: 1
+  ⚠️  Action 12: Clsn2 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn2: 2
+  ⚠️  Action 100: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 211: Clsn2 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn2: 3
+  ⚠️  Action 209: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 631: Clsn2 déclare 10, mais trouve 9
+      ✓ Corrigé: Clsn2: 9
+  ⚠️  Action 640: Clsn1 déclare 2, mais trouve 1
+      ✓ Corrigé: Clsn1: 1
+  ⚠️  Action 1004: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1040: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 3002: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 3052: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 2110: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 3904: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 840: Clsn2 déclare 8, mais trouve 7
+      ✓ Corrigé: Clsn2: 7
+  ⚠️  Action 151: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 5030: Clsn2 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn2: 2
+  ⚠️  Action 4540: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 35007: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+[22/27] Eve
+[23/27] Fang
+  ⚠️  Action 1123: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1131: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1302: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1350: Clsn1 déclare 5, mais trouve 4
+      ✓ Corrigé: Clsn1: 4
+  ⚠️  Action 2006: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2012: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2570: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+[24/27] Boss Gustab M
+  ⚠️  Action 306: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1121: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 1123: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1133: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 2001: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2012: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 2014: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 2913: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+[25/27] Unfailed Gustab
+[26/27] Cronus
+  ⚠️  Action 216: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1010: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 1451: Clsn2 déclare 6, mais trouve 5
+      ✓ Corrigé: Clsn2: 5
+  ⚠️  Action 1710: Clsn2 déclare 5, mais trouve 4
+      ✓ Corrigé: Clsn2: 4
+  ⚠️  Action 1850: Clsn1 déclare 3, mais trouve 2
+      ✓ Corrigé: Clsn1: 2
+  ⚠️  Action 1880: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+  ⚠️  Action 3160: Clsn2 déclare 9, mais trouve 8
+      ✓ Corrigé: Clsn2: 8
+  ⚠️  Action 3835: Clsn1 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn1: 0
+[27/27] Delirus
+  ⚠️  Action 650: Clsn2 déclare 10, mais trouve 9
+      ✓ Corrigé: Clsn2: 9
+  ⚠️  Action 1052: Clsn2 déclare 1, mais trouve 0
+      ✓ Corrigé: Clsn2: 0
+  ⚠️  Action 3210: Clsn1 déclare 4, mais trouve 3
+      ✓ Corrigé: Clsn1: 3
+
+======================================================================
+📊 RAPPORT FINAL
+======================================================================
+
+Erreurs CLSN réparées:      147
+Storyboards créés:          4
+
+✅ RÉPARATIONS TERMINÉES!
+
+💡 Testez maintenant le jeu:
+   1. Lancez KOF Ultimate Online
+   2. Sélectionnez les personnages réparés
+   3. Lancez un combat
+
+Appuyez sur ENTRÉE pour fermer...Traceback (most recent call last):
+  File "D:\KOF Ultimate Online\FIX_ALL_CLSN_AND_STORYBOARDS.py", line 217, in <module>
+    main()
+  File "D:\KOF Ultimate Online\FIX_ALL_CLSN_AND_STORYBOARDS.py", line 214, in main
+    input("\nAppuyez sur ENTRÉE pour fermer...")
+EOFError: EOF when reading a line

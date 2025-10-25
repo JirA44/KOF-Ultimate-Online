@@ -1,0 +1,1491 @@
+============================================================
+📸  EXTRACTION PORTRAITS depuis .sff
+============================================================
+
+✓ Trouvé 4 fichiers .sff:
+  - fight.sff
+  - fightfx.sff
+  - Loading.sff
+  - system.sff
+
+🎯 Extraction depuis system.sff...
+  📄 SFF v0.1.0.2
+  📊 0 groupes, 0 images
+❌ Aucun portrait trouvé (groupe 9000)
+
+============================================================
+🔍 Recherche portraits dans chars/*/sprite.sff
+============================================================
+
+✓ Trouvé 165 fichiers .sff dans chars/
+
+📂 Final Sachiel WF...
+  📄 SFF v0.1.0.1
+  📊 180 groupes, 1272 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Final Sachiel WF_portrait.png
+
+📂 boss-orochi...
+  📄 SFF v0.1.0.1
+  📊 155 groupes, 1956 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: boss-orochi_portrait.png
+
+📂 Nox Bernstein...
+  📄 SFF v0.1.0.1
+  📊 142 groupes, 1247 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Nox Bernstein_portrait.png
+
+📂 Raisen.blood-KOFM...
+  📄 SFF v0.1.0.1
+  📊 158 groupes, 1770 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Raisen.blood-KOFM_portrait.png
+
+📂 Kasim_LV2-CKOFM[v0.40]...
+  📄 SFF v0.1.0.1
+  📊 310 groupes, 2693 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=127
+  ✓ Sauvegardé: Kasim_LV2-CKOFM[v0.40]_portrait.png
+
+📂 Hiel_SP...
+  📄 SFF v0.1.0.1
+  📊 139 groupes, 1142 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=18181
+    ✓ Trouvé portrait: groupe=9000, image=19
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Hiel_SP_portrait.png
+
+📂 Final-IGNIZ...
+  📄 SFF v0.1.0.1
+  📊 120 groupes, 1055 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+  ✓ Sauvegardé: Final-IGNIZ_portrait.png
+
+📂 D.Yashiro.Rhythm(Dusk)1.x...
+  📄 SFF v0.1.0.1
+  📊 207 groupes, 2299 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: D.Yashiro.Rhythm(Dusk)1.x_portrait.png
+
+📂 ai...
+  📄 SFF v0.1.0.1
+  📊 147 groupes, 1231 images
+
+📂 Dragondomainlords...
+  📄 SFF v0.1.0.1
+  📊 324 groupes, 4284 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=3
+    ✓ Trouvé portrait: groupe=9000, image=2722
+    ✓ Trouvé portrait: groupe=9000, image=8282
+  ✓ Sauvegardé: Dragondomainlords_portrait.png
+
+📂 God_Wind...
+  📄 SFF v0.1.0.1
+  📊 268 groupes, 2934 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2888
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=13
+    ✓ Trouvé portrait: groupe=9000, image=14
+    ✓ Trouvé portrait: groupe=9000, image=15
+    ✓ Trouvé portrait: groupe=9000, image=16
+    ✓ Trouvé portrait: groupe=9000, image=17
+    ✓ Trouvé portrait: groupe=9000, image=19
+    ✓ Trouvé portrait: groupe=9000, image=500
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=52
+    ✓ Trouvé portrait: groupe=9000, image=53
+    ✓ Trouvé portrait: groupe=9000, image=54
+    ✓ Trouvé portrait: groupe=9000, image=55
+    ✓ Trouvé portrait: groupe=9000, image=56
+    ✓ Trouvé portrait: groupe=9000, image=57
+  ✓ Sauvegardé: God_Wind_portrait.png
+
+📂 Unfailed Gustab...
+  📄 SFF v0.1.0.1
+  📊 143 groupes, 1758 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=88
+  ✓ Sauvegardé: Unfailed Gustab_portrait.png
+
+📂 Clone Zero...
+  📄 SFF v0.1.0.1
+  📊 0 groupes, 41 images
+
+📂 final-goenitz...
+  📄 SFF v0.1.0.1
+  📊 140 groupes, 1121 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: final-goenitz_portrait.png
+
+📂 final-goenitz...
+  📄 SFF v0.1.0.1
+  📊 128 groupes, 845 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: final-goenitz_portrait.png
+
+📂 White DeathRaGeroous Version...
+  📄 SFF v0.1.0.1
+  📊 122 groupes, 2238 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: White DeathRaGeroous Version_portrait.png
+
+📂 Lord-Goenitz...
+  📄 SFF v0.1.0.1
+  📊 200 groupes, 1945 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+  ✓ Sauvegardé: Lord-Goenitz_portrait.png
+
+📂 heraclius...
+  📄 SFF v0.1.0.1
+  📊 151 groupes, 1303 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12828
+  ✓ Sauvegardé: heraclius_portrait.png
+
+📂 Nero...
+  📄 SFF v0.1.0.1
+  📊 126 groupes, 1288 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12828
+    ✓ Trouvé portrait: groupe=9000, image=23372
+  ✓ Sauvegardé: Nero_portrait.png
+
+📂 Goktore-CKOFM...
+  📄 SFF v0.1.0.1
+  📊 283 groupes, 2885 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Goktore-CKOFM_portrait.png
+
+📂 Psyche_57-1.1...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Drakyola...
+  📄 SFF v0.1.0.1
+  📊 182 groupes, 2643 images
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=52
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=100
+    ✓ Trouvé portrait: groupe=9000, image=200
+    ✓ Trouvé portrait: groupe=9000, image=11
+    ✓ Trouvé portrait: groupe=9000, image=18282
+    ✓ Trouvé portrait: groupe=9000, image=22828
+  ✓ Sauvegardé: Drakyola_portrait.png
+
+📂 Final-IGNIZ...
+  📄 SFF v0.1.0.1
+  📊 124 groupes, 1093 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Final-IGNIZ_portrait.png
+
+📂 Aileen...
+  📄 SFF v0.1.0.1
+  📊 258 groupes, 4082 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Aileen_portrait.png
+
+📂 WatchTV...
+  📄 SFF v0.1.0.1
+  📊 238 groupes, 4100 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12888
+    ✓ Trouvé portrait: groupe=9000, image=2222
+    ✓ Trouvé portrait: groupe=9000, image=11
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: WatchTV_portrait.png
+
+📂 ccihinako...
+  📄 SFF v0.1.0.1
+  📊 0 groupes, 41 images
+
+📂 baiyi...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 asura-kofa...
+  📄 SFF v0.1.0.1
+  📊 97 groupes, 915 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=12228
+    ✓ Trouvé portrait: groupe=9000, image=28282
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=105
+    ✓ Trouvé portrait: groupe=9000, image=222
+  ✓ Sauvegardé: asura-kofa_portrait.png
+
+📂 Ash...
+  📄 SFF v0.1.0.1
+  📊 151 groupes, 1383 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Ash_portrait.png
+
+📂 ALBA MEIRA KOF XI -MI2...
+  📄 SFF v0.1.0.1
+  📊 121 groupes, 932 images
+
+📂 K9999_KOF...
+  📄 SFF v0.1.0.1
+  📊 110 groupes, 986 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=17272
+  ✓ Sauvegardé: K9999_KOF_portrait.png
+
+📂 Orochi Leona-KOFM...
+  📄 SFF v0.1.0.1
+  📊 163 groupes, 1614 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Orochi Leona-KOFM_portrait.png
+
+📂 Kasumi-KOFM...
+  📄 SFF v0.1.0.1
+  📊 138 groupes, 857 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=4
+    ✓ Trouvé portrait: groupe=9000, image=5
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=19
+    ✓ Trouvé portrait: groupe=9000, image=70
+    ✓ Trouvé portrait: groupe=9000, image=71
+    ✓ Trouvé portrait: groupe=9000, image=72
+    ✓ Trouvé portrait: groupe=9000, image=73
+    ✓ Trouvé portrait: groupe=9000, image=74
+    ✓ Trouvé portrait: groupe=9000, image=75
+    ✓ Trouvé portrait: groupe=9000, image=76
+    ✓ Trouvé portrait: groupe=9000, image=77
+    ✓ Trouvé portrait: groupe=9000, image=80
+    ✓ Trouvé portrait: groupe=9000, image=81
+    ✓ Trouvé portrait: groupe=9000, image=82
+    ✓ Trouvé portrait: groupe=9000, image=99
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Kasumi-KOFM_portrait.png
+
+📂 kfm...
+  📄 SFF v0.1.0.2
+  📊 0 groupes, 0 images
+
+📂 Duester...
+  📄 SFF v0.1.0.1
+  📊 147 groupes, 1157 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=18872
+    ✓ Trouvé portrait: groupe=9000, image=90
+    ✓ Trouvé portrait: groupe=9000, image=91
+    ✓ Trouvé portrait: groupe=9000, image=92
+    ✓ Trouvé portrait: groupe=9000, image=95
+    ✓ Trouvé portrait: groupe=9000, image=96
+    ✓ Trouvé portrait: groupe=9000, image=97
+    ✓ Trouvé portrait: groupe=9000, image=98
+    ✓ Trouvé portrait: groupe=9000, image=99
+  ✓ Sauvegardé: Duester_portrait.png
+
+📂 Essence of Darkness...
+  📄 SFF v0.1.0.1
+  📊 109 groupes, 1269 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Essence of Darkness_portrait.png
+
+📂 Matam...
+  📄 SFF v0.1.0.1
+  📊 181 groupes, 1911 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1222
+    ✓ Trouvé portrait: groupe=9000, image=90
+    ✓ Trouvé portrait: groupe=9000, image=91
+    ✓ Trouvé portrait: groupe=9000, image=92
+    ✓ Trouvé portrait: groupe=9000, image=95
+    ✓ Trouvé portrait: groupe=9000, image=96
+    ✓ Trouvé portrait: groupe=9000, image=97
+    ✓ Trouvé portrait: groupe=9000, image=98
+    ✓ Trouvé portrait: groupe=9000, image=99
+  ✓ Sauvegardé: Matam_portrait.png
+
+📂 Anette-KOFM...
+  📄 SFF v0.1.0.1
+  📊 194 groupes, 1525 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=15
+  ✓ Sauvegardé: Anette-KOFM_portrait.png
+
+📂 Geese-KOFM...
+  📄 SFF v0.1.0.1
+  📊 152 groupes, 1153 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=222
+  ✓ Sauvegardé: Geese-KOFM_portrait.png
+
+📂 O.Zero-Prominence...
+  📄 SFF v0.1.0.1
+  📊 171 groupes, 2515 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=4
+    ✓ Trouvé portrait: groupe=9000, image=122
+    ✓ Trouvé portrait: groupe=9000, image=2222
+    ✓ Trouvé portrait: groupe=9000, image=33988
+    ✓ Trouvé portrait: groupe=9000, image=59982
+  ✓ Sauvegardé: O.Zero-Prominence_portrait.png
+
+📂 Shadow-Dancer...
+  📄 SFF v0.1.0.1
+  📊 411 groupes, 6402 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1344
+  ✓ Sauvegardé: Shadow-Dancer_portrait.png
+
+📂 Zerozuchi_Boss...
+  📄 SFF v0.1.0.1
+  📊 193 groupes, 1996 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Zerozuchi_Boss_portrait.png
+
+📂 Benimaru-Nikaido-STAR...
+  📄 SFF v0.1.0.1
+  📊 157 groupes, 1266 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Benimaru-Nikaido-STAR_portrait.png
+
+📂 Aika_MK...
+  📄 SFF v0.1.0.1
+  📊 118 groupes, 997 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=18282
+    ✓ Trouvé portrait: groupe=9000, image=28883
+  ✓ Sauvegardé: Aika_MK_portrait.png
+
+📂 Athena_XI...
+  📄 SFF v0.1.0.1
+  📊 128 groupes, 882 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=28277
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Athena_XI_portrait.png
+
+📂 Eputh Blood-KOFM...
+  📄 SFF v0.1.0.1
+  📊 177 groupes, 1821 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Eputh Blood-KOFM_portrait.png
+
+📂 Valmar Rugal...
+  📄 SFF v0.1.0.1
+  📊 208 groupes, 5273 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=18171
+  ✓ Sauvegardé: Valmar Rugal_portrait.png
+
+📂 Xion-V...
+  📄 SFF v0.1.0.1
+  📊 178 groupes, 1371 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Xion-V_portrait.png
+
+📂 Hunter_U6746...
+  📄 SFF v0.1.0.1
+  📊 172 groupes, 1493 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=17272
+    ✓ Trouvé portrait: groupe=9000, image=22828
+    ✓ Trouvé portrait: groupe=9000, image=12
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=199
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Hunter_U6746_portrait.png
+
+📂 Chobi-Hige...
+  📄 SFF v0.1.0.1
+  📊 179 groupes, 1893 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12828
+  ✓ Sauvegardé: Chobi-Hige_portrait.png
+
+📂 Boss Gustab M...
+  📄 SFF v0.1.0.1
+  📊 120 groupes, 1011 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Boss Gustab M_portrait.png
+
+📂 Yukida...
+  📄 SFF v0.1.0.1
+  📊 145 groupes, 1185 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12828
+    ✓ Trouvé portrait: groupe=9000, image=22828
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=111
+    ✓ Trouvé portrait: groupe=9000, image=199
+    ✓ Trouvé portrait: groupe=9000, image=502
+  ✓ Sauvegardé: Yukida_portrait.png
+
+📂 Alter Kyo...
+  📄 SFF v0.1.0.1
+  📊 254 groupes, 3293 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12828
+    ✓ Trouvé portrait: groupe=9000, image=28228
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Alter Kyo_portrait.png
+
+📂 Orochi-EV1.55...
+  📄 SFF v0.1.0.1
+  📊 208 groupes, 1793 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Orochi-EV1.55_portrait.png
+
+📂 Alou_AKOF...
+  📄 SFF v0.1.0.1
+  📊 113 groupes, 886 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Alou_AKOF_portrait.png
+
+📂 Clone Zero...
+  📄 SFF v0.1.0.1
+  📊 113 groupes, 1147 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Clone Zero_portrait.png
+
+📂 DG.Rugal-KOFM...
+  📄 SFF v0.1.0.1
+  📊 234 groupes, 2329 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=28877
+  ✓ Sauvegardé: DG.Rugal-KOFM_portrait.png
+
+📂 Final Goeniko...
+  📄 SFF v0.1.0.1
+  📊 228 groupes, 2357 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=17227
+    ✓ Trouvé portrait: groupe=9000, image=28282
+    ✓ Trouvé portrait: groupe=9000, image=4
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=30
+    ✓ Trouvé portrait: groupe=9000, image=41
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=1110
+    ✓ Trouvé portrait: groupe=9000, image=1111
+  ✓ Sauvegardé: Final Goeniko_portrait.png
+
+📂 kfm...
+  📄 SFF v0.1.0.1
+  📊 6 groupes, 7 images
+
+📂 Felix_THird...
+  📄 SFF v0.1.0.1
+  📊 143 groupes, 1634 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=18282
+    ✓ Trouvé portrait: groupe=9000, image=22828
+    ✓ Trouvé portrait: groupe=9000, image=22828
+    ✓ Trouvé portrait: groupe=9000, image=23939
+    ✓ Trouvé portrait: groupe=9000, image=3
+    ✓ Trouvé portrait: groupe=9000, image=39282
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=11
+  ✓ Sauvegardé: Felix_THird_portrait.png
+
+📂 Kychiel...
+  📄 SFF v0.1.0.1
+  📊 195 groupes, 1976 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=18282
+  ✓ Sauvegardé: Kychiel_portrait.png
+
+📂 Unleashesd God Kula...
+  📄 SFF v0.1.0.1
+  📊 238 groupes, 3347 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12727
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=90
+    ✓ Trouvé portrait: groupe=9000, image=91
+    ✓ Trouvé portrait: groupe=9000, image=92
+    ✓ Trouvé portrait: groupe=9000, image=95
+    ✓ Trouvé portrait: groupe=9000, image=96
+    ✓ Trouvé portrait: groupe=9000, image=97
+  ✓ Sauvegardé: Unleashesd God Kula_portrait.png
+
+📂 Akiha Yagami1...
+  📄 SFF v0.1.0.1
+  📊 163 groupes, 2011 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=14231
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Akiha Yagami1_portrait.png
+
+📂 BlackPrincess_Tohka...
+  📄 SFF v0.1.0.1
+  📊 137 groupes, 1509 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: BlackPrincess_Tohka_portrait.png
+
+📂 True Iori X_KOF...
+  📄 SFF v0.1.0.1
+  📊 200 groupes, 2303 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: True Iori X_KOF_portrait.png
+
+📂 Cruelty Sula UM...
+  📄 SFF v0.1.0.1
+  📊 176 groupes, 1487 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=19
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Cruelty Sula UM_portrait.png
+
+📂 Aika...
+  📄 SFF v0.1.0.1
+  📊 106 groupes, 793 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=105
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=0
+  ✓ Sauvegardé: Aika_portrait.png
+
+📂 NeoDio KOFM...
+  📄 SFF v0.1.0.1
+  📊 102 groupes, 743 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=0
+  ✓ Sauvegardé: NeoDio KOFM_portrait.png
+
+📂 Magnus...
+  📄 SFF v0.1.0.1
+  📊 148 groupes, 1293 images
+
+📂 Alfred_WLS...
+  📄 SFF v0.1.0.1
+  📊 162 groupes, 1110 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=11
+  ✓ Sauvegardé: Alfred_WLS_portrait.png
+
+📂 god_orochi...
+  📄 SFF v0.1.0.1
+  📊 148 groupes, 1325 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: god_orochi_portrait.png
+
+📂 Spiritland Lords...
+  📄 SFF v0.1.0.1
+  📊 335 groupes, 5085 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=0
+  ✓ Sauvegardé: Spiritland Lords_portrait.png
+
+📂 Kaneda-KOFM...
+  📄 SFF v0.1.0.2
+  📊 0 groupes, 0 images
+
+📂 Rugal7th...
+  📄 SFF v0.1.0.1
+  📊 258 groupes, 3690 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12929
+  ✓ Sauvegardé: Rugal7th_portrait.png
+
+📂 Wind_MMXIX...
+  📄 SFF v0.1.0.1
+  📊 126 groupes, 868 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=18282
+    ✓ Trouvé portrait: groupe=9000, image=22282
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=111
+    ✓ Trouvé portrait: groupe=9000, image=199
+    ✓ Trouvé portrait: groupe=9000, image=502
+  ✓ Sauvegardé: Wind_MMXIX_portrait.png
+
+📂 Kei...
+  📄 SFF v0.1.0.1
+  📊 165 groupes, 1678 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Kei_portrait.png
+
+📂 Delirus...
+  📄 SFF v0.1.0.1
+  📊 181 groupes, 1896 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=11
+    ✓ Trouvé portrait: groupe=9000, image=50
+  ✓ Sauvegardé: Delirus_portrait.png
+
+📂 Yuno-KOFM...
+  📄 SFF v0.1.0.1
+  📊 114 groupes, 802 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Yuno-KOFM_portrait.png
+
+📂 akuma...
+  📄 SFF v0.1.0.1
+  📊 167 groupes, 1036 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: akuma_portrait.png
+
+📂 Element Ash...
+  📄 SFF v0.1.0.1
+  📊 132 groupes, 1422 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Element Ash_portrait.png
+
+📂 Cronus...
+  📄 SFF v0.1.0.1
+  📊 224 groupes, 2299 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=11
+  ✓ Sauvegardé: Cronus_portrait.png
+
+📂 Aner Rolange KOFM...
+  📄 SFF v0.1.0.2
+  📊 0 groupes, 0 images
+
+📂 Balto-KOFM...
+  📄 SFF v0.1.0.1
+  📊 115 groupes, 907 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Balto-KOFM_portrait.png
+
+📂 Chaos-CKOFM...
+  📄 SFF v0.1.0.1
+  📊 275 groupes, 2333 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=188
+    ✓ Trouvé portrait: groupe=9000, image=999
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Chaos-CKOFM_portrait.png
+
+📂 A-Angel...
+  📄 SFF v0.1.0.1
+  📊 143 groupes, 1271 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=98
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=17727
+    ✓ Trouvé portrait: groupe=9000, image=28282
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=111
+    ✓ Trouvé portrait: groupe=9000, image=199
+    ✓ Trouvé portrait: groupe=9000, image=502
+  ✓ Sauvegardé: A-Angel_portrait.png
+
+📂 ALBA MEIRA KOF XI -MI2...
+  📄 SFF v0.1.0.1
+  📊 8 groupes, 41 images
+
+📂 billy...
+  📄 SFF v0.1.0.1
+  📊 106 groupes, 764 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: billy_portrait.png
+
+📂 Rozwel S.K (LEGIT)...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Eputh Blood-KOFM...
+  ⚠️ Erreur lecture: [Errno 13] Permission denied: 'D:\\KOF Ultimate Online\\chars\\Eputh Blood-KOFM\\blood.sff'
+
+📂 clone benimaru...
+  📄 SFF v0.1.0.1
+  📊 220 groupes, 1848 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=17777
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: clone benimaru_portrait.png
+
+📂 vandals...
+  📄 SFF v0.1.0.1
+  📊 205 groupes, 2090 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: vandals_portrait.png
+
+📂 Mai Phoenix XI...
+  📄 SFF v0.1.0.1
+  📊 215 groupes, 2194 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=178
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Mai Phoenix XI_portrait.png
+
+📂 03-A-Kyo LV2...
+  📄 SFF v0.1.0.1
+  📊 176 groupes, 2156 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=28272
+    ✓ Trouvé portrait: groupe=9000, image=3
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=5
+    ✓ Trouvé portrait: groupe=9000, image=5
+    ✓ Trouvé portrait: groupe=9000, image=5
+    ✓ Trouvé portrait: groupe=9000, image=5
+    ✓ Trouvé portrait: groupe=9000, image=20
+    ✓ Trouvé portrait: groupe=9000, image=20
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: 03-A-Kyo LV2_portrait.png
+
+📂 Ash...
+  📄 SFF v0.1.0.1
+  📊 0 groupes, 25 images
+
+📂 Graves...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Athena...
+  📄 SFF v0.1.0.1
+  📊 59 groupes, 628 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=52
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Athena_portrait.png
+
+📂 meteoricmarisa...
+  📄 SFF v0.1.0.2
+  📊 0 groupes, 0 images
+
+📂 N-Zeroko...
+  📄 SFF v0.1.0.1
+  📊 137 groupes, 1257 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=48882
+    ✓ Trouvé portrait: groupe=9000, image=1227
+    ✓ Trouvé portrait: groupe=9000, image=17777
+    ✓ Trouvé portrait: groupe=9000, image=28228
+  ✓ Sauvegardé: N-Zeroko_portrait.png
+
+📂 Akiha Yagami...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Athena-Heidern...
+  📄 SFF v0.1.0.1
+  📊 190 groupes, 1982 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=27171
+    ✓ Trouvé portrait: groupe=9000, image=50
+  ✓ Sauvegardé: Athena-Heidern_portrait.png
+
+📂 Titan_KOF...
+  📄 SFF v0.1.0.1
+  📊 165 groupes, 1824 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=10
+  ✓ Sauvegardé: Titan_KOF_portrait.png
+
+📂 dr-yang-kofa...
+  📄 SFF v0.1.0.1
+  📊 176 groupes, 1716 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=182
+    ✓ Trouvé portrait: groupe=9000, image=28877
+  ✓ Sauvegardé: dr-yang-kofa_portrait.png
+
+📂 Akari...
+  📄 SFF v0.1.0.1
+  📊 132 groupes, 757 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=1827
+    ✓ Trouvé portrait: groupe=9000, image=22828
+    ✓ Trouvé portrait: groupe=9000, image=4
+    ✓ Trouvé portrait: groupe=9000, image=11
+  ✓ Sauvegardé: Akari_portrait.png
+
+📂 Akiha Yagami DK...
+  📄 SFF v0.1.0.1
+  📊 380 groupes, 5333 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=13838
+    ✓ Trouvé portrait: groupe=9000, image=23393
+    ✓ Trouvé portrait: groupe=9000, image=21546
+    ✓ Trouvé portrait: groupe=9000, image=3
+    ✓ Trouvé portrait: groupe=9000, image=4
+    ✓ Trouvé portrait: groupe=9000, image=599
+    ✓ Trouvé portrait: groupe=9000, image=12
+    ✓ Trouvé portrait: groupe=9000, image=8
+    ✓ Trouvé portrait: groupe=9000, image=40
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=70
+    ✓ Trouvé portrait: groupe=9000, image=104
+    ✓ Trouvé portrait: groupe=9000, image=105
+    ✓ Trouvé portrait: groupe=9000, image=1066
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=220
+  ✓ Sauvegardé: Akiha Yagami DK_portrait.png
+
+📂 D_DisciplineGirl...
+  📄 SFF v0.1.0.1
+  📊 128 groupes, 1700 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: D_DisciplineGirl_portrait.png
+
+📂 orochi-iori...
+  📄 SFF v0.1.0.1
+  📊 153 groupes, 1389 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=18272
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: orochi-iori_portrait.png
+
+📂 Maltet...
+  📄 SFF v0.1.0.1
+  📊 247 groupes, 4124 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=4
+    ✓ Trouvé portrait: groupe=9000, image=5
+    ✓ Trouvé portrait: groupe=9000, image=5
+    ✓ Trouvé portrait: groupe=9000, image=6
+    ✓ Trouvé portrait: groupe=9000, image=7
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=20
+  ✓ Sauvegardé: Maltet_portrait.png
+
+📂 ccishermie...
+  📄 SFF v0.1.0.1
+  📊 93 groupes, 827 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: ccishermie_portrait.png
+
+📂 Cruelty Sula UM...
+  📄 SFF v0.1.0.1
+  📊 181 groupes, 1528 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=19
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Cruelty Sula UM_portrait.png
+
+📂 billy...
+  📄 SFF v0.1.0.1
+  📊 0 groupes, 20 images
+
+📂 Beast Yeorin QS...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 vandals...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Original Psyqhical...
+  📄 SFF v0.1.0.2
+  📊 0 groupes, 0 images
+
+📂 Reas-KOFM...
+  📄 SFF v0.1.0.1
+  📊 165 groupes, 1551 images
+    ✓ Trouvé portrait: groupe=9000, image=3
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Reas-KOFM_portrait.png
+
+📂 P-LEONA_ELEMENT...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Element-Adel...
+  📄 SFF v0.1.0.1
+  📊 158 groupes, 1775 images
+
+📂 Element Scarlet...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Andy-ROTD...
+  📄 SFF v0.1.0.1
+  📊 132 groupes, 745 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Andy-ROTD_portrait.png
+
+📂 Amoumi-KOFM...
+  📄 SFF v0.1.0.1
+  📊 103 groupes, 648 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=189
+    ✓ Trouvé portrait: groupe=9000, image=222
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Amoumi-KOFM_portrait.png
+
+📂 DF-Sula...
+  📄 SFF v0.1.0.1
+  📊 133 groupes, 953 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=12828
+  ✓ Sauvegardé: DF-Sula_portrait.png
+
+📂 kfm...
+  📄 SFF v0.1.0.1
+  📊 11 groupes, 12 images
+
+📂 Final-OriginalZero...
+  📄 SFF v0.1.0.1
+  📊 89 groupes, 781 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+  ✓ Sauvegardé: Final-OriginalZero_portrait.png
+
+📂 Viper...
+  📄 SFF v0.1.0.1
+  📊 268 groupes, 3572 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Viper_portrait.png
+
+📂 Meld_Boss...
+  📄 SFF v0.1.0.1
+  📊 148 groupes, 1261 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=18282
+    ✓ Trouvé portrait: groupe=9000, image=28837
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=111
+    ✓ Trouvé portrait: groupe=9000, image=199
+    ✓ Trouvé portrait: groupe=9000, image=502
+  ✓ Sauvegardé: Meld_Boss_portrait.png
+
+📂 Rayno...
+  📄 SFF v0.1.0.1
+  📊 279 groupes, 2957 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=1000
+  ✓ Sauvegardé: Rayno_portrait.png
+
+📂 cciking...
+  📄 SFF v0.1.0.1
+  📊 0 groupes, 49 images
+
+📂 billy...
+  📄 SFF v0.1.0.1
+  📊 165 groupes, 1398 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: billy_portrait.png
+
+📂 orochi-kyoko...
+  📄 SFF v0.1.0.1
+  📊 170 groupes, 1569 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=12828
+    ✓ Trouvé portrait: groupe=9000, image=3
+  ✓ Sauvegardé: orochi-kyoko_portrait.png
+
+📂 Nao-MX 1.0...
+  📄 SFF v0.1.0.1
+  📊 254 groupes, 3883 images
+    ✓ Trouvé portrait: groupe=9000, image=18228
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Nao-MX 1.0_portrait.png
+
+📂 Reyna...
+  📄 SFF v0.1.0.1
+  📊 257 groupes, 3994 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=11
+    ✓ Trouvé portrait: groupe=9000, image=33
+    ✓ Trouvé portrait: groupe=9000, image=3
+    ✓ Trouvé portrait: groupe=9000, image=4
+    ✓ Trouvé portrait: groupe=9000, image=22
+    ✓ Trouvé portrait: groupe=9000, image=22
+    ✓ Trouvé portrait: groupe=9000, image=7
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Reyna_portrait.png
+
+📂 Alou_AKOF...
+  📄 SFF v0.1.0.1
+  📊 114 groupes, 887 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Alou_AKOF_portrait.png
+
+📂 Daiki_Final(Prototype)...
+  📄 SFF v0.1.0.1
+  📊 218 groupes, 3410 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Daiki_Final(Prototype)_portrait.png
+
+📂 Fang...
+  📄 SFF v0.1.0.1
+  📊 183 groupes, 2289 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=17
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=3
+  ✓ Sauvegardé: Fang_portrait.png
+
+📂 Garnet 1.1...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 akuma...
+  📄 SFF v0.1.0.1
+  📊 89 groupes, 505 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: akuma_portrait.png
+
+📂 Kaori Yumiko...
+  📄 SFF v0.1.0.1
+  📊 213 groupes, 2076 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=35
+  ✓ Sauvegardé: Kaori Yumiko_portrait.png
+
+📂 Psyche_42-1.1...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Ryuji...
+  📄 SFF v0.1.0.1
+  📊 170 groupes, 1681 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Ryuji_portrait.png
+
+📂 Akiha Yagami1...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 S_Infezione...
+  📄 SFF v0.1.0.1
+  📊 130 groupes, 1595 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=12828
+  ✓ Sauvegardé: S_Infezione_portrait.png
+
+📂 GARS...
+  📄 SFF v0.1.0.1
+  📊 162 groupes, 1230 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: GARS_portrait.png
+
+📂 Final Adel...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Business_Vanessa-KOFM...
+  📄 SFF v0.1.0.1
+  📊 113 groupes, 938 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Business_Vanessa-KOFM_portrait.png
+
+📂 Clone Blood Rugal...
+  📄 SFF v0.1.0.1
+  📊 241 groupes, 2060 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=35
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=97
+    ✓ Trouvé portrait: groupe=9000, image=199
+    ✓ Trouvé portrait: groupe=9000, image=599
+    ✓ Trouvé portrait: groupe=9000, image=8000
+    ✓ Trouvé portrait: groupe=9000, image=9000
+    ✓ Trouvé portrait: groupe=9000, image=9500
+    ✓ Trouvé portrait: groupe=9000, image=9501
+    ✓ Trouvé portrait: groupe=9000, image=34345
+  ✓ Sauvegardé: Clone Blood Rugal_portrait.png
+
+📂 Chalice...
+  📄 SFF v0.1.0.1
+  📊 130 groupes, 2563 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12828
+    ✓ Trouvé portrait: groupe=9000, image=105
+    ✓ Trouvé portrait: groupe=9000, image=28228
+  ✓ Sauvegardé: Chalice_portrait.png
+
+📂 Eve...
+  📄 SFF v0.1.0.1
+  📊 213 groupes, 2076 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=18228
+    ✓ Trouvé portrait: groupe=9000, image=28282
+    ✓ Trouvé portrait: groupe=9000, image=3
+  ✓ Sauvegardé: Eve_portrait.png
+
+📂 Daisu...
+  📄 SFF v0.1.0.1
+  📊 163 groupes, 1431 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=177
+    ✓ Trouvé portrait: groupe=9000, image=28888
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=111
+    ✓ Trouvé portrait: groupe=9000, image=199
+    ✓ Trouvé portrait: groupe=9000, image=502
+  ✓ Sauvegardé: Daisu_portrait.png
+
+📂 mizore-kofmLV2...
+  📄 SFF v0.1.0.1
+  📊 189 groupes, 1494 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: mizore-kofmLV2_portrait.png
+
+📂 Final Zeroko B...
+  📄 SFF v0.1.0.1
+  📊 127 groupes, 1213 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=428
+    ✓ Trouvé portrait: groupe=9000, image=488
+    ✓ Trouvé portrait: groupe=9000, image=18
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Final Zeroko B_portrait.png
+
+📂 GOD_ADEL(2012-01-28 Trial)...
+  📄 SFF v0.1.0.1
+  📊 156 groupes, 1801 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=28882
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: GOD_ADEL(2012-01-28 Trial)_portrait.png
+
+📂 Infernal_Wind...
+  📄 SFF v0.1.0.1
+  📊 149 groupes, 1256 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: Infernal_Wind_portrait.png
+
+📂 Akiha Orochi...
+  📄 SFF v0.1.0.1
+  📊 285 groupes, 4352 images
+    ✓ Trouvé portrait: groupe=9000, image=105
+    ✓ Trouvé portrait: groupe=9000, image=18272
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Akiha Orochi_portrait.png
+
+📂 Orochi Kyo WF...
+  📄 SFF v0.1.0.1
+  📊 234 groupes, 2954 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: Orochi Kyo WF_portrait.png
+
+📂 robo-kyo-kofa...
+  📄 SFF v0.1.0.1
+  📊 130 groupes, 1136 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=12828
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+  ✓ Sauvegardé: robo-kyo-kofa_portrait.png
+
+📂 _ArchiMurderer...
+  📄 SFF v0.1.0.1
+  📊 194 groupes, 2572 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=3
+    ✓ Trouvé portrait: groupe=9000, image=28227
+    ✓ Trouvé portrait: groupe=9000, image=13
+    ✓ Trouvé portrait: groupe=9000, image=666
+  ✓ Sauvegardé: _ArchiMurderer_portrait.png
+
+📂 bob...
+  📄 SFF v0.1.0.1
+  📊 231 groupes, 3094 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=12828
+    ✓ Trouvé portrait: groupe=9000, image=28828
+  ✓ Sauvegardé: bob_portrait.png
+
+📂 Dual-flame_Magaki...
+  📄 SFF v0.1.0.1
+  📊 195 groupes, 2368 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=188
+    ✓ Trouvé portrait: groupe=9000, image=10
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Dual-flame_Magaki_portrait.png
+
+📂 Rose...
+  📄 SFF v0.1.0.2
+  📊 0 groupes, 0 images
+
+📂 Maryl...
+  📄 SFF v0.1.0.1
+  📊 226 groupes, 2127 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: Maryl_portrait.png
+
+📂 Wild.O.Yashiro...
+  📄 SFF v0.1.0.1
+  📊 207 groupes, 2297 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=12772
+    ✓ Trouvé portrait: groupe=9000, image=22828
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=111
+    ✓ Trouvé portrait: groupe=9000, image=2120
+  ✓ Sauvegardé: Wild.O.Yashiro_portrait.png
+
+📂 WhirlWind-Goenitz...
+  📄 SFF v0.1.0.1
+  📊 145 groupes, 1472 images
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=2
+  ✓ Sauvegardé: WhirlWind-Goenitz_portrait.png
+
+📂 Athena Asamiya MI KOFM...
+  📄 SFF v0.0.0.2
+  📊 0 groupes, 0 images
+
+📂 Choi_XI...
+  📄 SFF v0.1.0.1
+  📊 207 groupes, 1326 images
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=28272
+  ✓ Sauvegardé: Choi_XI_portrait.png
+
+📂 NeoGeegus KOFM...
+  📄 SFF v0.1.0.1
+  📊 184 groupes, 1617 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=1
+  ✓ Sauvegardé: NeoGeegus KOFM_portrait.png
+
+📂 Akira_Kazakami...
+  📄 SFF v0.1.0.1
+  📊 174 groupes, 2374 images
+    ✓ Trouvé portrait: groupe=9000, image=0
+    ✓ Trouvé portrait: groupe=9000, image=2
+    ✓ Trouvé portrait: groupe=9000, image=2877
+    ✓ Trouvé portrait: groupe=9000, image=1
+    ✓ Trouvé portrait: groupe=9000, image=50
+    ✓ Trouvé portrait: groupe=9000, image=51
+    ✓ Trouvé portrait: groupe=9000, image=2827
+  ✓ Sauvegardé: Akira_Kazakami_portrait.png
+
+============================================================
+✅ EXTRACTION TERMINÉE!
+📁 Dossier: D:\KOF Ultimate Online\portraits_extracted
+============================================================
+
+Appuyez sur ENTRÉE pour fermer...Traceback (most recent call last):
+  File "D:\KOF Ultimate Online\extract_portraits_from_sff.py", line 202, in <module>
+    main()
+  File "D:\KOF Ultimate Online\extract_portraits_from_sff.py", line 199, in main
+    input("\nAppuyez sur ENTRÉE pour fermer...")
+EOFError: EOF when reading a line

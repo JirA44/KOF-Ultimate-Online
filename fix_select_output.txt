@@ -1,0 +1,131 @@
+======================================================================
+🛠️  RÉPARATION ÉCRAN DE SÉLECTION - KOF ULTIMATE ONLINE
+======================================================================
+======================================================================
+🔍 DIAGNOSTIC ÉCRAN DE SÉLECTION
+======================================================================
+
+📋 Lecture de select.def...
+✓ Trouvé 27 personnages dans select.def
+
+======================================================================
+📸 ANALYSE DES PORTRAITS
+======================================================================
+  Athena                         ✅ OK
+  Athena_XI                      ⚠️  Manque PETIT portrait (9000,0)
+  Ash                            ⚠️  Manque PETIT portrait (9000,0)
+  Kei                            ❌ Manque LES DEUX portraits
+  boss-orochi                    ⚠️  Manque PETIT portrait (9000,0)
+  god_orochi                     ⚠️  Manque PETIT portrait (9000,0)
+  final-goenitz                  ✅ OK
+  Lord-Goenitz                   ⚠️  Manque PETIT portrait (9000,0)
+  WhirlWind-Goenitz              ⚠️  Manque PETIT portrait (9000,0)
+  Final-IGNIZ                    ⚠️  Manque GRAND portrait (9000,1)
+  Final-OriginalZero             ✅ OK
+  Clone Zero                     ✅ OK
+  O.Zero-Prominence              ❌ Manque LES DEUX portraits
+  Clone Blood Rugal              ✅ OK
+  DG.Rugal-KOFM                  ⚠️  Manque PETIT portrait (9000,0)
+  Valmar Rugal                   ⚠️  Manque PETIT portrait (9000,0)
+  akuma                          ⚠️  Manque PETIT portrait (9000,0)
+  Rose                           ❌ Manque LES DEUX portraits
+  Viper                          ✅ OK
+  Ryuji                          ⚠️  Manque PETIT portrait (9000,0)
+  Nero                           ✅ OK
+  Eve                            ⚠️  Manque PETIT portrait (9000,0)
+  Fang                           ✅ OK
+  Boss Gustab M                  ⚠️  Manque PETIT portrait (9000,0)
+  Unfailed Gustab                ⚠️  Manque PETIT portrait (9000,0)
+  Cronus                         ✅ OK
+  Delirus                        ✅ OK
+
+======================================================================
+📊 STATISTIQUES
+======================================================================
+  Personnages OK:           10/27 (37%)
+  Manque petit portrait:    16
+  Manque grand portrait:    4
+
+======================================================================
+💡 SOLUTIONS
+======================================================================
+
+🔧 OPTION 1: Configurer system.def pour ne PAS utiliser les grands portraits
+   → Modifier system.def ligne 168-174
+   → Mettre p1.face.spr = 9000,0 (utiliser petit portrait)
+   → Avantage: Fonctionne immédiatement
+
+🔧 OPTION 2: Copier/créer les grands portraits manquants
+   → Dupliquer 9000,0 → 9000,1 dans les .sff
+   → Nécessite outil SFF
+   → Plus complexe
+
+⚠️  ATTENTION: Moins de 50% des personnages ont des portraits complets!
+   Recommandation: Utiliser OPTION 1 (configurer system.def)
+
+======================================================================
+🎯 GRILLE DE SÉLECTION
+======================================================================
+  Configuration actuelle:
+    Lignes:    11
+    Colonnes:  19
+    Total:     209 emplacements
+    Utilisés:  27/209 (12%)
+
+  Grille optimale pour 27 personnages:
+    Lignes:    4
+    Colonnes:  7
+    Total:     28 emplacements
+    Utilisés:  27/28 (96%)
+
+======================================================================
+✅ DIAGNOSTIC TERMINÉ
+======================================================================
+
+======================================================================
+🔨 RÉPARATIONS AUTOMATIQUES
+======================================================================
+
+⚠️  4 personnages n'ont pas de grand portrait (9000,1)
+   Solution: Configurer system.def pour utiliser les petits portraits
+
+======================================================================
+🔧 RÉPARATION SYSTEM.DEF
+======================================================================
+✓ Backup créé: system.def.backup_portraits
+✓ Ligne 166: p1.face.scale = 1.5,1.5 (agrandi)
+✓ Ligne 168: p1.face.spr = 9000,0 (utilise petit portrait)
+✓ Ligne 172: p2.face.scale = 1.5,1.5 (agrandi)
+✓ Ligne 174: p2.face.spr = 9000,0 (utilise petit portrait)
+
+✅ system.def réparé!
+   → Les grands portraits utilisent maintenant 9000,0 (petits portraits)
+   → Échelle ajustée pour meilleure visibilité
+
+======================================================================
+🎯 OPTIMISATION GRILLE
+======================================================================
+  27 personnages trouvés
+  Grille optimale: 4 lignes x 7 colonnes
+✓ rows: 11 → 4
+✓ columns: 19 → 7
+
+✅ Grille optimisée!
+
+======================================================================
+✅ RÉPARATIONS TERMINÉES!
+======================================================================
+
+💡 Testez maintenant:
+   1. Lancez le jeu
+   2. Allez à l'écran de sélection
+   3. Vérifiez que les portraits s'affichent correctement
+
+   En cas de problème, restaurez: data/system.def.backup_portraits
+
+Appuyez sur ENTRÉE pour fermer...Traceback (most recent call last):
+  File "D:\KOF Ultimate Online\FIX_SELECT_SCREEN_PORTRAITS.py", line 354, in <module>
+    main()
+  File "D:\KOF Ultimate Online\FIX_SELECT_SCREEN_PORTRAITS.py", line 351, in main
+    input("\nAppuyez sur ENTRÉE pour fermer...")
+EOFError: EOF when reading a line

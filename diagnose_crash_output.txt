@@ -1,0 +1,245 @@
+================================================================================
+🔍 DIAGNOSTIC COMPLET - RECHERCHE DE LA CAUSE DU CRASH
+================================================================================
+
+📋 Lecture du roster...
+✓ 27 personnages trouvés
+✓ 31 stages uniques trouvés
+
+================================================================================
+🎮 ANALYSE DES PERSONNAGES
+================================================================================
+
+[1/27] Athena
+  ❌ 2 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix
+     - Palette manquant: pal6=
+
+[2/27] Athena_XI
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[3/27] Ash
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[4/27] Kei
+  ❌ 13 erreur(s) CRITIQUE(S):
+     - CMD manquant: Rock.cmd ;Contain commands to use skills and attacks or control the character
+     - CNS manquant: Rock.cns ;Stats,Intros,Outros and other stuff
+     - ST manquant: Rock.cns ;Stats,Intros,Outros and other stuff
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide) ;States that all chars have in common,examples: Get-hit states
+     - Sprite manquant: Rock.sff;Sprites and Effects
+     - Animation manquant: Rock.air ;Animations and Effects Animations
+     - Sound manquant: Rock.snd ;Sounds used in game
+     - Palette manquant: Pals/Rock02.act ;Pallete 1
+     - Palette manquant: Pals/Rock04.act ;Revenant Skin
+     - Palette manquant: Pals/Rock03.act ;Pallete 2
+     - Palette manquant: Pals/Rock01.act ;Original Colors
+     - Palette manquant: Pals/Rock05.act ;Pallete 3
+     - Palette manquant: Pals/Rock06.act ;NESTS-Kyo Skin
+
+[5/27] boss-orochi
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[6/27] god_orochi
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[7/27] final-goenitz
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[8/27] Lord-Goenitz
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix
+
+[9/27] WhirlWind-Goenitz
+  ✅ OK
+
+[10/27] Final-IGNIZ
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[11/27] Final-OriginalZero
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[12/27] Clone Zero
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[13/27] O.Zero-Prominence
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  ⚠️  2 avertissement(s):
+     - Intro storyboard manquant: Arcade/oping.def
+     - Ending storyboard manquant: Arcade/ending.def
+
+[14/27] Clone Blood Rugal
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: Common1.cns  ; Commenté par auto-fix
+
+[15/27] DG.Rugal-KOFM
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: Common1.cns  ; Commenté par auto-fix
+
+[16/27] Valmar Rugal
+  ❌ 6 erreur(s) CRITIQUE(S):
+     - Palette manquant: pal2=
+     - Palette manquant: pal4=
+     - Palette manquant: pal6=
+     - Palette manquant: pal8=
+     - Palette manquant: pal10=
+     - Palette manquant: pal12=
+
+[17/27] akuma
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[18/27] Rose
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[19/27] Viper
+  ✅ OK
+
+[20/27] Ryuji
+  ❌ 7 erreur(s) CRITIQUE(S):
+     - CMD manquant: Ryuji.cmd ;操作输入
+     - CNS manquant: Ryuji.cns ;常量定义
+     - ST manquant: Ryuji.cns ;State定义
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide) ;公用state (人物文件夹或者common文件夹中)
+     - Sprite manquant: Ryuji.sff;图像文件
+     - Animation manquant: Ryuji.air ;动作文件
+     - Sound manquant: Ryuji.snd ;声效文件
+  ⚠️  2 avertissement(s):
+     - Intro storyboard manquant: intro.def
+     - Ending storyboard manquant: ending.def
+
+[21/27] Nero
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[22/27] Eve
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix
+
+[23/27] Fang
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[24/27] Boss Gustab M
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[25/27] Unfailed Gustab
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+[26/27] Cronus
+  ✅ OK
+
+[27/27] Delirus
+  ❌ 1 erreur(s) CRITIQUE(S):
+     - ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+================================================================================
+🏞️  ANALYSE DES STAGES
+================================================================================
+
+[1/10] stages/space_nebula_purple.def
+  ⚠️  1 avertissement(s)
+
+[2/10] stages/Palece Mistery R.def
+  ⚠️  1 avertissement(s)
+
+[3/10] stages/Anime Blu.def
+  ⚠️  1 avertissement(s)
+
+[4/10] stages/Basque Palace.def
+  ⚠️  1 avertissement(s)
+
+[5/10] stages/Moon of dark wall.def
+  ⚠️  1 avertissement(s)
+
+[6/10] stages/space_galaxy.def
+  ⚠️  1 avertissement(s)
+
+[7/10] stages/The Will Of Hades S .def
+  ⚠️  1 avertissement(s)
+
+[8/10] stages/Moon recidence.def
+  ⚠️  1 avertissement(s)
+
+[9/10] stages/Red_Cliff.def
+  ⚠️  1 avertissement(s)
+
+[10/10] stages/O.DB DRORANGE BLACK.def
+  ⚠️  1 avertissement(s)
+
+================================================================================
+📊 RAPPORT FINAL
+================================================================================
+
+Erreurs critiques:  48
+Avertissements:     14
+
+❌ PERSONNAGES PROBLÉMATIQUES (24):
+  - Athena: ST Common manquant: common1.cns  ; Commenté par auto-fix
+  - Athena_XI: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Ash: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Kei: CMD manquant: Rock.cmd ;Contain commands to use skills and attacks or control the character
+  - boss-orochi: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - god_orochi: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - final-goenitz: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Lord-Goenitz: ST Common manquant: common1.cns  ; Commenté par auto-fix
+  - Final-IGNIZ: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Final-OriginalZero: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Clone Zero: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - O.Zero-Prominence: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Clone Blood Rugal: ST Common manquant: Common1.cns  ; Commenté par auto-fix
+  - DG.Rugal-KOFM: ST Common manquant: Common1.cns  ; Commenté par auto-fix
+  - Valmar Rugal: Palette manquant: pal2=
+  - akuma: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Rose: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Ryuji: CMD manquant: Ryuji.cmd ;操作输入
+  - Nero: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Eve: ST Common manquant: common1.cns  ; Commenté par auto-fix
+  - Fang: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Boss Gustab M: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Unfailed Gustab: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+  - Delirus: ST Common manquant: common1.cns  ; Commenté par auto-fix (référence invalide)
+
+================================================================================
+💡 RECOMMANDATIONS
+================================================================================
+
+🔧 ACTIONS URGENTES:
+
+1. RETIRER les 24 personnages problématiques du roster
+   Créer un nouveau select.def sans ces personnages
+
+================================================================================
+🛡️  CRÉATION ROSTER MINIMAL ULTRA-SAFE
+================================================================================
+
+✓ 3 personnages sûrs identifiés (sur 27)
+✓ Créé: select_minimal_safe.def
+
+💡 Pour utiliser ce roster:
+   1. Renommer data/select.def → data/select_old.def
+   2. Renommer select_minimal_safe.def → select.def
+   3. Relancer le jeu
+
+================================================================================
+✅ DIAGNOSTIC TERMINÉ
+================================================================================
+
+Appuyez sur ENTRÉE pour fermer...Traceback (most recent call last):
+  File "D:\KOF Ultimate Online\DIAGNOSE_CRASH.py", line 333, in <module>
+    main()
+  File "D:\KOF Ultimate Online\DIAGNOSE_CRASH.py", line 330, in main
+    input("\nAppuyez sur ENTRÉE pour fermer...")
+EOFError: EOF when reading a line

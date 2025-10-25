@@ -638,10 +638,19 @@
                 return '🎮';
             };
 
-            card.innerHTML = `
-                <div class="character-portrait">
-                    <div class="character-portrait-placeholder">${getCharacterEmoji(char)}</div>
+            // Créer le portrait avec fallback emoji
+            const portraitPath = `portraits_extracted/${char.name}_portrait.png`;
+            const portraitHTML = `
+                <div class="character-portrait" id="portrait-${char.name.replace(/[^a-zA-Z0-9]/g, '')}">
+                    <img src="${portraitPath}"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                         style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="character-portrait-placeholder" style="display: none;">${getCharacterEmoji(char)}</div>
                 </div>
+            `;
+
+            card.innerHTML = `
+                ${portraitHTML}
 
                 <div class="character-header">
                     <div class="character-name">${char.name}</div>
