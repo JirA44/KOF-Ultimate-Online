@@ -1,0 +1,9 @@
+Réparation effectuée: 2025-10-25 21:42:29.546358
+Personnages réparés: 190
+Erreurs corrigées: 1858
+
+Détails:
+  air_clsn: 1448
+  storyboards: 410
+  invalid_actions: 0
+  references: 0

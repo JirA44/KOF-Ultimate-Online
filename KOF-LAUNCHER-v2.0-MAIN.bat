@@ -48,7 +48,9 @@ echo    └───────────────────────
 echo.
 echo       [R] 🔧 Outils de Réparation
 echo       [C] ⚙️  Configuration
-echo       [D] 📊 Dashboard
+echo       [D] 📊 Dashboard Python
+echo       [L] 🌐 Launcher HTML Ultimate
+echo       [E] 📚 Encyclopédie Personnages
 echo.
 echo       [0] ❌ Quitter
 echo.
@@ -68,6 +70,8 @@ if "%choice%"=="9" goto TEST_DIAGNOSTIC
 if /i "%choice%"=="R" goto MENU_REPAIR
 if /i "%choice%"=="C" goto MENU_CONFIG
 if /i "%choice%"=="D" goto DASHBOARD
+if /i "%choice%"=="L" goto LAUNCHER_HTML
+if /i "%choice%"=="E" goto ENCYCLOPEDIE
 if "%choice%"=="0" goto EXIT
 
 goto MAIN_MENU
@@ -383,6 +387,40 @@ if exist "OUVRIR_DASHBOARD.bat" (
     call "OUVRIR_DASHBOARD.bat"
 ) else (
     echo   ❌ Fichier OUVRIR_DASHBOARD.bat non trouvé
+    echo.
+    pause
+)
+goto MAIN_MENU
+
+:LAUNCHER_HTML
+cls
+echo.
+echo ╔════════════════════════════════════════════════════════════════════╗
+echo ║                   🌐  LAUNCHER HTML ULTIMATE                       ║
+echo ╚════════════════════════════════════════════════════════════════════╝
+echo.
+cd /d "D:\KOF Ultimate Online"
+if exist "OUVRIR_LAUNCHER_HTML.bat" (
+    call "OUVRIR_LAUNCHER_HTML.bat"
+) else (
+    echo   ❌ Fichier OUVRIR_LAUNCHER_HTML.bat non trouvé
+    echo.
+    pause
+)
+goto MAIN_MENU
+
+:ENCYCLOPEDIE
+cls
+echo.
+echo ╔════════════════════════════════════════════════════════════════════╗
+echo ║                   📚  ENCYCLOPÉDIE PERSONNAGES                     ║
+echo ╚════════════════════════════════════════════════════════════════════╝
+echo.
+cd /d "D:\KOF Ultimate Online"
+if exist "OUVRIR_ENCYCLOPEDIE.bat" (
+    call "OUVRIR_ENCYCLOPEDIE.bat"
+) else (
+    echo   ❌ Fichier OUVRIR_ENCYCLOPEDIE.bat non trouvé
     echo.
     pause
 )

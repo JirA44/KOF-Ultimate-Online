@@ -59,12 +59,14 @@ class KOFLauncherDashboard:
         # Grid de boutons
         buttons_config = [
             ("🎮 Lancer le Jeu", self.launch_game, 0, 0, 2),
-            ("📊 Dashboard", self.open_dashboard, 1, 0, 1),
-            ("🧪 Test Auto", self.launch_auto_test, 1, 1, 1),
-            ("⚔️ Test Matchmaking", self.launch_matchmaking_test, 2, 0, 1),
-            ("🔍 Scanner Erreurs", self.scan_errors, 2, 1, 1),
-            ("📖 Guides", self.open_guides, 3, 0, 1),
-            ("⚙️ Configuration", self.open_config, 3, 1, 1),
+            ("🌐 Launcher HTML Ultimate", self.open_html_launcher, 1, 0, 2),
+            ("📊 Dashboard", self.open_dashboard, 2, 0, 1),
+            ("📚 Encyclopédie Persos", self.open_encyclopedia, 2, 1, 1),
+            ("🧪 Test Auto", self.launch_auto_test, 3, 0, 1),
+            ("⚔️ Test Matchmaking", self.launch_matchmaking_test, 3, 1, 1),
+            ("🔍 Scanner Erreurs", self.scan_errors, 4, 0, 1),
+            ("📖 Guides", self.open_guides, 4, 1, 1),
+            ("⚙️ Configuration", self.open_config, 5, 0, 2),
         ]
 
         for text, command, row, col, colspan in buttons_config:
@@ -85,7 +87,7 @@ class KOFLauncherDashboard:
                     sticky="nsew", padx=5, pady=5)
 
         # Configurer les poids des lignes/colonnes
-        for i in range(4):
+        for i in range(6):
             main_frame.grid_rowconfigure(i, weight=1)
         for i in range(2):
             main_frame.grid_columnconfigure(i, weight=1)
@@ -137,6 +139,36 @@ class KOFLauncherDashboard:
                 self.set_status("❌ Dashboard introuvable")
         except Exception as e:
             messagebox.showerror("Erreur", f"Impossible d'ouvrir le dashboard: {e}")
+            self.set_status("❌ Erreur")
+
+    def open_html_launcher(self):
+        """Ouvre le launcher HTML Ultimate"""
+        self.set_status("🌐 Ouverture du launcher HTML...")
+        try:
+            html_launcher = self.base_path / "LAUNCHER_ULTIMATE.html"
+            if html_launcher.exists():
+                webbrowser.open(str(html_launcher))
+                self.set_status("✓ Launcher HTML ouvert!")
+            else:
+                messagebox.showerror("Erreur", "Launcher HTML non trouvé!")
+                self.set_status("❌ Launcher HTML introuvable")
+        except Exception as e:
+            messagebox.showerror("Erreur", f"Impossible d'ouvrir le launcher HTML: {e}")
+            self.set_status("❌ Erreur")
+
+    def open_encyclopedia(self):
+        """Ouvre l'encyclopédie des personnages"""
+        self.set_status("📚 Ouverture de l'encyclopédie...")
+        try:
+            encyclopedia = self.base_path / "ENCYCLOPEDIE_PERSONNAGES.html"
+            if encyclopedia.exists():
+                webbrowser.open(str(encyclopedia))
+                self.set_status("✓ Encyclopédie ouverte!")
+            else:
+                messagebox.showerror("Erreur", "Encyclopédie non trouvée!")
+                self.set_status("❌ Encyclopédie introuvable")
+        except Exception as e:
+            messagebox.showerror("Erreur", f"Impossible d'ouvrir l'encyclopédie: {e}")
             self.set_status("❌ Erreur")
 
     def launch_auto_test(self):

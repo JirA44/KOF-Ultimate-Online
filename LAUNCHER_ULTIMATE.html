@@ -675,6 +675,12 @@
                         <div class="action-desc" data-i18n="mode_story_desc">Campagne solo épique</div>
                     </div>
 
+                    <div class="action-button" onclick="openEncyclopedia()">
+                        <div class="action-icon">📚</div>
+                        <div class="action-title" data-i18n="mode_encyclopedia">Encyclopédie</div>
+                        <div class="action-desc" data-i18n="mode_encyclopedia_desc">Tous les personnages & combos</div>
+                    </div>
+
                     <div class="action-button" onclick="openSettings()">
                         <div class="action-icon">⚙️</div>
                         <div class="action-title" data-i18n="mode_settings">Paramètres</div>
@@ -757,6 +763,8 @@
                 mode_training_desc: "Perfectionnez vos combos",
                 mode_story: "Histoire",
                 mode_story_desc: "Campagne solo épique",
+                mode_encyclopedia: "Encyclopédie",
+                mode_encyclopedia_desc: "Tous les personnages & combos",
                 mode_settings: "Paramètres",
                 mode_settings_desc: "Configuration du jeu",
                 news_new: "🔥 Nouveauté",
@@ -797,6 +805,8 @@
                 mode_training_desc: "Perfect your combos",
                 mode_story: "Story",
                 mode_story_desc: "Epic solo campaign",
+                mode_encyclopedia: "Encyclopedia",
+                mode_encyclopedia_desc: "All characters & combos",
                 mode_settings: "Settings",
                 mode_settings_desc: "Game configuration",
                 news_new: "🔥 New",
@@ -952,6 +962,11 @@
                 ? 'Paramètres\n\nConfiguration des contrôles, graphismes, audio... ⚙️'
                 : 'Settings\n\nConfigure controls, graphics, audio... ⚙️';
             alert(msg);
+        }
+
+        // Ouvrir encyclopédie (OFFLINE - pas besoin d'internet!)
+        function openEncyclopedia() {
+            window.location.href = 'ENCYCLOPEDIE_PERSONNAGES.html';
         }
 
         // Initialisation
