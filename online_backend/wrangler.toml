@@ -1,0 +1,35 @@
+name = "kof-ultimate-online-api"
+main = "cloudflare_worker.js"
+compatibility_date = "2024-01-01"
+
+# Account ID - À remplacer par votre Account ID Cloudflare
+# Trouvez-le sur: https://dash.cloudflare.com/ → Workers → Overview
+account_id = "YOUR_ACCOUNT_ID"
+
+# Routes - Domaine personnalisé (optionnel)
+# routes = [
+#   { pattern = "api.kof-ultimate.com/*", zone_name = "kof-ultimate.com" }
+# ]
+
+# Workers AI (si vous voulez utiliser Cloudflare AI)
+# [ai]
+# binding = "AI"
+
+# KV Namespace (pour cache/session storage)
+# kv_namespaces = [
+#   { binding = "KOF_KV", id = "YOUR_KV_ID", preview_id = "YOUR_PREVIEW_KV_ID" }
+# ]
+
+# D1 Database (alternative à SQLite pour production)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "kof-ultimate-online"
+# database_id = "YOUR_D1_DATABASE_ID"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+
+# Secrets (à définir avec: wrangler secret put <KEY>)
+# - JWT_SECRET
+# - API_KEY (si nécessaire)

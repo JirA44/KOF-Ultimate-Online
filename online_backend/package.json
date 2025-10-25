@@ -1,0 +1,37 @@
+{
+  "name": "kof-ultimate-online-backend",
+  "version": "2.0.0",
+  "description": "Backend serveur pour KOF Ultimate Online - Système Battle.net-style",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "matchmaking": "node matchmaking_server.js",
+    "api": "node api_server.js",
+    "all": "concurrently \"npm run matchmaking\" \"npm run api\"",
+    "test": "node test_connection.js"
+  },
+  "keywords": [
+    "kof",
+    "fighting-game",
+    "multiplayer",
+    "matchmaking",
+    "battle.net"
+  ],
+  "author": "KOF Ultimate Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "sqlite3": "^5.1.6",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.1"
+  }
+}
