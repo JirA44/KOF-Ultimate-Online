@@ -18,7 +18,7 @@ Kei, stages/Abyss-Rugal-Palace.def
 
 ; --- BOSS/OROCHI (Test√©s OK) ---
 boss-orochi, stages/Abyss-Rugal-Palace.def
-god_orochi, stages/Abyss-Rugal-Palace.def
+; RETIR… (Crash): god_orochi, stages/Abyss-Rugal-Palace.def
 final-goenitz, stages/Abyss-Rugal-Palace.def
 Lord-Goenitz, stages/Abyss-Rugal-Palace.def
 WhirlWind-Goenitz, stages/Abyss-Rugal-Palace.def

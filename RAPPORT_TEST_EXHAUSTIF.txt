@@ -1,0 +1,33 @@
+======================================================================
+RAPPORT TEST EXHAUSTIF
+======================================================================
+
+PERSONNAGES SÛRS (0):
+
+PERSONNAGES CRASHEURS (26):
+  ✗ Athena
+  ✗ Athena_XI
+  ✗ Ash
+  ✗ Kei
+  ✗ boss-orochi
+  ✗ final-goenitz
+  ✗ Lord-Goenitz
+  ✗ WhirlWind-Goenitz
+  ✗ Final-IGNIZ
+  ✗ Final-OriginalZero
+  ✗ Clone Zero
+  ✗ O.Zero-Prominence
+  ✗ Clone Blood Rugal
+  ✗ DG.Rugal-KOFM
+  ✗ Valmar Rugal
+  ✗ akuma
+  ✗ Rose
+  ✗ Viper
+  ✗ Ryuji
+  ✗ Nero
+  ✗ Eve
+  ✗ Fang
+  ✗ Boss Gustab M
+  ✗ Unfailed Gustab
+  ✗ Cronus
+  ✗ Delirus
