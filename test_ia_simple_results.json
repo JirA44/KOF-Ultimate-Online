@@ -1,6 +1,6 @@
 {
-  "total_tests": 143,
-  "crashes": 0,
-  "successful": 143,
+  "total_tests": 200,
+  "crashes": 6,
+  "successful": 194,
   "start_time": "2025-10-25T13:40:25.465217"
 }
