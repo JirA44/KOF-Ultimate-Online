@@ -1,4 +1,61 @@
-; Test roster
+; IKEMEN GO Select.def
+; ROSTER MINIMAL - 1 SEUL PERSONNAGE 100% STABLE
+; Généré automatiquement le 2025-10-26
+;
+
 [Characters]
-Athena, stages/Abyss-Rugal-Palace.def
+;
+; === PERSONNAGE CONFIRMÉ STABLE ===
 WhirlWind-Goenitz, stages/Abyss-Rugal-Palace.def
+WhirlWind-Goenitz, stages/Anime Blu.def
+WhirlWind-Goenitz, stages/Anubis.def
+
+[ExtraStages]
+;------------------------------
+
+stages/Abyss-Rugal-Palace.def
+stages/Anime Blu.def
+stages/Anubis.def
+stages/Basque Palace.def
+stages/BLACK SON DROTIME.def
+
+[Stages]
+;------------------------------
+
+stages/Abyss-Rugal-Palace.def
+stages/Anime Blu.def
+stages/Anubis.def
+stages/Basque Palace.def
+stages/BLACK SON DROTIME.def
+stages/Black wall.def
+stages/clones lab destroyed.def
+stages/DARK SAID RUGAL S .def
+stages/Darkness.def
+stages/DROBLOOD R 2.0.def
+stages/Exagon Force.def
+stages/Far from here.def
+stages/forest infernal fire.def
+stages/Galaxy BG.def
+stages/light kyouki.def
+stages/Moon of dark wall.def
+stages/Moon recidence.def
+stages/O.DB DRORANGE BLACK.def
+stages/Palece Mistery R.def
+stages/RED.def
+stages/Red_Cliff.def
+stages/space_binary.def
+stages/space_deep.def
+stages/space_galaxy.def
+stages/space_nebula_purple.def
+stages/space_planet.def
+stages/space_void.def
+stages/The Will Of Hades S .def
+stages/TIME INGCODNITA.def
+stages/Wall of paintings.def
+stages/xX-Hell-Dark-Xx.def
+
+[Options]
+;------------------------------
+
+arcade.rematches = 0
+team.loseondraw = 1
