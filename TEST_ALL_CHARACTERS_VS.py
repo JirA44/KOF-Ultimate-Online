@@ -82,9 +82,8 @@ class ExhaustiveVSTester:
         # Créer roster minimal
         self.create_minimal_roster(char1, char2)
 
-        # Nettoyer le log
-        if self.log_file.exists():
-            self.log_file.unlink()
+        # Le log sera écrasé au prochain lancement du jeu
+        # Pas besoin de le supprimer manuellement
 
         # Lancer le jeu
         try:
@@ -138,8 +137,16 @@ class ExhaustiveVSTester:
         """Test un personnage contre 3 adversaires différents"""
         print(f"\n🎯 Test de {char_name}...")
 
-        # Choisir 3 adversaires (les 3 premiers du roster différents du perso testé)
-        opponents = [c for c in self.characters if c != char_name][:3]
+        # Adversaires CONNUS STABLES (testés manuellement)
+        known_safe = ['WhirlWind-Goenitz', 'Viper', 'Cronus']
+
+        # Choisir adversaires parmi les safe, ou sinon les 3 premiers différents
+        opponents = [c for c in known_safe if c != char_name and c in self.characters]
+
+        if len(opponents) < 3:
+            # Compléter avec d'autres personnages
+            others = [c for c in self.characters if c != char_name and c not in opponents][:3-len(opponents)]
+            opponents.extend(others)
 
         if len(opponents) == 0:
             print(f"   ⚠️  Pas d'adversaires disponibles")
