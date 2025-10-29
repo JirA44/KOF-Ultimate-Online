@@ -1,0 +1,73 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║     🌐 INSTRUCTIONS CLOUDFLARE PAGES - AIDE-MÉMOIRE      ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+✅ GITHUB FAIT ! Code poussé avec succès sur:
+   https://github.com/JirA44/KOF-Ultimate-Online
+
+📋 MAINTENANT DANS CLOUDFLARE:
+
+1️⃣ Aller sur: https://dash.cloudflare.com
+   → Se connecter ou créer un compte (gratuit)
+
+2️⃣ Menu gauche → "Workers & Pages"
+
+3️⃣ Cliquer sur "Create application"
+
+4️⃣ Choisir "Pages"
+
+5️⃣ Cliquer sur "Connect to Git"
+
+6️⃣ Autoriser Cloudflare → Sélectionner "KOF-Ultimate-Online"
+
+7️⃣ Configuration Build:
+   ┌─────────────────────────────────────────────┐
+   │ Project name: kof-ultimate-online           │
+   │ Production branch: main                     │
+   │ Build command: (VIDE)                       │
+   │ Build output directory: web                 │
+   └─────────────────────────────────────────────┘
+
+8️⃣ Cliquer "Save and Deploy"
+
+9️⃣ Attendre 1-2 minutes ⏳
+
+🎉 SITE EN LIGNE sur:
+   https://kof-ultimate-online.pages.dev
+
+═══════════════════════════════════════════════════════════
+
+📄 PAGES DISPONIBLES:
+   → /                    (Accueil)
+   → /dashboard.html      (Dashboard)
+   → /leaderboard.html    (Classement)
+   → /docs.html           (Documentation)
+
+═══════════════════════════════════════════════════════════
+
+⚠️ IMPORTANT:
+   - Build output directory DOIT être "web"
+   - Build command doit rester VIDE
+   - Données = simulées (version démo)
+
+═══════════════════════════════════════════════════════════
+
+🔄 MISES À JOUR:
+   Chaque git push redéploie automatiquement le site !
+
+   cd "D:\KOF Ultimate Online"
+   git add web/
+   git commit -m "Mise à jour"
+   git push
+
+═══════════════════════════════════════════════════════════
+
+✅ VOTRE SITE SERA MONDIAL AVEC:
+   - HTTPS automatique
+   - CDN 300+ villes
+   - Hébergement gratuit illimité
+   - Déploiement auto en 1-2 min
+
+═══════════════════════════════════════════════════════════
