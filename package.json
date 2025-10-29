@@ -1,0 +1,27 @@
+{
+  "name": "kof-ultimate-online-web",
+  "version": "1.0.0",
+  "description": "Site web pour KOF Ultimate Online - Système multijoueur Battle.net",
+  "main": "web_server.js",
+  "scripts": {
+    "start": "node web_server.js",
+    "dev": "node web_server.js",
+    "test": "echo \"No tests configured yet\" && exit 0"
+  },
+  "keywords": [
+    "kof",
+    "fighting-game",
+    "multiplayer",
+    "battle.net",
+    "elo",
+    "matchmaking"
+  ],
+  "author": "KOF Ultimate Online Team",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.14.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
