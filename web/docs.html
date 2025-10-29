@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - KOF Ultimate Online</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .docs-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .docs-section {
+            background: rgba(30, 58, 138, 0.3);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .docs-section h2 {
+            color: var(--primary);
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .docs-section h3 {
+            color: var(--success);
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .docs-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .docs-section code {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 3px 8px;
+            border-radius: 4px;
+            color: var(--success);
+            font-family: 'Courier New', monospace;
+        }
+
+        .docs-section pre {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .docs-section pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .docs-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .docs-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .docs-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .info-box {
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: rgba(255, 170, 0, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: rgba(0, 255, 136, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .toc {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>⚔️ KOF ULTIMATE ONLINE ⚔️</h1>
+                <p class="tagline">Documentation</p>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="leaderboard.html">Classement</a>
+                <a href="docs.html" class="active">Documentation</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="docs-container">
+        <div class="toc">
+            <h3>📚 Table des Matières</h3>
+            <ul>
+                <li><a href="#getting-started">🚀 Démarrage Rapide</a></li>
+                <li><a href="#installation">💾 Installation</a></li>
+                <li><a href="#multiplayer">⚔️ Jouer en Ligne</a></li>
+                <li><a href="#elo-system">📊 Système ELO</a></li>
+                <li><a href="#bug-detector">🔍 Détecteur de Bugs</a></li>
+                <li><a href="#troubleshooting">🛠️ Dépannage</a></li>
+            </ul>
+        </div>
+
+        <div class="docs-section" id="getting-started">
+            <h2>🚀 Démarrage Rapide</h2>
+            <p>
+                Bienvenue sur KOF Ultimate Online ! Ce guide vous aidera à installer et utiliser tous les composants du système.
+            </p>
+
+            <div class="success-box">
+                <strong>⏱️ Temps estimé :</strong> 10 minutes
+            </div>
+
+            <h3>Étape 1 : Installer les Dépendances</h3>
+            <p>Double-cliquez sur le fichier :</p>
+            <pre><code>INSTALL_DEPENDENCIES.bat</code></pre>
+            <p>Ce script installera automatiquement :</p>
+            <ul class="docs-list">
+                <li>websockets (communication serveur)</li>
+                <li>psutil (gestion des processus)</li>
+            </ul>
+
+            <h3>Étape 2 : Lancer le Launcher</h3>
+            <p>Double-cliquez sur :</p>
+            <pre><code>LAUNCH_ULTIMATE.bat</code></pre>
+            <p>Le launcher vous permet de gérer tous les services en un clic.</p>
+
+            <h3>Étape 3 : Commencer à Jouer</h3>
+            <ul class="docs-list">
+                <li><strong>Solo :</strong> Cliquez sur "🎮 Lancer le Jeu (Solo)"</li>
+                <li><strong>En ligne :</strong> Cliquez sur "⚔️ Jouer en Ligne (Battle.net)"</li>
+            </ul>
+        </div>
+
+        <div class="docs-section" id="installation">
+            <h2>💾 Installation Détaillée</h2>
+
+            <h3>Prérequis</h3>
+            <ul class="docs-list">
+                <li>Windows 10 ou supérieur</li>
+                <li>Python 3.8 ou supérieur</li>
+                <li>Node.js 14+ (pour le site web)</li>
+                <li>4 GB RAM minimum</li>
+            </ul>
+
+            <h3>Installation de Python</h3>
+            <ol class="docs-list">
+                <li>Téléchargez Python sur <a href="https://www.python.org/" target="_blank" style="color: var(--primary);">python.org</a></li>
+                <li>Lors de l'installation, cochez "Add Python to PATH"</li>
+                <li>Vérifiez l'installation : <code>python --version</code></li>
+            </ol>
+
+            <h3>Installation de Node.js (optionnel)</h3>
+            <p>Requis uniquement pour le site web.</p>
+            <ol class="docs-list">
+                <li>Téléchargez Node.js sur <a href="https://nodejs.org/" target="_blank" style="color: var(--primary);">nodejs.org</a></li>
+                <li>Installez avec les options par défaut</li>
+                <li>Vérifiez : <code>node --version</code></li>
+            </ol>
+
+            <div class="info-box">
+                <strong>💡 Astuce :</strong> Le site web n'est pas obligatoire pour jouer. Il permet de consulter les stats en ligne.
+            </div>
+        </div>
+
+        <div class="docs-section" id="multiplayer">
+            <h2>⚔️ Jouer en Ligne</h2>
+
+            <h3>Configuration LAN</h3>
+            <p>Pour jouer en réseau local :</p>
+
+            <h4>Sur l'ordinateur serveur :</h4>
+            <ol class="docs-list">
+                <li>Lancer le launcher (<code>LAUNCH_ULTIMATE.bat</code>)</li>
+                <li>Cliquer sur "🖥️ Lancer Serveur Battle.net"</li>
+                <li>Noter votre adresse IP : <code>ipconfig</code></li>
+            </ol>
+
+            <h4>Sur chaque ordinateur client :</h4>
+            <ol class="docs-list">
+                <li>Ouvrir <code>BATTLENET_CLIENT.py</code></li>
+                <li>Modifier la ligne 265 avec l'IP du serveur</li>
+                <li>Lancer le client depuis le launcher</li>
+            </ol>
+
+            <h3>Workflow de Jeu</h3>
+            <ol class="docs-list">
+                <li>Se connecter avec un pseudo</li>
+                <li>Cliquer sur "Rechercher un Adversaire"</li>
+                <li>Attendre le matchmaking (5-10 secondes)</li>
+                <li>Jouer la partie dans le jeu</li>
+                <li>Votre ELO est mis à jour automatiquement</li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>⚠️ Important :</strong> Le serveur Battle.net doit être lancé en premier.
+            </div>
+        </div>
+
+        <div class="docs-section" id="elo-system">
+            <h2>📊 Système ELO</h2>
+
+            <h3>Comment fonctionne l'ELO ?</h3>
+            <p>
+                Le système ELO calcule votre niveau de jeu et vous associe à des adversaires de niveau similaire.
+            </p>
+
+            <h3>Calcul des Points</h3>
+            <ul class="docs-list">
+                <li><strong>Victoire contre adversaire plus fort :</strong> +30 à +40 points</li>
+                <li><strong>Victoire contre adversaire similaire :</strong> +15 à +20 points</li>
+                <li><strong>Victoire contre adversaire plus faible :</strong> +5 à +10 points</li>
+                <li><strong>Défaite :</strong> Points perdus selon la même logique</li>
+            </ul>
+
+            <h3>Rangs ELO</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background: rgba(0, 212, 255, 0.2);">
+                    <th style="padding: 10px; text-align: left; color: var(--primary);">Rang</th>
+                    <th style="padding: 10px; text-align: left; color: var(--primary);">ELO</th>
+                    <th style="padding: 10px; text-align: left; color: var(--primary);">Badge</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">Diamond</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">2500+</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">💎</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">Platinum</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">2000-2499</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">💿</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">Gold</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">1500-1999</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🥇</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">Silver</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">1000-1499</td>
+                    <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🥈</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">Bronze</td>
+                    <td style="padding: 10px;">0-999</td>
+                    <td style="padding: 10px;">🥉</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <strong>💡 Astuce :</strong> Le matchmaking cherche des adversaires avec ±200 points ELO pour des parties équilibrées.
+            </div>
+        </div>
+
+        <div class="docs-section" id="bug-detector">
+            <h2>🔍 Détecteur de Bugs</h2>
+
+            <h3>Pourquoi l'utiliser ?</h3>
+            <p>
+                Certains personnages Mugen peuvent causer des crashes ou des lags. Le détecteur identifie automatiquement ces problèmes.
+            </p>
+
+            <h3>Utilisation</h3>
+            <ol class="docs-list">
+                <li>Lancer le launcher</li>
+                <li>Cliquer sur "🔍 Détecter les Bugs"</li>
+                <li>Attendre la fin du scan (15-30 minutes)</li>
+                <li>Consulter <code>bug_report.json</code></li>
+                <li>Cliquer sur "📝 Optimiser Select.def"</li>
+            </ol>
+
+            <h3>Types de Bugs Détectés</h3>
+            <ul class="docs-list">
+                <li><strong>LOAD_FAILED :</strong> Personnage ne se charge pas</li>
+                <li><strong>FILE_MISSING :</strong> Fichiers manquants (.air, .sff, .snd)</li>
+                <li><strong>SLOW_LOAD :</strong> Chargement >5 secondes</li>
+                <li><strong>TOO_COMPLEX :</strong> Trop d'expressions (>20000)</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>✅ Résultat :</strong> Un roster stable avec uniquement les personnages qui fonctionnent !
+            </div>
+        </div>
+
+        <div class="docs-section" id="troubleshooting">
+            <h2>🛠️ Dépannage</h2>
+
+            <h3>Le jeu crash au lancement d'un match</h3>
+            <p><strong>Solution :</strong></p>
+            <ol class="docs-list">
+                <li>Lancer le détecteur de bugs</li>
+                <li>Optimiser le select.def</li>
+                <li>Relancer le jeu</li>
+            </ol>
+
+            <h3>Le serveur Battle.net ne démarre pas</h3>
+            <p><strong>Causes possibles :</strong></p>
+            <ul class="docs-list">
+                <li>Module websockets non installé</li>
+                <li>Port 8765 déjà utilisé</li>
+            </ul>
+            <p><strong>Solutions :</strong></p>
+            <pre><code>pip install websockets
+netstat -ano | findstr 8765</code></pre>
+
+            <h3>Le client ne se connecte pas</h3>
+            <p><strong>Vérifications :</strong></p>
+            <ul class="docs-list">
+                <li>Le serveur est-il lancé ?</li>
+                <li>L'adresse IP est-elle correcte ?</li>
+                <li>Le pare-feu bloque-t-il la connexion ?</li>
+            </ul>
+
+            <h3>Le site web ne s'affiche pas</h3>
+            <p><strong>Solution :</strong></p>
+            <ol class="docs-list">
+                <li>Installer Node.js</li>
+                <li>Installer les dépendances : <code>npm install</code></li>
+                <li>Lancer le serveur web : <code>LAUNCH_WEB_SERVER.bat</code></li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>⚠️ Besoin d'aide ?</strong> Consultez les fichiers README détaillés dans le dossier du jeu.
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="index.html" class="btn btn-primary">← Retour à l'Accueil</a>
+            <a href="dashboard.html" class="btn btn-secondary">Voir le Dashboard →</a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Documentation</h3>
+                    <p>Guide complet pour KOF Ultimate Online</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Fichiers Utiles</h3>
+                    <ul>
+                        <li><code>README_SYSTÈME_COMPLET.md</code></li>
+                        <li><code>GUIDE_TEST_RAPIDE.md</code></li>
+                        <li><code>README_SITE_WEB.md</code></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KOF Ultimate Online | Documentation v1.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

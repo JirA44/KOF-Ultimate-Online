@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - KOF Ultimate Online</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .dashboard-card {
+            background: rgba(30, 58, 138, 0.3);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 16px;
+            padding: 25px;
+        }
+
+        .dashboard-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-list {
+            list-style: none;
+        }
+
+        .status-list li {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .status-badge.active {
+            background: var(--success);
+            color: var(--background);
+        }
+
+        .status-badge.inactive {
+            background: var(--error);
+            color: var(--text);
+        }
+
+        .chart-container {
+            height: 300px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .chart-bar {
+            flex: 1;
+            background: linear-gradient(to top, var(--primary), var(--success));
+            margin: 0 5px;
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .chart-bar:hover {
+            opacity: 0.8;
+        }
+
+        .chart-bar-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+            color: var(--text-secondary);
+        }
+
+        .realtime-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: blink 2s ease-in-out infinite;
+            margin-right: 8px;
+        }
+
+        .activity-log {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .activity-item {
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .activity-time {
+            color: var(--text-secondary);
+            font-size: 0.85em;
+        }
+
+        .refresh-btn {
+            background: var(--primary);
+            color: var(--background);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .refresh-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>⚔️ KOF ULTIMATE ONLINE ⚔️</h1>
+                <p class="tagline">Dashboard</p>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="leaderboard.html">Classement</a>
+                <a href="docs.html">Documentation</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2 class="hero-title">
+                <span class="realtime-indicator"></span>
+                Dashboard en Temps Réel
+            </h2>
+            <p class="hero-description">
+                Surveillez les statistiques du serveur et l'activité des joueurs en direct
+            </p>
+        </section>
+
+        <section class="stats-grid" id="stats">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-value" id="online-players">-</div>
+                <div class="stat-label">Joueurs en ligne</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚔️</div>
+                <div class="stat-value" id="active-matches">-</div>
+                <div class="stat-label">Matchs en cours</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-value" id="total-matches">-</div>
+                <div class="stat-label">Total de matchs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value" id="total-players">-</div>
+                <div class="stat-label">Joueurs inscrits</div>
+            </div>
+        </section>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h3>
+                    <span>🖥️</span>
+                    Statut des Services
+                </h3>
+                <ul class="status-list">
+                    <li>
+                        <span>Serveur Web</span>
+                        <span class="status-badge active" id="web-status">En ligne</span>
+                    </li>
+                    <li>
+                        <span>Serveur Battle.net</span>
+                        <span class="status-badge inactive" id="battlenet-status">Vérification...</span>
+                    </li>
+                    <li>
+                        <span>WebSocket</span>
+                        <span class="status-badge inactive" id="ws-status">Déconnecté</span>
+                    </li>
+                    <li>
+                        <span>API REST</span>
+                        <span class="status-badge active" id="api-status">En ligne</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>
+                    <span>📊</span>
+                    Activité des Matchs
+                </h3>
+                <div class="chart-container" id="matches-chart">
+                    <!-- Chart généré par JS -->
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>
+                    <span>👥</span>
+                    Joueurs Actifs
+                </h3>
+                <div id="active-players">
+                    <div class="loading">Chargement...</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>
+                    <span>📝</span>
+                    Journal d'Activité
+                </h3>
+                <div class="activity-log" id="activity-log">
+                    <div class="activity-item">
+                        <div class="activity-time">Juste maintenant</div>
+                        <div>Dashboard chargé</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <button class="refresh-btn" onclick="location.reload()">
+                🔄 Rafraîchir le Dashboard
+            </button>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KOF Ultimate Online</h3>
+                    <p>Dashboard temps réel - Mise à jour toutes les 5 secondes</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Statut Serveur</h3>
+                    <div class="server-status">
+                        <span class="status-indicator" id="server-status">●</span>
+                        <span id="server-status-text">Vérification...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KOF Ultimate Online | Dashboard v1.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Dashboard-specific code
+        function updateWebSocketStatus() {
+            const wsStatus = document.getElementById('ws-status');
+            if (wsStatus) {
+                if (ws && ws.readyState === WebSocket.OPEN) {
+                    wsStatus.textContent = 'Connecté';
+                    wsStatus.className = 'status-badge active';
+                } else {
+                    wsStatus.textContent = 'Déconnecté';
+                    wsStatus.className = 'status-badge inactive';
+                }
+            }
+        }
+
+        function updateBattleNetStatus() {
+            fetch(`${API_BASE}/health`)
+                .then(res => res.json())
+                .then(result => {
+                    const bnStatus = document.getElementById('battlenet-status');
+                    if (bnStatus) {
+                        if (result.battlenet) {
+                            bnStatus.textContent = 'En ligne';
+                            bnStatus.className = 'status-badge active';
+                        } else {
+                            bnStatus.textContent = 'Hors ligne';
+                            bnStatus.className = 'status-badge inactive';
+                        }
+                    }
+                })
+                .catch(() => {
+                    const bnStatus = document.getElementById('battlenet-status');
+                    if (bnStatus) {
+                        bnStatus.textContent = 'Erreur';
+                        bnStatus.className = 'status-badge inactive';
+                    }
+                });
+        }
+
+        // Update périodique
+        setInterval(updateWebSocketStatus, 2000);
+        setInterval(updateBattleNetStatus, 5000);
+        updateWebSocketStatus();
+        updateBattleNetStatus();
+
+        // Génération d'un chart simple
+        function generateMatchesChart() {
+            const container = document.getElementById('matches-chart');
+            if (!container) return;
+
+            // Données simulées (à remplacer par de vraies données)
+            const data = Array.from({length: 7}, () => Math.floor(Math.random() * 100));
+            const days = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
+
+            container.innerHTML = data.map((value, i) => `
+                <div class="chart-bar" style="height: ${value}%">
+                    <div class="chart-bar-label">${days[i]}</div>
+                </div>
+            `).join('');
+        }
+
+        setTimeout(generateMatchesChart, 1000);
+    </script>
+</body>
+</html>
