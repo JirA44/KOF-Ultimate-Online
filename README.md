@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # KOF ULTIMATE ONLINE 🎮
 
 <div align="center">
@@ -10,6 +9,24 @@
 [![M.U.G.E.N](https://img.shields.io/badge/M.U.G.E.N-1.1.0%20Beta%201-red.svg)](http://www.elecbyte.com/mugen/)
 
 *Le jeu de combat ultime avec 188 personnages, système d'auto-réparation et IA avancée*
+
+## À quoi sert ce dépôt ?
+
+Ce dépôt rassemble une version personnalisée de KOF sous M.U.G.E.N, ainsi que des lanceurs et des outils de vérification et de dépannage. Il s’adresse aux personnes qui veulent lancer le jeu, ajuster ses fichiers ou diagnostiquer un problème sans parcourir les scripts un par un.
+
+## Pourquoi l’utiliser ?
+
+Le projet regroupe le jeu et ses outils autour de tâches concrètes : démarrer une partie, vérifier les fichiers, examiner les journaux et configurer les personnages ou les commandes. Les scripts de diagnostic peuvent aider à localiser un problème ; ils ne garantissent pas qu’une réparation automatique soit toujours possible.
+
+## Exemples
+
+- **Lancer le jeu** : utiliser le launcher intelligent indiqué dans la section « Lancement rapide », ou lancer directement l’exécutable si les fichiers nécessaires sont présents.
+- **Diagnostiquer un démarrage bloqué** : lancer d’abord l’outil de vérification, examiner le rapport, puis utiliser l’auto-réparation si le diagnostic le recommande.
+- **Ajouter un personnage** : placer ses fichiers dans le dossier prévu, l’inscrire dans la configuration de sélection puis vérifier le résultat avec l’outil de test.
+
+Le dépôt indique que certains gros fichiers de personnages ne sont pas inclus. Il faut donc disposer de ces ressources avant de pouvoir utiliser une installation complète.
+
+
 
 [🎮 Installation](#installation) • [📖 Documentation](#documentation) • [🚀 Lancement](#lancement-rapide) • [⚙️ Configuration](#configuration)
 
@@ -94,7 +111,7 @@
 
 1. **Cloner le dépôt:**
    ```bash
-   git clone https://github.com/VOTRE_USERNAME/KOF-Ultimate-Online.git
+   git clone https://github.com/JirA44/KOF-Ultimate-Online.git
    cd KOF-Ultimate-Online
    ```
 
@@ -102,10 +119,7 @@
 
    ⚠️ **Important:** Les personnages (9.7 GB) ne sont pas inclus dans le dépôt Git.
 
-   Téléchargez-les depuis:
-   - [Google Drive](LIEN_À_AJOUTER)
-   - [OneDrive](LIEN_À_AJOUTER)
-   - [MEGA](LIEN_À_AJOUTER)
+   Le dépôt ne fournit pas de lien de téléchargement pour ces fichiers. Sans le dossier de personnages requis, le jeu peut ne pas démarrer correctement.
 
    Décompressez le dossier `chars/` à la racine du projet.
 
