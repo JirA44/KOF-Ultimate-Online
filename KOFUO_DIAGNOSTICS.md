@@ -16,12 +16,12 @@ La VM peut rester sans accès Internet. Configure un dossier partagé VirtualBox
 - Sur l'hôte où tourne Supa, définir `SUPA_KOFUO_DIAGNOSTICS_DIR=C:\KOFUOReports` avant de démarrer l'API.
 - Garder `KOFUO_DIAGNOSTICS_LOCAL_DIR` sur le disque de la VM pour que les journaux bruts restent locaux.
 
-L'API Supa proposée dans le changement compagnon expose une lecture locale en `GET /games/kofuo/diagnostics` et `GET /games/kofuo/diagnostics/{report_id}`. Elle ne lance pas un modèle automatiquement, ne modifie pas les rapports et ne crée pas d'accès réseau supplémentaire. L'API actuelle de Supa écoute sur `127.0.0.1` ; ce dispositif utilise le dossier partagé au lieu d'exposer le port de Supa à la VM.
+La PR compagnon Supa ajoute une lecture locale en `GET /games/kofuo/diagnostics` et `GET /games/kofuo/diagnostics/{report_id}`. Elle ne lance pas un modèle automatiquement, ne modifie pas les rapports et ne crée pas d'accès réseau supplémentaire. L'API actuelle de Supa écoute sur `127.0.0.1` ; ce dispositif utilise le dossier partagé au lieu d'exposer le port de Supa à la VM.
 
 ## Mise en service et limites
 
 - Les variables d'environnement et le partage VirtualBox doivent être définis dans les environnements hôte/VM ; cette session ne peut pas accéder au bureau Windows pour les configurer.
-- Le launcher principal est le seul point modifié dans cette PR. Les autres anciens launchers ou un lancement direct de l'exécutable ne passent pas encore par le collecteur.
+- Le launcher principal est le seul point de lancement instrumenté dans cette PR. Le processus est surveillé à sa sortie; un processus bloqué n'est pas encore détecté. Les autres anciens launchers ou un lancement direct de l'exécutable ne passent pas encore par le collecteur.
 - Le rapport paraît après la fermeture du processus. Le collecteur ne sait pas observer un crash interne qui laisse le processus bloqué ; il n'interroge pas l'Observateur d'événements Windows.
 - Le rapporteur historique `COMPLETE_ERROR_REPORTER.py` n'est pas appelé : il supprime `mugen.log`, remplace `select.def` pour ses essais et termine le jeu après trois secondes. Ne pas le lancer sur l'installation de référence.
 - Aucun crash actuel n'a été reproduit depuis cette session ; l'intégration Windows/VM et la réception par Supa restent à vérifier dès que VM1 sera pilotable.
