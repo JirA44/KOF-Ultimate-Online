@@ -42,8 +42,8 @@ class ProcessManager:
             process = subprocess.Popen(
                 command,
                 cwd=cwd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                stdout=None,
+                stderr=None,
                 creationflags=subprocess.CREATE_NEW_CONSOLE if sys.platform == 'win32' else 0
             )
 
@@ -435,11 +435,15 @@ class KOFUOLauncher:
         exit_code = process.wait()
         report = diagnostic.finish(exit_code)
         status = report.get("status", "report_saved")
-        self.root.after(
-            0,
-            lambda: self.log(f"📄 Rapport de fin de session enregistré ({status})"),
-        )
-            messagebox.showerror("Erreur", f"Impossible de lancer le jeu:\n{msg}")
+
+        def update_ui():
+            self.log(f"📄 Rapport de fin de session enregistré ({status})")
+            self.update_status("game", False)
+
+        try:
+            self.root.after(0, update_ui)
+        except tk.TclError:
+            pass
 
     def check_game_status(self):
         """Vérifie si le jeu est toujours en cours"""
