@@ -25,6 +25,16 @@ L'environnement de cette session ne contient pas VM1 ni le bureau Windows de l'u
 | Test multijoueur Python | `multiplayer_test_system.py` lance les instances séquentiellement dans ses principaux modes, utilise un chemin codé en dur (`D:\\KOF Ultimate Online Online Online`) et lit un journal global fixe (`D:\\KOF Ultimate\\mugen.log`). | Il ne démontre pas des sessions réseau simultanées et peut lire le mauvais journal. Il faut corriger le banc avant de s'appuyer sur ses rapports. |
 | Manifeste Python | `requirements.txt` et `pyproject.toml` ne sont pas présents à la racine de cette référence. | Les dépendances et versions des scripts Python ne sont pas verrouillées par un manifeste racine constaté. |
 
+## Indices de crash déjà archivés — pistes à confirmer
+
+- `RAPPORT_CRASH_REEL.md` décrit un ancien scénario VS : le flow atteint la sélection, charge le stage, charge Akiha Orochi en 9 secondes et Yuri_SV en 3,4 secondes, puis le jeu ferme après `Match loop init`. Le rapport avance une complexité de personnage (55 180 expressions) comme cause probable, mais ne fournit pas le journal brut permettant de vérifier cette attribution. **Ne pas conclure que ce personnage est la cause du crash actuel sans reproduire le cas.**
+- `RAPPORT_CRASH_FIX_20251024_161045.md` liste 11 personnages avec des références `.cmd`/`.cns` manquantes ou des sections `.def` absentes. Il dit qu'un `select.def` filtré a été généré, mais le « résultat attendu » n'est pas un résultat de test observé ; vérifier la configuration actuelle de VM1 avant de l'utiliser.
+- `diagnose_crash_output.txt` contient des références invalides rapportées, dont des palettes vides et des valeurs `common1.cns` suivies de commentaires `auto-fix`. Le parseur de diagnostic peut confondre texte de commentaire inline et chemin de fichier ; confirmer chaque défaut sur le fichier et dans le log moteur avant modification.
+- `PROBLÈME_TESTS_AUTO.md` avertit que les touches envoyées par son automatisation peuvent atteindre d'autres fenêtres actives. Ne pas lancer ces tests sur le bureau de travail. Utiliser VM1 isolée une fois que son accès est disponible, ou un test manuel guidé.
+- Aucun journal brut actuel `mugen.log` n'a été trouvé à la racine de `main`. Les symptômes du propriétaire (crash au démarrage, à la sélection et au lancement du combat) restent donc à reproduire sur l'installation réelle.
+
+La recommandation ancienne d'augmenter le cache ou les buffers dans `RAPPORT_CRASH_REEL.md` est une hypothèse de ce rapport ; elle n'a pas été validée et ne doit pas être appliquée comme correctif sans mesure mémoire et reproduction contrôlée.
+
 ## Décisions à prendre avant d'annoncer un lancement en ligne
 
 1. **Identifier le runtime livré** : M.U.G.E.N existant, portage Ikemen GO, ou séparation entre runtime de combat et services web. Ne pas supposer que les fichiers de configuration de M.U.G.E.N sont compatibles avec Ikemen.
@@ -88,4 +98,4 @@ Les IA ne doivent pas présenter comme acquis des tests exécutés seulement à 
 - Scripts du guide ajoutés : **non**.
 - Test de jeu ou de réseau exécuté : **non**.
 - Lancement public prêt : **non démontré**.
-- Prochaine action technique prioritaire : dans VM1 accessible, capturer le premier crash reproductible (démarrage/sélection/combat), avec le journal complet, l'identité du personnage/stage et la version du moteur ; récupérer ensuite les assets absents et établir le test de référence. L'audit réseau vient après la stabilité locale.
+- Prochaine action technique prioritaire : dans VM1 accessible, capturer séparément les trois crashs signalés (démarrage, sélection, lancement du combat) avec journaux bruts, identité du personnage/stage, versions et empreintes du binaire ; reproduire d'abord le crash le plus précoce, sans auto-réparation. L'audit réseau vient après la stabilité locale.
