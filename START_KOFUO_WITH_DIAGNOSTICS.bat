@@ -20,6 +20,8 @@ if not defined KOFUO_DIAGNOSTICS_OUTBOX if exist "\\VBOXSVR\KOFUOReports\" (
 
 where py >nul 2>nul
 if errorlevel 1 goto use_python
+py -3 --version >nul 2>nul
+if errorlevel 1 goto use_python
 py -3 "%KOFUO_LAUNCHER%"
 goto finished
 
@@ -35,8 +37,9 @@ pause
 exit /b 9009
 
 :finished
-if errorlevel 1 (
-  echo Launcher exited with code %ERRORLEVEL%.
+set "LAUNCH_EXIT=%ERRORLEVEL%"
+if not "%LAUNCH_EXIT%"=="0" (
+  echo Launcher exited with code %LAUNCH_EXIT%.
   pause
 )
-exit /b %ERRORLEVEL%
+exit /b %LAUNCH_EXIT%
