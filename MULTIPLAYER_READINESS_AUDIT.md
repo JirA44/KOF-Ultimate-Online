@@ -44,12 +44,15 @@ L'environnement de cette session ne contient pas VM1 ni le bureau Windows de l'u
 - Retrouver les 9,7 Go d'assets manquants, vérifier leur provenance, leur arborescence et les empreintes SHA-256 sans les ajouter au dépôt Git.
 - Créer un manifeste qui distingue fichiers suivis, assets externes absents et résultats générés.
 
-### Phase 1 — Démarrage hors réseau
+### Phase 1 — Stabiliser le lancement et les combats hors réseau
 
-- Lancer la copie exacte en mode local sur un poste Windows propre.
-- Vérifier le launcher, les configurations, les journaux et la sortie du processus.
-- Tester quelques personnages et stages sélectionnés, puis exécuter les outils de validation sans auto-réparation destructive.
-- Remplacer les chemins absolus codés en dur par des chemins calculés depuis le dossier du projet et fournir un chemin de log propre à chaque instance.
+- Figer une copie de test et sauvegarder la configuration avant toute réparation ; ne pas éditer directement les assets de la copie de référence.
+- Reproduire séparément les trois chemins : lancement initial, ouverture de la sélection, démarrage d'un combat. Conserver chaque journal, code de sortie, durée avant crash, personnage, stage, résolution et paramètres.
+- Identifier le binaire et la version exacts (M.U.G.E.N ou Ikemen), les chemins d'assets et les dépendances réellement présents dans VM1.
+- Vérifier d'abord un combat minimal avec un personnage et un stage connus stables ; ajouter ensuite les personnages par lots et isoler les régressions par dichotomie. Tester chaque personnage problématique comme joueur 1 puis joueur 2, avec au moins un adversaire et un stage de référence.
+- Critère provisoire de sortie : 20 démarrages consécutifs réussis et 20 chargements de combat consécutifs réussis sur la configuration de référence, puis couverture explicite des personnages/stages retenus. Ce seuil est une cible de validation proposée, pas un résultat déjà obtenu.
+- Corriger le vérificateur pour qu'il ne déclare jamais « prêt » sur la seule présence de fichiers. Remplacer les chemins absolus codés en dur et attribuer un fichier de log distinct à chaque processus.
+- N'utiliser l'auto-réparation qu'après diagnostic et sauvegarde ; toute modification d'un fichier de personnage doit être isolée, traçable et réversible.
 
 ### Phase 2 — Qualité du banc de tests
 
