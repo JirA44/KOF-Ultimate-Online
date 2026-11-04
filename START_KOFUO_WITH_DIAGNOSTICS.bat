@@ -11,11 +11,13 @@ if not exist "%KOFUO_LAUNCHER%" (
 if not defined KOFUO_GAME_DIR set "KOFUO_GAME_DIR=%~dp0"
 if not defined KOFUO_DIAGNOSTICS_LOCAL_DIR set "KOFUO_DIAGNOSTICS_LOCAL_DIR=%LOCALAPPDATA%\KOFUO\diagnostics"
 
-if not defined KOFUO_DIAGNOSTICS_OUTBOX if exist "\\VBOXSVR\KOFUOReports\" (
-  set "KOFUO_DIAGNOSTICS_OUTBOX=\\VBOXSVR\KOFUOReports"
-  echo Supa shared-folder outbox detected.
-) else (
-  echo Shared-folder outbox unavailable. Reports will remain local.
+if not defined KOFUO_DIAGNOSTICS_OUTBOX (
+  if exist "\\VBOXSVR\KOFUOReports\" (
+    set "KOFUO_DIAGNOSTICS_OUTBOX=\\VBOXSVR\KOFUOReports"
+    echo Supa shared-folder outbox detected.
+  ) else (
+    echo Shared-folder outbox unavailable. Reports will remain local.
+  )
 )
 
 where py >nul 2>nul
