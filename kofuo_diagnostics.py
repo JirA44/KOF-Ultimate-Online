@@ -212,8 +212,8 @@ class DiagnosticRun:
         outbox = os.environ.get("KOFUO_DIAGNOSTICS_OUTBOX", "").strip()
         if outbox:
             try:
-                _atomic_json(Path(outbox) / f"{self.report_id}.json", report)
                 report["supa_delivery"] = "shared_folder_outbox"
+                _atomic_json(Path(outbox) / f"{self.report_id}.json", report)
                 _atomic_json(local_report, report)
             except OSError as exc:
                 report["supa_delivery"] = f"outbox_error:{type(exc).__name__}"
