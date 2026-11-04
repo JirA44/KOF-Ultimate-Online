@@ -14,6 +14,7 @@ import os
 import sys
 from pathlib import Path
 from datetime import datetime
+from kofuo_diagnostics import DiagnosticRun, default_diagnostics_dir
 
 class Colors:
     PRIMARY = "#00d4ff"
@@ -95,7 +96,8 @@ class KOFUOLauncher:
         self.root.geometry("1200x800")
         self.root.configure(bg=Colors.BACKGROUND)
 
-        self.game_dir = Path("D:/KOF Ultimate Online")
+        configured_game_dir = os.environ.get("KOFUO_GAME_DIR")
+        self.game_dir = Path(configured_game_dir).expanduser().resolve() if configured_game_dir else Path(__file__).resolve().parent
         self.process_manager = ProcessManager()
 
         self.create_ui()
@@ -394,13 +396,15 @@ class KOFUOLauncher:
             self.log("✅ Installation complète")
 
     def launch_game(self):
-        """Lance le jeu en solo"""
-        self.log("🎮 Lancement du jeu...")
+        """Lance le jeu et archive un rapport local à chaque sortie."""
+        self.log("🎮 Lancement du jeu avec diagnostic automatique...")
 
         exe_path = self.game_dir / "KOF_Ultimate_Online.exe"
+        diagnostic = DiagnosticRun(self.game_dir, exe_path)
 
         if not exe_path.exists():
-            self.log("❌ Exécutable du jeu non trouvé")
+            report = diagnostic.finish(None, launch_error="game_executable_missing")
+            self.log("❌ Exécutable du jeu non trouvé; rapport diagnostic enregistré")
             messagebox.showerror("Erreur", "KOF_Ultimate_Online.exe non trouvé")
             return
 
@@ -411,13 +415,30 @@ class KOFUOLauncher:
         )
 
         if success:
-            self.log(f"✅ Jeu lancé: {msg}")
+            process = self.process_manager.processes["game"]
+            threading.Thread(
+                target=self._monitor_game_exit,
+                args=(process, diagnostic),
+                daemon=True,
+            ).start()
+            self.log(f"✅ Jeu lancé et surveillé: {msg}")
             self.update_status("game", True)
 
             # Vérifier le statut après 5 secondes
             threading.Timer(5.0, lambda: self.check_game_status()).start()
         else:
-            self.log(f"❌ Erreur lancement jeu: {msg}")
+            diagnostic.finish(None, launch_error=msg)
+            self.log(f"❌ Erreur lancement jeu: {msg}; rapport enregistré")
+
+    def _monitor_game_exit(self, process, diagnostic):
+        """Enregistre la sortie du jeu sans modifier ses fichiers."""
+        exit_code = process.wait()
+        report = diagnostic.finish(exit_code)
+        status = report.get("status", "report_saved")
+        self.root.after(
+            0,
+            lambda: self.log(f"📄 Rapport de fin de session enregistré ({status})"),
+        )
             messagebox.showerror("Erreur", f"Impossible de lancer le jeu:\n{msg}")
 
     def check_game_status(self):
@@ -544,24 +565,14 @@ class KOFUOLauncher:
             )
 
     def view_reports(self):
-        """Ouvre les rapports"""
-        self.log("📊 Ouverture des rapports...")
-
-        # Chercher les rapports
-        reports = list(self.game_dir.glob("*RAPPORT*.md"))
-
-        if not reports:
-            messagebox.showinfo("Information", "Aucun rapport trouvé")
-            return
-
-        # Ouvrir le dernier rapport
-        latest = max(reports, key=lambda p: p.stat().st_mtime)
-
+        """Ouvre le dossier des diagnostics automatiques."""
+        reports_dir = Path(os.environ.get("KOFUO_DIAGNOSTICS_LOCAL_DIR", default_diagnostics_dir()))
+        reports_dir.mkdir(parents=True, exist_ok=True)
         try:
-            os.startfile(str(latest))
-            self.log(f"✅ Rapport ouvert: {latest.name}")
+            os.startfile(str(reports_dir))
+            self.log(f"✅ Dossier des rapports ouvert: {reports_dir}")
         except Exception as e:
-            self.log(f"❌ Erreur: {e}")
+            self.log(f"❌ Impossible d'ouvrir le dossier des rapports: {e}")
 
     def open_config(self):
         """Ouvre la configuration"""
