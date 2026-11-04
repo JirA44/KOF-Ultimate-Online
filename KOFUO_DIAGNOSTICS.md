@@ -16,7 +16,7 @@ La VM peut rester sans accès Internet. Configure un dossier partagé VirtualBox
 - Sur l'hôte où tourne Supa, définir `SUPA_KOFUO_DIAGNOSTICS_DIR=C:\KOFUOReports` avant de démarrer l'API.
 - Garder `KOFUO_DIAGNOSTICS_LOCAL_DIR` sur le disque de la VM pour que les journaux bruts restent locaux.
 
-La PR compagnon Supa ajoute une lecture locale en `GET /games/kofuo/diagnostics` et `GET /games/kofuo/diagnostics/{report_id}`. Elle ne lance pas un modèle automatiquement, ne modifie pas les rapports et ne crée pas d'accès réseau supplémentaire. L'API actuelle de Supa écoute sur `127.0.0.1` ; ce dispositif utilise le dossier partagé au lieu d'exposer le port de Supa à la VM.
+Le dépôt Supa `main` expose maintenant une lecture locale en `GET /games/kofuo/diagnostics` et `GET /games/kofuo/diagnostics/{report_id}`. Le code est fusionné, mais l’API doit encore être démarrée sur l’hôte avec le dossier partagé configuré. Elle ne lance pas un modèle automatiquement, ne modifie pas les rapports et ne crée pas d'accès réseau supplémentaire. L'API actuelle de Supa écoute sur `127.0.0.1` ; ce dispositif utilise le dossier partagé au lieu d'exposer le port de Supa à la VM.
 
 ## Mise en service et limites
 
