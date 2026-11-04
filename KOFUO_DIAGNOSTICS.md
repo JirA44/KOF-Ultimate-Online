@@ -12,7 +12,7 @@ Le rapport de partage contient un identifiant, l'heure UTC, le code de sortie, l
 
 La VM peut rester sans accès Internet. Configure un dossier partagé VirtualBox qui pointe vers un dossier de l'hôte, par exemple `C:\KOFUOReports`, avec le nom `KOFUOReports`.
 
-- Dans la VM Windows, définir `KOFUO_DIAGNOSTICS_OUTBOX=\\VBOXSVR\KOFUOReports`.
+- Dans la VM Windows, lancer `START_KOFUO_WITH_DIAGNOSTICS.bat` : il détecte `\\VBOXSVR\KOFUOReports` et active l’outbox si le partage est présent. Sinon les rapports restent locaux. Il reste possible de définir `KOFUO_DIAGNOSTICS_OUTBOX` manuellement.
 - Sur l'hôte où tourne Supa, définir `SUPA_KOFUO_DIAGNOSTICS_DIR=C:\KOFUOReports` avant de démarrer l'API.
 - Garder `KOFUO_DIAGNOSTICS_LOCAL_DIR` sur le disque de la VM pour que les journaux bruts restent locaux.
 
@@ -20,7 +20,7 @@ La PR compagnon Supa ajoute une lecture locale en `GET /games/kofuo/diagnostics`
 
 ## Mise en service et limites
 
-- Les variables d'environnement et le partage VirtualBox doivent être définis dans les environnements hôte/VM ; cette session ne peut pas accéder au bureau Windows pour les configurer.
+- Le partage VirtualBox doit être créé et permanent. Le lanceur `.bat` détecte l’outbox dans la VM ; l’hôte doit encore définir `SUPA_KOFUO_DIAGNOSTICS_DIR` avant de démarrer Supa. La session n’a pas accès au bureau Windows pour vérifier ces réglages.
 - Le launcher principal est le seul point de lancement instrumenté dans cette PR. Le processus est surveillé à sa sortie; un processus bloqué n'est pas encore détecté. Les autres anciens launchers ou un lancement direct de l'exécutable ne passent pas encore par le collecteur.
 - Le rapport paraît après la fermeture du processus. Le collecteur ne sait pas observer un crash interne qui laisse le processus bloqué ; il n'interroge pas l'Observateur d'événements Windows.
 - Le rapporteur historique `COMPLETE_ERROR_REPORTER.py` n'est pas appelé : il supprime `mugen.log`, remplace `select.def` pour ses essais et termine le jeu après trois secondes. Ne pas le lancer sur l'installation de référence.
