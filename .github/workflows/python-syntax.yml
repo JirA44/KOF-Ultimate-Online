@@ -1,0 +1,39 @@
+name: Python syntax check
+
+on:
+  push:
+    branches: [main]
+    paths: ["**/*.py", ".github/workflows/python-syntax.yml"]
+  pull_request:
+    branches: [main]
+    paths: ["**/*.py", ".github/workflows/python-syntax.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  parse-python:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Parse tracked Python files without executing them
+        shell: bash
+        run: |
+          python - <<'PY'
+          import ast
+          import subprocess
+          from pathlib import Path
+
+          files = subprocess.check_output(
+              ["git", "ls-files", "--", "*.py"],
+              text=True,
+          ).splitlines()
+          for name in files:
+              path = Path(name)
+              ast.parse(path.read_text(encoding="utf-8-sig"), filename=name)
+          print(f"Parsed {len(files)} tracked Python files")
+          PY
