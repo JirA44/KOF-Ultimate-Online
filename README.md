@@ -4,7 +4,6 @@
 
 **Version 2.0 Enhanced**
 
-[![License](https://img.shields.io/badge/license-Free-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 [![M.U.G.E.N](https://img.shields.io/badge/M.U.G.E.N-1.1.0%20Beta%201-red.svg)](http://www.elecbyte.com/mugen/)
 
@@ -477,9 +476,11 @@ Pour tout problème:
 
 ---
 
-## 📜 License
+## 📜 Licence / License
 
-Ce projet est distribué sous license libre. Les personnages, sprites et autres assets appartiennent à leurs créateurs respectifs.
+**Français** — Aucun fichier `LICENSE` n’est actuellement fourni à la racine. La présence de la licence dans `Ikemen_GO/License.txt` concerne Ikemen GO; elle ne détermine pas les droits sur les personnages, stages, sprites, musiques, polices ou autres éléments de KOF. Ne supposez pas que le jeu complet ni ses assets peuvent être redistribués. Les droits et licences doivent être vérifiés élément par élément.
+
+**English** — No root `LICENSE` file is currently provided. The license in `Ikemen_GO/License.txt` applies to Ikemen GO; it does not establish rights to KOF characters, stages, sprites, music, fonts, or other included material. Do not assume that the complete game or its assets may be redistributed. Rights and licenses must be verified component by component.
 
 **M.U.G.E.N** est développé par Elecbyte.
 
